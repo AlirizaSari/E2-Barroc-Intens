@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\aliri\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\jarmo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\aliri\\source\\repos\\BarrocItems\\BarrocItems\\BarrocItems.csproj",
+      "projectUniqueName": "C:\\Users\\jarmo\\Documents\\School\\Softwaredeveloper\\Leerjaar 3\\P_Ext\\Periode 1\\Barroc Intens\\E2-Barroc-Intens\\BarrocItems\\BarrocItems.csproj",
       "projectName": "BarrocItems",
-      "projectPath": "D:\\Users\\aliri\\source\\repos\\BarrocItems\\BarrocItems\\BarrocItems.csproj",
-      "packagesPath": "C:\\Users\\aliri\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\aliri\\source\\repos\\BarrocItems\\BarrocItems\\obj\\",
+      "projectPath": "C:\\Users\\jarmo\\Documents\\School\\Softwaredeveloper\\Leerjaar 3\\P_Ext\\Periode 1\\Barroc Intens\\E2-Barroc-Intens\\BarrocItems\\BarrocItems.csproj",
+      "packagesPath": "C:\\Users\\jarmo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jarmo\\Documents\\School\\Softwaredeveloper\\Leerjaar 3\\P_Ext\\Periode 1\\Barroc Intens\\E2-Barroc-Intens\\BarrocItems\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\aliri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jarmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
