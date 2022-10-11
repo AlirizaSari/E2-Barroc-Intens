@@ -8,6 +8,8 @@ Voor elke afdeling die er is, wordt er een map aangemaakt waar we de forms in ze
 
 De classes zetten we in de classes map.
 
+Elke tekst die de klant te zien krijgt, heeft het lettertype 'Arial'.
+
 Coding guidelines:
 Classes zijn PascalCase
 Private fields _camelCase
@@ -46,4 +48,7 @@ Voorbeeld: ‘dgvInvoice’
 Combobox:
 Begin met ‘cbox’ en daarna PascalCase
 Voorbeeld: ‘cboxColorChoice’
+
+Textbox:
+txbNameOfItem
 
