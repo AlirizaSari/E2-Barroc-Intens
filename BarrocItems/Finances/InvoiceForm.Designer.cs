@@ -35,6 +35,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblCompanyAdress = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblDivider = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblFactuur
@@ -95,11 +96,20 @@
             this.textBox2.Size = new System.Drawing.Size(250, 27);
             this.textBox2.TabIndex = 6;
             // 
+            // lblDivider
+            // 
+            this.lblDivider.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDivider.Location = new System.Drawing.Point(-2, 313);
+            this.lblDivider.Name = "lblDivider";
+            this.lblDivider.Size = new System.Drawing.Size(918, 10);
+            this.lblDivider.TabIndex = 8;
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.lblDivider);
             this.Controls.Add(this.lblCompanyAdress);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.dateTimePicker1);
@@ -123,5 +133,6 @@
         private DateTimePicker dateTimePicker1;
         private Label lblCompanyAdress;
         private TextBox textBox2;
+        private Label lblDivider;
     }
 }
