@@ -12,6 +12,9 @@ namespace BarrocItems.Finances
 {
     public partial class InvoiceForm : Form
     {
+        string _companyName = "";
+        string _companyAdress = "";
+        string _comment = "";
 
 
 
@@ -23,7 +26,20 @@ namespace BarrocItems.Finances
             
         }
 
-      
+        private void btnCreateInvoice_Click(object sender, EventArgs e)
+        {
+            _companyName = inputValidationString(txbCompanyName.Text);
+            _companyAdress = txbCompanyAdress.Text;
+            _comment = txbComments.Text;
+        }
 
+        private string inputValidationString(string myInput)
+        {
+            if (myInput == "")
+            {
+                lblError.Text = "Vul alstublieft elk vak in";
+            }
+            return myInput;
+        }
     }
 }
