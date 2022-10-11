@@ -1,4 +1,6 @@
-﻿namespace BarrocItems.Finances
+﻿using System.Windows.Forms;
+
+namespace BarrocItems.Finances
 {
     partial class InvoiceForm
     {

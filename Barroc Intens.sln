@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarrocItems", "BarrocItems\BarrocItems.csproj", "{FF7AF464-2DC6-473E-BC01-1609AD2DC60F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barroc Intens", "Barroc Intens\Barroc Intens.csproj", "{5A687B7B-FC8A-4543-A282-99A1A9D981D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FF7AF464-2DC6-473E-BC01-1609AD2DC60F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF7AF464-2DC6-473E-BC01-1609AD2DC60F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF7AF464-2DC6-473E-BC01-1609AD2DC60F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF7AF464-2DC6-473E-BC01-1609AD2DC60F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A687B7B-FC8A-4543-A282-99A1A9D981D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A687B7B-FC8A-4543-A282-99A1A9D981D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A687B7B-FC8A-4543-A282-99A1A9D981D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A687B7B-FC8A-4543-A282-99A1A9D981D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8DB6206F-D958-481E-8D43-F4DB68951CB7}
+		SolutionGuid = {7AC2209F-1396-4FBD-8220-C23D7CF0C5CE}
 	EndGlobalSection
 EndGlobal
