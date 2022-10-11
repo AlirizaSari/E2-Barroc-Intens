@@ -12,9 +12,16 @@ namespace BarrocItems.Finances
 {
     public partial class InvoiceForm : Form
     {
+
+
+
+
         public InvoiceForm()
         {
             InitializeComponent();
         }
+
+      
+
     }
 }
