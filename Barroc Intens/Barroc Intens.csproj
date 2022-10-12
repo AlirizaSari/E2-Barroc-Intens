@@ -319,10 +319,6 @@
     <Content Include="Resources\Logo6_groot.png" />
     <Content Include="Resources\Logo6_klein.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Inkoop\" />
-    <Folder Include="Maintenance\" />
-    <Folder Include="Sales\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
