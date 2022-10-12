@@ -291,6 +291,12 @@
     <Compile Include="Sales\CustomerNotesForm.Designer.cs">
       <DependentUpon>CustomerNotesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestFolde2.0\Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFolde2.0\Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Finances\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
