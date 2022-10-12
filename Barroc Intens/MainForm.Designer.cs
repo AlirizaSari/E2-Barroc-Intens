@@ -38,9 +38,10 @@
             // 
             // btnDirectToFinances
             // 
-            this.btnDirectToFinances.Location = new System.Drawing.Point(588, 76);
+            this.btnDirectToFinances.Location = new System.Drawing.Point(441, 62);
+            this.btnDirectToFinances.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDirectToFinances.Name = "btnDirectToFinances";
-            this.btnDirectToFinances.Size = new System.Drawing.Size(104, 39);
+            this.btnDirectToFinances.Size = new System.Drawing.Size(78, 32);
             this.btnDirectToFinances.TabIndex = 0;
             this.btnDirectToFinances.Text = "Finances";
             this.btnDirectToFinances.UseVisualStyleBackColor = true;
@@ -49,49 +50,54 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 26);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(101, 83);
+            this.pictureBox1.Size = new System.Drawing.Size(98, 82);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // btnDirectToSales
             // 
-            this.btnDirectToSales.Location = new System.Drawing.Point(588, 132);
+            this.btnDirectToSales.Location = new System.Drawing.Point(441, 107);
+            this.btnDirectToSales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDirectToSales.Name = "btnDirectToSales";
-            this.btnDirectToSales.Size = new System.Drawing.Size(104, 39);
+            this.btnDirectToSales.Size = new System.Drawing.Size(78, 32);
             this.btnDirectToSales.TabIndex = 2;
             this.btnDirectToSales.Text = "Sales";
             this.btnDirectToSales.UseVisualStyleBackColor = true;
             // 
             // btnDirectToMaintenance
             // 
-            this.btnDirectToMaintenance.Location = new System.Drawing.Point(712, 132);
+            this.btnDirectToMaintenance.Location = new System.Drawing.Point(534, 107);
+            this.btnDirectToMaintenance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDirectToMaintenance.Name = "btnDirectToMaintenance";
-            this.btnDirectToMaintenance.Size = new System.Drawing.Size(104, 39);
+            this.btnDirectToMaintenance.Size = new System.Drawing.Size(78, 32);
             this.btnDirectToMaintenance.TabIndex = 3;
             this.btnDirectToMaintenance.Text = "Maintenance";
             this.btnDirectToMaintenance.UseVisualStyleBackColor = true;
             // 
             // btnDirectToInkoop
             // 
-            this.btnDirectToInkoop.Location = new System.Drawing.Point(712, 76);
+            this.btnDirectToInkoop.Location = new System.Drawing.Point(534, 62);
+            this.btnDirectToInkoop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDirectToInkoop.Name = "btnDirectToInkoop";
-            this.btnDirectToInkoop.Size = new System.Drawing.Size(104, 39);
+            this.btnDirectToInkoop.Size = new System.Drawing.Size(78, 32);
             this.btnDirectToInkoop.TabIndex = 4;
             this.btnDirectToInkoop.Text = "Inkoop";
             this.btnDirectToInkoop.UseVisualStyleBackColor = true;
             // 
             // HomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(686, 488);
             this.Controls.Add(this.btnDirectToInkoop);
             this.Controls.Add(this.btnDirectToMaintenance);
             this.Controls.Add(this.btnDirectToSales);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDirectToFinances);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "HomeForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
