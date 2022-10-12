@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblInvoice = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCreateInvoice = new System.Windows.Forms.Button();
             this.txbCompanyName = new System.Windows.Forms.TextBox();
             this.nudHoursWorked = new System.Windows.Forms.NumericUpDown();
             this.lblDivider = new System.Windows.Forms.Label();
@@ -45,6 +45,7 @@
             this.nudDiscount = new System.Windows.Forms.NumericUpDown();
             this.nudHourlyPrice = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAddToInvoice = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).BeginInit();
@@ -60,15 +61,15 @@
             this.lblInvoice.TabIndex = 0;
             this.lblInvoice.Text = "Factuur";
             // 
-            // button1
+            // btnCreateInvoice
             // 
-            this.button1.Location = new System.Drawing.Point(606, 368);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCreateInvoice.Location = new System.Drawing.Point(606, 368);
+            this.btnCreateInvoice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCreateInvoice.Name = "btnCreateInvoice";
+            this.btnCreateInvoice.Size = new System.Drawing.Size(173, 60);
+            this.btnCreateInvoice.TabIndex = 1;
+            this.btnCreateInvoice.Text = "Creëer factuur";
+            this.btnCreateInvoice.UseVisualStyleBackColor = true;
             // 
             // txbCompanyName
             // 
@@ -205,11 +206,22 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Prijs per uur";
             // 
+            // btnAddToInvoice
+            // 
+            this.btnAddToInvoice.Location = new System.Drawing.Point(606, 442);
+            this.btnAddToInvoice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddToInvoice.Name = "btnAddToInvoice";
+            this.btnAddToInvoice.Size = new System.Drawing.Size(173, 60);
+            this.btnAddToInvoice.TabIndex = 17;
+            this.btnAddToInvoice.Text = "Voeg toe aan factuur";
+            this.btnAddToInvoice.UseVisualStyleBackColor = true;
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.btnAddToInvoice);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nudHourlyPrice);
             this.Controls.Add(this.nudDiscount);
@@ -225,7 +237,7 @@
             this.Controls.Add(this.lblDivider);
             this.Controls.Add(this.nudHoursWorked);
             this.Controls.Add(this.txbCompanyName);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCreateInvoice);
             this.Controls.Add(this.lblInvoice);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -242,7 +254,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblInvoice;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCreateInvoice;
         private System.Windows.Forms.TextBox txbCompanyName;
         private System.Windows.Forms.NumericUpDown nudHoursWorked;
         private System.Windows.Forms.Label lblDivider;
@@ -258,5 +270,6 @@
         private System.Windows.Forms.NumericUpDown nudDiscount;
         private System.Windows.Forms.NumericUpDown nudHourlyPrice;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAddToInvoice;
     }
 }
