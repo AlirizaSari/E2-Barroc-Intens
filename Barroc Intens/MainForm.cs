@@ -23,5 +23,11 @@ namespace Barroc_Intens
             Finances.InvoiceForm invoiceForm = new Finances.InvoiceForm();
             invoiceForm.ShowDialog();
         }
+
+        private void btnDirectToSales_Click(object sender, EventArgs e)
+        {
+            Sales.CustomerNotesForm CustomerNotesForm = new Sales.CustomerNotesForm();
+            CustomerNotesForm.ShowDialog();
+        }
     }
 }
