@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Barroc_Intens
 {
-    public partial class HomeForm : Form
+    public partial class MainForm : Form
     {
-        public HomeForm()
+        public MainForm()
         {
             InitializeComponent();
         }
