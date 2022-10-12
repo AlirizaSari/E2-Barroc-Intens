@@ -40,12 +40,13 @@
             this.lblDiscount = new System.Windows.Forms.Label();
             this.lblHourlyPrice = new System.Windows.Forms.Label();
             this.txbCompanyAdress = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbComment = new System.Windows.Forms.TextBox();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.nudDiscount = new System.Windows.Forms.NumericUpDown();
             this.nudHourlyPrice = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblComment = new System.Windows.Forms.Label();
             this.btnAddToInvoice = new System.Windows.Forms.Button();
+            this.lblError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).BeginInit();
@@ -70,6 +71,7 @@
             this.btnCreateInvoice.TabIndex = 1;
             this.btnCreateInvoice.Text = "Creëer factuur";
             this.btnCreateInvoice.UseVisualStyleBackColor = true;
+            this.btnCreateInvoice.Click += new System.EventHandler(this.btnCreateInvoice_Click);
             // 
             // txbCompanyName
             // 
@@ -149,7 +151,7 @@
             // 
             this.lblHourlyPrice.AutoSize = true;
             this.lblHourlyPrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHourlyPrice.Location = new System.Drawing.Point(62, 442);
+            this.lblHourlyPrice.Location = new System.Drawing.Point(60, 442);
             this.lblHourlyPrice.Name = "lblHourlyPrice";
             this.lblHourlyPrice.Size = new System.Drawing.Size(87, 20);
             this.lblHourlyPrice.TabIndex = 10;
@@ -163,14 +165,14 @@
             this.txbCompanyAdress.Size = new System.Drawing.Size(218, 27);
             this.txbCompanyAdress.TabIndex = 11;
             // 
-            // textBox3
+            // txbComment
             // 
-            this.textBox3.Location = new System.Drawing.Point(212, 475);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(218, 84);
-            this.textBox3.TabIndex = 12;
+            this.txbComment.Location = new System.Drawing.Point(212, 475);
+            this.txbComment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txbComment.Multiline = true;
+            this.txbComment.Name = "txbComment";
+            this.txbComment.Size = new System.Drawing.Size(218, 84);
+            this.txbComment.TabIndex = 12;
             // 
             // dtpDate
             // 
@@ -196,15 +198,15 @@
             this.nudHourlyPrice.Size = new System.Drawing.Size(218, 27);
             this.nudHourlyPrice.TabIndex = 15;
             // 
-            // label1
+            // lblComment
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 479);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 20);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Prijs per uur";
+            this.lblComment.AutoSize = true;
+            this.lblComment.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComment.Location = new System.Drawing.Point(60, 478);
+            this.lblComment.Name = "lblComment";
+            this.lblComment.Size = new System.Drawing.Size(61, 20);
+            this.lblComment.TabIndex = 16;
+            this.lblComment.Text = "Notities";
             // 
             // btnAddToInvoice
             // 
@@ -216,17 +218,28 @@
             this.btnAddToInvoice.Text = "Voeg toe aan factuur";
             this.btnAddToInvoice.UseVisualStyleBackColor = true;
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(363, 567);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 20);
+            this.lblError.TabIndex = 18;
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnAddToInvoice);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblComment);
             this.Controls.Add(this.nudHourlyPrice);
             this.Controls.Add(this.nudDiscount);
             this.Controls.Add(this.dtpDate);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txbComment);
             this.Controls.Add(this.txbCompanyAdress);
             this.Controls.Add(this.lblHourlyPrice);
             this.Controls.Add(this.lblDiscount);
@@ -265,11 +278,12 @@
         private System.Windows.Forms.Label lblDiscount;
         private System.Windows.Forms.Label lblHourlyPrice;
         private System.Windows.Forms.TextBox txbCompanyAdress;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txbComment;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.NumericUpDown nudDiscount;
         private System.Windows.Forms.NumericUpDown nudHourlyPrice;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblComment;
         private System.Windows.Forms.Button btnAddToInvoice;
+        private System.Windows.Forms.Label lblError;
     }
 }
