@@ -30,25 +30,24 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBackToMain = new System.Windows.Forms.Button();
-            this.txtConversationReport = new System.Windows.Forms.TextBox();
             this.lblConversationReport = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnExportText = new System.Windows.Forms.Button();
+            this.btnSaveToDb = new System.Windows.Forms.Button();
+            this.btnRecallLastExport = new System.Windows.Forms.Button();
+            this.btnExportToDocument = new System.Windows.Forms.Button();
             this.lblMenu = new System.Windows.Forms.Label();
             this.lblInvoervelden = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblTitleHead = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txbTitleHeader = new System.Windows.Forms.TextBox();
+            this.txbTextInput = new System.Windows.Forms.TextBox();
+            this.dtpDateInput = new System.Windows.Forms.DateTimePicker();
             this.lblActor = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.cbClient = new System.Windows.Forms.CheckBox();
+            this.cbEmployee = new System.Windows.Forms.CheckBox();
+            this.lblDateTimePicker = new System.Windows.Forms.Label();
+            this.txbConversationReport = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,60 +70,54 @@
             this.btnBackToMain.TabIndex = 3;
             this.btnBackToMain.Text = "Terug naar hoofd pagina";
             this.btnBackToMain.UseVisualStyleBackColor = true;
-            // 
-            // txtConversationReport
-            // 
-            this.txtConversationReport.Location = new System.Drawing.Point(31, 117);
-            this.txtConversationReport.Multiline = true;
-            this.txtConversationReport.Name = "txtConversationReport";
-            this.txtConversationReport.Size = new System.Drawing.Size(451, 316);
-            this.txtConversationReport.TabIndex = 4;
+            this.btnBackToMain.Click += new System.EventHandler(this.btnBackToMain_Click);
             // 
             // lblConversationReport
             // 
             this.lblConversationReport.AutoSize = true;
             this.lblConversationReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConversationReport.Location = new System.Drawing.Point(147, 89);
+            this.lblConversationReport.Location = new System.Drawing.Point(168, 100);
             this.lblConversationReport.Name = "lblConversationReport";
             this.lblConversationReport.Size = new System.Drawing.Size(159, 25);
             this.lblConversationReport.TabIndex = 5;
             this.lblConversationReport.Text = "Gespreksverslag";
             // 
-            // button1
+            // btnExportText
             // 
-            this.button1.Location = new System.Drawing.Point(488, 126);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 31);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnExportText.Location = new System.Drawing.Point(488, 126);
+            this.btnExportText.Name = "btnExportText";
+            this.btnExportText.Size = new System.Drawing.Size(170, 39);
+            this.btnExportText.TabIndex = 6;
+            this.btnExportText.Text = "<-- Exporteer";
+            this.btnExportText.UseVisualStyleBackColor = true;
+            this.btnExportText.Click += new System.EventHandler(this.btnExportText_Click);
             // 
-            // button2
+            // btnSaveToDb
             // 
-            this.button2.Location = new System.Drawing.Point(488, 236);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 31);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSaveToDb.Location = new System.Drawing.Point(488, 236);
+            this.btnSaveToDb.Name = "btnSaveToDb";
+            this.btnSaveToDb.Size = new System.Drawing.Size(170, 39);
+            this.btnSaveToDb.TabIndex = 7;
+            this.btnSaveToDb.Text = "opslaan naar database";
+            this.btnSaveToDb.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnRecallLastExport
             // 
-            this.button3.Location = new System.Drawing.Point(488, 181);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(170, 31);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnRecallLastExport.Location = new System.Drawing.Point(488, 181);
+            this.btnRecallLastExport.Name = "btnRecallLastExport";
+            this.btnRecallLastExport.Size = new System.Drawing.Size(170, 39);
+            this.btnRecallLastExport.TabIndex = 8;
+            this.btnRecallLastExport.Text = "Herstel";
+            this.btnRecallLastExport.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnExportToDocument
             // 
-            this.button4.Location = new System.Drawing.Point(488, 288);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(170, 31);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnExportToDocument.Location = new System.Drawing.Point(488, 288);
+            this.btnExportToDocument.Name = "btnExportToDocument";
+            this.btnExportToDocument.Size = new System.Drawing.Size(170, 39);
+            this.btnExportToDocument.TabIndex = 9;
+            this.btnExportToDocument.Text = "opslaan naar document";
+            this.btnExportToDocument.UseVisualStyleBackColor = true;
             // 
             // lblMenu
             // 
@@ -173,44 +166,27 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "text invoer";
             // 
-            // label4
+            // txbTitleHeader
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(714, 291);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "label4";
+            this.txbTitleHeader.Location = new System.Drawing.Point(766, 181);
+            this.txbTitleHeader.Name = "txbTitleHeader";
+            this.txbTitleHeader.Size = new System.Drawing.Size(314, 22);
+            this.txbTitleHeader.TabIndex = 17;
             // 
-            // textBox1
+            // txbTextInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(766, 181);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(314, 22);
-            this.textBox1.TabIndex = 17;
+            this.txbTextInput.Location = new System.Drawing.Point(766, 211);
+            this.txbTextInput.Multiline = true;
+            this.txbTextInput.Name = "txbTextInput";
+            this.txbTextInput.Size = new System.Drawing.Size(314, 72);
+            this.txbTextInput.TabIndex = 19;
             // 
-            // textBox4
+            // dtpDateInput
             // 
-            this.textBox4.Location = new System.Drawing.Point(766, 211);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(314, 72);
-            this.textBox4.TabIndex = 19;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(766, 288);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(314, 81);
-            this.textBox5.TabIndex = 20;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(880, 396);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 21;
+            this.dtpDateInput.Location = new System.Drawing.Point(766, 290);
+            this.dtpDateInput.Name = "dtpDateInput";
+            this.dtpDateInput.Size = new System.Drawing.Size(314, 22);
+            this.dtpDateInput.TabIndex = 21;
             // 
             // lblActor
             // 
@@ -221,50 +197,66 @@
             this.lblActor.TabIndex = 22;
             this.lblActor.Text = "Actor";
             // 
-            // checkBox1
+            // cbClient
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(766, 153);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(98, 21);
-            this.checkBox1.TabIndex = 23;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbClient.AutoSize = true;
+            this.cbClient.Location = new System.Drawing.Point(766, 153);
+            this.cbClient.Name = "cbClient";
+            this.cbClient.Size = new System.Drawing.Size(60, 21);
+            this.cbClient.TabIndex = 23;
+            this.cbClient.Text = "klant";
+            this.cbClient.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // cbEmployee
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(880, 153);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(98, 21);
-            this.checkBox2.TabIndex = 24;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbEmployee.AutoSize = true;
+            this.cbEmployee.Location = new System.Drawing.Point(880, 153);
+            this.cbEmployee.Name = "cbEmployee";
+            this.cbEmployee.Size = new System.Drawing.Size(98, 21);
+            this.cbEmployee.TabIndex = 24;
+            this.cbEmployee.Text = "checkBox2";
+            this.cbEmployee.UseVisualStyleBackColor = true;
+            // 
+            // lblDateTimePicker
+            // 
+            this.lblDateTimePicker.AutoSize = true;
+            this.lblDateTimePicker.Location = new System.Drawing.Point(708, 295);
+            this.lblDateTimePicker.Name = "lblDateTimePicker";
+            this.lblDateTimePicker.Size = new System.Drawing.Size(47, 17);
+            this.lblDateTimePicker.TabIndex = 25;
+            this.lblDateTimePicker.Text = "datum";
+            // 
+            // txbConversationReport
+            // 
+            this.txbConversationReport.Location = new System.Drawing.Point(31, 117);
+            this.txbConversationReport.Multiline = true;
+            this.txbConversationReport.Name = "txbConversationReport";
+            this.txbConversationReport.Size = new System.Drawing.Size(451, 316);
+            this.txbConversationReport.TabIndex = 26;
             // 
             // CustomerNotesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1158, 589);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.lblConversationReport);
+            this.Controls.Add(this.txbConversationReport);
+            this.Controls.Add(this.lblDateTimePicker);
+            this.Controls.Add(this.cbEmployee);
+            this.Controls.Add(this.cbClient);
             this.Controls.Add(this.lblActor);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dtpDateInput);
+            this.Controls.Add(this.txbTextInput);
+            this.Controls.Add(this.txbTitleHeader);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblTitleHead);
             this.Controls.Add(this.lblInvoervelden);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.lblMenu);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblConversationReport);
-            this.Controls.Add(this.txtConversationReport);
+            this.Controls.Add(this.btnExportToDocument);
+            this.Controls.Add(this.btnRecallLastExport);
+            this.Controls.Add(this.btnSaveToDb);
+            this.Controls.Add(this.btnExportText);
             this.Controls.Add(this.btnBackToMain);
             this.Controls.Add(this.pictureBox1);
             this.Name = "CustomerNotesForm";
@@ -279,24 +271,23 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBackToMain;
-        private System.Windows.Forms.TextBox txtConversationReport;
         private System.Windows.Forms.Label lblConversationReport;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnExportText;
+        private System.Windows.Forms.Button btnSaveToDb;
+        private System.Windows.Forms.Button btnRecallLastExport;
+        private System.Windows.Forms.Button btnExportToDocument;
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Label lblInvoervelden;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblTitleHead;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txbTitleHeader;
+        private System.Windows.Forms.TextBox txbTextInput;
+        private System.Windows.Forms.DateTimePicker dtpDateInput;
         private System.Windows.Forms.Label lblActor;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox cbClient;
+        private System.Windows.Forms.CheckBox cbEmployee;
+        private System.Windows.Forms.Label lblDateTimePicker;
+        private System.Windows.Forms.TextBox txbConversationReport;
     }
 }
