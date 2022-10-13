@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
 
 namespace Barroc_Intens.Finances
 {
     public partial class InvoiceForm : Form
     {
         string _companyName = "";
+        string _companyEmail = "";
         string _companyAdress = "";
         string _comment;
         string _date;
@@ -29,12 +32,14 @@ namespace Barroc_Intens.Finances
         private void btnCreateInvoice_Click(object sender, EventArgs e)
         {
             _companyName = txbCompanyName.Text;
+            _companyEmail = txbEmailAdresCompany.Text;
             _companyAdress = txbCompanyAdress.Text;
             _comment = txbComment.Text;
             _date = dtpDate.Text.ToString();
             _hoursWorked = nudHoursWorked.Value;
             _discount = nudDiscount.Value;
             _pricePerHour = nudHourlyPrice.Value;
+
 
             if (stringInputValidation(_companyName) 
                 && stringInputValidation(_companyAdress) 
@@ -43,7 +48,30 @@ namespace Barroc_Intens.Finances
                 && decimalInputValidation(_pricePerHour)
                 )
             {
-                System.Diagnostics.Process.Start("mailto:mail@domain.com");
+                string message = $"hallo {_companyName},%0d%0a" +
+                $"%0d%0aOp {_date} is er een koffiezetapparaat geïnstalleerd.%0d%0a" +
+                $"Gelieve de volgende kosten zo snel mogelijk te betalen:%0d%0a%0d%0a" +
+                $"Uur gewerkt\tArbeidskosten per uur\tKorting\ttotal%0d%0a";
+
+                if (_discount > 0 && _discount <= 100)
+                {
+                    message += $"{_hoursWorked}\t{_pricePerHour}\t{_discount}\t{_hoursWorked * _pricePerHour * (1 - (_discount / 100))}";
+                }
+                else
+                {
+                    message += $"{_hoursWorked}\t{_pricePerHour}\t{_discount}\t{_hoursWorked * _pricePerHour * 1}";
+                }
+
+                if (!String.IsNullOrEmpty(_comment))
+                {
+                    message += $"%0d%0a{_comment}%0d%0a";
+                }
+
+                message += $"%0d%0aMet vriendelijke groeten,%0d%0a" +
+                    $"Barroc Intens";
+
+                Process.Start($"mailto:{_companyEmail}?subject=Factuur%20Installatie%20{_date.ToString()}&body={message}");
+
             }
         }
 

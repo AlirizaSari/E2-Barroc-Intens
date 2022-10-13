@@ -47,6 +47,8 @@
             this.lblComment = new System.Windows.Forms.Label();
             this.btnAddToInvoice = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txbEmailAdresCompany = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).BeginInit();
@@ -75,7 +77,7 @@
             // 
             // txbCompanyName
             // 
-            this.txbCompanyName.Location = new System.Drawing.Point(212, 172);
+            this.txbCompanyName.Location = new System.Drawing.Point(212, 140);
             this.txbCompanyName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbCompanyName.Name = "txbCompanyName";
             this.txbCompanyName.Size = new System.Drawing.Size(218, 27);
@@ -101,7 +103,7 @@
             // 
             this.lblCompanyName.AutoSize = true;
             this.lblCompanyName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompanyName.Location = new System.Drawing.Point(60, 176);
+            this.lblCompanyName.Location = new System.Drawing.Point(60, 143);
             this.lblCompanyName.Name = "lblCompanyName";
             this.lblCompanyName.Size = new System.Drawing.Size(97, 20);
             this.lblCompanyName.TabIndex = 5;
@@ -121,7 +123,7 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(60, 249);
+            this.lblDate.Location = new System.Drawing.Point(60, 247);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(54, 20);
             this.lblDate.TabIndex = 7;
@@ -228,11 +230,31 @@
             this.lblError.Size = new System.Drawing.Size(0, 20);
             this.lblError.TabIndex = 18;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(60, 178);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 20);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Emailadres";
+            // 
+            // txbEmailAdresCompany
+            // 
+            this.txbEmailAdresCompany.Location = new System.Drawing.Point(212, 174);
+            this.txbEmailAdresCompany.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txbEmailAdresCompany.Name = "txbEmailAdresCompany";
+            this.txbEmailAdresCompany.Size = new System.Drawing.Size(218, 27);
+            this.txbEmailAdresCompany.TabIndex = 19;
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txbEmailAdresCompany);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnAddToInvoice);
             this.Controls.Add(this.lblComment);
@@ -285,5 +307,7 @@
         private System.Windows.Forms.Label lblComment;
         private System.Windows.Forms.Button btnAddToInvoice;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txbEmailAdresCompany;
     }
 }
