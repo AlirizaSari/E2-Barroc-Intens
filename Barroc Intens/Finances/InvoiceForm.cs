@@ -51,15 +51,15 @@ namespace Barroc_Intens.Finances
                 string message = $"hallo {_companyName},%0d%0a" +
                 $"%0d%0aOp {_date} is er een koffiezetapparaat geïnstalleerd.%0d%0a" +
                 $"Gelieve de volgende kosten zo snel mogelijk te betalen:%0d%0a%0d%0a" +
-                $"Uur gewerkt\tArbeidskosten per uur\tKorting\ttotal%0d%0a";
+                $"Uur gewerkt%20|%20Arbeidskosten per uur%20|%20Korting%20|%20total%0d%0a";
 
                 if (_discount > 0 && _discount <= 100)
                 {
-                    message += $"{_hoursWorked}\t{_pricePerHour}\t{_discount}\t{_hoursWorked * _pricePerHour * (1 - (_discount / 100))}";
+                    message += $"{_hoursWorked}%20|%20{_pricePerHour}%20|%20{_discount}%20|%20{_hoursWorked * _pricePerHour * (1 - (_discount / 100))}";
                 }
                 else
                 {
-                    message += $"{_hoursWorked}\t{_pricePerHour}\t{_discount}\t{_hoursWorked * _pricePerHour * 1}";
+                    message += $"{_hoursWorked}%20|%20{_pricePerHour}%20|%20{_discount}%20|%20{_hoursWorked * _pricePerHour * 1}";
                 }
 
                 if (!String.IsNullOrEmpty(_comment))
@@ -68,7 +68,7 @@ namespace Barroc_Intens.Finances
                 }
 
                 message += $"%0d%0aMet vriendelijke groeten,%0d%0a" +
-                    $"Barroc Intens";
+                    $"Barroc Intens%0d%0a";
 
                 Process.Start($"mailto:{_companyEmail}?subject=Factuur%20Installatie%20{_date.ToString()}&body={message}");
 
