@@ -28,8 +28,8 @@ namespace Barroc_Intens
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().HasData(
-                new Category { CategoryId = 1, Name = "Automaten", IsEmployeeOnly = 1 },
-                new Category { CategoryId = 2, Name = "Koffiebonen", IsEmployeeOnly = 1 });
+                new Category { CategoryId = 1, Name = "Automaten",  },
+                new Category { CategoryId = 2, Name = "Koffiebonen", });
 
             modelBuilder.Entity<Product>().HasData(
                 new Product { ProductId = 1, CategoryId = 1, Name = "Barroc Intens Italian Light" },
