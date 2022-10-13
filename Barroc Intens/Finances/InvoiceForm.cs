@@ -37,7 +37,9 @@ namespace Barroc_Intens.Finances
             _discount = nudDiscount.Value;
             _pricePerHour = nudHourlyPrice.Value;
 
-            if (stringInputValidation(txbCompanyName.Text) && stringInputValidation(txbCompanyAdress.Text) && stringInputValidation(_date))
+            if (stringInputValidation(_companyName) 
+                && stringInputValidation(_companyAdress) 
+                && stringInputValidation(_date)
                 && decimalInputValidation(_hoursWorked)
                 && decimalInputValidation(_pricePerHour)
                 )
