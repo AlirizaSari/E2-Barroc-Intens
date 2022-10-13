@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace Barroc_Intens.Classes
+namespace Barroc_Intens
 {
     internal class Category
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace Barroc_Intens.Classes
+namespace Barroc_Intens
 {
     internal class User
     {
