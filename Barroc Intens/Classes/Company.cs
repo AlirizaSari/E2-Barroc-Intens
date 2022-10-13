@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace Barroc_Intens.Classes
+namespace Barroc_Intens
 {
     internal class Company
     {
@@ -28,10 +28,7 @@ namespace Barroc_Intens.Classes
         public int ContactId { get; set; }
         public User User { get; set; } = null;
 
-        public ObservableCollectionListSource<CustomInvoice> CustomInvoices { get; } = new ObservableCollectionListSource<CustomInvoice>();
-
         public ObservableCollectionListSource<Note> Notes { get; } = new ObservableCollectionListSource<Note>();
 
-        public ObservableCollectionListSource<MaintenanceAppointment> MaintenanceAppointments { get; } = new ObservableCollectionListSource<MaintenanceAppointment>();
     }
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Barroc_Intens.Classes
+namespace Barroc_Intens
 {
     internal class Product
     {
@@ -22,7 +22,6 @@ namespace Barroc_Intens.Classes
         public int CategoryId { get; set; }
         public Category Category { get; set; } = null;
 
-        public ObservableCollectionListSource<CustomInvoiceProduct> CustomInvoiceProducts { get; } = new ObservableCollectionListSource<CustomInvoiceProduct>();
 
     }
 }
