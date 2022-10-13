@@ -23,11 +23,11 @@ namespace Barroc_Intens
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //this.dbContext = new AppDbContext();
+            this.dbContext = new AppDbContext();
 
             // Uncomment the line below to start fresh with a new database.
             // this.dbContext.Database.EnsureDeleted();
-            //this.dbContext.Database.EnsureCreated();
+            this.dbContext.Database.EnsureCreated();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
