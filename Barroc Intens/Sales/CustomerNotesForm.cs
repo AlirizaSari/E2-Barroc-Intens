@@ -23,18 +23,18 @@ namespace Barroc_Intens.Sales
 
         private void btnExportText_Click(object sender, EventArgs e)
         {
-            bool isclient = cbClient.Checked;
+            bool isClient = cbClient.Checked;
             bool isEmployee = cbEmployee.Checked;
             string InputText = txbTextInput.Text;
             string actor = null;
-            if (cbClient.Checked)
+            if (isClient)
             {
                 actor = cbClient.Text;
                 txbConversationReport.Text += $"[{actor}]: {InputText}";
 
             }
 
-            else if (cbEmployee.Checked)
+            else if (isEmployee)
             {
                 actor = cbEmployee.Text;
                 txbConversationReport.Text += $"[{actor}]: {InputText}";
