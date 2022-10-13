@@ -12,8 +12,8 @@ namespace Barroc_Intens.Finances
 {
     public partial class InvoiceForm : Form
     {
-        string _companyName;
-        string _companyAdress;
+        string _companyName = "";
+        string _companyAdress = "";
         string _comment;
         string _date;
         decimal _hoursWorked;
