@@ -4,16 +4,18 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Outlook = Microsoft.Office.Interop.Outlook;
 
 namespace Barroc_Intens.Finances
 {
     public partial class InvoiceForm : Form
     {
-        string _companyName;
-        string _companyAdress;
+        string _companyName = "";
+        string _companyAdress = "";
         string _comment;
         string _date;
         decimal _hoursWorked;
@@ -27,16 +29,22 @@ namespace Barroc_Intens.Finances
 
         private void btnCreateInvoice_Click(object sender, EventArgs e)
         {
-          
+            _companyName = txbCompanyName.Text;
+            _companyAdress = txbCompanyAdress.Text;
             _comment = txbComment.Text;
             _date = dtpDate.Text.ToString();
             _hoursWorked = nudHoursWorked.Value;
             _discount = nudDiscount.Value;
             _pricePerHour = nudHourlyPrice.Value;
 
-            if (stringInputValidation(txbCompanyName.Text) && stringInputValidation(txbCompanyAdress.Text) && stringInputValidation(_date))
+            if (stringInputValidation(_companyName) 
+                && stringInputValidation(_companyAdress) 
+                && stringInputValidation(_date)
+                && decimalInputValidation(_hoursWorked)
+                && decimalInputValidation(_pricePerHour)
+                )
             {
-                //do stuff
+                System.Diagnostics.Process.Start("mailto:mail@domain.com");
             }
         }
 
@@ -50,7 +58,7 @@ namespace Barroc_Intens.Finances
             return true;
         }
 
-        private bool decimalInputValidation(float invoiceInformation)
+        private bool decimalInputValidation(decimal invoiceInformation)
         {
             if (invoiceInformation == 0)
             {

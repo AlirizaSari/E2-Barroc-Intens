@@ -68,7 +68,7 @@
             this.btnCreateInvoice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreateInvoice.Name = "btnCreateInvoice";
             this.btnCreateInvoice.Size = new System.Drawing.Size(173, 60);
-            this.btnCreateInvoice.TabIndex = 1;
+            this.btnCreateInvoice.TabIndex = 8;
             this.btnCreateInvoice.Text = "Creëer factuur";
             this.btnCreateInvoice.UseVisualStyleBackColor = true;
             this.btnCreateInvoice.Click += new System.EventHandler(this.btnCreateInvoice_Click);
@@ -79,7 +79,7 @@
             this.txbCompanyName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbCompanyName.Name = "txbCompanyName";
             this.txbCompanyName.Size = new System.Drawing.Size(218, 27);
-            this.txbCompanyName.TabIndex = 2;
+            this.txbCompanyName.TabIndex = 0;
             // 
             // nudHoursWorked
             // 
@@ -87,7 +87,7 @@
             this.nudHoursWorked.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudHoursWorked.Name = "nudHoursWorked";
             this.nudHoursWorked.Size = new System.Drawing.Size(218, 27);
-            this.nudHoursWorked.TabIndex = 3;
+            this.nudHoursWorked.TabIndex = 4;
             // 
             // lblDivider
             // 
@@ -163,7 +163,7 @@
             this.txbCompanyAdress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbCompanyAdress.Name = "txbCompanyAdress";
             this.txbCompanyAdress.Size = new System.Drawing.Size(218, 27);
-            this.txbCompanyAdress.TabIndex = 11;
+            this.txbCompanyAdress.TabIndex = 1;
             // 
             // txbComment
             // 
@@ -172,7 +172,7 @@
             this.txbComment.Multiline = true;
             this.txbComment.Name = "txbComment";
             this.txbComment.Size = new System.Drawing.Size(218, 84);
-            this.txbComment.TabIndex = 12;
+            this.txbComment.TabIndex = 7;
             // 
             // dtpDate
             // 
@@ -180,7 +180,7 @@
             this.dtpDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(218, 27);
-            this.dtpDate.TabIndex = 13;
+            this.dtpDate.TabIndex = 2;
             // 
             // nudDiscount
             // 
@@ -188,7 +188,7 @@
             this.nudDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudDiscount.Name = "nudDiscount";
             this.nudDiscount.Size = new System.Drawing.Size(218, 27);
-            this.nudDiscount.TabIndex = 14;
+            this.nudDiscount.TabIndex = 5;
             // 
             // nudHourlyPrice
             // 
@@ -196,7 +196,7 @@
             this.nudHourlyPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudHourlyPrice.Name = "nudHourlyPrice";
             this.nudHourlyPrice.Size = new System.Drawing.Size(218, 27);
-            this.nudHourlyPrice.TabIndex = 15;
+            this.nudHourlyPrice.TabIndex = 6;
             // 
             // lblComment
             // 
