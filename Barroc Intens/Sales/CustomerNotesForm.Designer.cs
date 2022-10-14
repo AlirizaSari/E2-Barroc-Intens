@@ -118,7 +118,6 @@
             this.btnExportToDocument.TabIndex = 9;
             this.btnExportToDocument.Text = "opslaan naar document";
             this.btnExportToDocument.UseVisualStyleBackColor = true;
-            this.btnExportToDocument.Click += new System.EventHandler(this.btnExportToDocument_Click);
             // 
             // lblMenu
             // 

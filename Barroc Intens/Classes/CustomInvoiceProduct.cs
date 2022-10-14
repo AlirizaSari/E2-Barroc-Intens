@@ -8,6 +8,7 @@ namespace Barroc_Intens
 {
     internal class CustomInvoiceProduct
     {
+        public int CustomInvoiceProductId { get; set; }
         public int CustomInvoiceId { get; set; }
         public CustomInvoice CustomInvoice { get; set; }
         public int ProductId { get; set; }

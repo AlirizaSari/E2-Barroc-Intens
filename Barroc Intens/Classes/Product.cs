@@ -22,6 +22,8 @@ namespace Barroc_Intens
         public int CategoryId { get; set; }
         public Category Category { get; set; } = null;
 
+        public ObservableCollectionListSource<CustomInvoiceProduct> CustomInvoiceProducts { get; } = new ObservableCollectionListSource<CustomInvoiceProduct>();
+
 
     }
 }
