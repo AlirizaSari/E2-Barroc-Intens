@@ -50,7 +50,7 @@ namespace Barroc_Intens
             this.Close();
         }
 
-        private void btnDirectToMaintenance_Click(object sender, EventArgs e)
+        private void btnDirectToMaintenance_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             Maintenance.MaintenanceForm MaintenanceForm = new Maintenance.MaintenanceForm();
