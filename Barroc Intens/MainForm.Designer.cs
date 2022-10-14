@@ -38,7 +38,7 @@
             // 
             // btnDirectToFinances
             // 
-            this.btnDirectToFinances.Location = new System.Drawing.Point(588, 76);
+            this.btnDirectToFinances.Location = new System.Drawing.Point(204, 101);
             this.btnDirectToFinances.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDirectToFinances.Name = "btnDirectToFinances";
             this.btnDirectToFinances.Size = new System.Drawing.Size(104, 39);
@@ -50,16 +50,17 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(175, 124);
+            this.pictureBox1.Size = new System.Drawing.Size(153, 129);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // btnDirectToSales
             // 
-            this.btnDirectToSales.Location = new System.Drawing.Point(588, 132);
+            this.btnDirectToSales.Location = new System.Drawing.Point(594, 101);
             this.btnDirectToSales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDirectToSales.Name = "btnDirectToSales";
             this.btnDirectToSales.Size = new System.Drawing.Size(104, 39);
@@ -70,7 +71,7 @@
             // 
             // btnDirectToMaintenance
             // 
-            this.btnDirectToMaintenance.Location = new System.Drawing.Point(712, 132);
+            this.btnDirectToMaintenance.Location = new System.Drawing.Point(464, 101);
             this.btnDirectToMaintenance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDirectToMaintenance.Name = "btnDirectToMaintenance";
             this.btnDirectToMaintenance.Size = new System.Drawing.Size(104, 39);
@@ -80,7 +81,7 @@
             // 
             // btnDirectToInkoop
             // 
-            this.btnDirectToInkoop.Location = new System.Drawing.Point(712, 76);
+            this.btnDirectToInkoop.Location = new System.Drawing.Point(334, 101);
             this.btnDirectToInkoop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDirectToInkoop.Name = "btnDirectToInkoop";
             this.btnDirectToInkoop.Size = new System.Drawing.Size(104, 39);
