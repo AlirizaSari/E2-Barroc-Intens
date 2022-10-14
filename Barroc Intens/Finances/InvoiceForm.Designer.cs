@@ -49,6 +49,8 @@
             this.lblError = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txbEmailAdresCompany = new System.Windows.Forms.TextBox();
+            this.cbBkrCheck = new System.Windows.Forms.CheckBox();
+            this.btnSaveToFile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).BeginInit();
@@ -66,7 +68,7 @@
             // 
             // btnCreateInvoice
             // 
-            this.btnCreateInvoice.Location = new System.Drawing.Point(606, 368);
+            this.btnCreateInvoice.Location = new System.Drawing.Point(606, 354);
             this.btnCreateInvoice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreateInvoice.Name = "btnCreateInvoice";
             this.btnCreateInvoice.Size = new System.Drawing.Size(173, 60);
@@ -212,7 +214,7 @@
             // 
             // btnAddToInvoice
             // 
-            this.btnAddToInvoice.Location = new System.Drawing.Point(606, 442);
+            this.btnAddToInvoice.Location = new System.Drawing.Point(606, 422);
             this.btnAddToInvoice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddToInvoice.Name = "btnAddToInvoice";
             this.btnAddToInvoice.Size = new System.Drawing.Size(173, 60);
@@ -248,11 +250,32 @@
             this.txbEmailAdresCompany.Size = new System.Drawing.Size(218, 27);
             this.txbEmailAdresCompany.TabIndex = 1;
             // 
+            // cbBkrCheck
+            // 
+            this.cbBkrCheck.AutoSize = true;
+            this.cbBkrCheck.Location = new System.Drawing.Point(606, 139);
+            this.cbBkrCheck.Name = "cbBkrCheck";
+            this.cbBkrCheck.Size = new System.Drawing.Size(101, 24);
+            this.cbBkrCheck.TabIndex = 21;
+            this.cbBkrCheck.Text = "BKR-check";
+            this.cbBkrCheck.UseVisualStyleBackColor = true;
+            // 
+            // btnSaveToFile
+            // 
+            this.btnSaveToFile.Location = new System.Drawing.Point(606, 489);
+            this.btnSaveToFile.Name = "btnSaveToFile";
+            this.btnSaveToFile.Size = new System.Drawing.Size(173, 59);
+            this.btnSaveToFile.TabIndex = 22;
+            this.btnSaveToFile.Text = "Opslaan naar bestand";
+            this.btnSaveToFile.UseVisualStyleBackColor = true;
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.btnSaveToFile);
+            this.Controls.Add(this.cbBkrCheck);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbEmailAdresCompany);
             this.Controls.Add(this.lblError);
@@ -309,5 +332,7 @@
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbEmailAdresCompany;
+        private System.Windows.Forms.CheckBox cbBkrCheck;
+        private System.Windows.Forms.Button btnSaveToFile;
     }
 }
