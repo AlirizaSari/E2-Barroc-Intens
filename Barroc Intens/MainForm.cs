@@ -26,7 +26,7 @@ namespace Barroc_Intens
             this.dbContext = new AppDbContext();
 
             // Uncomment the line below to start fresh with a new database.
-            // this.dbContext.Database.EnsureDeleted();
+            this.dbContext.Database.EnsureDeleted();
             this.dbContext.Database.EnsureCreated();
         }
 
@@ -47,6 +47,14 @@ namespace Barroc_Intens
             this.Hide();
             Sales.CustomerNotesForm CustomerNotesForm = new Sales.CustomerNotesForm();
             CustomerNotesForm.ShowDialog();
+            this.Close();
+        }
+
+        private void btnDirectToMaintenance_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Maintenance.MaintenanceForm MaintenanceForm = new Maintenance.MaintenanceForm();
+            MaintenanceForm.ShowDialog();
             this.Close();
         }
     }

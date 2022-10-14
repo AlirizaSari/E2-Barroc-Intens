@@ -30,22 +30,8 @@ namespace Barroc_Intens
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Category>().HasData(
-                new Category { CategoryId = 1, Name = "Automaten",  },
-                new Category { CategoryId = 2, Name = "Koffiebonen", });
-
-            modelBuilder.Entity<CustomInvoiceProduct>().HasNoKey();
-
-            modelBuilder.Entity<Product>().HasData(
-                new Product { ProductId = 1, CategoryId = 1, Name = "Barroc Intens Italian Light" },
-                new Product { ProductId = 2, CategoryId = 1, Name = "Barroc Intens Italian" },
-                new Product { ProductId = 3, CategoryId = 1, Name = "Barroc Intens Italian Deluxe" },
-                new Product { ProductId = 4, CategoryId = 1, Name = "Barroc Intens Italian Deluxe Special" },
-                new Product { ProductId = 5, CategoryId = 2, Name = "Espresso Beneficio" },
-                new Product { ProductId = 6, CategoryId = 2, Name = "Yellow Bourbon Brasil" },
-                new Product { ProductId = 7, CategoryId = 2, Name = "Espresso Roma" },
-                new Product { ProductId = 8, CategoryId = 2, Name = "Red Honey Honduras" });
-
+            //modelBuilder.Entity<CustomInvoiceProduct>().HasNoKey();
+            //modelBuilder.Entity<CustomInvoiceProduct>().HasKey(c => new { c.CustomInvoiceId, c.ProductId });
         }
     }
 }
