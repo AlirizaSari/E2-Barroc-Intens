@@ -118,6 +118,7 @@
             this.btnExportToDocument.TabIndex = 9;
             this.btnExportToDocument.Text = "opslaan naar document";
             this.btnExportToDocument.UseVisualStyleBackColor = true;
+            this.btnExportToDocument.Click += new System.EventHandler(this.btnExportToDocument_Click);
             // 
             // lblMenu
             // 
@@ -212,9 +213,9 @@
             this.cbEmployee.AutoSize = true;
             this.cbEmployee.Location = new System.Drawing.Point(880, 153);
             this.cbEmployee.Name = "cbEmployee";
-            this.cbEmployee.Size = new System.Drawing.Size(98, 21);
+            this.cbEmployee.Size = new System.Drawing.Size(107, 21);
             this.cbEmployee.TabIndex = 24;
-            this.cbEmployee.Text = "checkBox2";
+            this.cbEmployee.Text = "Medewerker";
             this.cbEmployee.UseVisualStyleBackColor = true;
             // 
             // lblDateTimePicker
@@ -228,6 +229,7 @@
             // 
             // txbConversationReport
             // 
+            this.txbConversationReport.AcceptsReturn = true;
             this.txbConversationReport.Location = new System.Drawing.Point(31, 117);
             this.txbConversationReport.Multiline = true;
             this.txbConversationReport.Name = "txbConversationReport";
