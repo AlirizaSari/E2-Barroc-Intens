@@ -13,6 +13,9 @@ namespace Barroc_Intens
         public DbSet<User> Users { get; set; }
         public DbSet<Note> Notes { get; set; }
         public DbSet<Company> Companies { get; set; }
+        public DbSet<MaintenanceAppointment> MaintenanceAppointments { get; set; }
+        public DbSet<CustomInvoice> CustomInvoices { get; set; }
+        public DbSet<CustomInvoiceProduct> CustomInvoiceProducts { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
  
@@ -30,6 +33,8 @@ namespace Barroc_Intens
             modelBuilder.Entity<Category>().HasData(
                 new Category { CategoryId = 1, Name = "Automaten",  },
                 new Category { CategoryId = 2, Name = "Koffiebonen", });
+
+            modelBuilder.Entity<CustomInvoiceProduct>().HasNoKey();
 
             modelBuilder.Entity<Product>().HasData(
                 new Product { ProductId = 1, CategoryId = 1, Name = "Barroc Intens Italian Light" },

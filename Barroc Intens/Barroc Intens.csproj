@@ -289,6 +289,9 @@
     <Compile Include="AppDbContext.cs" />
     <Compile Include="Classes\Category.cs" />
     <Compile Include="Classes\Company.cs" />
+    <Compile Include="Classes\CustomInvoice.cs" />
+    <Compile Include="Classes\CustomInvoiceProduct.cs" />
+    <Compile Include="Classes\MaintenanceAppointment.cs" />
     <Compile Include="Classes\Note.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\User.cs" />

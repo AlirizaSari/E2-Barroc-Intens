@@ -23,12 +23,14 @@ namespace Barroc_Intens
 
         public string CountryCode { get; set; }
 
-        public DateTime BkrCheckedAt { get; set; }
+        public DateTime? BkrCheckedAt { get; set; }
 
-        public int ContactId { get; set; }
+        public int UserId { get; set; }
         public User User { get; set; } = null;
 
         public ObservableCollectionListSource<Note> Notes { get; } = new ObservableCollectionListSource<Note>();
+        public ObservableCollectionListSource<CustomInvoice> CustomInvoices { get; } = new ObservableCollectionListSource<CustomInvoice>();
+        public ObservableCollectionListSource<MaintenanceAppointment> MaintenanceAppointments { get; } = new ObservableCollectionListSource<MaintenanceAppointment>();
 
     }
 }
