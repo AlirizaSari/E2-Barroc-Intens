@@ -246,7 +246,7 @@
             this.txbEmailAdresCompany.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbEmailAdresCompany.Name = "txbEmailAdresCompany";
             this.txbEmailAdresCompany.Size = new System.Drawing.Size(218, 27);
-            this.txbEmailAdresCompany.TabIndex = 19;
+            this.txbEmailAdresCompany.TabIndex = 1;
             // 
             // InvoiceForm
             // 
