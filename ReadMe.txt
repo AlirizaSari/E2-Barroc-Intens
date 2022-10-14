@@ -42,13 +42,18 @@ Begin met ‘lbl’ en daarna PascalCase.
 Voorbeeld: ‘lblResult’
 
 Datagridview:
-Begin met ‘dgv’ en daarna PascalCase
+Begin met ‘dgv’ en daarna PascalCase.
 Voorbeeld: ‘dgvInvoice’
+
+Checkbox:
+Begin met 'cb' en daarna PascalCase.
+Voorbeeld: 'cbBkrCheck'
 
 Combobox:
 Begin met ‘cbox’ en daarna PascalCase
 Voorbeeld: ‘cboxColorChoice’
 
 Textbox:
-txbNameOfItem
+Begin met 'txb' en daarna PascalCase.
+Voorbeeld: 'txbNameOfItem'
 
