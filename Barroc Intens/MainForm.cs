@@ -55,8 +55,8 @@ namespace Barroc_Intens
         private void btnDirectToMaintenance_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Maintenance.MaintenanceForm MaintenanceForm = new Maintenance.MaintenanceForm();
-            MaintenanceForm.ShowDialog();
+            DashboardMaintenanceForm dashboardMaintenanceForm = new DashboardMaintenanceForm();
+            dashboardMaintenanceForm.ShowDialog();
             this.Close();
         }
     }
