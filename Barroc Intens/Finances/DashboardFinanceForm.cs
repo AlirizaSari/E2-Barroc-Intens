@@ -26,6 +26,11 @@ namespace Barroc_Intens
             this.Close();
         }
 
+        /// <summary>
+        /// If you click on the logo, you will be redirected to the homepage.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pboxLogo_Click(object sender, EventArgs e)
         {
             this.Hide();

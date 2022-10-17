@@ -75,6 +75,12 @@ namespace Barroc_Intens.Finances
             }
         }
 
+        /// <summary>
+        /// Responsible for checking if an inputfield contains information.
+        /// <br>In case it doesn't it gives an error.</br>
+        /// </summary>
+        /// <param name="companyInformation"></param>
+        /// <returns></returns>
         private bool stringInputValidation(string companyInformation)
         {
             if (companyInformation == null)
@@ -85,10 +91,17 @@ namespace Barroc_Intens.Finances
             return true;
         }
 
+        /// <summary>
+        /// Responsible for checking if an numericUpDown contains information.
+        /// <br>In case it doesn't it gives an error.</br>
+        /// </summary>
+        /// <param name="companyInformation"></param>
+        /// <returns></returns>
         private bool decimalInputValidation(decimal invoiceInformation)
         {
             if (invoiceInformation == 0)
             {
+                lblError.Text = "Zorg ervoor dat alle velden zijn ingevuld";
                 return false;
             }
             return true;
