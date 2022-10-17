@@ -1,6 +1,6 @@
 ﻿namespace Barroc_Intens
 {
-    partial class DashboardFinanceForm
+    partial class DashboardMaintenanceForm
     {
         /// <summary>
         /// Required designer variable.
@@ -38,8 +38,8 @@
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblSystemName = new System.Windows.Forms.Label();
             this.btnLocation3 = new System.Windows.Forms.Button();
-            this.btnLocation2 = new System.Windows.Forms.Button();
-            this.btnDirectToInvoice = new System.Windows.Forms.Button();
+            this.btnMaintenancePlanner = new System.Windows.Forms.Button();
+            this.btnMaintenance = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -120,8 +120,8 @@
             this.pnlTop.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlTop.Controls.Add(this.lblSystemName);
             this.pnlTop.Controls.Add(this.btnLocation3);
-            this.pnlTop.Controls.Add(this.btnLocation2);
-            this.pnlTop.Controls.Add(this.btnDirectToInvoice);
+            this.pnlTop.Controls.Add(this.btnMaintenancePlanner);
+            this.pnlTop.Controls.Add(this.btnMaintenance);
             this.pnlTop.Location = new System.Drawing.Point(222, 0);
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(692, 157);
@@ -131,11 +131,11 @@
             // 
             this.lblSystemName.AutoSize = true;
             this.lblSystemName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSystemName.Location = new System.Drawing.Point(273, 24);
+            this.lblSystemName.Location = new System.Drawing.Point(240, 34);
             this.lblSystemName.Name = "lblSystemName";
-            this.lblSystemName.Size = new System.Drawing.Size(138, 41);
+            this.lblSystemName.Size = new System.Drawing.Size(200, 41);
             this.lblSystemName.TabIndex = 3;
-            this.lblSystemName.Text = "Finances";
+            this.lblSystemName.Text = "Maintenance";
             // 
             // btnLocation3
             // 
@@ -146,26 +146,27 @@
             this.btnLocation3.Text = "Location 3";
             this.btnLocation3.UseVisualStyleBackColor = true;
             // 
-            // btnLocation2
+            // btnMaintenancePlanner
             // 
-            this.btnLocation2.Location = new System.Drawing.Point(280, 117);
-            this.btnLocation2.Name = "btnLocation2";
-            this.btnLocation2.Size = new System.Drawing.Size(172, 37);
-            this.btnLocation2.TabIndex = 1;
-            this.btnLocation2.Text = "Location 2";
-            this.btnLocation2.UseVisualStyleBackColor = true;
+            this.btnMaintenancePlanner.Location = new System.Drawing.Point(280, 117);
+            this.btnMaintenancePlanner.Name = "btnMaintenancePlanner";
+            this.btnMaintenancePlanner.Size = new System.Drawing.Size(172, 37);
+            this.btnMaintenancePlanner.TabIndex = 1;
+            this.btnMaintenancePlanner.Text = "Planner";
+            this.btnMaintenancePlanner.UseVisualStyleBackColor = true;
+            this.btnMaintenancePlanner.Click += new System.EventHandler(this.btnMaintenancePlanner_Click);
             // 
-            // btnDirectToInvoice
+            // btnMaintenance
             // 
-            this.btnDirectToInvoice.Location = new System.Drawing.Point(52, 117);
-            this.btnDirectToInvoice.Name = "btnDirectToInvoice";
-            this.btnDirectToInvoice.Size = new System.Drawing.Size(172, 37);
-            this.btnDirectToInvoice.TabIndex = 0;
-            this.btnDirectToInvoice.Text = "Factuur aanmaken";
-            this.btnDirectToInvoice.UseVisualStyleBackColor = true;
-            this.btnDirectToInvoice.Click += new System.EventHandler(this.btnDirectToInvoice_Click);
+            this.btnMaintenance.Location = new System.Drawing.Point(52, 117);
+            this.btnMaintenance.Name = "btnMaintenance";
+            this.btnMaintenance.Size = new System.Drawing.Size(172, 37);
+            this.btnMaintenance.TabIndex = 0;
+            this.btnMaintenance.Text = "Maintenance";
+            this.btnMaintenance.UseVisualStyleBackColor = true;
+            this.btnMaintenance.Click += new System.EventHandler(this.btnMaintenance_Click);
             // 
-            // DashboardFinanceForm
+            // DashboardMaintenanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,8 +175,8 @@
             this.Controls.Add(this.pnlLeft);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "DashboardFinanceForm";
-            this.Text = "DashboardFinanceForm";
+            this.Name = "DashboardMaintenanceForm";
+            this.Text = "DashboardMaintenanceForm";
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
@@ -197,7 +198,7 @@
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Label lblSystemName;
         private System.Windows.Forms.Button btnLocation3;
-        private System.Windows.Forms.Button btnLocation2;
-        private System.Windows.Forms.Button btnDirectToInvoice;
+        private System.Windows.Forms.Button btnMaintenancePlanner;
+        private System.Windows.Forms.Button btnMaintenance;
     }
 }

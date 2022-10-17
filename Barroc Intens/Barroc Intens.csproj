@@ -314,11 +314,23 @@
     <Compile Include="Finances\InvoiceForm.Designer.cs">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inkoop\DashboardInkoopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inkoop\DashboardInkoopForm.Designer.cs">
+      <DependentUpon>DashboardInkoopForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\DashboardMaintenanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\DashboardMaintenanceForm.Designer.cs">
+      <DependentUpon>DashboardMaintenanceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Maintenance\MaintenanceForm.cs">
       <SubType>Form</SubType>
@@ -349,8 +361,14 @@
     <EmbeddedResource Include="Finances\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inkoop\DashboardInkoopForm.resx">
+      <DependentUpon>DashboardInkoopForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\DashboardMaintenanceForm.resx">
+      <DependentUpon>DashboardMaintenanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintenance\MaintenanceForm.resx">
       <DependentUpon>MaintenanceForm.cs</DependentUpon>
