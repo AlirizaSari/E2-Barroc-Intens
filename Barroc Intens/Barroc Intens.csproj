@@ -302,6 +302,12 @@
     <Compile Include="dashboardTemplateForm.Designer.cs">
       <DependentUpon>dashboardTemplateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finances\DashboardFinanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finances\DashboardFinanceForm.Designer.cs">
+      <DependentUpon>DashboardFinanceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Finances\InvoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,6 +342,9 @@
     </Compile>
     <EmbeddedResource Include="dashboardTemplateForm.resx">
       <DependentUpon>dashboardTemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finances\DashboardFinanceForm.resx">
+      <DependentUpon>DashboardFinanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Finances\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
