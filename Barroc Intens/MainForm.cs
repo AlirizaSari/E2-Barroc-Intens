@@ -59,5 +59,13 @@ namespace Barroc_Intens
             dashboardMaintenanceForm.ShowDialog();
             this.Close();
         }
+
+        private void btnDirectToInkoop_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DashboardInkoopForm dashboardInkoopForm = new DashboardInkoopForm();
+            dashboardInkoopForm.ShowDialog();
+            this.Close();
+        }
     }
 }

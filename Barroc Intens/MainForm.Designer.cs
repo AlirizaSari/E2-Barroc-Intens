@@ -89,6 +89,7 @@
             this.btnDirectToInkoop.TabIndex = 4;
             this.btnDirectToInkoop.Text = "Inkoop";
             this.btnDirectToInkoop.UseVisualStyleBackColor = true;
+            this.btnDirectToInkoop.Click += new System.EventHandler(this.btnDirectToInkoop_Click);
             // 
             // MainForm
             // 
