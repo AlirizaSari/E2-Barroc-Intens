@@ -314,6 +314,12 @@
     <Compile Include="Finances\InvoiceForm.Designer.cs">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inkoop\DashboardInkoopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inkoop\DashboardInkoopForm.Designer.cs">
+      <DependentUpon>DashboardInkoopForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Finances\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inkoop\DashboardInkoopForm.resx">
+      <DependentUpon>DashboardInkoopForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
