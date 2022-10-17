@@ -38,5 +38,13 @@ namespace Barroc_Intens
             mainForm.ShowDialog();
             this.Close();
         }
+
+        private void btnBackToMain_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Barroc_Intens.MainForm mainForm = new Barroc_Intens.MainForm();
+            mainForm.ShowDialog();
+            this.Close();
+        }
     }
 }

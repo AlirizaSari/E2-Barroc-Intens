@@ -138,17 +138,17 @@
             // 
             // btnBackToMain
             // 
-            this.btnBackToMain.Location = new System.Drawing.Point(496, 117);
+            this.btnBackToMain.Location = new System.Drawing.Point(52, 117);
             this.btnBackToMain.Name = "btnBackToMain";
             this.btnBackToMain.Size = new System.Drawing.Size(172, 37);
             this.btnBackToMain.TabIndex = 2;
-            this.btnBackToMain.Text = "Terug naar homepagina";
+            this.btnBackToMain.Text = "Home";
             this.btnBackToMain.UseVisualStyleBackColor = true;
             this.btnBackToMain.Click += new System.EventHandler(this.btnBackToMain_Click);
             // 
             // btnStock
             // 
-            this.btnStock.Location = new System.Drawing.Point(280, 117);
+            this.btnStock.Location = new System.Drawing.Point(492, 117);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(172, 37);
             this.btnStock.TabIndex = 1;
@@ -157,7 +157,7 @@
             // 
             // btnInkoop
             // 
-            this.btnInkoop.Location = new System.Drawing.Point(52, 117);
+            this.btnInkoop.Location = new System.Drawing.Point(272, 117);
             this.btnInkoop.Name = "btnInkoop";
             this.btnInkoop.Size = new System.Drawing.Size(172, 37);
             this.btnInkoop.TabIndex = 0;
