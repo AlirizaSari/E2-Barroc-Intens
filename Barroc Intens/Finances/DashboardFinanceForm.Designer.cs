@@ -36,10 +36,10 @@
             this.lblAccountName = new System.Windows.Forms.Label();
             this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.btnLocation1 = new System.Windows.Forms.Button();
-            this.btnLocation2 = new System.Windows.Forms.Button();
-            this.btnLocation3 = new System.Windows.Forms.Button();
             this.lblSystemName = new System.Windows.Forms.Label();
+            this.btnLocation3 = new System.Windows.Forms.Button();
+            this.btnLocation2 = new System.Windows.Forms.Button();
+            this.btnDirectToInvoice = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -113,6 +113,7 @@
             this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboxLogo.TabIndex = 1;
             this.pboxLogo.TabStop = false;
+            this.pboxLogo.Click += new System.EventHandler(this.pboxLogo_Click);
             // 
             // pnlTop
             // 
@@ -120,29 +121,21 @@
             this.pnlTop.Controls.Add(this.lblSystemName);
             this.pnlTop.Controls.Add(this.btnLocation3);
             this.pnlTop.Controls.Add(this.btnLocation2);
-            this.pnlTop.Controls.Add(this.btnLocation1);
+            this.pnlTop.Controls.Add(this.btnDirectToInvoice);
             this.pnlTop.Location = new System.Drawing.Point(222, 0);
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(692, 157);
             this.pnlTop.TabIndex = 1;
             // 
-            // btnLocation1
+            // lblSystemName
             // 
-            this.btnLocation1.Location = new System.Drawing.Point(52, 117);
-            this.btnLocation1.Name = "btnLocation1";
-            this.btnLocation1.Size = new System.Drawing.Size(172, 37);
-            this.btnLocation1.TabIndex = 0;
-            this.btnLocation1.Text = "Location 1";
-            this.btnLocation1.UseVisualStyleBackColor = true;
-            // 
-            // btnLocation2
-            // 
-            this.btnLocation2.Location = new System.Drawing.Point(280, 117);
-            this.btnLocation2.Name = "btnLocation2";
-            this.btnLocation2.Size = new System.Drawing.Size(172, 37);
-            this.btnLocation2.TabIndex = 1;
-            this.btnLocation2.Text = "Location 2";
-            this.btnLocation2.UseVisualStyleBackColor = true;
+            this.lblSystemName.AutoSize = true;
+            this.lblSystemName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSystemName.Location = new System.Drawing.Point(273, 24);
+            this.lblSystemName.Name = "lblSystemName";
+            this.lblSystemName.Size = new System.Drawing.Size(138, 41);
+            this.lblSystemName.TabIndex = 3;
+            this.lblSystemName.Text = "Finances";
             // 
             // btnLocation3
             // 
@@ -153,15 +146,24 @@
             this.btnLocation3.Text = "Location 3";
             this.btnLocation3.UseVisualStyleBackColor = true;
             // 
-            // lblSystemName
+            // btnLocation2
             // 
-            this.lblSystemName.AutoSize = true;
-            this.lblSystemName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSystemName.Location = new System.Drawing.Point(240, 34);
-            this.lblSystemName.Name = "lblSystemName";
-            this.lblSystemName.Size = new System.Drawing.Size(211, 41);
-            this.lblSystemName.TabIndex = 3;
-            this.lblSystemName.Text = "Systeemnaam";
+            this.btnLocation2.Location = new System.Drawing.Point(280, 117);
+            this.btnLocation2.Name = "btnLocation2";
+            this.btnLocation2.Size = new System.Drawing.Size(172, 37);
+            this.btnLocation2.TabIndex = 1;
+            this.btnLocation2.Text = "Location 2";
+            this.btnLocation2.UseVisualStyleBackColor = true;
+            // 
+            // btnDirectToInvoice
+            // 
+            this.btnDirectToInvoice.Location = new System.Drawing.Point(52, 117);
+            this.btnDirectToInvoice.Name = "btnDirectToInvoice";
+            this.btnDirectToInvoice.Size = new System.Drawing.Size(172, 37);
+            this.btnDirectToInvoice.TabIndex = 0;
+            this.btnDirectToInvoice.Text = "Factuur aanmaken";
+            this.btnDirectToInvoice.UseVisualStyleBackColor = true;
+            this.btnDirectToInvoice.Click += new System.EventHandler(this.btnDirectToInvoice_Click);
             // 
             // DashboardFinanceForm
             // 
@@ -196,6 +198,6 @@
         private System.Windows.Forms.Label lblSystemName;
         private System.Windows.Forms.Button btnLocation3;
         private System.Windows.Forms.Button btnLocation2;
-        private System.Windows.Forms.Button btnLocation1;
+        private System.Windows.Forms.Button btnDirectToInvoice;
     }
 }
