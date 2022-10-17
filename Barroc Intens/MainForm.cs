@@ -38,8 +38,10 @@ namespace Barroc_Intens
 
         private void btnDirectToFinances_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Finances.InvoiceForm invoiceForm = new Finances.InvoiceForm();
             invoiceForm.ShowDialog();
+            this.Close();
         }
 
         private void btnDirectToSales_Click(object sender, EventArgs e)
