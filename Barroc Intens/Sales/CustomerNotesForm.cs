@@ -23,26 +23,7 @@ namespace Barroc_Intens.Sales
 
         private void btnExportText_Click(object sender, EventArgs e)
         {
-            bool isClient = cbClient.Checked;
-            bool isEmployee = cbEmployee.Checked;
-            string InputText = txbTextInput.Text;
-            string actor = null;
-            if (isClient)
-            {
-                actor = cbClient.Text;
-                txbConversationReport.Text += $"[{actor}]: {InputText}";
-
-            }
-
-            else if (isEmployee)
-            {
-                actor = cbEmployee.Text;
-                txbConversationReport.Text += $"[{actor}]: {InputText}";
-            }
-            else
-            {
-                MessageBox.Show("vul een actor in (klant/medewerker)");
-            }
+           
 
         }
 
@@ -52,6 +33,11 @@ namespace Barroc_Intens.Sales
             Barroc_Intens.MainForm mainForm = new Barroc_Intens.MainForm();
             mainForm.ShowDialog();
             this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

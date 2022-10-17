@@ -37,18 +37,10 @@
             this.btnExportToDocument = new System.Windows.Forms.Button();
             this.lblMenu = new System.Windows.Forms.Label();
             this.lblInvoervelden = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblTitleHead = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txbTitleHeader = new System.Windows.Forms.TextBox();
-            this.txbTextInput = new System.Windows.Forms.TextBox();
-            this.dtpDateInput = new System.Windows.Forms.DateTimePicker();
-            this.lblActor = new System.Windows.Forms.Label();
-            this.cbClient = new System.Windows.Forms.CheckBox();
-            this.cbEmployee = new System.Windows.Forms.CheckBox();
-            this.lblDateTimePicker = new System.Windows.Forms.Label();
             this.txbConversationReport = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -139,93 +131,6 @@
             this.lblInvoervelden.TabIndex = 12;
             this.lblInvoervelden.Text = "Invoervelden";
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox2.Location = new System.Drawing.Point(664, 117);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(436, 316);
-            this.textBox2.TabIndex = 11;
-            // 
-            // lblTitleHead
-            // 
-            this.lblTitleHead.AutoSize = true;
-            this.lblTitleHead.Location = new System.Drawing.Point(703, 184);
-            this.lblTitleHead.Name = "lblTitleHead";
-            this.lblTitleHead.Size = new System.Drawing.Size(57, 17);
-            this.lblTitleHead.TabIndex = 13;
-            this.lblTitleHead.Text = "titel kop";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(687, 214);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 17);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "text invoer";
-            // 
-            // txbTitleHeader
-            // 
-            this.txbTitleHeader.Location = new System.Drawing.Point(766, 181);
-            this.txbTitleHeader.Name = "txbTitleHeader";
-            this.txbTitleHeader.Size = new System.Drawing.Size(314, 22);
-            this.txbTitleHeader.TabIndex = 17;
-            // 
-            // txbTextInput
-            // 
-            this.txbTextInput.Location = new System.Drawing.Point(766, 211);
-            this.txbTextInput.Multiline = true;
-            this.txbTextInput.Name = "txbTextInput";
-            this.txbTextInput.Size = new System.Drawing.Size(314, 72);
-            this.txbTextInput.TabIndex = 19;
-            // 
-            // dtpDateInput
-            // 
-            this.dtpDateInput.Location = new System.Drawing.Point(766, 290);
-            this.dtpDateInput.Name = "dtpDateInput";
-            this.dtpDateInput.Size = new System.Drawing.Size(314, 22);
-            this.dtpDateInput.TabIndex = 21;
-            // 
-            // lblActor
-            // 
-            this.lblActor.AutoSize = true;
-            this.lblActor.Location = new System.Drawing.Point(714, 157);
-            this.lblActor.Name = "lblActor";
-            this.lblActor.Size = new System.Drawing.Size(41, 17);
-            this.lblActor.TabIndex = 22;
-            this.lblActor.Text = "Actor";
-            // 
-            // cbClient
-            // 
-            this.cbClient.AutoSize = true;
-            this.cbClient.Location = new System.Drawing.Point(766, 153);
-            this.cbClient.Name = "cbClient";
-            this.cbClient.Size = new System.Drawing.Size(60, 21);
-            this.cbClient.TabIndex = 23;
-            this.cbClient.Text = "klant";
-            this.cbClient.UseVisualStyleBackColor = true;
-            // 
-            // cbEmployee
-            // 
-            this.cbEmployee.AutoSize = true;
-            this.cbEmployee.Location = new System.Drawing.Point(880, 153);
-            this.cbEmployee.Name = "cbEmployee";
-            this.cbEmployee.Size = new System.Drawing.Size(107, 21);
-            this.cbEmployee.TabIndex = 24;
-            this.cbEmployee.Text = "Medewerker";
-            this.cbEmployee.UseVisualStyleBackColor = true;
-            // 
-            // lblDateTimePicker
-            // 
-            this.lblDateTimePicker.AutoSize = true;
-            this.lblDateTimePicker.Location = new System.Drawing.Point(708, 295);
-            this.lblDateTimePicker.Name = "lblDateTimePicker";
-            this.lblDateTimePicker.Size = new System.Drawing.Size(47, 17);
-            this.lblDateTimePicker.TabIndex = 25;
-            this.lblDateTimePicker.Text = "datum";
-            // 
             // txbConversationReport
             // 
             this.txbConversationReport.AcceptsReturn = true;
@@ -235,24 +140,26 @@
             this.txbConversationReport.Size = new System.Drawing.Size(451, 316);
             this.txbConversationReport.TabIndex = 26;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(664, 117);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(482, 316);
+            this.dataGridView1.TabIndex = 27;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // CustomerNotesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1158, 589);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblConversationReport);
             this.Controls.Add(this.txbConversationReport);
-            this.Controls.Add(this.lblDateTimePicker);
-            this.Controls.Add(this.cbEmployee);
-            this.Controls.Add(this.cbClient);
-            this.Controls.Add(this.lblActor);
-            this.Controls.Add(this.dtpDateInput);
-            this.Controls.Add(this.txbTextInput);
-            this.Controls.Add(this.txbTitleHeader);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblTitleHead);
             this.Controls.Add(this.lblInvoervelden);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.lblMenu);
             this.Controls.Add(this.btnExportToDocument);
             this.Controls.Add(this.btnRecallLastExport);
@@ -263,6 +170,7 @@
             this.Name = "CustomerNotesForm";
             this.Text = "CustomerNotesForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,16 +187,7 @@
         private System.Windows.Forms.Button btnExportToDocument;
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Label lblInvoervelden;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label lblTitleHead;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txbTitleHeader;
-        private System.Windows.Forms.TextBox txbTextInput;
-        private System.Windows.Forms.DateTimePicker dtpDateInput;
-        private System.Windows.Forms.Label lblActor;
-        private System.Windows.Forms.CheckBox cbClient;
-        private System.Windows.Forms.CheckBox cbEmployee;
-        private System.Windows.Forms.Label lblDateTimePicker;
         private System.Windows.Forms.TextBox txbConversationReport;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
