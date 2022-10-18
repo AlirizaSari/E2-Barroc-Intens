@@ -61,6 +61,7 @@
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.Size = new System.Drawing.Size(189, 22);
             this.txbPassword.TabIndex = 2;
+            this.txbPassword.TextChanged += new System.EventHandler(this.txbPassword_TextChanged);
             // 
             // lblPassword
             // 

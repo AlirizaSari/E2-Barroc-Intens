@@ -51,7 +51,7 @@ namespace Barroc_Intens
 
         private void txbUsername_TextChanged(object sender, EventArgs e)
         {
-            if ((txbUsername.Text).Count() < 1)
+            if ((txbPassword.Text).Count() < 1 || (txbPassword.Text).Count() < 1)
             {
                 btnLogin.Enabled = false;
             }
@@ -67,6 +67,18 @@ namespace Barroc_Intens
 
             this.dbContext?.Dispose();
             this.dbContext = null;
+        }
+
+        private void txbPassword_TextChanged(object sender, EventArgs e)
+        {
+            if ((txbPassword.Text).Count() < 1 || (txbPassword.Text).Count() < 1)
+            {
+                btnLogin.Enabled = false;
+            }
+            else
+            {
+                btnLogin.Enabled = true;
+            }
         }
     }
 }
