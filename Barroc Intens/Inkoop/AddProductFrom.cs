@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,16 +24,21 @@ namespace Barroc_Intens.Inkoop
         private void AddProductFrom_Load(object sender, EventArgs e)
         {
             this.dbContext = new AppDbContext();
+
+            this.dbContext.Categories.Load();
+
+            this.categoryBindingSource.DataSource = dbContext.Categories.Local.ToBindingList();
         }
 
         private void btnSaveProduct_Click(object sender, EventArgs e)
         {
+
             var product = new Product
             {
                 Name = txbNameProduct.Text,
                 Description = txbDescriptionProduct.Text,
                 Price = decimal.Parse(txbPriceProduct.Text),
-                Category = dbContext.Categories.FirstOrDefault(c => c.Name == txbCategoryProduct.Text)
+                CategoryId = (int)newProductCategoryComboBox.SelectedValue
             };
             dbContext.Products.Add(product);
             dbContext.SaveChanges();

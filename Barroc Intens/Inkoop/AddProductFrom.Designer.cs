@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,9 +37,11 @@
             this.txbNameProduct = new System.Windows.Forms.TextBox();
             this.txbDescriptionProduct = new System.Windows.Forms.TextBox();
             this.txbPriceProduct = new System.Windows.Forms.TextBox();
-            this.txbCategoryProduct = new System.Windows.Forms.TextBox();
             this.btnSaveProduct = new System.Windows.Forms.Button();
             this.btnCancelProduct = new System.Windows.Forms.Button();
+            this.newProductCategoryComboBox = new System.Windows.Forms.ComboBox();
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -112,13 +115,6 @@
             this.txbPriceProduct.Size = new System.Drawing.Size(224, 20);
             this.txbPriceProduct.TabIndex = 7;
             // 
-            // txbCategoryProduct
-            // 
-            this.txbCategoryProduct.Location = new System.Drawing.Point(133, 145);
-            this.txbCategoryProduct.Name = "txbCategoryProduct";
-            this.txbCategoryProduct.Size = new System.Drawing.Size(224, 20);
-            this.txbCategoryProduct.TabIndex = 8;
-            // 
             // btnSaveProduct
             // 
             this.btnSaveProduct.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,14 +137,30 @@
             this.btnCancelProduct.UseVisualStyleBackColor = true;
             this.btnCancelProduct.Click += new System.EventHandler(this.btnCancelProduct_Click);
             // 
+            // newProductCategoryComboBox
+            // 
+            this.newProductCategoryComboBox.DataSource = this.categoryBindingSource;
+            this.newProductCategoryComboBox.DisplayMember = "Name";
+            this.newProductCategoryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.newProductCategoryComboBox.FormattingEnabled = true;
+            this.newProductCategoryComboBox.Location = new System.Drawing.Point(133, 145);
+            this.newProductCategoryComboBox.Name = "newProductCategoryComboBox";
+            this.newProductCategoryComboBox.Size = new System.Drawing.Size(224, 21);
+            this.newProductCategoryComboBox.TabIndex = 11;
+            this.newProductCategoryComboBox.ValueMember = "CategoryId";
+            // 
+            // categoryBindingSource
+            // 
+            this.categoryBindingSource.DataSource = typeof(Barroc_Intens.Category);
+            // 
             // AddProductFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 223);
+            this.Controls.Add(this.newProductCategoryComboBox);
             this.Controls.Add(this.btnCancelProduct);
             this.Controls.Add(this.btnSaveProduct);
-            this.Controls.Add(this.txbCategoryProduct);
             this.Controls.Add(this.txbPriceProduct);
             this.Controls.Add(this.txbDescriptionProduct);
             this.Controls.Add(this.txbNameProduct);
@@ -160,6 +172,7 @@
             this.Name = "AddProductFrom";
             this.Text = "AddProductFrom";
             this.Load += new System.EventHandler(this.AddProductFrom_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,8 +188,9 @@
         private System.Windows.Forms.TextBox txbNameProduct;
         private System.Windows.Forms.TextBox txbDescriptionProduct;
         private System.Windows.Forms.TextBox txbPriceProduct;
-        private System.Windows.Forms.TextBox txbCategoryProduct;
         private System.Windows.Forms.Button btnSaveProduct;
         private System.Windows.Forms.Button btnCancelProduct;
+        private System.Windows.Forms.ComboBox newProductCategoryComboBox;
+        private System.Windows.Forms.BindingSource categoryBindingSource;
     }
 }

@@ -26,7 +26,7 @@ namespace Barroc_Intens
             this.dbContext = new AppDbContext();
 
             // Uncomment the line below to start fresh with a new database.
-            //this.dbContext.Database.EnsureDeleted();
+            this.dbContext.Database.EnsureDeleted();
             this.dbContext.Database.EnsureCreated();
         }
 

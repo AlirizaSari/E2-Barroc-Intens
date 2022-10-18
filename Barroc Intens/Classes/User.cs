@@ -17,6 +17,9 @@ namespace Barroc_Intens
 
         public string Password { get; set; }
 
+        public int RolId { get; set; }
+        public Rol Rol { get; set; } = null;
+
         public ObservableCollectionListSource<Company> Companies { get; } = new ObservableCollectionListSource<Company>();
 
         public ObservableCollectionListSource<Note> Notes { get; } = new ObservableCollectionListSource<Note>();

@@ -15,6 +15,8 @@ namespace Barroc_Intens
 
         public string Description { get; set; }
 
+        public string Brand { get; set; }
+
         public string ImagePath { get; set; }
 
         public decimal Price { get; set; }
@@ -23,7 +25,5 @@ namespace Barroc_Intens
         public Category Category { get; set; } = null;
 
         public ObservableCollectionListSource<CustomInvoiceProduct> CustomInvoiceProducts { get; } = new ObservableCollectionListSource<CustomInvoiceProduct>();
-
-
     }
 }

@@ -11,5 +11,10 @@ namespace Barroc_Intens
         public int IsEmployeeOnly { get; set; }
 
         public ObservableCollectionListSource<Product> Products { get; } = new ObservableCollectionListSource<Product>();
+
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 }
