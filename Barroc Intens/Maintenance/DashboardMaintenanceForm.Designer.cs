@@ -106,6 +106,7 @@
             // 
             // pboxLogo
             // 
+            this.pboxLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pboxLogo.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
             this.pboxLogo.Location = new System.Drawing.Point(61, 12);
             this.pboxLogo.Name = "pboxLogo";

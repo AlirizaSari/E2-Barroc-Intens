@@ -51,9 +51,11 @@
             this.txbEmailAdresCompany = new System.Windows.Forms.TextBox();
             this.cbBkrCheck = new System.Windows.Forms.CheckBox();
             this.btnSaveToFile = new System.Windows.Forms.Button();
+            this.pboxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInvoice
@@ -269,11 +271,24 @@
             this.btnSaveToFile.Text = "Opslaan naar bestand";
             this.btnSaveToFile.UseVisualStyleBackColor = true;
             // 
+            // pboxLogo
+            // 
+            this.pboxLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pboxLogo.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
+            this.pboxLogo.Location = new System.Drawing.Point(55, 21);
+            this.pboxLogo.Name = "pboxLogo";
+            this.pboxLogo.Size = new System.Drawing.Size(100, 100);
+            this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboxLogo.TabIndex = 23;
+            this.pboxLogo.TabStop = false;
+            this.pboxLogo.Click += new System.EventHandler(this.pboxLogo_Click);
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.pboxLogo);
             this.Controls.Add(this.btnSaveToFile);
             this.Controls.Add(this.cbBkrCheck);
             this.Controls.Add(this.label1);
@@ -304,6 +319,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,5 +350,6 @@
         private System.Windows.Forms.TextBox txbEmailAdresCompany;
         private System.Windows.Forms.CheckBox cbBkrCheck;
         private System.Windows.Forms.Button btnSaveToFile;
+        private System.Windows.Forms.PictureBox pboxLogo;
     }
 }

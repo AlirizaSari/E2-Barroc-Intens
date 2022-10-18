@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.btnBackToMain = new System.Windows.Forms.Button();
             this.lblConversationReport = new System.Windows.Forms.Label();
             this.btnExportText = new System.Windows.Forms.Button();
@@ -39,19 +39,22 @@
             this.lblInvoervelden = new System.Windows.Forms.Label();
             this.txbConversationReport = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pboxLogo
             // 
-            this.pictureBox1.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
-            this.pictureBox1.Location = new System.Drawing.Point(31, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 101);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pboxLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pboxLogo.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
+            this.pboxLogo.Location = new System.Drawing.Point(31, 13);
+            this.pboxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pboxLogo.Name = "pboxLogo";
+            this.pboxLogo.Size = new System.Drawing.Size(100, 100);
+            this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboxLogo.TabIndex = 2;
+            this.pboxLogo.TabStop = false;
+            this.pboxLogo.Click += new System.EventHandler(this.pboxLogo_Click);
             // 
             // btnBackToMain
             // 
@@ -166,10 +169,10 @@
             this.Controls.Add(this.btnSaveToDb);
             this.Controls.Add(this.btnExportText);
             this.Controls.Add(this.btnBackToMain);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pboxLogo);
             this.Name = "CustomerNotesForm";
             this.Text = "CustomerNotesForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,7 +181,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pboxLogo;
         private System.Windows.Forms.Button btnBackToMain;
         private System.Windows.Forms.Label lblConversationReport;
         private System.Windows.Forms.Button btnExportText;
