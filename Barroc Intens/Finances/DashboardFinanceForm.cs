@@ -51,5 +51,13 @@ namespace Barroc_Intens
         {
             txbExtraInfo.Text = "Dit is een test";
         }
+
+        private void btnDirectToLeaseContract_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LeaseContractForm leaseContractForm = new LeaseContractForm();
+            leaseContractForm.ShowDialog();
+            this.Close();
+        }
     }
 }

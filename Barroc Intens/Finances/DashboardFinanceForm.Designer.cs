@@ -37,7 +37,7 @@
             this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblSystemName = new System.Windows.Forms.Label();
-            this.btnLocation3 = new System.Windows.Forms.Button();
+            this.btnDirectToLeaseContract = new System.Windows.Forms.Button();
             this.btnDirectToInvoice = new System.Windows.Forms.Button();
             this.btnBackToMain = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
@@ -122,7 +122,7 @@
             // 
             this.pnlTop.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlTop.Controls.Add(this.lblSystemName);
-            this.pnlTop.Controls.Add(this.btnLocation3);
+            this.pnlTop.Controls.Add(this.btnDirectToLeaseContract);
             this.pnlTop.Controls.Add(this.btnDirectToInvoice);
             this.pnlTop.Controls.Add(this.btnBackToMain);
             this.pnlTop.Location = new System.Drawing.Point(222, 0);
@@ -140,14 +140,15 @@
             this.lblSystemName.TabIndex = 3;
             this.lblSystemName.Text = "Finances";
             // 
-            // btnLocation3
+            // btnDirectToLeaseContract
             // 
-            this.btnLocation3.Location = new System.Drawing.Point(496, 117);
-            this.btnLocation3.Name = "btnLocation3";
-            this.btnLocation3.Size = new System.Drawing.Size(172, 37);
-            this.btnLocation3.TabIndex = 2;
-            this.btnLocation3.Text = "Location 3";
-            this.btnLocation3.UseVisualStyleBackColor = true;
+            this.btnDirectToLeaseContract.Location = new System.Drawing.Point(496, 117);
+            this.btnDirectToLeaseContract.Name = "btnDirectToLeaseContract";
+            this.btnDirectToLeaseContract.Size = new System.Drawing.Size(172, 37);
+            this.btnDirectToLeaseContract.TabIndex = 2;
+            this.btnDirectToLeaseContract.Text = "Lease contracten";
+            this.btnDirectToLeaseContract.UseVisualStyleBackColor = true;
+            this.btnDirectToLeaseContract.Click += new System.EventHandler(this.btnDirectToLeaseContract_Click);
             // 
             // btnDirectToInvoice
             // 
@@ -201,7 +202,7 @@
         private System.Windows.Forms.Label lblDepartment;
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Label lblSystemName;
-        private System.Windows.Forms.Button btnLocation3;
+        private System.Windows.Forms.Button btnDirectToLeaseContract;
         private System.Windows.Forms.Button btnBackToMain;
         private System.Windows.Forms.Button btnDirectToInvoice;
     }
