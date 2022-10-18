@@ -24,5 +24,13 @@ namespace Barroc_Intens
             mainForm.ShowDialog();
             this.Close();
         }
+
+        private void pboxLogo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.ShowDialog();
+            this.Close();
+        }
     }
 }

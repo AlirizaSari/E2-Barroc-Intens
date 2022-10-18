@@ -65,7 +65,7 @@
             this.lblExtraInfo.AutoSize = true;
             this.lblExtraInfo.Location = new System.Drawing.Point(20, 322);
             this.lblExtraInfo.Name = "lblExtraInfo";
-            this.lblExtraInfo.Size = new System.Drawing.Size(91, 15);
+            this.lblExtraInfo.Size = new System.Drawing.Size(115, 20);
             this.lblExtraInfo.TabIndex = 6;
             this.lblExtraInfo.Text = "Extra Informatie";
             // 
@@ -91,7 +91,7 @@
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Location = new System.Drawing.Point(53, 249);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(52, 15);
+            this.lblDepartment.Size = new System.Drawing.Size(66, 20);
             this.lblDepartment.TabIndex = 3;
             this.lblDepartment.Text = "Afdeling";
             // 
@@ -100,12 +100,13 @@
             this.lblAccountName.AutoSize = true;
             this.lblAccountName.Location = new System.Drawing.Point(53, 220);
             this.lblAccountName.Name = "lblAccountName";
-            this.lblAccountName.Size = new System.Drawing.Size(87, 15);
+            this.lblAccountName.Size = new System.Drawing.Size(107, 20);
             this.lblAccountName.TabIndex = 2;
             this.lblAccountName.Text = "Account Naam";
             // 
             // pboxLogo
             // 
+            this.pboxLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pboxLogo.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
             this.pboxLogo.Location = new System.Drawing.Point(61, 12);
             this.pboxLogo.Name = "pboxLogo";
@@ -113,6 +114,7 @@
             this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboxLogo.TabIndex = 1;
             this.pboxLogo.TabStop = false;
+            this.pboxLogo.Click += new System.EventHandler(this.pboxLogo_Click);
             // 
             // pnlTop
             // 
@@ -132,7 +134,7 @@
             this.lblInkoop.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInkoop.Location = new System.Drawing.Point(293, 30);
             this.lblInkoop.Name = "lblInkoop";
-            this.lblInkoop.Size = new System.Drawing.Size(95, 32);
+            this.lblInkoop.Size = new System.Drawing.Size(118, 41);
             this.lblInkoop.TabIndex = 3;
             this.lblInkoop.Text = "Inkoop";
             // 
@@ -166,7 +168,7 @@
             // 
             // DashboardInkoopForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.pnlTop);
