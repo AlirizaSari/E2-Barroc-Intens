@@ -41,6 +41,8 @@
             this.btnCancelProduct = new System.Windows.Forms.Button();
             this.newProductCategoryComboBox = new System.Windows.Forms.ComboBox();
             this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.txbBrandProduct = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +80,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 123);
+            this.label4.Location = new System.Drawing.Point(14, 155);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 3;
@@ -88,7 +90,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 148);
+            this.label5.Location = new System.Drawing.Point(14, 187);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 4;
@@ -110,7 +112,7 @@
             // 
             // txbPriceProduct
             // 
-            this.txbPriceProduct.Location = new System.Drawing.Point(133, 120);
+            this.txbPriceProduct.Location = new System.Drawing.Point(133, 152);
             this.txbPriceProduct.Name = "txbPriceProduct";
             this.txbPriceProduct.Size = new System.Drawing.Size(224, 20);
             this.txbPriceProduct.TabIndex = 7;
@@ -118,7 +120,7 @@
             // btnSaveProduct
             // 
             this.btnSaveProduct.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveProduct.Location = new System.Drawing.Point(133, 183);
+            this.btnSaveProduct.Location = new System.Drawing.Point(133, 225);
             this.btnSaveProduct.Name = "btnSaveProduct";
             this.btnSaveProduct.Size = new System.Drawing.Size(75, 23);
             this.btnSaveProduct.TabIndex = 9;
@@ -129,7 +131,7 @@
             // btnCancelProduct
             // 
             this.btnCancelProduct.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelProduct.Location = new System.Drawing.Point(214, 183);
+            this.btnCancelProduct.Location = new System.Drawing.Point(214, 225);
             this.btnCancelProduct.Name = "btnCancelProduct";
             this.btnCancelProduct.Size = new System.Drawing.Size(75, 23);
             this.btnCancelProduct.TabIndex = 10;
@@ -143,7 +145,7 @@
             this.newProductCategoryComboBox.DisplayMember = "Name";
             this.newProductCategoryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.newProductCategoryComboBox.FormattingEnabled = true;
-            this.newProductCategoryComboBox.Location = new System.Drawing.Point(133, 145);
+            this.newProductCategoryComboBox.Location = new System.Drawing.Point(133, 184);
             this.newProductCategoryComboBox.Name = "newProductCategoryComboBox";
             this.newProductCategoryComboBox.Size = new System.Drawing.Size(224, 21);
             this.newProductCategoryComboBox.TabIndex = 11;
@@ -153,11 +155,30 @@
             // 
             this.categoryBindingSource.DataSource = typeof(Barroc_Intens.Category);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(14, 124);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(36, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Merk:";
+            // 
+            // txbBrandProduct
+            // 
+            this.txbBrandProduct.Location = new System.Drawing.Point(133, 121);
+            this.txbBrandProduct.Name = "txbBrandProduct";
+            this.txbBrandProduct.Size = new System.Drawing.Size(224, 20);
+            this.txbBrandProduct.TabIndex = 13;
+            // 
             // AddProductFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 223);
+            this.ClientSize = new System.Drawing.Size(369, 260);
+            this.Controls.Add(this.txbBrandProduct);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.newProductCategoryComboBox);
             this.Controls.Add(this.btnCancelProduct);
             this.Controls.Add(this.btnSaveProduct);
@@ -192,5 +213,7 @@
         private System.Windows.Forms.Button btnCancelProduct;
         private System.Windows.Forms.ComboBox newProductCategoryComboBox;
         private System.Windows.Forms.BindingSource categoryBindingSource;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txbBrandProduct;
     }
 }
