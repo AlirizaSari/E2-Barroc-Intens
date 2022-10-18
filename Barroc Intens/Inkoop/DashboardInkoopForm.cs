@@ -3,11 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Barroc_Intens
 {
@@ -58,6 +60,16 @@ namespace Barroc_Intens
             this.Close();
         }
 
+        private void btnRemoveProduct_Click(object sender, EventArgs e)
+        {
+            var product = (Product)this.productsDataGridView.CurrentRow?.DataBoundItem;
+
+            productsDataGridView.Rows.RemoveAt(productsDataGridView.SelectedRows[0].Index);
+
+            dbContext.Products.Remove(product);
+            dbContext.SaveChanges();
+        }
+
         private void categoriesDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             if (this.dbContext == null)
@@ -75,6 +87,16 @@ namespace Barroc_Intens
             Inkoop.AddCategoryForm addCategoryForm = new Inkoop.AddCategoryForm();
             addCategoryForm.ShowDialog();
             this.Close();
+        }
+
+        private void btnRemoveCategory_Click(object sender, EventArgs e)
+        {
+            var category = (Category)this.categoriesDataGridView.CurrentRow?.DataBoundItem;
+
+            categoriesDataGridView.Rows.RemoveAt(categoriesDataGridView.SelectedRows[0].Index);
+
+            dbContext.Categories.Remove(category);
+            dbContext.SaveChanges();
         }
 
         private void btnBackToMain_Click(object sender, EventArgs e)
