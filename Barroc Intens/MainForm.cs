@@ -67,5 +67,13 @@ namespace Barroc_Intens
             dashboardInkoopForm.ShowDialog();
             this.Close();
         }
+
+        private void btnDirectToInlogPage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InlogForm inlogForm = new InlogForm();
+            inlogForm.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -44,6 +44,7 @@
             this.txbUsername.Name = "txbUsername";
             this.txbUsername.Size = new System.Drawing.Size(189, 22);
             this.txbUsername.TabIndex = 0;
+            this.txbUsername.TextChanged += new System.EventHandler(this.txbUsername_TextChanged);
             // 
             // lblUsername
             // 
@@ -114,6 +115,8 @@
             this.Controls.Add(this.txbUsername);
             this.Name = "InlogForm";
             this.Text = "InlogForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InlogForm_FormClosing);
+            this.Load += new System.EventHandler(this.InlogForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
