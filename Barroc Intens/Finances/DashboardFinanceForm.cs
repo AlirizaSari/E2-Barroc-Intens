@@ -46,5 +46,18 @@ namespace Barroc_Intens
             mainForm.ShowDialog();
             this.Close();
         }
+
+        private void DashboardFinanceForm_Load(object sender, EventArgs e)
+        {
+            txbExtraInfo.Text = "Dit is een test";
+        }
+
+        private void btnDirectToLeaseContract_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LeaseContractForm leaseContractForm = new LeaseContractForm();
+            leaseContractForm.ShowDialog();
+            this.Close();
+        }
     }
 }

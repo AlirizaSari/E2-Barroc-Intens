@@ -37,7 +37,7 @@
             this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblSystemName = new System.Windows.Forms.Label();
-            this.btnLocation3 = new System.Windows.Forms.Button();
+            this.btnDirectToLeaseContract = new System.Windows.Forms.Button();
             this.btnDirectToInvoice = new System.Windows.Forms.Button();
             this.btnBackToMain = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
@@ -71,11 +71,13 @@
             // 
             // txbExtraInfo
             // 
+            this.txbExtraInfo.Enabled = false;
             this.txbExtraInfo.Location = new System.Drawing.Point(24, 345);
             this.txbExtraInfo.Multiline = true;
             this.txbExtraInfo.Name = "txbExtraInfo";
+            this.txbExtraInfo.ReadOnly = true;
             this.txbExtraInfo.Size = new System.Drawing.Size(162, 160);
-            this.txbExtraInfo.TabIndex = 5;
+            this.txbExtraInfo.TabIndex = 4;
             // 
             // btnLogout
             // 
@@ -120,7 +122,7 @@
             // 
             this.pnlTop.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlTop.Controls.Add(this.lblSystemName);
-            this.pnlTop.Controls.Add(this.btnLocation3);
+            this.pnlTop.Controls.Add(this.btnDirectToLeaseContract);
             this.pnlTop.Controls.Add(this.btnDirectToInvoice);
             this.pnlTop.Controls.Add(this.btnBackToMain);
             this.pnlTop.Location = new System.Drawing.Point(222, 0);
@@ -138,21 +140,22 @@
             this.lblSystemName.TabIndex = 3;
             this.lblSystemName.Text = "Finances";
             // 
-            // btnLocation3
+            // btnDirectToLeaseContract
             // 
-            this.btnLocation3.Location = new System.Drawing.Point(496, 117);
-            this.btnLocation3.Name = "btnLocation3";
-            this.btnLocation3.Size = new System.Drawing.Size(172, 37);
-            this.btnLocation3.TabIndex = 2;
-            this.btnLocation3.Text = "Location 3";
-            this.btnLocation3.UseVisualStyleBackColor = true;
+            this.btnDirectToLeaseContract.Location = new System.Drawing.Point(496, 117);
+            this.btnDirectToLeaseContract.Name = "btnDirectToLeaseContract";
+            this.btnDirectToLeaseContract.Size = new System.Drawing.Size(172, 37);
+            this.btnDirectToLeaseContract.TabIndex = 2;
+            this.btnDirectToLeaseContract.Text = "Lease contracten";
+            this.btnDirectToLeaseContract.UseVisualStyleBackColor = true;
+            this.btnDirectToLeaseContract.Click += new System.EventHandler(this.btnDirectToLeaseContract_Click);
             // 
             // btnDirectToInvoice
             // 
             this.btnDirectToInvoice.Location = new System.Drawing.Point(279, 117);
             this.btnDirectToInvoice.Name = "btnDirectToInvoice";
             this.btnDirectToInvoice.Size = new System.Drawing.Size(172, 37);
-            this.btnDirectToInvoice.TabIndex = 0;
+            this.btnDirectToInvoice.TabIndex = 1;
             this.btnDirectToInvoice.Text = "Factuur aanmaken";
             this.btnDirectToInvoice.UseVisualStyleBackColor = true;
             this.btnDirectToInvoice.Click += new System.EventHandler(this.btnDirectToInvoice_Click);
@@ -162,7 +165,7 @@
             this.btnBackToMain.Location = new System.Drawing.Point(46, 117);
             this.btnBackToMain.Name = "btnBackToMain";
             this.btnBackToMain.Size = new System.Drawing.Size(172, 37);
-            this.btnBackToMain.TabIndex = 1;
+            this.btnBackToMain.TabIndex = 0;
             this.btnBackToMain.Text = "Home";
             this.btnBackToMain.UseVisualStyleBackColor = true;
             this.btnBackToMain.Click += new System.EventHandler(this.btnBackToMain_Click);
@@ -178,6 +181,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DashboardFinanceForm";
             this.Text = "DashboardFinanceForm";
+            this.Load += new System.EventHandler(this.DashboardFinanceForm_Load);
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
@@ -198,7 +202,7 @@
         private System.Windows.Forms.Label lblDepartment;
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Label lblSystemName;
-        private System.Windows.Forms.Button btnLocation3;
+        private System.Windows.Forms.Button btnDirectToLeaseContract;
         private System.Windows.Forms.Button btnBackToMain;
         private System.Windows.Forms.Button btnDirectToInvoice;
     }
