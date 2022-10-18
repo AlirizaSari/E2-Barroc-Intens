@@ -203,6 +203,7 @@
             this.btnEditProduct.TabIndex = 4;
             this.btnEditProduct.Text = "Product Aanpassen";
             this.btnEditProduct.UseVisualStyleBackColor = true;
+            this.btnEditProduct.Click += new System.EventHandler(this.btnEditProduct_Click);
             // 
             // btnRemoveProduct
             // 
@@ -232,6 +233,7 @@
             this.btnEditCategory.TabIndex = 8;
             this.btnEditCategory.Text = "Categorie Aanpassen";
             this.btnEditCategory.UseVisualStyleBackColor = true;
+            this.btnEditCategory.Click += new System.EventHandler(this.btnEditCategory_Click);
             // 
             // btnRemoveCategory
             // 

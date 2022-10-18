@@ -60,6 +60,14 @@ namespace Barroc_Intens
             this.Close();
         }
 
+        private void btnEditProduct_Click(object sender, EventArgs e)
+        {
+            var product = (Product)this.productsDataGridView.CurrentRow?.DataBoundItem;
+
+            dbContext.Products.Update(product);
+            dbContext.SaveChanges();
+        }
+
         private void btnRemoveProduct_Click(object sender, EventArgs e)
         {
             var product = (Product)this.productsDataGridView.CurrentRow?.DataBoundItem;
@@ -89,6 +97,14 @@ namespace Barroc_Intens
             this.Close();
         }
 
+        private void btnEditCategory_Click(object sender, EventArgs e)
+        {
+            var category = (Category)this.categoriesDataGridView.CurrentRow?.DataBoundItem;
+
+            dbContext.Categories.Update(category);
+            dbContext.SaveChanges();
+        }
+
         private void btnRemoveCategory_Click(object sender, EventArgs e)
         {
             var category = (Category)this.categoriesDataGridView.CurrentRow?.DataBoundItem;
@@ -106,7 +122,6 @@ namespace Barroc_Intens
             mainForm.ShowDialog();
             this.Close();
         }
-
 
     }
 }
