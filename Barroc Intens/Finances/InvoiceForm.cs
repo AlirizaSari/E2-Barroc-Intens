@@ -106,5 +106,13 @@ namespace Barroc_Intens.Finances
             }
             return true;
         }
+
+        private void pboxLogo_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MainForm mainForm = new MainForm();
+            mainForm.ShowDialog();
+            this.Hide();
+        }
     }
 }
