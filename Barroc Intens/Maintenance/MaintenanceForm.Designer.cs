@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.maintenanceAppointmentDataGridView = new System.Windows.Forms.DataGridView();
+            this.btnBackToMaintenance = new System.Windows.Forms.Button();
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remarkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maintenanceAppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnBackToMain = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentBindingSource)).BeginInit();
@@ -69,6 +69,16 @@
             this.maintenanceAppointmentDataGridView.TabIndex = 1;
             this.maintenanceAppointmentDataGridView.SelectionChanged += new System.EventHandler(this.maintenanceAppointmentDataGridView_SelectionChanged);
             // 
+            // btnBackToMaintenance
+            // 
+            this.btnBackToMaintenance.Location = new System.Drawing.Point(719, 15);
+            this.btnBackToMaintenance.Name = "btnBackToMaintenance";
+            this.btnBackToMaintenance.Size = new System.Drawing.Size(168, 30);
+            this.btnBackToMaintenance.TabIndex = 2;
+            this.btnBackToMaintenance.Text = "Terug naar Dashboard";
+            this.btnBackToMaintenance.UseVisualStyleBackColor = true;
+            this.btnBackToMaintenance.Click += new System.EventHandler(this.btnBackToMaintenance_Click);
+            // 
             // companyDataGridViewTextBoxColumn
             // 
             this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
@@ -95,22 +105,12 @@
             // 
             this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
             // 
-            // btnBackToMain
-            // 
-            this.btnBackToMain.Location = new System.Drawing.Point(719, 15);
-            this.btnBackToMain.Name = "btnBackToMain";
-            this.btnBackToMain.Size = new System.Drawing.Size(168, 30);
-            this.btnBackToMain.TabIndex = 2;
-            this.btnBackToMain.Text = "Terug naam homepagina";
-            this.btnBackToMain.UseVisualStyleBackColor = true;
-            this.btnBackToMain.Click += new System.EventHandler(this.btnBackToMain_Click);
-            // 
             // MaintenanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 519);
-            this.Controls.Add(this.btnBackToMain);
+            this.Controls.Add(this.btnBackToMaintenance);
             this.Controls.Add(this.maintenanceAppointmentDataGridView);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,6 +135,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn remarkDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addedDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource productBindingSource;
-        private System.Windows.Forms.Button btnBackToMain;
+        private System.Windows.Forms.Button btnBackToMaintenance;
     }
 }

@@ -26,6 +26,8 @@ namespace Barroc_Intens.Maintenance
 
             this.dbContext.MaintenanceAppointments.Load();
 
+            this.dbContext.Companies.Load();
+
             this.maintenanceAppointmentBindingSource.DataSource = dbContext.MaintenanceAppointments.Local.ToBindingList();
 
         }
@@ -35,7 +37,7 @@ namespace Barroc_Intens.Maintenance
             if (this.dbContext == null)
                 return;
 
-            var maintenanceAppointment = (MaintenanceAppointment)this.maintenanceAppointmentDataGridView.CurrentRow.DataBoundItem;
+            var maintenanceAppointment = (MaintenanceAppointment)this.maintenanceAppointmentDataGridView.CurrentRow?.DataBoundItem;
 
             if (maintenanceAppointment == null)
                 return;
@@ -46,12 +48,13 @@ namespace Barroc_Intens.Maintenance
 
         }
 
-        private void btnBackToMain_Click(object sender, EventArgs e)
+        private void btnBackToMaintenance_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Barroc_Intens.MainForm mainForm = new Barroc_Intens.MainForm();
-            mainForm.ShowDialog();
+            DashboardMaintenanceForm dashboardMaintenanceForm = new DashboardMaintenanceForm();
+            dashboardMaintenanceForm.ShowDialog();
             this.Close();
         }
+
     }
 }

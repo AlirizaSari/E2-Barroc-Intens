@@ -314,6 +314,18 @@
     <Compile Include="Finances\InvoiceForm.Designer.cs">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inkoop\AddCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inkoop\AddCategoryForm.Designer.cs">
+      <DependentUpon>AddCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inkoop\AddProductFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inkoop\AddProductFrom.Designer.cs">
+      <DependentUpon>AddProductFrom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inkoop\DashboardInkoopForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,6 +373,12 @@
     <EmbeddedResource Include="Finances\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inkoop\AddCategoryForm.resx">
+      <DependentUpon>AddCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inkoop\AddProductFrom.resx">
+      <DependentUpon>AddProductFrom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inkoop\DashboardInkoopForm.resx">
       <DependentUpon>DashboardInkoopForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,6 +405,7 @@
       <DependentUpon>CustomerNotesForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Category.datasource" />
     <None Include="Properties\DataSources\MaintenanceAppointment.datasource" />
     <None Include="Properties\DataSources\Product.datasource" />
     <None Include="Properties\Settings.settings">
