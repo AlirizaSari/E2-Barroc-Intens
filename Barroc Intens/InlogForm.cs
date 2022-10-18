@@ -30,7 +30,23 @@ namespace Barroc_Intens
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+            string username = txbUsername.Text;
+            string password = txbPassword.Text;
+
+            var rec = dbContext.Users.Where(a => a.UserName == username && a.Password == password).FirstOrDefault();
+
+            if (rec != null)
+            {
+                MessageBox.Show("Ingelogd");
+                this.Hide();
+                Barroc_Intens.MainForm mainForm = new Barroc_Intens.MainForm();
+                mainForm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Gegevens zijn fout");
+            }
         }
 
         private void txbUsername_TextChanged(object sender, EventArgs e)
