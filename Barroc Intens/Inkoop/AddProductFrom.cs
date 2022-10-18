@@ -37,6 +37,7 @@ namespace Barroc_Intens.Inkoop
             {
                 Name = txbNameProduct.Text,
                 Description = txbDescriptionProduct.Text,
+                Brand = txbBrandProduct.Text,
                 Price = decimal.Parse(txbPriceProduct.Text),
                 CategoryId = (int)newProductCategoryComboBox.SelectedValue
             };
