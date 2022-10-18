@@ -12,9 +12,18 @@ namespace Barroc_Intens.Maintenance
 {
     public partial class PlannerForm : Form
     {
+
         public PlannerForm()
         {
             InitializeComponent();
+
+            
+        }
+
+        private void PlannerForm_Load(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Today;
+            this.mcaMalfunctionCalendar.BoldedDates = new System.DateTime[] { today };
         }
     }
 }
