@@ -40,7 +40,7 @@
             // 
             // txbUsername
             // 
-            this.txbUsername.Location = new System.Drawing.Point(291, 211);
+            this.txbUsername.Location = new System.Drawing.Point(200, 216);
             this.txbUsername.Name = "txbUsername";
             this.txbUsername.Size = new System.Drawing.Size(189, 22);
             this.txbUsername.TabIndex = 0;
@@ -48,7 +48,7 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(197, 214);
+            this.lblUsername.Location = new System.Drawing.Point(106, 219);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(70, 16);
             this.lblUsername.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // txbPassword
             // 
-            this.txbPassword.Location = new System.Drawing.Point(291, 239);
+            this.txbPassword.Location = new System.Drawing.Point(200, 244);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.Size = new System.Drawing.Size(189, 22);
             this.txbPassword.TabIndex = 2;
@@ -64,7 +64,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(197, 242);
+            this.lblPassword.Location = new System.Drawing.Point(106, 247);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(67, 16);
             this.lblPassword.TabIndex = 3;
@@ -74,7 +74,7 @@
             // 
             this.lblInformation.AutoSize = true;
             this.lblInformation.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformation.Location = new System.Drawing.Point(328, 92);
+            this.lblInformation.Location = new System.Drawing.Point(237, 92);
             this.lblInformation.Name = "lblInformation";
             this.lblInformation.Size = new System.Drawing.Size(110, 31);
             this.lblInformation.TabIndex = 4;
@@ -92,7 +92,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(291, 322);
+            this.btnLogin.Location = new System.Drawing.Point(200, 335);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(189, 66);
             this.btnLogin.TabIndex = 6;
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(542, 445);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblInformation);
