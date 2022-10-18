@@ -71,11 +71,13 @@
             // 
             // txbExtraInfo
             // 
+            this.txbExtraInfo.Enabled = false;
             this.txbExtraInfo.Location = new System.Drawing.Point(24, 345);
             this.txbExtraInfo.Multiline = true;
             this.txbExtraInfo.Name = "txbExtraInfo";
+            this.txbExtraInfo.ReadOnly = true;
             this.txbExtraInfo.Size = new System.Drawing.Size(162, 160);
-            this.txbExtraInfo.TabIndex = 5;
+            this.txbExtraInfo.TabIndex = 4;
             // 
             // btnLogout
             // 
@@ -152,7 +154,7 @@
             this.btnDirectToInvoice.Location = new System.Drawing.Point(279, 117);
             this.btnDirectToInvoice.Name = "btnDirectToInvoice";
             this.btnDirectToInvoice.Size = new System.Drawing.Size(172, 37);
-            this.btnDirectToInvoice.TabIndex = 0;
+            this.btnDirectToInvoice.TabIndex = 1;
             this.btnDirectToInvoice.Text = "Factuur aanmaken";
             this.btnDirectToInvoice.UseVisualStyleBackColor = true;
             this.btnDirectToInvoice.Click += new System.EventHandler(this.btnDirectToInvoice_Click);
@@ -162,7 +164,7 @@
             this.btnBackToMain.Location = new System.Drawing.Point(46, 117);
             this.btnBackToMain.Name = "btnBackToMain";
             this.btnBackToMain.Size = new System.Drawing.Size(172, 37);
-            this.btnBackToMain.TabIndex = 1;
+            this.btnBackToMain.TabIndex = 0;
             this.btnBackToMain.Text = "Home";
             this.btnBackToMain.UseVisualStyleBackColor = true;
             this.btnBackToMain.Click += new System.EventHandler(this.btnBackToMain_Click);
@@ -178,6 +180,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DashboardFinanceForm";
             this.Text = "DashboardFinanceForm";
+            this.Load += new System.EventHandler(this.DashboardFinanceForm_Load);
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();

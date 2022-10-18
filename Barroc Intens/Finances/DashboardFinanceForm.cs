@@ -46,5 +46,10 @@ namespace Barroc_Intens
             mainForm.ShowDialog();
             this.Close();
         }
+
+        private void DashboardFinanceForm_Load(object sender, EventArgs e)
+        {
+            txbExtraInfo.Text = "Dit is een test";
+        }
     }
 }

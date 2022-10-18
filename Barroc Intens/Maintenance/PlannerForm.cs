@@ -23,7 +23,22 @@ namespace Barroc_Intens.Maintenance
         private void PlannerForm_Load(object sender, EventArgs e)
         {
             DateTime today = DateTime.Today;
-            this.mcaMalfunctionCalendar.BoldedDates = new System.DateTime[] { today };
+
+            DateTime[] dates = { today.AddDays(1),
+            today.AddDays(3), today.AddDays(5)};
+
+            mcaMalfunctionCalendar.BoldedDates = dates;
+
+            //for (int r = 0; r < dates.GetLength(0); r++)
+            //{
+            //    DataGridViewRow gridView = new DataGridViewRow();
+            //    gridView.CreateCells(dgvMaintenanceInformation);
+
+            //    for (int c = 0; c < dates.GetLength(1); c++)
+            //    {
+            //        gridView.CreateCells[c].Value = dates;
+            //    }
+            //}
         }
     }
 }
