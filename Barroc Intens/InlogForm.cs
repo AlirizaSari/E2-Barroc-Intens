@@ -45,7 +45,7 @@ namespace Barroc_Intens
             }
             else
             {
-                MessageBox.Show("Gegevens zijn fout");
+                lblError.Text = "Inloggegevens zijn onjuist";
             }
         }
 
