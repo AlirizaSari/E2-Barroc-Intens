@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,20 +13,12 @@ namespace Barroc_Intens.Sales
 {
     public partial class CustomerNotesForm : Form
     {
-        string _txtTitleHeader = "";
-        string _ConvertationText = "";
-        string _date;
-        
+        private AppDbContext dbContext;
         public CustomerNotesForm()
         {
             InitializeComponent();
         }
 
-        private void btnExportText_Click(object sender, EventArgs e)
-        {
-           
-
-        }
 
         private void btnBackToMain_Click(object sender, EventArgs e)
         {
@@ -35,10 +28,6 @@ namespace Barroc_Intens.Sales
             this.Close();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void pboxLogo_Click(object sender, EventArgs e)
         {
@@ -46,6 +35,26 @@ namespace Barroc_Intens.Sales
             MainForm mainForm = new MainForm();
             mainForm.ShowDialog();
             this.Close();
+        }
+
+        private void CustomerNotesForm_Load(object sender, EventArgs e)
+        {
+            this.dbContext = new AppDbContext();
+            this.dbContext.Database.EnsureCreated();    
+            this.dbContext.Companies.Load();
+            this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
+        }
+
+        private void btnSaveToDb_Click(object sender, EventArgs e)
+        {
+            //var noteToAdd = new Note
+            //{
+            //    NoteId = 1,
+            //    NoteDesription = txbConversationReport.ToString(),
+            //    CompanyId = companyIdDataGridViewTextBoxColumn.Index,
+                
+            //};
+            //this.dbContext.Notes.Add(noteToAdd);
         }
     }
 }
