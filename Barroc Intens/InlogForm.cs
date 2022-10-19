@@ -31,12 +31,55 @@ namespace Barroc_Intens
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            DirectToDashboard();
+        }
+
+        private void txbUsername_TextChanged(object sender, EventArgs e)
+        {
+            DisableLoginButton();
+        }
+
+        private void InlogForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            base.OnClosing(e);
+
+            this.dbContext?.Dispose();
+            this.dbContext = null;
+        }
+
+        private void txbPassword_TextChanged(object sender, EventArgs e)
+        {
+            DisableLoginButton();
+        }
+
+        private void DisableLoginButton()
+        {
+            if ((txbPassword.Text).Count() < 1 || (txbPassword.Text).Count() < 1)
+            {
+                btnLogin.Enabled = false;
+            }
+            else
+            {
+                btnLogin.Enabled = true;
+            }
+        }
+
+        private void txbPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                DirectToDashboard();
+            }
+        }
+
+        private void DirectToDashboard()
+        {
             string username = txbUsername.Text;
             string password = txbPassword.Text;
 
             var rec = dbContext.Users.Where(a => a.UserName == username && a.Password == password).FirstOrDefault();
 
-            
+
             //has succesfully logged in
             if (rec != null)
             {
@@ -77,54 +120,10 @@ namespace Barroc_Intens
                     dashboardMaintenanceForm.ShowDialog();
                     this.Close();
                 }
-
-                //finances
-                //if (rec.RolId == 3 || )
-                //{
-                //    this.Hide();
-                //    DashboardFinanceForm dashboardFinanceForm = new DashboardFinanceForm();
-                //    dashboardFinanceForm.ShowDialog();
-                //    this.Close();
-                //}
-
-                //this.Hide();
-                //Barroc_Intens.MainForm mainForm = new Barroc_Intens.MainForm();
-                //mainForm.ShowDialog();
-                //this.Close();
             }
             else
             {
                 lblError.Text = "Inloggegevens zijn onjuist";
-            }
-        }
-
-        private void txbUsername_TextChanged(object sender, EventArgs e)
-        {
-            DisableLoginButton();
-        }
-
-        private void InlogForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            base.OnClosing(e);
-
-            this.dbContext?.Dispose();
-            this.dbContext = null;
-        }
-
-        private void txbPassword_TextChanged(object sender, EventArgs e)
-        {
-            DisableLoginButton();
-        }
-
-        private void DisableLoginButton()
-        {
-            if ((txbPassword.Text).Count() < 1 || (txbPassword.Text).Count() < 1)
-            {
-                btnLogin.Enabled = false;
-            }
-            else
-            {
-                btnLogin.Enabled = true;
             }
         }
     }

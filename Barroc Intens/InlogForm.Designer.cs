@@ -60,9 +60,11 @@
             // 
             this.txbPassword.Location = new System.Drawing.Point(200, 244);
             this.txbPassword.Name = "txbPassword";
+            this.txbPassword.PasswordChar = 'ඞ';
             this.txbPassword.Size = new System.Drawing.Size(189, 22);
             this.txbPassword.TabIndex = 2;
             this.txbPassword.TextChanged += new System.EventHandler(this.txbPassword_TextChanged);
+            this.txbPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbPassword_KeyDown);
             // 
             // lblPassword
             // 
