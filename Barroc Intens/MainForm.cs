@@ -47,8 +47,8 @@ namespace Barroc_Intens
         private void btnDirectToSales_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Sales.CustomerNotesForm CustomerNotesForm = new Sales.CustomerNotesForm();
-            CustomerNotesForm.ShowDialog();
+            DashboardSalesForm dashboardSalesForm = new DashboardSalesForm();
+            dashboardSalesForm.ShowDialog();
             this.Close();
         }
 

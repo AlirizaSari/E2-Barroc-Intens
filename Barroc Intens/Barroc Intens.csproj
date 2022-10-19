@@ -383,6 +383,12 @@
     <Compile Include="Sales\CustomerNotesForm.Designer.cs">
       <DependentUpon>CustomerNotesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\DashboardSalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\DashboardSalesForm.Designer.cs">
+      <DependentUpon>DashboardSalesForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="dashboardTemplateForm.resx">
       <DependentUpon>dashboardTemplateForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -431,6 +437,9 @@
     </Compile>
     <EmbeddedResource Include="Sales\CustomerNotesForm.resx">
       <DependentUpon>CustomerNotesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\DashboardSalesForm.resx">
+      <DependentUpon>DashboardSalesForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Category.datasource" />

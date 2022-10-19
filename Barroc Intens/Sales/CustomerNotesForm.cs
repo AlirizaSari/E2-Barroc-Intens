@@ -30,8 +30,8 @@ namespace Barroc_Intens.Sales
         private void btnBackToMain_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Barroc_Intens.MainForm mainForm = new Barroc_Intens.MainForm();
-            mainForm.ShowDialog();
+            DashboardSalesForm dashboardSalesForm = new DashboardSalesForm();
+            dashboardSalesForm.ShowDialog();
             this.Close();
         }
 
