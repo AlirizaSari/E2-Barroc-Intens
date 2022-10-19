@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,13 +36,55 @@ namespace Barroc_Intens
 
             var rec = dbContext.Users.Where(a => a.UserName == username && a.Password == password).FirstOrDefault();
 
+            
+            //has succesfully logged in
             if (rec != null)
             {
-                MessageBox.Show("Ingelogd");
-                this.Hide();
-                Barroc_Intens.MainForm mainForm = new Barroc_Intens.MainForm();
-                mainForm.ShowDialog();
-                this.Close();
+                //admin
+                if (rec.RolId == 1)
+                {
+                    this.Hide();
+                    MainForm mainForm = new MainForm();
+                    mainForm.ShowDialog();
+                    this.Close();
+                }
+                //finances
+                else if (rec.RolId == 2 || rec.RolId == 3)
+                {
+                    this.Hide();
+                    DashboardFinanceForm dashboardFinanceForm = new DashboardFinanceForm();
+                    dashboardFinanceForm.ShowDialog();
+                    this.Close();
+                }
+                //Sales
+                else if (rec.RolId == 4 || rec.RolId == 5)
+                {
+                    this.Hide();
+                }
+                //Inkoop
+                else if (rec.RolId == 6 || rec.RolId == 7)
+                {
+
+                }
+                //Maintenance
+                else if (rec.RolId == 8 || rec.RolId == 9)
+                {
+
+                }
+
+                //finances
+                //if (rec.RolId == 3 || )
+                //{
+                //    this.Hide();
+                //    DashboardFinanceForm dashboardFinanceForm = new DashboardFinanceForm();
+                //    dashboardFinanceForm.ShowDialog();
+                //    this.Close();
+                //}
+
+                //this.Hide();
+                //Barroc_Intens.MainForm mainForm = new Barroc_Intens.MainForm();
+                //mainForm.ShowDialog();
+                //this.Close();
             }
             else
             {
@@ -51,14 +94,7 @@ namespace Barroc_Intens
 
         private void txbUsername_TextChanged(object sender, EventArgs e)
         {
-            if ((txbPassword.Text).Count() < 1 || (txbPassword.Text).Count() < 1)
-            {
-                btnLogin.Enabled = false;
-            }
-            else
-            {
-                btnLogin.Enabled = true;
-            }
+            DisableLoginButton();
         }
 
         private void InlogForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -70,6 +106,11 @@ namespace Barroc_Intens
         }
 
         private void txbPassword_TextChanged(object sender, EventArgs e)
+        {
+            DisableLoginButton();
+        }
+
+        private void DisableLoginButton()
         {
             if ((txbPassword.Text).Count() < 1 || (txbPassword.Text).Count() < 1)
             {

@@ -17,6 +17,8 @@ namespace Barroc_Intens
 
         public string Password { get; set; }
 
+        //public bool IsLoggedIn { get; set; }
+
         public int RolId { get; set; }
         public Rol Rol { get; set; } = null;
 

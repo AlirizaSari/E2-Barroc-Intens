@@ -43,15 +43,15 @@ namespace Barroc_Intens
                 new Rol { RolId = 9, Name = "Mainentance", IsManager = 2 });
 
             modelBuilder.Entity<User>().HasData(
-                new User { UserId = 1, Name = "Admin", UserName = "Admin", Password = "123", RolId = 1 },
-                new User { UserId = 2, Name = "Finance Head", UserName = "FinanceHead", Password = "123", RolId = 2 },
-                new User { UserId = 3, Name = "Finance", UserName = "Finance", Password = "123", RolId = 3 },
-                new User { UserId = 4, Name = "Sales Head", UserName = "SalesHead", Password = "123", RolId = 4 },
-                new User { UserId = 5, Name = "Sales", UserName = "Sales", Password = "123", RolId = 5 },
-                new User { UserId = 6, Name = "Inkoop Head", UserName = "InkoopHead", Password = "123", RolId = 6 },
-                new User { UserId = 7, Name = "Inkoop", UserName = "Inkoop", Password = "123", RolId = 7 },
-                new User { UserId = 8, Name = "Maintenance Head", UserName = "MaintenanceHead", Password = "123", RolId = 8 },
-                new User { UserId = 9, Name = "Mainentance", UserName = "Maintenance", Password = "123", RolId = 9 });
+                new User { UserId = 1, Name = "Admin", UserName = "Admin", Password = "123", RolId = 1/*, IsLoggedIn = false*/ },
+                new User { UserId = 2, Name = "Finance Head", UserName = "FinanceHead", Password = "123", RolId = 2/*, IsLoggedIn = false*/ },
+                new User { UserId = 3, Name = "Finance", UserName = "Finance", Password = "123", RolId = 3/*, IsLoggedIn = false*/ },
+                new User { UserId = 4, Name = "Sales Head", UserName = "SalesHead", Password = "123", RolId = 4/*, IsLoggedIn = false*/ },
+                new User { UserId = 5, Name = "Sales", UserName = "Sales", Password = "123", RolId = 5/*, IsLoggedIn = false*/ },
+                new User { UserId = 6, Name = "Inkoop Head", UserName = "InkoopHead", Password = "123", RolId = 6/*, IsLoggedIn = false*/ },
+                new User { UserId = 7, Name = "Inkoop", UserName = "Inkoop", Password = "123", RolId = 7/*, IsLoggedIn = false*/ },
+                new User { UserId = 8, Name = "Maintenance Head", UserName = "MaintenanceHead", Password = "123", RolId = 8/*, IsLoggedIn = false*/ },
+                new User { UserId = 9, Name = "Mainentance", UserName = "Maintenance", Password = "123", RolId = 9/*, IsLoggedIn = false*/ });
 
             modelBuilder.Entity<Company>().HasData(
                 new Company { CompanyId = 1, Name = "Curio", Phone = "0648686105", Street = "terheidenseweg", HouseNumber = "350", City = "Breda", CountryCode = "31", BkrCheckedAt = DateTime.Now, UserId = 1 
