@@ -64,7 +64,6 @@
             this.txbPassword.Size = new System.Drawing.Size(189, 22);
             this.txbPassword.TabIndex = 2;
             this.txbPassword.TextChanged += new System.EventHandler(this.txbPassword_TextChanged);
-            this.txbPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbPassword_KeyDown);
             // 
             // lblPassword
             // 
@@ -118,6 +117,7 @@
             // 
             // InlogForm
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 445);

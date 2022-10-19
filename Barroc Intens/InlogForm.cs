@@ -117,13 +117,5 @@ namespace Barroc_Intens
             }
         }
 
-        private void txbPassword_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode.Equals(Keys.Enter))
-            {
-                btnLogin.PerformClick();
-            }
-        }
-
     }
 }
