@@ -123,5 +123,12 @@ namespace Barroc_Intens
             this.Close();
         }
 
+        private void btnInkoop_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Inkoop.ProductenForm productenForm = new Inkoop.ProductenForm();
+            productenForm.ShowDialog();
+            this.Close();
+        }
     }
 }

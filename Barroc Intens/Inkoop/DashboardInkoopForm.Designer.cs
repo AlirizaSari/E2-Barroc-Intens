@@ -35,7 +35,6 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblDepartment = new System.Windows.Forms.Label();
             this.lblAccountName = new System.Windows.Forms.Label();
-            this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblInkoop = new System.Windows.Forms.Label();
             this.btnBackToMain = new System.Windows.Forms.Button();
@@ -48,23 +47,24 @@
             this.btnEditCategory = new System.Windows.Forms.Button();
             this.btnRemoveCategory = new System.Windows.Forms.Button();
             this.productsDataGridView = new System.Windows.Forms.DataGridView();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoriesDataGridView = new System.Windows.Forms.DataGridView();
             this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isEmployeeOnlyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.pnlLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLeft
@@ -126,16 +126,6 @@
             this.lblAccountName.TabIndex = 2;
             this.lblAccountName.Text = "Account Naam";
             // 
-            // pboxLogo
-            // 
-            this.pboxLogo.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
-            this.pboxLogo.Location = new System.Drawing.Point(61, 12);
-            this.pboxLogo.Name = "pboxLogo";
-            this.pboxLogo.Size = new System.Drawing.Size(100, 100);
-            this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pboxLogo.TabIndex = 1;
-            this.pboxLogo.TabStop = false;
-            // 
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -185,6 +175,7 @@
             this.btnInkoop.TabIndex = 0;
             this.btnInkoop.Text = "Inkopen";
             this.btnInkoop.UseVisualStyleBackColor = true;
+            this.btnInkoop.Click += new System.EventHandler(this.btnInkoop_Click);
             // 
             // btnAddProduct
             // 
@@ -264,9 +255,11 @@
             this.productsDataGridView.TabIndex = 10;
             this.productsDataGridView.SelectionChanged += new System.EventHandler(this.productsDataGridView_SelectionChanged);
             // 
-            // productBindingSource
+            // Brand
             // 
-            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
+            this.Brand.DataPropertyName = "Brand";
+            this.Brand.HeaderText = "Brand";
+            this.Brand.Name = "Brand";
             // 
             // categoriesDataGridView
             // 
@@ -311,12 +304,6 @@
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             // 
-            // Brand
-            // 
-            this.Brand.DataPropertyName = "Brand";
-            this.Brand.HeaderText = "Brand";
-            this.Brand.Name = "Brand";
-            // 
             // priceDataGridViewTextBoxColumn
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
@@ -328,6 +315,20 @@
             this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
             this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
+            // 
+            // pboxLogo
+            // 
+            this.pboxLogo.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
+            this.pboxLogo.Location = new System.Drawing.Point(61, 12);
+            this.pboxLogo.Name = "pboxLogo";
+            this.pboxLogo.Size = new System.Drawing.Size(100, 100);
+            this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboxLogo.TabIndex = 1;
+            this.pboxLogo.TabStop = false;
             // 
             // DashboardInkoopForm
             // 
@@ -351,13 +352,13 @@
             this.Load += new System.EventHandler(this.DashboardInkoopForm_Load);
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
