@@ -33,7 +33,6 @@
             this.btnDirectToMaintenance = new System.Windows.Forms.Button();
             this.btnDirectToInkoop = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnDirectToInlogPage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,22 +91,11 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // btnDirectToInlogPage
-            // 
-            this.btnDirectToInlogPage.Location = new System.Drawing.Point(253, 231);
-            this.btnDirectToInlogPage.Name = "btnDirectToInlogPage";
-            this.btnDirectToInlogPage.Size = new System.Drawing.Size(75, 23);
-            this.btnDirectToInlogPage.TabIndex = 5;
-            this.btnDirectToInlogPage.Text = "Inlog";
-            this.btnDirectToInlogPage.UseVisualStyleBackColor = true;
-            this.btnDirectToInlogPage.Click += new System.EventHandler(this.btnDirectToInlogPage_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 601);
-            this.Controls.Add(this.btnDirectToInlogPage);
             this.Controls.Add(this.btnDirectToSales);
             this.Controls.Add(this.btnDirectToInkoop);
             this.Controls.Add(this.btnDirectToMaintenance);
@@ -129,7 +117,6 @@
         private System.Windows.Forms.Button btnDirectToSales;
         private System.Windows.Forms.Button btnDirectToMaintenance;
         private System.Windows.Forms.Button btnDirectToInkoop;
-        private System.Windows.Forms.Button btnDirectToInlogPage;
     }
 }
 

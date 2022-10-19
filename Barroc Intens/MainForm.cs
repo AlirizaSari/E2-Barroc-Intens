@@ -68,12 +68,5 @@ namespace Barroc_Intens
             this.Close();
         }
 
-        private void btnDirectToInlogPage_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            InlogForm inlogForm = new InlogForm();
-            inlogForm.ShowDialog();
-            this.Close();
-        }
     }
 }
