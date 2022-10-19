@@ -59,17 +59,23 @@ namespace Barroc_Intens
                 //Sales
                 else if (rec.RolId == 4 || rec.RolId == 5)
                 {
-                    this.Hide();
+                    //dashboard sales incoming
                 }
                 //Inkoop
                 else if (rec.RolId == 6 || rec.RolId == 7)
                 {
-
+                    this.Hide();
+                    DashboardInkoopForm dashboardInkoopForm = new DashboardInkoopForm();
+                    dashboardInkoopForm.ShowDialog();
+                    this.Close();
                 }
                 //Maintenance
                 else if (rec.RolId == 8 || rec.RolId == 9)
                 {
-
+                    this.Hide();
+                    DashboardMaintenanceForm dashboardMaintenanceForm = new DashboardMaintenanceForm();
+                    dashboardMaintenanceForm.ShowDialog();
+                    this.Close();
                 }
 
                 //finances
