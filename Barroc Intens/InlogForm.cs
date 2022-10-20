@@ -43,42 +43,27 @@ namespace Barroc_Intens
                 //admin
                 if (rec.RolId == 1)
                 {
-                    this.Hide();
-                    MainForm mainForm = new MainForm();
-                    mainForm.ShowDialog();
-                    this.Close();
+                    DirectToForm(new MainForm());
                 }
                 //finances
                 else if (rec.RolId == 2 || rec.RolId == 3)
                 {
-                    this.Hide();
-                    DashboardFinanceForm dashboardFinanceForm = new DashboardFinanceForm();
-                    dashboardFinanceForm.ShowDialog();
-                    this.Close();
+                    DirectToForm(new DashboardFinanceForm());
                 }
                 //Sales
                 else if (rec.RolId == 4 || rec.RolId == 5)
                 {
-                    this.Hide();
-                    DashboardSalesForm dashboardSalesForm = new DashboardSalesForm();
-                    dashboardSalesForm.ShowDialog();
-                    this.Close();
+                    DirectToForm(new DashboardSalesForm());
                 }
                 //Inkoop
                 else if (rec.RolId == 6 || rec.RolId == 7)
                 {
-                    this.Hide();
-                    DashboardInkoopForm dashboardInkoopForm = new DashboardInkoopForm();
-                    dashboardInkoopForm.ShowDialog();
-                    this.Close();
+                    DirectToForm(new DashboardInkoopForm());
                 }
                 //Maintenance
                 else if (rec.RolId == 8 || rec.RolId == 9)
                 {
-                    this.Hide();
-                    DashboardMaintenanceForm dashboardMaintenanceForm = new DashboardMaintenanceForm();
-                    dashboardMaintenanceForm.ShowDialog();
-                    this.Close();
+                    DirectToForm(new DashboardMaintenanceForm());
                 }
             }
             else
@@ -115,6 +100,13 @@ namespace Barroc_Intens
             {
                 btnLogin.Enabled = true;
             }
+        }
+
+        private void DirectToForm(Form myForm)
+        {
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
         }
 
     }
