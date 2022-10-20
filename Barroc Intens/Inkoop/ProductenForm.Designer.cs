@@ -68,6 +68,7 @@
             this.productDataGridView.AllowUserToAddRows = false;
             this.productDataGridView.AllowUserToDeleteRows = false;
             this.productDataGridView.AllowUserToResizeColumns = false;
+            this.productDataGridView.AllowUserToResizeRows = false;
             this.productDataGridView.AutoGenerateColumns = false;
             this.productDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.productDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -77,6 +78,7 @@
             this.productDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn});
             this.productDataGridView.DataSource = this.productBindingSource;
+            this.productDataGridView.EnableHeadersVisualStyles = false;
             this.productDataGridView.Location = new System.Drawing.Point(123, 159);
             this.productDataGridView.Name = "productDataGridView";
             this.productDataGridView.ReadOnly = true;
