@@ -22,19 +22,13 @@ namespace Barroc_Intens.Sales
 
         private void btnBackToMain_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            DashboardSalesForm dashboardSalesForm = new DashboardSalesForm();
-            dashboardSalesForm.ShowDialog();
-            this.Close();
+            DirectToForm(new DashboardSalesForm());
         }
 
 
         private void pboxLogo_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
-            this.Close();
+            DirectToForm(new MainForm());
         }
 
         private void CustomerNotesForm_Load(object sender, EventArgs e)
@@ -77,6 +71,13 @@ namespace Barroc_Intens.Sales
 
             this.dbContext.Notes.Add(noteToAdd);
             this.dbContext.SaveChanges();
+        }
+
+        private void DirectToForm(Form myForm)
+        {
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
         }
     }
 }

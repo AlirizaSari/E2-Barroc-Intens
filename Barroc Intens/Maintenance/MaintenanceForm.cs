@@ -50,9 +50,13 @@ namespace Barroc_Intens.Maintenance
 
         private void btnBackToMaintenance_Click(object sender, EventArgs e)
         {
+            DirectToForm(new DashboardMaintenanceForm());
+        }
+
+        private void DirectToForm(Form myForm)
+        {
             this.Hide();
-            DashboardMaintenanceForm dashboardMaintenanceForm = new DashboardMaintenanceForm();
-            dashboardMaintenanceForm.ShowDialog();
+            myForm.ShowDialog();
             this.Close();
         }
 

@@ -1,4 +1,5 @@
 ﻿using Barroc_Intens.Classes;
+using Barroc_Intens.Sales;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,17 +30,23 @@ namespace Barroc_Intens
 
         private void btnBackToMain_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MainForm mainform = new MainForm();
-            mainform.ShowDialog();
-            this.Close();
+            DirectToForm(new MainForm());
         }
 
         private void btnCustomerNotes_Click(object sender, EventArgs e)
         {
+            DirectToForm(new CustomerNotesForm()); 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new InlogForm());
+        }
+
+        private void DirectToForm(Form myForm)
+        {
             this.Hide();
-            Sales.CustomerNotesForm customerNotesForm = new Sales.CustomerNotesForm();
-            customerNotesForm.ShowDialog();
+            myForm.ShowDialog();
             this.Close();
         }
     }

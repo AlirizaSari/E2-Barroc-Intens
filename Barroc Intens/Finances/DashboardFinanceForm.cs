@@ -36,18 +36,12 @@ namespace Barroc_Intens
         /// <param name="e"></param>
         private void pboxLogo_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
-            this.Close();
+            DirectToForm(new InlogForm());
         }
 
         private void btnBackToMain_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Barroc_Intens.MainForm mainForm = new Barroc_Intens.MainForm();
-            mainForm.ShowDialog();
-            this.Close();
+            DirectToForm(new MainForm());
         }
 
         private void DashboardFinanceForm_Load(object sender, EventArgs e)
@@ -57,9 +51,18 @@ namespace Barroc_Intens
 
         private void btnDirectToLeaseContract_Click(object sender, EventArgs e)
         {
+            DirectToForm(new LeaseContractForm());
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new InlogForm());
+        }
+
+        private void DirectToForm(Form myForm)
+        {
             this.Hide();
-            LeaseContractForm leaseContractForm = new LeaseContractForm();
-            leaseContractForm.ShowDialog();
+            myForm.ShowDialog();
             this.Close();
         }
     }

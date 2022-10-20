@@ -1,4 +1,5 @@
 ﻿using Barroc_Intens.Classes;
+using Barroc_Intens.Inkoop;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -57,10 +58,7 @@ namespace Barroc_Intens
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inkoop.AddProductFrom addProductFrom = new Inkoop.AddProductFrom();
-            addProductFrom.ShowDialog();
-            this.Close();
+            DirectToForm(new AddProductFrom());
         }
 
         private void btnEditProduct_Click(object sender, EventArgs e)
@@ -94,10 +92,7 @@ namespace Barroc_Intens
 
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inkoop.AddCategoryForm addCategoryForm = new Inkoop.AddCategoryForm();
-            addCategoryForm.ShowDialog();
-            this.Close();
+            DirectToForm(new AddCategoryForm());
         }
 
         private void btnEditCategory_Click(object sender, EventArgs e)
@@ -120,18 +115,24 @@ namespace Barroc_Intens
 
         private void btnBackToMain_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Barroc_Intens.MainForm mainForm = new Barroc_Intens.MainForm();
-            mainForm.ShowDialog();
-            this.Close();
+            DirectToForm(new MainForm());
         }
 
         private void btnInkoop_Click(object sender, EventArgs e)
         {
+            DirectToForm(new ProductenForm());
+        }
+
+        private void DirectToForm(Form myForm)
+        {
             this.Hide();
-            Inkoop.ProductenForm productenForm = new Inkoop.ProductenForm();
-            productenForm.ShowDialog();
+            myForm.ShowDialog();
             this.Close();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new InlogForm());
         }
     }
 }

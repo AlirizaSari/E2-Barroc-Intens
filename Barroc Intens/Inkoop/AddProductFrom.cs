@@ -44,17 +44,18 @@ namespace Barroc_Intens.Inkoop
             dbContext.Products.Add(product);
             dbContext.SaveChanges();
 
-            this.Hide();
-            DashboardInkoopForm dashboardInkoopForm = new DashboardInkoopForm();
-            dashboardInkoopForm.ShowDialog();
-            this.Close();
+            DirectToForm(new DashboardInkoopForm());
         }
 
         private void btnCancelProduct_Click(object sender, EventArgs e)
         {
+            DirectToForm(new DashboardInkoopForm());
+        }
+
+        private void DirectToForm(Form myForm)
+        {
             this.Hide();
-            DashboardInkoopForm dashboardInkoopForm = new DashboardInkoopForm();
-            dashboardInkoopForm.ShowDialog();
+            myForm.ShowDialog();
             this.Close();
         }
 

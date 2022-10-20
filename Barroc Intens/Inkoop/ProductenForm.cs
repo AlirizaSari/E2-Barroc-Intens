@@ -35,10 +35,7 @@ namespace Barroc_Intens.Inkoop
 
         private void btnBackToInkoopDashboard_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            DashboardInkoopForm dashboardInkoopForm = new DashboardInkoopForm();
-            dashboardInkoopForm.ShowDialog();
-            this.Close();
+            DirectToForm(new DashboardInkoopForm());
         }
 
         private void categoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,6 +69,13 @@ namespace Barroc_Intens.Inkoop
 
             if (product.Category != null)
                 lblProductCategory.Text = product.Category.Name;
+        }
+
+        private void DirectToForm(Form myForm)
+        {
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -52,6 +52,7 @@
             this.cbBkrCheck = new System.Windows.Forms.CheckBox();
             this.btnSaveToFile = new System.Windows.Forms.Button();
             this.pboxLogo = new System.Windows.Forms.PictureBox();
+            this.btnDirectToFinanceDash = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).BeginInit();
@@ -283,11 +284,22 @@
             this.pboxLogo.TabStop = false;
             this.pboxLogo.Click += new System.EventHandler(this.pboxLogo_Click);
             // 
+            // btnDirectToFinanceDash
+            // 
+            this.btnDirectToFinanceDash.Location = new System.Drawing.Point(606, 56);
+            this.btnDirectToFinanceDash.Name = "btnDirectToFinanceDash";
+            this.btnDirectToFinanceDash.Size = new System.Drawing.Size(179, 52);
+            this.btnDirectToFinanceDash.TabIndex = 24;
+            this.btnDirectToFinanceDash.Text = "Terug naar finances dashboard";
+            this.btnDirectToFinanceDash.UseVisualStyleBackColor = true;
+            this.btnDirectToFinanceDash.Click += new System.EventHandler(this.btnDirectToFinanceDash_Click);
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.btnDirectToFinanceDash);
             this.Controls.Add(this.pboxLogo);
             this.Controls.Add(this.btnSaveToFile);
             this.Controls.Add(this.cbBkrCheck);
@@ -351,5 +363,6 @@
         private System.Windows.Forms.CheckBox cbBkrCheck;
         private System.Windows.Forms.Button btnSaveToFile;
         private System.Windows.Forms.PictureBox pboxLogo;
+        private System.Windows.Forms.Button btnDirectToFinanceDash;
     }
 }

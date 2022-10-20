@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.maintenanceAppointmentDataGridView = new System.Windows.Forms.DataGridView();
-            this.btnBackToMaintenance = new System.Windows.Forms.Button();
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remarkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maintenanceAppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnBackToMaintenance = new System.Windows.Forms.Button();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentDataGridView)).BeginInit();
@@ -62,12 +62,41 @@
             this.remarkDataGridViewTextBoxColumn,
             this.addedDataGridViewTextBoxColumn});
             this.maintenanceAppointmentDataGridView.DataSource = this.maintenanceAppointmentBindingSource;
-            this.maintenanceAppointmentDataGridView.Location = new System.Drawing.Point(143, 130);
+            this.maintenanceAppointmentDataGridView.Location = new System.Drawing.Point(158, 130);
             this.maintenanceAppointmentDataGridView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.maintenanceAppointmentDataGridView.Name = "maintenanceAppointmentDataGridView";
+            this.maintenanceAppointmentDataGridView.RowHeadersWidth = 51;
             this.maintenanceAppointmentDataGridView.Size = new System.Drawing.Size(744, 354);
             this.maintenanceAppointmentDataGridView.TabIndex = 1;
             this.maintenanceAppointmentDataGridView.SelectionChanged += new System.EventHandler(this.maintenanceAppointmentDataGridView_SelectionChanged);
+            // 
+            // companyDataGridViewTextBoxColumn
+            // 
+            this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
+            this.companyDataGridViewTextBoxColumn.HeaderText = "Company";
+            this.companyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
+            this.companyDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // remarkDataGridViewTextBoxColumn
+            // 
+            this.remarkDataGridViewTextBoxColumn.DataPropertyName = "Remark";
+            this.remarkDataGridViewTextBoxColumn.HeaderText = "Remark";
+            this.remarkDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.remarkDataGridViewTextBoxColumn.Name = "remarkDataGridViewTextBoxColumn";
+            this.remarkDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // addedDataGridViewTextBoxColumn
+            // 
+            this.addedDataGridViewTextBoxColumn.DataPropertyName = "Added";
+            this.addedDataGridViewTextBoxColumn.HeaderText = "Added";
+            this.addedDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.addedDataGridViewTextBoxColumn.Name = "addedDataGridViewTextBoxColumn";
+            this.addedDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // maintenanceAppointmentBindingSource
+            // 
+            this.maintenanceAppointmentBindingSource.DataSource = typeof(Barroc_Intens.MaintenanceAppointment);
             // 
             // btnBackToMaintenance
             // 
@@ -79,35 +108,13 @@
             this.btnBackToMaintenance.UseVisualStyleBackColor = true;
             this.btnBackToMaintenance.Click += new System.EventHandler(this.btnBackToMaintenance_Click);
             // 
-            // companyDataGridViewTextBoxColumn
-            // 
-            this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
-            this.companyDataGridViewTextBoxColumn.HeaderText = "Company";
-            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
-            // 
-            // remarkDataGridViewTextBoxColumn
-            // 
-            this.remarkDataGridViewTextBoxColumn.DataPropertyName = "Remark";
-            this.remarkDataGridViewTextBoxColumn.HeaderText = "Remark";
-            this.remarkDataGridViewTextBoxColumn.Name = "remarkDataGridViewTextBoxColumn";
-            // 
-            // addedDataGridViewTextBoxColumn
-            // 
-            this.addedDataGridViewTextBoxColumn.DataPropertyName = "Added";
-            this.addedDataGridViewTextBoxColumn.HeaderText = "Added";
-            this.addedDataGridViewTextBoxColumn.Name = "addedDataGridViewTextBoxColumn";
-            // 
-            // maintenanceAppointmentBindingSource
-            // 
-            this.maintenanceAppointmentBindingSource.DataSource = typeof(Barroc_Intens.MaintenanceAppointment);
-            // 
             // productBindingSource
             // 
             this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
             // 
             // MaintenanceForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 519);
             this.Controls.Add(this.btnBackToMaintenance);

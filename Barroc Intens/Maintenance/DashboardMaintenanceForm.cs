@@ -23,25 +23,28 @@ namespace Barroc_Intens
 
         private void pboxLogo_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
-            this.Close();
+            DirectToForm(new InlogForm());
         }
 
         private void btnMaintenancePlanner_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PlannerForm plannerForm = new PlannerForm();
-            plannerForm.ShowDialog();
-            this.Close();
+            DirectToForm(new PlannerForm());
         }
 
         private void btnMaintenance_Click(object sender, EventArgs e)
         {
+            DirectToForm(new MaintenanceForm());
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new InlogForm());
+        }
+
+        private void DirectToForm(Form myForm)
+        {
             this.Hide();
-            MaintenanceForm maintenanceForm = new MaintenanceForm();
-            maintenanceForm.ShowDialog();
+            myForm.ShowDialog();
             this.Close();
         }
     }
