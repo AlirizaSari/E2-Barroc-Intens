@@ -9,6 +9,11 @@ namespace Barroc_Intens.Classes
 {
     static class UserLoginInformation
     {
+        /// <summary>
+        /// Converts the roleID to a string with the role
+        /// </summary>
+        /// <param name="rolId">The rolId of a logged in user</param>
+        /// <returns>A string with the role corresponding to the user</returns>
         public static string ConvertRoleId(int rolId)
         {
             string myRole = "Not found";
