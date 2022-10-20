@@ -75,11 +75,11 @@ namespace Barroc_Intens.Classes
             set { loginName = value; }
         }
 
-        private static int rolId;
-        public static int RolId
+        private static int loginRolId;
+        public static int LoginRolId
         {
-            get { return rolId; }
-            set { rolId = value; }
+            get { return loginRolId; }
+            set { loginRolId = value; }
         }
 
         

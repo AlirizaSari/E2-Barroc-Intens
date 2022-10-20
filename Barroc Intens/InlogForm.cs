@@ -16,11 +16,13 @@ namespace Barroc_Intens
     public partial class InlogForm : Form
     {
         private AppDbContext dbContext;
+        private Form currentForm = Form.ActiveForm;
+        
 
         public InlogForm()
         {
             InitializeComponent();
-        }
+    }
 
         private void InlogForm_Load(object sender, EventArgs e)
         {
@@ -39,13 +41,13 @@ namespace Barroc_Intens
 
             var rec = dbContext.Users.Where(a => a.UserName == username && a.Password == password).FirstOrDefault();
 
-            UserLoginInformation.LoginUserName = "test";
-            
             //has succesfully logged in
             if (rec != null)
             {
                 UserLoginInformation.LoginUserName = rec.UserName;
-                UserLoginInformation.RolId = rec.RolId;
+                UserLoginInformation.LoginName = rec.Name;
+                UserLoginInformation.LoginUserId = rec.UserId;
+                UserLoginInformation.LoginRolId = rec.RolId;
 
                 //admin
                 if (rec.RolId == 1)
