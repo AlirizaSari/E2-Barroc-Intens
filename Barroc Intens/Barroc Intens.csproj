@@ -297,6 +297,7 @@
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Rol.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Classes\UserLoginInformation.cs" />
     <Compile Include="dashboardTemplateForm.cs">
       <SubType>Form</SubType>
     </Compile>

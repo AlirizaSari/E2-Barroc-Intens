@@ -1,4 +1,5 @@
-﻿using Barroc_Intens.Finances;
+﻿using Barroc_Intens.Classes;
+using Barroc_Intens.Finances;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,8 @@ namespace Barroc_Intens
         public DashboardFinanceForm()
         {
             InitializeComponent();
+            lblAccountName.Text = UserLoginInformation.LoginUserName;
+            lblDepartment.Text = UserLoginInformation.ConvertRoleId(UserLoginInformation.RolId);
         }
 
         private void btnDirectToInvoice_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Barroc_Intens.Classes;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,10 +39,14 @@ namespace Barroc_Intens
 
             var rec = dbContext.Users.Where(a => a.UserName == username && a.Password == password).FirstOrDefault();
 
+            UserLoginInformation.LoginUserName = "test";
             
             //has succesfully logged in
             if (rec != null)
             {
+                UserLoginInformation.LoginUserName = rec.UserName;
+                UserLoginInformation.RolId = rec.RolId;
+
                 //admin
                 if (rec.RolId == 1)
                 {
