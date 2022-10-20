@@ -40,7 +40,6 @@
             this.lblInvoervelden = new System.Windows.Forms.Label();
             this.txbConversationReport = new System.Windows.Forms.TextBox();
             this.companyDataGridView = new System.Windows.Forms.DataGridView();
-            this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +50,7 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
@@ -100,10 +100,6 @@
             this.btnExportText.TabIndex = 6;
             this.btnExportText.Text = "<-- Exporteer";
             this.btnExportText.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
             // 
             // btnSaveToDb
             // 
@@ -114,7 +110,7 @@
             this.btnSaveToDb.TabIndex = 7;
             this.btnSaveToDb.Text = "opslaan naar database";
             this.btnSaveToDb.UseVisualStyleBackColor = true;
-            this.btnSaveToDb.Click += new System.EventHandler(this.btnSaveToDb_Click);
+            this.btnSaveToDb.Click += new System.EventHandler(this.btnSaveToDb_Click_1);
             // 
             // btnRecallLastExport
             // 
@@ -168,17 +164,6 @@
             // 
             // companyDataGridView
             // 
-<<<<<<< Updated upstream
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(498, 95);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(362, 257);
-            this.dataGridView1.TabIndex = 27;
-
-=======
             this.companyDataGridView.AutoGenerateColumns = false;
             this.companyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.companyDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -201,10 +186,6 @@
             this.companyDataGridView.Size = new System.Drawing.Size(472, 317);
             this.companyDataGridView.TabIndex = 27;
             this.companyDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.companyDataGridView_CellContentClick);
-            // 
-            // companyBindingSource
-            // 
-            this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -285,7 +266,10 @@
             this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.Width = 125;
->>>>>>> Stashed changes
+            // 
+            // companyBindingSource
+            // 
+            this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
             // 
             // CustomerNotesForm
             // 

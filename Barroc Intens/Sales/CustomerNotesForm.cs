@@ -39,16 +39,25 @@ namespace Barroc_Intens.Sales
 
         private void CustomerNotesForm_Load(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
             this.dbContext = new AppDbContext();   
-=======
+
             this.dbContext = new AppDbContext();
->>>>>>> Stashed changes
             this.dbContext.Companies.Load();
-            //this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
+            this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
         }
 
-        private void btnSaveToDb_Click(object sender, EventArgs e)
+       
+        private void companyDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void companyDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnSaveToDb_Click_1(object sender, EventArgs e)
         {
             if (this.dbContext == null)
                 return;
@@ -63,23 +72,11 @@ namespace Barroc_Intens.Sales
                 NoteDesription = txbConversationReport.Text,
                 date = DateTime.Now,
                 CompanyId = selectedCompany.CompanyId,
-                UserId =  1,
+                UserId = 1,
             };
-
-            
 
             this.dbContext.Notes.Add(noteToAdd);
             this.dbContext.SaveChanges();
-        }
-
-        private void companyDataGridView_SelectionChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void companyDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
