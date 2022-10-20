@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Barroc_Intens.Classes;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,8 @@ namespace Barroc_Intens
         public DashboardInkoopForm()
         {
             InitializeComponent();
+            lblAccountName.Text = UserLoginInformation.LoginUserName;
+            lblDepartment.Text = UserLoginInformation.ConvertRoleId(UserLoginInformation.RolId);
         }
 
         private void DashboardInkoopForm_Load(object sender, EventArgs e)

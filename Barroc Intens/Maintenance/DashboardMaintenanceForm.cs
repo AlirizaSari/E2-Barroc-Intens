@@ -1,4 +1,5 @@
-﻿using Barroc_Intens.Maintenance;
+﻿using Barroc_Intens.Classes;
+using Barroc_Intens.Maintenance;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,8 @@ namespace Barroc_Intens
         public DashboardMaintenanceForm()
         {
             InitializeComponent();
+            lblAccountName.Text = UserLoginInformation.LoginUserName;
+            lblDepartment.Text = UserLoginInformation.ConvertRoleId(UserLoginInformation.RolId);
         }
 
         private void pboxLogo_Click(object sender, EventArgs e)

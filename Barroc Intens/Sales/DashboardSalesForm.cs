@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Barroc_Intens.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,8 @@ namespace Barroc_Intens
         public DashboardSalesForm()
         {
             InitializeComponent();
+            lblAccountName.Text = UserLoginInformation.LoginUserName;
+            lblDepartment.Text = UserLoginInformation.ConvertRoleId(UserLoginInformation.RolId);
         }
 
         private void DashboardSalesForm_Load(object sender, EventArgs e)
