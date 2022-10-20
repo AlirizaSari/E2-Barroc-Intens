@@ -56,6 +56,10 @@ namespace Barroc_Intens
             modelBuilder.Entity<Company>().HasData(
                 new Company { CompanyId = 1, Name = "Curio", Phone = "0648686105", Street = "terheidenseweg", HouseNumber = "350", City = "Breda", CountryCode = "31", BkrCheckedAt = DateTime.Now, UserId = 1 
                 });
+
+            modelBuilder.Entity<Category>().HasData(
+                new Category { CategoryId = 1, Name = "Automaten", IsEmployeeOnly = 2 },
+                new Category { CategoryId = 2, Name = "Koffiebonen", IsEmployeeOnly = 2 });
         }
     }
 }

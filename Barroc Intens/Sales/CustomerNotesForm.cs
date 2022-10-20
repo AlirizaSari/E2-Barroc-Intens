@@ -39,10 +39,9 @@ namespace Barroc_Intens.Sales
 
         private void CustomerNotesForm_Load(object sender, EventArgs e)
         {
-            this.dbContext = new AppDbContext();
-            this.dbContext.Database.EnsureCreated();    
+            this.dbContext = new AppDbContext();   
             this.dbContext.Companies.Load();
-            this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
+            //this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
         }
 
         private void btnSaveToDb_Click(object sender, EventArgs e)

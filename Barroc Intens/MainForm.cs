@@ -27,7 +27,7 @@ namespace Barroc_Intens
 
             // Uncomment the line below to start fresh with a new database.
             //this.dbContext.Database.EnsureDeleted();
-            this.dbContext.Database.EnsureCreated();
+            //this.dbContext.Database.EnsureCreated();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)

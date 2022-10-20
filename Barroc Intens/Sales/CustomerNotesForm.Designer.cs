@@ -88,7 +88,6 @@
             this.btnExportText.TabIndex = 6;
             this.btnExportText.Text = "<-- Exporteer";
             this.btnExportText.UseVisualStyleBackColor = true;
-            this.btnExportText.Click += new System.EventHandler(this.btnExportText_Click);
             // 
             // btnSaveToDb
             // 
@@ -162,7 +161,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(362, 257);
             this.dataGridView1.TabIndex = 27;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // CustomerNotesForm
             // 
