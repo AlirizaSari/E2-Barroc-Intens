@@ -19,7 +19,7 @@ namespace Barroc_Intens
         public DbSet<CustomInvoiceProduct> CustomInvoiceProducts { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
- 
+
 
 
 
@@ -54,7 +54,17 @@ namespace Barroc_Intens
                 new User { UserId = 9, Name = "Mainentance", UserName = "Maintenance", Password = "123", RolId = 9/*, IsLoggedIn = false*/ });
 
             modelBuilder.Entity<Company>().HasData(
-                new Company { CompanyId = 1, Name = "Curio", Phone = "0648686105", Street = "terheidenseweg", HouseNumber = "350", City = "Breda", CountryCode = "31", BkrCheckedAt = DateTime.Now, UserId = 1 
+                new Company
+                {
+                    CompanyId = 1,
+                    Name = "Curio",
+                    Phone = "0648686105",
+                    Street = "terheidenseweg",
+                    HouseNumber = "350",
+                    City = "Breda",
+                    CountryCode = "31",
+                    BkrCheckedAt = DateTime.Now,
+                    UserId = 1
                 });
 
             modelBuilder.Entity<Category>().HasData(
