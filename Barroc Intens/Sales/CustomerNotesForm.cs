@@ -1,5 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Barroc_Intens.Sales
@@ -26,16 +33,17 @@ namespace Barroc_Intens.Sales
 
         private void CustomerNotesForm_Load(object sender, EventArgs e)
         {
+            this.dbContext = new AppDbContext();   
 
             this.dbContext = new AppDbContext();
             this.dbContext.Companies.Load();
             this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
         }
 
-
+       
         private void companyDataGridView_SelectionChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void companyDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -63,11 +71,6 @@ namespace Barroc_Intens.Sales
 
             this.dbContext.Notes.Add(noteToAdd);
             this.dbContext.SaveChanges();
-
-            lblSaveMessage.Visible = true;
-            lblSaveMessage.Text = "de notitie is opgeslagen naar de database";
-
-
         }
 
         private void DirectToForm(Form myForm)
@@ -76,7 +79,5 @@ namespace Barroc_Intens.Sales
             myForm.ShowDialog();
             this.Close();
         }
-
-
     }
 }
