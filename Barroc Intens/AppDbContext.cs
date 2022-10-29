@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Barroc_Intens.Classes;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace Barroc_Intens
         public DbSet<CustomInvoiceProduct> CustomInvoiceProducts { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Leasecontract> LeaseContracts { get; set; }
 
 
 
@@ -54,17 +56,13 @@ namespace Barroc_Intens
                 new User { UserId = 9, Name = "Mainentance", UserName = "Maintenance", Password = "123", RolId = 9/*, IsLoggedIn = false*/ });
 
             modelBuilder.Entity<Company>().HasData(
-                new Company
-                {
-                    CompanyId = 1,
-                    Name = "Curio",
-                    Phone = "0648686105",
-                    Street = "terheidenseweg",
-                    HouseNumber = "350",
-                    City = "Breda",
-                    CountryCode = "31",
-                    BkrCheckedAt = DateTime.Now,
-                    UserId = 1
+                new Company { CompanyId = 1, Name = "Curio", Phone = "0648686105", Street = "terheidenseweg", HouseNumber = "350", City = "Breda", CountryCode = "31", BkrCheckedAt = DateTime.Now, UserId = 1 },
+                new Company { CompanyId = 2, Name = "hustllebv", Phone = "0658686185", Street = "poolseweg", HouseNumber = "50", City = "tilburg", CountryCode = "31", BkrCheckedAt = null, UserId = 2,
+                });
+
+            modelBuilder.Entity<Leasecontract>().HasData(
+                new Leasecontract { id = 1, CompanyId = 1, BkrChecked = 1, UserId = 1 }, 
+                new Leasecontract { id = 2, CompanyId = 2, BkrChecked = 0, UserId = 2,                 
                 });
 
             modelBuilder.Entity<Category>().HasData(
