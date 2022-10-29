@@ -63,8 +63,8 @@
     <Reference Include="Microsoft.EntityFrameworkCore.Relational, Version=3.1.19.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.EntityFrameworkCore.Relational.3.1.19\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Relational.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.EntityFrameworkCore.Relational.Design, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Relational.Design.1.1.1\lib\net451\Microsoft.EntityFrameworkCore.Relational.Design.dll</HintPath>
+    <Reference Include="Microsoft.EntityFrameworkCore.Relational.Design, Version=1.1.6.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Relational.Design.1.1.6\lib\net451\Microsoft.EntityFrameworkCore.Relational.Design.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.dll</HintPath>
@@ -298,6 +298,7 @@
     <Compile Include="Classes\Company.cs" />
     <Compile Include="Classes\CustomInvoice.cs" />
     <Compile Include="Classes\CustomInvoiceProduct.cs" />
+    <Compile Include="Classes\LeaseContract.cs" />
     <Compile Include="Classes\MaintenanceAppointment.cs" />
     <Compile Include="Classes\Note.cs" />
     <Compile Include="Classes\Product.cs" />
@@ -404,6 +405,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Finances\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finances\LeaseContractForm.resx">
+      <DependentUpon>LeaseContractForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inkoop\AddCategoryForm.resx">
       <DependentUpon>AddCategoryForm.cs</DependentUpon>
