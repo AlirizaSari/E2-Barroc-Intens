@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.maintenanceAppointmentDataGridView = new System.Windows.Forms.DataGridView();
+            this.btnBackToMaintenance = new System.Windows.Forms.Button();
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remarkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maintenanceAppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnBackToMaintenance = new System.Windows.Forms.Button();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentDataGridView)).BeginInit();
@@ -70,6 +70,16 @@
             this.maintenanceAppointmentDataGridView.TabIndex = 1;
             this.maintenanceAppointmentDataGridView.SelectionChanged += new System.EventHandler(this.maintenanceAppointmentDataGridView_SelectionChanged);
             // 
+            // btnBackToMaintenance
+            // 
+            this.btnBackToMaintenance.Location = new System.Drawing.Point(719, 15);
+            this.btnBackToMaintenance.Name = "btnBackToMaintenance";
+            this.btnBackToMaintenance.Size = new System.Drawing.Size(168, 30);
+            this.btnBackToMaintenance.TabIndex = 2;
+            this.btnBackToMaintenance.Text = "Terug naar Dashboard";
+            this.btnBackToMaintenance.UseVisualStyleBackColor = true;
+            this.btnBackToMaintenance.Click += new System.EventHandler(this.btnBackToMaintenance_Click);
+            // 
             // companyDataGridViewTextBoxColumn
             // 
             this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
@@ -97,16 +107,6 @@
             // maintenanceAppointmentBindingSource
             // 
             this.maintenanceAppointmentBindingSource.DataSource = typeof(Barroc_Intens.MaintenanceAppointment);
-            // 
-            // btnBackToMaintenance
-            // 
-            this.btnBackToMaintenance.Location = new System.Drawing.Point(719, 15);
-            this.btnBackToMaintenance.Name = "btnBackToMaintenance";
-            this.btnBackToMaintenance.Size = new System.Drawing.Size(168, 30);
-            this.btnBackToMaintenance.TabIndex = 2;
-            this.btnBackToMaintenance.Text = "Terug naar Dashboard";
-            this.btnBackToMaintenance.UseVisualStyleBackColor = true;
-            this.btnBackToMaintenance.Click += new System.EventHandler(this.btnBackToMaintenance_Click);
             // 
             // productBindingSource
             // 

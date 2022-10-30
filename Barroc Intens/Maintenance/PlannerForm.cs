@@ -27,7 +27,7 @@ namespace Barroc_Intens.Maintenance
             DateTime[] dates = { today.AddDays(1),
             today.AddDays(3), today.AddDays(5)};
 
-            mcaMalfunctionCalendar.BoldedDates = dates;
+            //mcaMalfunctionCalendar.BoldedDates = dates;
 
             //for (int r = 0; r < dates.GetLength(0); r++)
             //{
@@ -39,6 +39,22 @@ namespace Barroc_Intens.Maintenance
             //        gridView.CreateCells[c].Value = dates;
             //    }
             //}
+        }
+
+        private void btnBackToMaintenance_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new DashboardMaintenanceForm());
+        }
+        private void DirectToForm(Form myForm)
+        {
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
