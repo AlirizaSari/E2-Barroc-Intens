@@ -32,10 +32,7 @@
             this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.btnBackToMain = new System.Windows.Forms.Button();
             this.lblConversationReport = new System.Windows.Forms.Label();
-            this.btnExportText = new System.Windows.Forms.Button();
             this.btnSaveToDb = new System.Windows.Forms.Button();
-            this.btnRecallLastExport = new System.Windows.Forms.Button();
-            this.btnExportToDocument = new System.Windows.Forms.Button();
             this.lblMenu = new System.Windows.Forms.Label();
             this.lblInvoervelden = new System.Windows.Forms.Label();
             this.txbConversationReport = new System.Windows.Forms.TextBox();
@@ -91,19 +88,9 @@
             this.lblConversationReport.TabIndex = 5;
             this.lblConversationReport.Text = "Gespreksverslag";
             // 
-            // btnExportText
-            // 
-            this.btnExportText.Location = new System.Drawing.Point(488, 126);
-            this.btnExportText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnExportText.Name = "btnExportText";
-            this.btnExportText.Size = new System.Drawing.Size(171, 39);
-            this.btnExportText.TabIndex = 6;
-            this.btnExportText.Text = "<-- Exporteer";
-            this.btnExportText.UseVisualStyleBackColor = true;
-            // 
             // btnSaveToDb
             // 
-            this.btnSaveToDb.Location = new System.Drawing.Point(488, 236);
+            this.btnSaveToDb.Location = new System.Drawing.Point(488, 117);
             this.btnSaveToDb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSaveToDb.Name = "btnSaveToDb";
             this.btnSaveToDb.Size = new System.Drawing.Size(171, 39);
@@ -111,26 +98,6 @@
             this.btnSaveToDb.Text = "opslaan naar database";
             this.btnSaveToDb.UseVisualStyleBackColor = true;
             this.btnSaveToDb.Click += new System.EventHandler(this.btnSaveToDb_Click_1);
-            // 
-            // btnRecallLastExport
-            // 
-            this.btnRecallLastExport.Location = new System.Drawing.Point(488, 181);
-            this.btnRecallLastExport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRecallLastExport.Name = "btnRecallLastExport";
-            this.btnRecallLastExport.Size = new System.Drawing.Size(171, 39);
-            this.btnRecallLastExport.TabIndex = 8;
-            this.btnRecallLastExport.Text = "Herstel";
-            this.btnRecallLastExport.UseVisualStyleBackColor = true;
-            // 
-            // btnExportToDocument
-            // 
-            this.btnExportToDocument.Location = new System.Drawing.Point(488, 288);
-            this.btnExportToDocument.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnExportToDocument.Name = "btnExportToDocument";
-            this.btnExportToDocument.Size = new System.Drawing.Size(171, 39);
-            this.btnExportToDocument.TabIndex = 9;
-            this.btnExportToDocument.Text = "opslaan naar document";
-            this.btnExportToDocument.UseVisualStyleBackColor = true;
             // 
             // lblMenu
             // 
@@ -178,12 +145,12 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.companyDataGridView.DataSource = this.companyBindingSource;
-            this.companyDataGridView.Location = new System.Drawing.Point(674, 117);
+            this.companyDataGridView.Location = new System.Drawing.Point(664, 117);
             this.companyDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.companyDataGridView.Name = "companyDataGridView";
             this.companyDataGridView.RowHeadersWidth = 51;
             this.companyDataGridView.RowTemplate.Height = 24;
-            this.companyDataGridView.Size = new System.Drawing.Size(472, 317);
+            this.companyDataGridView.Size = new System.Drawing.Size(482, 317);
             this.companyDataGridView.TabIndex = 27;
             this.companyDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.companyDataGridView_CellContentClick);
             // 
@@ -281,10 +248,7 @@
             this.Controls.Add(this.txbConversationReport);
             this.Controls.Add(this.lblInvoervelden);
             this.Controls.Add(this.lblMenu);
-            this.Controls.Add(this.btnExportToDocument);
-            this.Controls.Add(this.btnRecallLastExport);
             this.Controls.Add(this.btnSaveToDb);
-            this.Controls.Add(this.btnExportText);
             this.Controls.Add(this.btnBackToMain);
             this.Controls.Add(this.pboxLogo);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -304,10 +268,7 @@
         private System.Windows.Forms.PictureBox pboxLogo;
         private System.Windows.Forms.Button btnBackToMain;
         private System.Windows.Forms.Label lblConversationReport;
-        private System.Windows.Forms.Button btnExportText;
         private System.Windows.Forms.Button btnSaveToDb;
-        private System.Windows.Forms.Button btnRecallLastExport;
-        private System.Windows.Forms.Button btnExportToDocument;
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Label lblInvoervelden;
         private System.Windows.Forms.TextBox txbConversationReport;
