@@ -45,6 +45,9 @@ namespace Barroc_Intens.Finances
             if (companies == null)
                 return;
             else
+            
+            // you may now make a selection of a company in the datagridview. depending on the data it finds about a bkrRegistration it wil check a box if this data is registerd or not. s.smit
+            
             {
                 if (companies.BkrCheckedAt != null)
                 {
@@ -62,25 +65,27 @@ namespace Barroc_Intens.Finances
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-        //public string NoteDesription { get; set; }
+            var companies = (Company)this.dgvCompanys.CurrentRow?.DataBoundItem;
+            int bkrResult;
+            if (chbBkrCheckNegative.Checked != true)
+            {
+                bkrResult = 1;
+            }
+            else
+            {
+                bkrResult = 0;
+            }
+            
 
-        //public DateTime date { get; set; }
+            var leaseContract = new Leasecontract
+            {
+                CompanyId = companies.CompanyId,
+                BkrChecked = bkrResult,
+                UserId = companies.UserId,
+            };
 
-        //public int CompanyId { get; set; }
-        //public Company Company { get; set; } = null;
-
-        //public int UserId { get; set; }
-        //public User User { get; set; } = null;
-        //var leaseContract = new LeaseContract
-        //    {
-        //        BkrRegisterChecked = ,
-        //        companyId = ,
-
-                
-
-        //    };
-        //    dbContext.Categories.Add(category);
-        //    dbContext.SaveChanges();
+            dbContext.LeaseContracts.Add(leaseContract);
+            dbContext.SaveChanges();
 
         }
 
