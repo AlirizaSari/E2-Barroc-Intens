@@ -22,6 +22,7 @@ namespace Barroc_Intens
             
             if (UserLoginInformation.LoginRolId != 1)
             {
+                pboxLogo.Visible = false;
                 btnBackToMain.Visible = false;
             }
         }
@@ -41,7 +42,7 @@ namespace Barroc_Intens
         /// <param name="e"></param>
         private void pboxLogo_Click(object sender, EventArgs e)
         {
-            DirectToForm(new InlogForm());
+            DirectToForm(new MainForm());
         }
 
         private void btnBackToMain_Click(object sender, EventArgs e)

@@ -19,11 +19,22 @@ namespace Barroc_Intens
             InitializeComponent();
             lblAccountName.Text = UserLoginInformation.LoginUserName;
             lblDepartment.Text = UserLoginInformation.ConvertRoleId(UserLoginInformation.LoginRolId);
+
+            if (UserLoginInformation.LoginRolId != 1)
+            {
+                pboxLogo.Visible = false;
+                btnBackToMain.Visible = false;
+            }
         }
 
         private void pboxLogo_Click(object sender, EventArgs e)
         {
-            DirectToForm(new InlogForm());
+            DirectToForm(new MainForm());
+        }
+
+        private void btnBackToMain_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new MainForm());
         }
 
         private void btnMaintenancePlanner_Click(object sender, EventArgs e)
@@ -47,5 +58,7 @@ namespace Barroc_Intens
             myForm.ShowDialog();
             this.Close();
         }
+
+ 
     }
 }

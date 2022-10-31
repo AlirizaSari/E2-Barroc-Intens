@@ -37,7 +37,7 @@
             this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblSystemName = new System.Windows.Forms.Label();
-            this.btnLocation3 = new System.Windows.Forms.Button();
+            this.btnBackToMain = new System.Windows.Forms.Button();
             this.btnMaintenancePlanner = new System.Windows.Forms.Button();
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
@@ -65,7 +65,7 @@
             this.lblExtraInfo.AutoSize = true;
             this.lblExtraInfo.Location = new System.Drawing.Point(20, 322);
             this.lblExtraInfo.Name = "lblExtraInfo";
-            this.lblExtraInfo.Size = new System.Drawing.Size(115, 20);
+            this.lblExtraInfo.Size = new System.Drawing.Size(91, 15);
             this.lblExtraInfo.TabIndex = 6;
             this.lblExtraInfo.Text = "Extra Informatie";
             // 
@@ -92,7 +92,7 @@
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Location = new System.Drawing.Point(53, 249);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(66, 20);
+            this.lblDepartment.Size = new System.Drawing.Size(52, 15);
             this.lblDepartment.TabIndex = 3;
             this.lblDepartment.Text = "Afdeling";
             // 
@@ -101,7 +101,7 @@
             this.lblAccountName.AutoSize = true;
             this.lblAccountName.Location = new System.Drawing.Point(53, 220);
             this.lblAccountName.Name = "lblAccountName";
-            this.lblAccountName.Size = new System.Drawing.Size(107, 20);
+            this.lblAccountName.Size = new System.Drawing.Size(87, 15);
             this.lblAccountName.TabIndex = 2;
             this.lblAccountName.Text = "Account Naam";
             // 
@@ -121,7 +121,7 @@
             // 
             this.pnlTop.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlTop.Controls.Add(this.lblSystemName);
-            this.pnlTop.Controls.Add(this.btnLocation3);
+            this.pnlTop.Controls.Add(this.btnBackToMain);
             this.pnlTop.Controls.Add(this.btnMaintenancePlanner);
             this.pnlTop.Controls.Add(this.btnMaintenance);
             this.pnlTop.Location = new System.Drawing.Point(222, 0);
@@ -135,22 +135,23 @@
             this.lblSystemName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSystemName.Location = new System.Drawing.Point(240, 34);
             this.lblSystemName.Name = "lblSystemName";
-            this.lblSystemName.Size = new System.Drawing.Size(200, 41);
+            this.lblSystemName.Size = new System.Drawing.Size(162, 32);
             this.lblSystemName.TabIndex = 3;
             this.lblSystemName.Text = "Maintenance";
             // 
-            // btnLocation3
+            // btnBackToMain
             // 
-            this.btnLocation3.Location = new System.Drawing.Point(496, 117);
-            this.btnLocation3.Name = "btnLocation3";
-            this.btnLocation3.Size = new System.Drawing.Size(172, 37);
-            this.btnLocation3.TabIndex = 2;
-            this.btnLocation3.Text = "Location 3";
-            this.btnLocation3.UseVisualStyleBackColor = true;
+            this.btnBackToMain.Location = new System.Drawing.Point(40, 117);
+            this.btnBackToMain.Name = "btnBackToMain";
+            this.btnBackToMain.Size = new System.Drawing.Size(172, 37);
+            this.btnBackToMain.TabIndex = 2;
+            this.btnBackToMain.Text = "Home";
+            this.btnBackToMain.UseVisualStyleBackColor = true;
+            this.btnBackToMain.Click += new System.EventHandler(this.btnBackToMain_Click);
             // 
             // btnMaintenancePlanner
             // 
-            this.btnMaintenancePlanner.Location = new System.Drawing.Point(280, 117);
+            this.btnMaintenancePlanner.Location = new System.Drawing.Point(495, 117);
             this.btnMaintenancePlanner.Name = "btnMaintenancePlanner";
             this.btnMaintenancePlanner.Size = new System.Drawing.Size(172, 37);
             this.btnMaintenancePlanner.TabIndex = 1;
@@ -160,7 +161,7 @@
             // 
             // btnMaintenance
             // 
-            this.btnMaintenance.Location = new System.Drawing.Point(52, 117);
+            this.btnMaintenance.Location = new System.Drawing.Point(264, 117);
             this.btnMaintenance.Name = "btnMaintenance";
             this.btnMaintenance.Size = new System.Drawing.Size(172, 37);
             this.btnMaintenance.TabIndex = 0;
@@ -170,7 +171,7 @@
             // 
             // DashboardMaintenanceForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.pnlTop);
@@ -198,7 +199,7 @@
         private System.Windows.Forms.Label lblDepartment;
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Label lblSystemName;
-        private System.Windows.Forms.Button btnLocation3;
+        private System.Windows.Forms.Button btnBackToMain;
         private System.Windows.Forms.Button btnMaintenancePlanner;
         private System.Windows.Forms.Button btnMaintenance;
     }

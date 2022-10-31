@@ -21,6 +21,11 @@ namespace Barroc_Intens
             InitializeComponent();
             lblAccountName.Text = UserLoginInformation.LoginUserName;
             lblDepartment.Text = UserLoginInformation.ConvertRoleId(UserLoginInformation.LoginRolId);
+
+            if (UserLoginInformation.LoginRolId != 1)
+            {
+                btnBackToMain.Visible = false;
+            }
         }
 
         private void DashboardSalesForm_Load(object sender, EventArgs e)
