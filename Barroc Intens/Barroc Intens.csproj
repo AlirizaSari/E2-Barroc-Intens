@@ -300,6 +300,7 @@
     <Compile Include="Classes\CustomInvoiceProduct.cs" />
     <Compile Include="Classes\LeaseContract.cs" />
     <Compile Include="Classes\MaintenanceAppointment.cs" />
+    <Compile Include="Classes\MaintenanceAppointmentProduct.cs" />
     <Compile Include="Classes\Note.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Rol.cs" />
@@ -383,6 +384,7 @@
     <Compile Include="Maintenance\PlannerForm.Designer.cs">
       <DependentUpon>PlannerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sales\CustomerNotesForm.cs">
@@ -452,6 +454,7 @@
     <EmbeddedResource Include="Sales\DashboardSalesForm.resx">
       <DependentUpon>DashboardSalesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\Barroc Intens.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Barroc_Intens.Sales.CustomerNotesForm.datasource" />
     <None Include="Properties\DataSources\Category.datasource" />
@@ -473,6 +476,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\Barroc Intens.exe" />
+    <Content Include="bin\Debug\Barroc Intens.pdb" />
     <Content Include="Resources\Logo6_groot.png" />
     <Content Include="Resources\Logo6_klein.png" />
   </ItemGroup>

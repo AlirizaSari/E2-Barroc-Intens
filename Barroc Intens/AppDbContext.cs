@@ -16,6 +16,7 @@ namespace Barroc_Intens
         public DbSet<Note> Notes { get; set; }
         public DbSet<Company> Companies { get; set; }
         public DbSet<MaintenanceAppointment> MaintenanceAppointments { get; set; }
+        public DbSet<MaintenanceAppointmentProduct> MaintenanceAppointmentProducts { get; set; }
         public DbSet<CustomInvoice> CustomInvoices { get; set; }
         public DbSet<CustomInvoiceProduct> CustomInvoiceProducts { get; set; }
         public DbSet<Product> Products { get; set; }

@@ -101,7 +101,7 @@
             // 
             // productBindingSource
             // 
-            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
+            //this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
             // 
             // label1
             // 
