@@ -19,6 +19,11 @@ namespace Barroc_Intens
             InitializeComponent();
             lblAccountName.Text = UserLoginInformation.LoginUserName;
             lblDepartment.Text = UserLoginInformation.ConvertRoleId(UserLoginInformation.LoginRolId);
+            
+            if (UserLoginInformation.LoginRolId != 1)
+            {
+                btnBackToMain.Visible = false;
+            }
         }
 
         private void btnDirectToInvoice_Click(object sender, EventArgs e)
