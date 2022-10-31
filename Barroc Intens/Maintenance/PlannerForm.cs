@@ -51,10 +51,5 @@ namespace Barroc_Intens.Maintenance
             myForm.ShowDialog();
             this.Close();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
