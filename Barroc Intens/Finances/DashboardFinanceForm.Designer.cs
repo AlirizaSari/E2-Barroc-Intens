@@ -1,4 +1,6 @@
-﻿namespace Barroc_Intens
+﻿using Barroc_Intens.Classes;
+
+namespace Barroc_Intens
 {
     partial class DashboardFinanceForm
     {
@@ -39,7 +41,13 @@
             this.lblSystemName = new System.Windows.Forms.Label();
             this.btnDirectToLeaseContract = new System.Windows.Forms.Button();
             this.btnDirectToInvoice = new System.Windows.Forms.Button();
-            this.btnBackToMain = new System.Windows.Forms.Button();
+            
+            if (UserLoginInformation.LoginRolId == 1)
+            {
+                this.btnBackToMain = new System.Windows.Forms.Button();
+            }
+
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -160,22 +168,38 @@
             this.btnDirectToInvoice.Text = "Factuur aanmaken";
             this.btnDirectToInvoice.UseVisualStyleBackColor = true;
             this.btnDirectToInvoice.Click += new System.EventHandler(this.btnDirectToInvoice_Click);
+            
+
+            if (UserLoginInformation.LoginRolId == 1)
+            {
+                // 
+                // btnBackToMain
+                // 
+                this.btnBackToMain.Location = new System.Drawing.Point(46, 117);
+                this.btnBackToMain.Name = "btnBackToMain";
+                this.btnBackToMain.Size = new System.Drawing.Size(172, 37);
+                this.btnBackToMain.TabIndex = 0;
+                this.btnBackToMain.Text = "Home";
+                this.btnBackToMain.UseVisualStyleBackColor = true;
+                this.btnBackToMain.Click += new System.EventHandler(this.btnBackToMain_Click);
+            }
+            
             // 
-            // btnBackToMain
+            // button1
             // 
-            this.btnBackToMain.Location = new System.Drawing.Point(46, 117);
-            this.btnBackToMain.Name = "btnBackToMain";
-            this.btnBackToMain.Size = new System.Drawing.Size(172, 37);
-            this.btnBackToMain.TabIndex = 0;
-            this.btnBackToMain.Text = "Home";
-            this.btnBackToMain.UseVisualStyleBackColor = true;
-            this.btnBackToMain.Click += new System.EventHandler(this.btnBackToMain_Click);
+            this.button1.Location = new System.Drawing.Point(364, 300);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // DashboardFinanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlLeft);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -206,5 +230,6 @@
         private System.Windows.Forms.Button btnDirectToLeaseContract;
         private System.Windows.Forms.Button btnBackToMain;
         private System.Windows.Forms.Button btnDirectToInvoice;
+        private System.Windows.Forms.Button button1;
     }
 }
