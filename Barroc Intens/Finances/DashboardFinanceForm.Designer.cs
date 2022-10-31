@@ -1,4 +1,6 @@
-﻿namespace Barroc_Intens
+﻿using Barroc_Intens.Classes;
+
+namespace Barroc_Intens
 {
     partial class DashboardFinanceForm
     {

@@ -287,7 +287,7 @@
             this.lblAdresCompany.Size = new System.Drawing.Size(55, 17);
             this.lblAdresCompany.TabIndex = 1;
             this.lblAdresCompany.Text = "Adres:";
-            this.lblAdresCompany.Click += new System.EventHandler(this.label1_Click);
+            //this.lblAdresCompany.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblCityCompany
             // 
