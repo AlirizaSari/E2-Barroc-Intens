@@ -1,6 +1,7 @@
 ﻿using Barroc_Intens.Classes;
 using Barroc_Intens.Inkoop;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Exchange.WebServices.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,21 @@ namespace Barroc_Intens
             InitializeComponent();
             lblAccountName.Text = UserLoginInformation.LoginUserName;
             lblDepartment.Text = UserLoginInformation.ConvertRoleId(UserLoginInformation.LoginRolId);
+
+            if (UserLoginInformation.LoginRolId != 1)
+            {
+                btnBackToMain.Visible = false;
+            }
+
+            if (UserLoginInformation.LoginRolId != 1 && UserLoginInformation.LoginRolId != 6)
+            {
+                btnAddProduct.Visible = false;
+                btnEditProduct.Visible = false;
+                btnRemoveProduct.Visible = false;
+                btnAddCategory.Visible = false;
+                btnEditCategory.Visible = false;
+                btnRemoveCategory.Visible = false;
+            }
         }
 
         private void DashboardInkoopForm_Load(object sender, EventArgs e)
@@ -55,7 +71,7 @@ namespace Barroc_Intens
             .Load();
 
         }
-
+        
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             DirectToForm(new AddProductFrom());

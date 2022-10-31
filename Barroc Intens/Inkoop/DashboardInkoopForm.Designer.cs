@@ -48,16 +48,15 @@
             this.btnEditCategory = new System.Windows.Forms.Button();
             this.btnRemoveCategory = new System.Windows.Forms.Button();
             this.productsDataGridView = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriesDataGridView = new System.Windows.Forms.DataGridView();
             this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isEmployeeOnlyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -87,7 +86,7 @@
             this.lblExtraInfo.AutoSize = true;
             this.lblExtraInfo.Location = new System.Drawing.Point(20, 322);
             this.lblExtraInfo.Name = "lblExtraInfo";
-            this.lblExtraInfo.Size = new System.Drawing.Size(115, 20);
+            this.lblExtraInfo.Size = new System.Drawing.Size(91, 15);
             this.lblExtraInfo.TabIndex = 6;
             this.lblExtraInfo.Text = "Extra Informatie";
             // 
@@ -114,7 +113,7 @@
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Location = new System.Drawing.Point(53, 249);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(66, 20);
+            this.lblDepartment.Size = new System.Drawing.Size(52, 15);
             this.lblDepartment.TabIndex = 3;
             this.lblDepartment.Text = "Afdeling";
             // 
@@ -123,7 +122,7 @@
             this.lblAccountName.AutoSize = true;
             this.lblAccountName.Location = new System.Drawing.Point(53, 220);
             this.lblAccountName.Name = "lblAccountName";
-            this.lblAccountName.Size = new System.Drawing.Size(107, 20);
+            this.lblAccountName.Size = new System.Drawing.Size(87, 15);
             this.lblAccountName.TabIndex = 2;
             this.lblAccountName.Text = "Account Naam";
             // 
@@ -155,7 +154,7 @@
             this.lblInkoop.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInkoop.Location = new System.Drawing.Point(293, 30);
             this.lblInkoop.Name = "lblInkoop";
-            this.lblInkoop.Size = new System.Drawing.Size(118, 41);
+            this.lblInkoop.Size = new System.Drawing.Size(95, 32);
             this.lblInkoop.TabIndex = 3;
             this.lblInkoop.Text = "Inkoop";
             // 
@@ -220,7 +219,7 @@
             // 
             // btnAddCategory
             // 
-            this.btnAddCategory.Location = new System.Drawing.Point(481, 468);
+            this.btnAddCategory.Location = new System.Drawing.Point(537, 468);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(172, 37);
             this.btnAddCategory.TabIndex = 7;
@@ -230,7 +229,7 @@
             // 
             // btnEditCategory
             // 
-            this.btnEditCategory.Location = new System.Drawing.Point(481, 511);
+            this.btnEditCategory.Location = new System.Drawing.Point(537, 511);
             this.btnEditCategory.Name = "btnEditCategory";
             this.btnEditCategory.Size = new System.Drawing.Size(172, 37);
             this.btnEditCategory.TabIndex = 8;
@@ -240,7 +239,7 @@
             // 
             // btnRemoveCategory
             // 
-            this.btnRemoveCategory.Location = new System.Drawing.Point(481, 554);
+            this.btnRemoveCategory.Location = new System.Drawing.Point(537, 554);
             this.btnRemoveCategory.Name = "btnRemoveCategory";
             this.btnRemoveCategory.Size = new System.Drawing.Size(172, 37);
             this.btnRemoveCategory.TabIndex = 9;
@@ -257,7 +256,6 @@
             this.nameDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
             this.Brand,
-            this.priceDataGridViewTextBoxColumn,
             this.categoryDataGridViewTextBoxColumn});
             this.productsDataGridView.DataSource = this.productBindingSource;
             this.productsDataGridView.Location = new System.Drawing.Point(229, 164);
@@ -266,6 +264,46 @@
             this.productsDataGridView.Size = new System.Drawing.Size(673, 196);
             this.productsDataGridView.TabIndex = 10;
             this.productsDataGridView.SelectionChanged += new System.EventHandler(this.productsDataGridView_SelectionChanged);
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
+            // 
+            // categoriesDataGridView
+            // 
+            this.categoriesDataGridView.AutoGenerateColumns = false;
+            this.categoriesDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.categoriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.categoriesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn1,
+            this.isEmployeeOnlyDataGridViewTextBoxColumn});
+            this.categoriesDataGridView.DataSource = this.categoryBindingSource;
+            this.categoriesDataGridView.Location = new System.Drawing.Point(229, 410);
+            this.categoriesDataGridView.Name = "categoriesDataGridView";
+            this.categoriesDataGridView.RowHeadersWidth = 51;
+            this.categoriesDataGridView.Size = new System.Drawing.Size(302, 178);
+            this.categoriesDataGridView.TabIndex = 11;
+            this.categoriesDataGridView.SelectionChanged += new System.EventHandler(this.categoriesDataGridView_SelectionChanged);
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // isEmployeeOnlyDataGridViewTextBoxColumn
+            // 
+            this.isEmployeeOnlyDataGridViewTextBoxColumn.DataPropertyName = "IsEmployeeOnly";
+            this.isEmployeeOnlyDataGridViewTextBoxColumn.HeaderText = "IsEmployeeOnly";
+            this.isEmployeeOnlyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.isEmployeeOnlyDataGridViewTextBoxColumn.Name = "isEmployeeOnlyDataGridViewTextBoxColumn";
+            this.isEmployeeOnlyDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // categoryBindingSource
+            // 
+            this.categoryBindingSource.DataSource = typeof(Barroc_Intens.Category);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -291,14 +329,6 @@
             this.Brand.Name = "Brand";
             this.Brand.Width = 125;
             // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.Width = 125;
-            // 
             // categoryDataGridViewTextBoxColumn
             // 
             this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
@@ -307,49 +337,9 @@
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
             this.categoryDataGridViewTextBoxColumn.Width = 125;
             // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
-            // 
-            // categoriesDataGridView
-            // 
-            this.categoriesDataGridView.AutoGenerateColumns = false;
-            this.categoriesDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.categoriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.categoriesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn1,
-            this.isEmployeeOnlyDataGridViewTextBoxColumn});
-            this.categoriesDataGridView.DataSource = this.categoryBindingSource;
-            this.categoriesDataGridView.Location = new System.Drawing.Point(229, 410);
-            this.categoriesDataGridView.Name = "categoriesDataGridView";
-            this.categoriesDataGridView.RowHeadersWidth = 51;
-            this.categoriesDataGridView.Size = new System.Drawing.Size(246, 178);
-            this.categoriesDataGridView.TabIndex = 11;
-            this.categoriesDataGridView.SelectionChanged += new System.EventHandler(this.categoriesDataGridView_SelectionChanged);
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            this.nameDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // isEmployeeOnlyDataGridViewTextBoxColumn
-            // 
-            this.isEmployeeOnlyDataGridViewTextBoxColumn.DataPropertyName = "IsEmployeeOnly";
-            this.isEmployeeOnlyDataGridViewTextBoxColumn.HeaderText = "IsEmployeeOnly";
-            this.isEmployeeOnlyDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.isEmployeeOnlyDataGridViewTextBoxColumn.Name = "isEmployeeOnlyDataGridViewTextBoxColumn";
-            this.isEmployeeOnlyDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // categoryBindingSource
-            // 
-            this.categoryBindingSource.DataSource = typeof(Barroc_Intens.Category);
-            // 
             // DashboardInkoopForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.categoriesDataGridView);
@@ -409,7 +399,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Brand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
     }
 }
