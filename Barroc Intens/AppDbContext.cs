@@ -43,23 +43,22 @@ namespace Barroc_Intens
                 new Rol { RolId = 6, Name = "Inkoop.Head", IsManager = 1 },
                 new Rol { RolId = 7, Name = "Inkoop", IsManager = 2 },
                 new Rol { RolId = 8, Name = "Maintenance.Head", IsManager = 1 },
-                new Rol { RolId = 9, Name = "Mainentance", IsManager = 2 },
-                new Rol { RolId = 10, Name = "Klant", IsManager = 2 });
+                new Rol { RolId = 9, Name = "Mainentance", IsManager = 2 });
 
             modelBuilder.Entity<User>().HasData(
-                new User { UserId = 1, Name = "Admin", UserName = "Admin", Password = "123", RolId = 1/*, IsLoggedIn = false*/ },
-                new User { UserId = 2, Name = "Finance Head", UserName = "FinanceHead", Password = "123", RolId = 2/*, IsLoggedIn = false*/ },
-                new User { UserId = 3, Name = "Finance", UserName = "Finance", Password = "123", RolId = 3/*, IsLoggedIn = false*/ },
-                new User { UserId = 4, Name = "Sales Head", UserName = "SalesHead", Password = "123", RolId = 4/*, IsLoggedIn = false*/ },
-                new User { UserId = 5, Name = "Sales", UserName = "Sales", Password = "123", RolId = 5/*, IsLoggedIn = false*/ },
-                new User { UserId = 6, Name = "Inkoop Head", UserName = "InkoopHead", Password = "123", RolId = 6/*, IsLoggedIn = false*/ },
-                new User { UserId = 7, Name = "Inkoop", UserName = "Inkoop", Password = "123", RolId = 7/*, IsLoggedIn = false*/ },
-                new User { UserId = 8, Name = "Maintenance Head", UserName = "MaintenanceHead", Password = "123", RolId = 8/*, IsLoggedIn = false*/ },
-                new User { UserId = 9, Name = "Mainentance", UserName = "Maintenance", Password = "123", RolId = 9/*, IsLoggedIn = false*/ });
+                new User { UserId = 1, Name = "Admin", UserName = "Admin", Password = "123", RolId = 1 },
+                new User { UserId = 2, Name = "Finance Head", UserName = "FinanceHead", Password = "123", RolId = 2 },
+                new User { UserId = 3, Name = "Finance", UserName = "Finance", Password = "123", RolId = 3 },
+                new User { UserId = 4, Name = "Sales Head", UserName = "SalesHead", Password = "123", RolId = 4 },
+                new User { UserId = 5, Name = "Sales", UserName = "Sales", Password = "123", RolId = 5 },
+                new User { UserId = 6, Name = "Inkoop Head", UserName = "InkoopHead", Password = "123", RolId = 6 },
+                new User { UserId = 7, Name = "Inkoop", UserName = "Inkoop", Password = "123", RolId = 7 },
+                new User { UserId = 8, Name = "Maintenance Head", UserName = "MaintenanceHead", Password = "123", RolId = 8 },
+                new User { UserId = 9, Name = "Mainentance", UserName = "Maintenance", Password = "123", RolId = 9 });
 
             modelBuilder.Entity<Company>().HasData(
-                new Company { CompanyId = 1, Name = "Curio", Phone = "0648686105", Street = "terheidenseweg", HouseNumber = "350", City = "Breda", CountryCode = "31", BkrCheckedAt = DateTime.Now, UserId = 1 },
-                new Company { CompanyId = 2, Name = "hustllebv", Phone = "0658686185", Street = "poolseweg", HouseNumber = "50", City = "tilburg", CountryCode = "31", BkrCheckedAt = null, UserId = 2,
+                new Company { CompanyId = 1, Name = "Curio", Phone = "0648686105", Street = "Terheidenseweg", HouseNumber = "350", City = "Breda", CountryCode = "31", BkrCheckedAt = DateTime.Now, UserId = 1 },
+                new Company { CompanyId = 2, Name = "Hustllebv", Phone = "0658686185", Street = "Poolseweg", HouseNumber = "50", City = "Tilburg", CountryCode = "31", BkrCheckedAt = null, UserId = 2,
                 });
 
             modelBuilder.Entity<Leasecontract>().HasData(
@@ -72,14 +71,22 @@ namespace Barroc_Intens
                 new Category { CategoryId = 2, Name = "Koffiebonen", IsEmployeeOnly = 2 
                 });
             modelBuilder.Entity<MaintenanceAppointment>().HasData(
-                new MaintenanceAppointment { MaintenanceAppointmentId = 1, CompanyId = 1, Remark = "koffiezet automaat 1 is ontploft", Added = DateTime.Now, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 2, CompanyId = 1, Remark = "koffiezet automaat 2 is ontploft", Added = DateTime.Now, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 3, CompanyId = 1, Remark = "koffiezet automaat 3 is de linker tuben kapot", Added = DateTime.Now, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 4, CompanyId = 1, Remark = "koffiezet automaat 4 is ontploft", Added = DateTime.Now, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 5, CompanyId = 2, Remark = "koffiezet automaat 1 is ontploft", Added = DateTime.Now, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 6, CompanyId = 2, Remark = "koffiezet automaat 2 is de linker tuben kapot", Added = DateTime.Now, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 7, CompanyId = 2, Remark = "koffiezet automaat 3 is ontploft", Added = DateTime.Now, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 8, CompanyId = 2, Remark = "koffiezet automaat 4 is ontploft", Added = DateTime.Now, 
+                new MaintenanceAppointment { MaintenanceAppointmentId = 1, CompanyId = 1, Remark = "Koffiezet automaat 1 is ontploft", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime =  null, UserId = null, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 2, CompanyId = 1, Remark = "Koffiezet automaat 2 is ontploft", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime =  null, UserId = null, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 3, CompanyId = 1, Remark = "Koffiezet automaat 3 is de linker tuben kapot", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime =  null, UserId = null, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 4, CompanyId = 1, Remark = "Koffiezet automaat 4 is ontploft", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime =  null, UserId = null, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 5, CompanyId = 2, Remark = "Koffiezet automaat 1 is ontploft", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime =  null, UserId = null, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 6, CompanyId = 2, Remark = "Koffiezet automaat 2 is de linker tuben kapot", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime = null, UserId = null, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 7, CompanyId = 2, Remark = "Koffiezet automaat 3 is ontploft", Added = DateTime.Now, AppointmentDate = null , AppointmentTime =  null, UserId = null, },
+                new MaintenanceAppointment
+                {
+                    MaintenanceAppointmentId = 8,
+                    CompanyId = 2,
+                    Remark = "Koffiezet automaat 4 is ontploft",
+                    Added = DateTime.Now,
+                    AppointmentDate = null,
+                    AppointmentTime = null,
+                    UserId = null,
                 });
         }
     }
