@@ -61,6 +61,10 @@ namespace Barroc_Intens.Finances
                 }
                 
             }
+
+            this.dbContext.Entry(companies)
+            .Reference(c => c.User)
+            .Load();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
