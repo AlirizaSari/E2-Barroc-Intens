@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblInvoice = new System.Windows.Forms.Label();
             this.btnCreateInvoice = new System.Windows.Forms.Button();
             this.txbCompanyName = new System.Windows.Forms.TextBox();
@@ -45,7 +46,7 @@
             this.nudDiscount = new System.Windows.Forms.NumericUpDown();
             this.nudHourlyPrice = new System.Windows.Forms.NumericUpDown();
             this.lblComment = new System.Windows.Forms.Label();
-            this.btnAddToInvoice = new System.Windows.Forms.Button();
+            this.btnSaveToDatabase = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txbEmailAdresCompany = new System.Windows.Forms.TextBox();
@@ -53,10 +54,13 @@
             this.btnSaveToFile = new System.Windows.Forms.Button();
             this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.btnDirectToFinanceDash = new System.Windows.Forms.Button();
+            this.cboxCompanyName = new System.Windows.Forms.ComboBox();
+            this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInvoice
@@ -215,15 +219,16 @@
             this.lblComment.TabIndex = 16;
             this.lblComment.Text = "Notities";
             // 
-            // btnAddToInvoice
+            // btnSaveToDatabase
             // 
-            this.btnAddToInvoice.Location = new System.Drawing.Point(606, 422);
-            this.btnAddToInvoice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAddToInvoice.Name = "btnAddToInvoice";
-            this.btnAddToInvoice.Size = new System.Drawing.Size(173, 60);
-            this.btnAddToInvoice.TabIndex = 17;
-            this.btnAddToInvoice.Text = "Voeg toe aan factuur";
-            this.btnAddToInvoice.UseVisualStyleBackColor = true;
+            this.btnSaveToDatabase.Location = new System.Drawing.Point(606, 422);
+            this.btnSaveToDatabase.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSaveToDatabase.Name = "btnSaveToDatabase";
+            this.btnSaveToDatabase.Size = new System.Drawing.Size(173, 60);
+            this.btnSaveToDatabase.TabIndex = 17;
+            this.btnSaveToDatabase.Text = "Opslaan naar database";
+            this.btnSaveToDatabase.UseVisualStyleBackColor = true;
+            this.btnSaveToDatabase.Click += new System.EventHandler(this.btnSaveToDatabase_Click);
             // 
             // lblError
             // 
@@ -294,11 +299,28 @@
             this.btnDirectToFinanceDash.UseVisualStyleBackColor = true;
             this.btnDirectToFinanceDash.Click += new System.EventHandler(this.btnDirectToFinanceDash_Click);
             // 
+            // cboxCompanyName
+            // 
+            this.cboxCompanyName.DataSource = this.companyBindingSource;
+            this.cboxCompanyName.DisplayMember = "Name";
+            this.cboxCompanyName.FormattingEnabled = true;
+            this.cboxCompanyName.Location = new System.Drawing.Point(212, 105);
+            this.cboxCompanyName.Name = "cboxCompanyName";
+            this.cboxCompanyName.Size = new System.Drawing.Size(121, 28);
+            this.cboxCompanyName.TabIndex = 25;
+            this.cboxCompanyName.ValueMember = "CompanyId";
+            this.cboxCompanyName.SelectedIndexChanged += new System.EventHandler(this.cboxCompanyName_SelectedIndexChanged);
+            // 
+            // companyBindingSource
+            // 
+            this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.cboxCompanyName);
             this.Controls.Add(this.btnDirectToFinanceDash);
             this.Controls.Add(this.pboxLogo);
             this.Controls.Add(this.btnSaveToFile);
@@ -306,7 +328,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbEmailAdresCompany);
             this.Controls.Add(this.lblError);
-            this.Controls.Add(this.btnAddToInvoice);
+            this.Controls.Add(this.btnSaveToDatabase);
             this.Controls.Add(this.lblComment);
             this.Controls.Add(this.nudHourlyPrice);
             this.Controls.Add(this.nudDiscount);
@@ -328,10 +350,12 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "InvoiceForm";
             this.Text = "InvoiceForm";
+            this.Load += new System.EventHandler(this.InvoiceForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,7 +380,7 @@
         private System.Windows.Forms.NumericUpDown nudDiscount;
         private System.Windows.Forms.NumericUpDown nudHourlyPrice;
         private System.Windows.Forms.Label lblComment;
-        private System.Windows.Forms.Button btnAddToInvoice;
+        private System.Windows.Forms.Button btnSaveToDatabase;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbEmailAdresCompany;
@@ -364,5 +388,7 @@
         private System.Windows.Forms.Button btnSaveToFile;
         private System.Windows.Forms.PictureBox pboxLogo;
         private System.Windows.Forms.Button btnDirectToFinanceDash;
+        private System.Windows.Forms.ComboBox cboxCompanyName;
+        private System.Windows.Forms.BindingSource companyBindingSource;
     }
 }
