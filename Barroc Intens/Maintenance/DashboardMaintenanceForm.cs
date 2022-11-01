@@ -24,6 +24,8 @@ namespace Barroc_Intens
             {
                 pboxLogo.Visible = false;
                 btnBackToMain.Visible = false;
+                btnMaintenance.Location = new Point(40, 117);
+                btnMaintenancePlanner.Location = new Point(264, 117);
             }
         }
 

@@ -24,6 +24,8 @@ namespace Barroc_Intens
             {
                 pboxLogo.Visible = false;
                 btnBackToMain.Visible = false;
+                btnDirectToInvoice.Location = new Point(46, 117);
+                btnDirectToLeaseContract.Location = new Point(279, 117);
             }
         }
 

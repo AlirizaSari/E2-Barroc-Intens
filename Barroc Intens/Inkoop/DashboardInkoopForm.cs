@@ -1,7 +1,7 @@
 ﻿using Barroc_Intens.Classes;
 using Barroc_Intens.Inkoop;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Exchange.WebServices.Data;
+//using Microsoft.Exchange.WebServices.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +29,8 @@ namespace Barroc_Intens
             if (UserLoginInformation.LoginRolId != 1)
             {
                 btnBackToMain.Visible = false;
+                btnInkoop.Location = new Point(52, 117);
+                btnInkoop.Location = new Point(272, 117);
             }
 
             if (UserLoginInformation.LoginRolId != 1 && UserLoginInformation.LoginRolId != 6)
