@@ -26,11 +26,12 @@ namespace Barroc_Intens.Inkoop
 
             this.dbContext.Categories.Load();
 
-            this.dbContext.Products.Load();
+            //this.dbContext.Products.Load();
 
             this.categoryBindingSource.DataSource = dbContext.Categories.Local.ToBindingList();
 
-            this.productBindingSource.DataSource = dbContext.Products.Local.ToBindingList();
+            ShowProducts();
+
         }
 
         private void btnBackToInkoopDashboard_Click(object sender, EventArgs e)
@@ -40,6 +41,12 @@ namespace Barroc_Intens.Inkoop
 
         private void categoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ShowProducts();
+        }
+
+        private void ShowProducts()
+        {
+
             if (this.dbContext == null)
                 return;
 
