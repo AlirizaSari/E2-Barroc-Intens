@@ -43,7 +43,7 @@ namespace Barroc_Intens
                 new Rol { RolId = 6, Name = "Inkoop.Head", IsManager = 1 },
                 new Rol { RolId = 7, Name = "Inkoop", IsManager = 2 },
                 new Rol { RolId = 8, Name = "Maintenance.Head", IsManager = 1 },
-                new Rol { RolId = 9, Name = "Mainentance", IsManager = 2 },
+                new Rol { RolId = 9, Name = "Mainentance", IsManager = 2 });
 
             modelBuilder.Entity<User>().HasData(
                 new User { UserId = 1, Name = "Admin", UserName = "Admin", Password = "123", RolId = 1 },
