@@ -33,14 +33,15 @@
             this.maintenanceAppointmentDataGridView = new System.Windows.Forms.DataGridView();
             this.btnBackToMaintenance = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.maintenanceAppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AppointmentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AppointmentTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remarkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AppointmentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AppointmentTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintenanceAppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentBindingSource)).BeginInit();
@@ -59,6 +60,8 @@
             // 
             // maintenanceAppointmentDataGridView
             // 
+            this.maintenanceAppointmentDataGridView.AllowUserToAddRows = false;
+            this.maintenanceAppointmentDataGridView.AllowUserToDeleteRows = false;
             this.maintenanceAppointmentDataGridView.AutoGenerateColumns = false;
             this.maintenanceAppointmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.maintenanceAppointmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -72,6 +75,8 @@
             this.maintenanceAppointmentDataGridView.Location = new System.Drawing.Point(158, 130);
             this.maintenanceAppointmentDataGridView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.maintenanceAppointmentDataGridView.Name = "maintenanceAppointmentDataGridView";
+            this.maintenanceAppointmentDataGridView.ReadOnly = true;
+            this.maintenanceAppointmentDataGridView.RowHeadersVisible = false;
             this.maintenanceAppointmentDataGridView.RowHeadersWidth = 51;
             this.maintenanceAppointmentDataGridView.Size = new System.Drawing.Size(744, 354);
             this.maintenanceAppointmentDataGridView.TabIndex = 1;
@@ -97,13 +102,25 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Storings Afspraken";
             // 
-            // maintenanceAppointmentBindingSource
+            // AppointmentDate
             // 
-            this.maintenanceAppointmentBindingSource.DataSource = typeof(Barroc_Intens.MaintenanceAppointment);
+            this.AppointmentDate.DataPropertyName = "AppointmentDate";
+            this.AppointmentDate.HeaderText = "AppointmentDate";
+            this.AppointmentDate.Name = "AppointmentDate";
+            this.AppointmentDate.ReadOnly = true;
             // 
-            // productBindingSource
+            // AppointmentTime
             // 
-            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
+            this.AppointmentTime.DataPropertyName = "AppointmentTime";
+            this.AppointmentTime.HeaderText = "AppointmentTime";
+            this.AppointmentTime.Name = "AppointmentTime";
+            this.AppointmentTime.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "User";
+            this.dataGridViewTextBoxColumn1.HeaderText = "User";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // companyDataGridViewTextBoxColumn
             // 
@@ -111,6 +128,7 @@
             this.companyDataGridViewTextBoxColumn.HeaderText = "Company";
             this.companyDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
+            this.companyDataGridViewTextBoxColumn.ReadOnly = true;
             this.companyDataGridViewTextBoxColumn.Width = 125;
             // 
             // remarkDataGridViewTextBoxColumn
@@ -119,6 +137,7 @@
             this.remarkDataGridViewTextBoxColumn.HeaderText = "Remark";
             this.remarkDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.remarkDataGridViewTextBoxColumn.Name = "remarkDataGridViewTextBoxColumn";
+            this.remarkDataGridViewTextBoxColumn.ReadOnly = true;
             this.remarkDataGridViewTextBoxColumn.Width = 125;
             // 
             // addedDataGridViewTextBoxColumn
@@ -127,25 +146,23 @@
             this.addedDataGridViewTextBoxColumn.HeaderText = "Added";
             this.addedDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.addedDataGridViewTextBoxColumn.Name = "addedDataGridViewTextBoxColumn";
+            this.addedDataGridViewTextBoxColumn.ReadOnly = true;
             this.addedDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // AppointmentDate
-            // 
-            this.AppointmentDate.DataPropertyName = "AppointmentDate";
-            this.AppointmentDate.HeaderText = "AppointmentDate";
-            this.AppointmentDate.Name = "AppointmentDate";
-            // 
-            // AppointmentTime
-            // 
-            this.AppointmentTime.DataPropertyName = "AppointmentTime";
-            this.AppointmentTime.HeaderText = "AppointmentTime";
-            this.AppointmentTime.Name = "AppointmentTime";
             // 
             // User
             // 
             this.User.DataPropertyName = "User";
             this.User.HeaderText = "User";
             this.User.Name = "User";
+            this.User.ReadOnly = true;
+            // 
+            // maintenanceAppointmentBindingSource
+            // 
+            this.maintenanceAppointmentBindingSource.DataSource = typeof(Barroc_Intens.MaintenanceAppointment);
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
             // 
             // MaintenanceForm
             // 
@@ -184,5 +201,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn User;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }
