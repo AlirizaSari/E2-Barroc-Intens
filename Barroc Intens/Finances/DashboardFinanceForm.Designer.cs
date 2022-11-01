@@ -52,6 +52,7 @@ namespace Barroc_Intens
             this.companyAdressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoursWorkedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPaidInvoice = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -275,11 +276,21 @@ namespace Barroc_Intens
             this.notesDataGridViewTextBoxColumn.ReadOnly = true;
             this.notesDataGridViewTextBoxColumn.Width = 125;
             // 
+            // btnPaidInvoice
+            // 
+            this.btnPaidInvoice.Location = new System.Drawing.Point(297, 386);
+            this.btnPaidInvoice.Name = "btnPaidInvoice";
+            this.btnPaidInvoice.Size = new System.Drawing.Size(143, 59);
+            this.btnPaidInvoice.TabIndex = 3;
+            this.btnPaidInvoice.Text = "Betaald";
+            this.btnPaidInvoice.UseVisualStyleBackColor = true;
+            // 
             // DashboardFinanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1122, 600);
+            this.Controls.Add(this.btnPaidInvoice);
             this.Controls.Add(this.dgvInvoices);
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlLeft);
@@ -322,5 +333,6 @@ namespace Barroc_Intens
         private System.Windows.Forms.DataGridViewTextBoxColumn companyAdressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoursWorkedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnPaidInvoice;
     }
 }

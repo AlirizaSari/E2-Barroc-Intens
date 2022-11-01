@@ -82,8 +82,12 @@ namespace Barroc_Intens
         {
             var product = (Product)this.productsDataGridView.CurrentRow?.DataBoundItem;
 
-            dbContext.Products.Update(product);
-            dbContext.SaveChanges();
+            if (product != null)
+            {
+                dbContext.Products.Update(product);
+                dbContext.SaveChanges();
+            }
+            
         }
 
         private void btnRemoveProduct_Click(object sender, EventArgs e)
