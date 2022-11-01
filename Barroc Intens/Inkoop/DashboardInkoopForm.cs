@@ -132,7 +132,7 @@ namespace Barroc_Intens
 
         private void btnBackToMain_Click(object sender, EventArgs e)
         {
-            DirectToForm(new MainForm());
+            DirectToForm(new DashboardAdminForm());
         }
 
         private void btnInkoop_Click(object sender, EventArgs e)
