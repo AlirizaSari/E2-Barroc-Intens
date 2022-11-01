@@ -14,10 +14,9 @@ namespace Barroc_Intens
         public Company Company { get; set; }
         public string Remark { get; set; }
         public DateTime Added { get; set; }
-
-        public DateTime AppointmentDate { get; set; }
-        public DateTime AppointmentTime { get; set; }
-        public int UserId { get; set; }
+        public DateTime? AppointmentDate { get; set; }
+        public DateTime? AppointmentTime { get; set; }
+        public int? UserId { get; set; }
         public User User { get; set; }
     }
 }
