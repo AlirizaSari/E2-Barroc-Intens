@@ -23,6 +23,8 @@ namespace Barroc_Intens
 
         public string CountryCode { get; set; }
 
+        public bool IsBkrChecked { get; set; }
+
         public DateTime? BkrCheckedAt { get; set; }
 
         public int UserId { get; set; }
