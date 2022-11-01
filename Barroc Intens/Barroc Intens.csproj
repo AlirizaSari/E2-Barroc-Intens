@@ -459,6 +459,7 @@
     <None Include="Properties\DataSources\Barroc_Intens.Sales.CustomerNotesForm.datasource" />
     <None Include="Properties\DataSources\Category.datasource" />
     <None Include="Properties\DataSources\Company.datasource" />
+    <None Include="Properties\DataSources\CustomInvoice.datasource" />
     <None Include="Properties\DataSources\MaintenanceAppointment.datasource" />
     <None Include="Properties\DataSources\Note.datasource" />
     <None Include="Properties\DataSources\Product.datasource" />
