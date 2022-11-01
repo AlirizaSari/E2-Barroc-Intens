@@ -48,9 +48,10 @@
             // chbBkrCheckNegative
             // 
             this.chbBkrCheckNegative.AutoSize = true;
-            this.chbBkrCheckNegative.Location = new System.Drawing.Point(298, 79);
+            this.chbBkrCheckNegative.Location = new System.Drawing.Point(224, 64);
+            this.chbBkrCheckNegative.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chbBkrCheckNegative.Name = "chbBkrCheckNegative";
-            this.chbBkrCheckNegative.Size = new System.Drawing.Size(80, 20);
+            this.chbBkrCheckNegative.Size = new System.Drawing.Size(66, 17);
             this.chbBkrCheckNegative.TabIndex = 0;
             this.chbBkrCheckNegative.Text = "Negatief";
             this.chbBkrCheckNegative.UseVisualStyleBackColor = true;
@@ -59,18 +60,20 @@
             // 
             this.lblBkrCheckResult.AutoSize = true;
             this.lblBkrCheckResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBkrCheckResult.Location = new System.Drawing.Point(22, 60);
+            this.lblBkrCheckResult.Location = new System.Drawing.Point(16, 49);
+            this.lblBkrCheckResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBkrCheckResult.Name = "lblBkrCheckResult";
-            this.lblBkrCheckResult.Size = new System.Drawing.Size(132, 40);
+            this.lblBkrCheckResult.Size = new System.Drawing.Size(112, 34);
             this.lblBkrCheckResult.TabIndex = 1;
             this.lblBkrCheckResult.Text = "Bkr-Check:\r\nnegatief/positief:";
             // 
             // chbBkrCheckPositive
             // 
             this.chbBkrCheckPositive.AutoSize = true;
-            this.chbBkrCheckPositive.Location = new System.Drawing.Point(175, 79);
+            this.chbBkrCheckPositive.Location = new System.Drawing.Point(131, 64);
+            this.chbBkrCheckPositive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chbBkrCheckPositive.Name = "chbBkrCheckPositive";
-            this.chbBkrCheckPositive.Size = new System.Drawing.Size(73, 20);
+            this.chbBkrCheckPositive.Size = new System.Drawing.Size(60, 17);
             this.chbBkrCheckPositive.TabIndex = 2;
             this.chbBkrCheckPositive.Text = "Positief";
             this.chbBkrCheckPositive.UseVisualStyleBackColor = true;
@@ -79,9 +82,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(71, 9);
+            this.label2.Location = new System.Drawing.Point(53, 7);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(240, 25);
+            this.label2.Size = new System.Drawing.Size(201, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "lease contract opstellen";
             // 
@@ -95,13 +99,14 @@
             this.bkrCheckedAtDataGridViewTextBoxColumn,
             this.userIdDataGridViewTextBoxColumn});
             this.dgvCompanys.DataSource = this.companyBindingSource;
-            this.dgvCompanys.Location = new System.Drawing.Point(413, 60);
+            this.dgvCompanys.Location = new System.Drawing.Point(310, 49);
+            this.dgvCompanys.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvCompanys.Name = "dgvCompanys";
             this.dgvCompanys.RowHeadersVisible = false;
             this.dgvCompanys.RowHeadersWidth = 51;
             this.dgvCompanys.RowTemplate.Height = 24;
             this.dgvCompanys.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCompanys.Size = new System.Drawing.Size(375, 386);
+            this.dgvCompanys.Size = new System.Drawing.Size(458, 314);
             this.dgvCompanys.TabIndex = 6;
             this.dgvCompanys.SelectionChanged += new System.EventHandler(this.dgvCompanys_SelectionChanged);
             // 
@@ -147,9 +152,10 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(118, 386);
+            this.btnSave.Location = new System.Drawing.Point(88, 314);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(173, 33);
+            this.btnSave.Size = new System.Drawing.Size(130, 27);
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "test save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -157,9 +163,10 @@
             // 
             // btnDirectToFinanceDash
             // 
-            this.btnDirectToFinanceDash.Location = new System.Drawing.Point(609, 9);
+            this.btnDirectToFinanceDash.Location = new System.Drawing.Point(634, 7);
+            this.btnDirectToFinanceDash.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDirectToFinanceDash.Name = "btnDirectToFinanceDash";
-            this.btnDirectToFinanceDash.Size = new System.Drawing.Size(179, 45);
+            this.btnDirectToFinanceDash.Size = new System.Drawing.Size(134, 37);
             this.btnDirectToFinanceDash.TabIndex = 25;
             this.btnDirectToFinanceDash.Text = "Terug naar finances dashboard";
             this.btnDirectToFinanceDash.UseVisualStyleBackColor = true;
@@ -167,9 +174,9 @@
             // 
             // LeaseContractForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(779, 366);
             this.Controls.Add(this.btnDirectToFinanceDash);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dgvCompanys);
@@ -177,6 +184,7 @@
             this.Controls.Add(this.chbBkrCheckPositive);
             this.Controls.Add(this.lblBkrCheckResult);
             this.Controls.Add(this.chbBkrCheckNegative);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LeaseContractForm";
             this.Text = "Leasecontracten";
             this.Load += new System.EventHandler(this.LeaseContractForm_Load);
