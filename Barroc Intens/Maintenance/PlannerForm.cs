@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace Barroc_Intens.Maintenance
 {
     public partial class PlannerForm : Form
     {
+        private AppDbContext dbContext;
+        private int _recordCount;
 
         public PlannerForm()
         {
@@ -22,17 +25,28 @@ namespace Barroc_Intens.Maintenance
 
         private void PlannerForm_Load(object sender, EventArgs e)
         {
-            DateTime today = DateTime.Today;
+            this.dbContext = new AppDbContext();
+            this.dbContext.MaintenanceAppointments.Load();
+            this.maintenanceAppointmentBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
 
-            DateTime[] dates = { today.AddDays(1),
-            today.AddDays(3), today.AddDays(5)};
+            string maintenanceAppointmentsCount = dbContext.MaintenanceAppointments.Count().ToString();
 
-            //mcaMalfunctionCalendar.BoldedDates = dates;
+            lblCurrentNumberOfOpenTickets.Text = maintenanceAppointmentsCount;
+
+
+
+
+            //DateTime today = DateTime.Today;
+
+            //DateTime[] dates = { today.AddDays(1),
+            //today.AddDays(3), today.AddDays(5)};
+
+            //mcMaintanence.BoldedDates = dates;
 
             //for (int r = 0; r < dates.GetLength(0); r++)
             //{
             //    DataGridViewRow gridView = new DataGridViewRow();
-            //    gridView.CreateCells(dgvMaintenanceInformation);
+            //    gridView.CreateCells(bsMaintenanceAppointmentData);
 
             //    for (int c = 0; c < dates.GetLength(1); c++)
             //    {
