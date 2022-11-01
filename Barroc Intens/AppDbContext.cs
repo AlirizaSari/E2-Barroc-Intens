@@ -72,14 +72,22 @@ namespace Barroc_Intens
                 new Category { CategoryId = 2, Name = "Koffiebonen", IsEmployeeOnly = 2 
                 });
             modelBuilder.Entity<MaintenanceAppointment>().HasData(
-                new MaintenanceAppointment { MaintenanceAppointmentId = 1, CompanyId = 1, Remark = "koffiezet automaat 1 is ontploft", Added = DateTime.Now, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 2, CompanyId = 1, Remark = "koffiezet automaat 2 is ontploft", Added = DateTime.Now, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 3, CompanyId = 1, Remark = "koffiezet automaat 3 is de linker tuben kapot", Added = DateTime.Now, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 4, CompanyId = 1, Remark = "koffiezet automaat 4 is ontploft", Added = DateTime.Now, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 5, CompanyId = 2, Remark = "koffiezet automaat 1 is ontploft", Added = DateTime.Now, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 6, CompanyId = 2, Remark = "koffiezet automaat 2 is de linker tuben kapot", Added = DateTime.Now, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 7, CompanyId = 2, Remark = "koffiezet automaat 3 is ontploft", Added = DateTime.Now, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 8, CompanyId = 2, Remark = "koffiezet automaat 4 is ontploft", Added = DateTime.Now, 
+                new MaintenanceAppointment { MaintenanceAppointmentId = 1, CompanyId = 1, Remark = "koffiezet automaat 1 is ontploft", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime =  null, UserId = null, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 2, CompanyId = 1, Remark = "koffiezet automaat 2 is ontploft", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime =  null, UserId = null, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 3, CompanyId = 1, Remark = "koffiezet automaat 3 is de linker tuben kapot", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime =  null, UserId = null, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 4, CompanyId = 1, Remark = "koffiezet automaat 4 is ontploft", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime =  null, UserId = null, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 5, CompanyId = 2, Remark = "koffiezet automaat 1 is ontploft", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime =  null, UserId = null, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 6, CompanyId = 2, Remark = "koffiezet automaat 2 is de linker tuben kapot", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime = null, UserId = null, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 7, CompanyId = 2, Remark = "koffiezet automaat 3 is ontploft", Added = DateTime.Now, AppointmentDate = null , AppointmentTime =  null, UserId = null, },
+                new MaintenanceAppointment
+                {
+                    MaintenanceAppointmentId = 8,
+                    CompanyId = 2,
+                    Remark = "koffiezet automaat 4 is ontploft",
+                    Added = DateTime.Now,
+                    AppointmentDate = null,
+                    AppointmentTime = null,
+                    UserId = null,
                 });
         }
     }
