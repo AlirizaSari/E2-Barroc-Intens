@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace Barroc_Intens.Inkoop
 {
-    public partial class AddProductFrom : Form
+    public partial class AddProductForm : Form
     {
         private AppDbContext dbContext;
 
-        public AddProductFrom()
+        public AddProductForm()
         {
             InitializeComponent();
         }

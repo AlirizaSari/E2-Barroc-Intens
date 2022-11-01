@@ -1,6 +1,6 @@
 ﻿namespace Barroc_Intens.Inkoop
 {
-    partial class AddProductFrom
+    partial class AddProductForm
     {
         /// <summary>
         /// Required designer variable.

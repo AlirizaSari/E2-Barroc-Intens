@@ -336,11 +336,11 @@
     <Compile Include="Inkoop\AddCategoryForm.Designer.cs">
       <DependentUpon>AddCategoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inkoop\AddProductFrom.cs">
+    <Compile Include="Inkoop\AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inkoop\AddProductFrom.Designer.cs">
-      <DependentUpon>AddProductFrom.cs</DependentUpon>
+    <Compile Include="Inkoop\AddProductForm.Designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Inkoop\DashboardInkoopForm.cs">
       <SubType>Form</SubType>
@@ -414,8 +414,8 @@
     <EmbeddedResource Include="Inkoop\AddCategoryForm.resx">
       <DependentUpon>AddCategoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inkoop\AddProductFrom.resx">
-      <DependentUpon>AddProductFrom.cs</DependentUpon>
+    <EmbeddedResource Include="Inkoop\AddProductForm.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inkoop\DashboardInkoopForm.resx">
       <DependentUpon>DashboardInkoopForm.cs</DependentUpon>

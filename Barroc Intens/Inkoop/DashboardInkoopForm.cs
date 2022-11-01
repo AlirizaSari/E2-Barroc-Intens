@@ -75,7 +75,7 @@ namespace Barroc_Intens
         
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            DirectToForm(new AddProductFrom());
+            DirectToForm(new AddProductForm());
         }
 
         private void btnEditProduct_Click(object sender, EventArgs e)

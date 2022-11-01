@@ -59,6 +59,8 @@
             // 
             // maintenanceAppointmentDataGridView
             // 
+            this.maintenanceAppointmentDataGridView.AllowUserToAddRows = false;
+            this.maintenanceAppointmentDataGridView.AllowUserToDeleteRows = false;
             this.maintenanceAppointmentDataGridView.AutoGenerateColumns = false;
             this.maintenanceAppointmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.maintenanceAppointmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -72,8 +74,10 @@
             this.maintenanceAppointmentDataGridView.Location = new System.Drawing.Point(158, 130);
             this.maintenanceAppointmentDataGridView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.maintenanceAppointmentDataGridView.Name = "maintenanceAppointmentDataGridView";
+            this.maintenanceAppointmentDataGridView.ReadOnly = true;
+            this.maintenanceAppointmentDataGridView.RowHeadersVisible = false;
             this.maintenanceAppointmentDataGridView.RowHeadersWidth = 51;
-            this.maintenanceAppointmentDataGridView.Size = new System.Drawing.Size(744, 354);
+            this.maintenanceAppointmentDataGridView.Size = new System.Drawing.Size(762, 354);
             this.maintenanceAppointmentDataGridView.TabIndex = 1;
             this.maintenanceAppointmentDataGridView.SelectionChanged += new System.EventHandler(this.maintenanceAppointmentDataGridView_SelectionChanged);
             // 
@@ -83,6 +87,7 @@
             this.companyDataGridViewTextBoxColumn.HeaderText = "Company";
             this.companyDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
+            this.companyDataGridViewTextBoxColumn.ReadOnly = true;
             this.companyDataGridViewTextBoxColumn.Width = 125;
             // 
             // remarkDataGridViewTextBoxColumn
@@ -91,6 +96,7 @@
             this.remarkDataGridViewTextBoxColumn.HeaderText = "Remark";
             this.remarkDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.remarkDataGridViewTextBoxColumn.Name = "remarkDataGridViewTextBoxColumn";
+            this.remarkDataGridViewTextBoxColumn.ReadOnly = true;
             this.remarkDataGridViewTextBoxColumn.Width = 125;
             // 
             // addedDataGridViewTextBoxColumn
@@ -99,6 +105,7 @@
             this.addedDataGridViewTextBoxColumn.HeaderText = "Added";
             this.addedDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.addedDataGridViewTextBoxColumn.Name = "addedDataGridViewTextBoxColumn";
+            this.addedDataGridViewTextBoxColumn.ReadOnly = true;
             this.addedDataGridViewTextBoxColumn.Width = 125;
             // 
             // AppointmentDate
@@ -184,6 +191,7 @@
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.Button btnBackToMaintenance;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn remarkDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addedDataGridViewTextBoxColumn;
