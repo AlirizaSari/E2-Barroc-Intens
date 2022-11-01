@@ -34,7 +34,7 @@ namespace Barroc_Intens.Finances
 
         private void btnCreateInvoice_Click(object sender, EventArgs e)
         {
-            _companyName = txbCompanyName.Text;
+            _companyName = cboxCompanyName.Text;
             _companyEmail = txbEmailAdresCompany.Text;
             _companyAdress = txbCompanyAdress.Text;
             _comment = txbComment.Text;
