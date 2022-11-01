@@ -31,10 +31,7 @@ namespace Barroc_Intens
 
         private void btnDirectToInvoice_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            InvoiceForm invoiceForm = new InvoiceForm();
-            invoiceForm.ShowDialog();
-            this.Close();
+            DirectToForm(new InvoiceForm());
         }
 
         /// <summary>
@@ -44,12 +41,12 @@ namespace Barroc_Intens
         /// <param name="e"></param>
         private void pboxLogo_Click(object sender, EventArgs e)
         {
-            DirectToForm(new MainForm());
+            DirectToForm(new DashboardAdminForm());
         }
 
         private void btnBackToMain_Click(object sender, EventArgs e)
         {
-            DirectToForm(new MainForm());
+            DirectToForm(new DashboardAdminForm());
         }
 
         private void DashboardFinanceForm_Load(object sender, EventArgs e)

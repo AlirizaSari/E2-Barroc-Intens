@@ -111,7 +111,7 @@ namespace Barroc_Intens.Finances
 
         private void pboxLogo_Click(object sender, EventArgs e)
         {
-            DirectToForm(new MainForm());
+            DirectToForm(new DashboardFinanceForm());
         }
 
         private void btnDirectToFinanceDash_Click(object sender, EventArgs e)

@@ -28,7 +28,7 @@ namespace Barroc_Intens.Sales
 
         private void pboxLogo_Click(object sender, EventArgs e)
         {
-            DirectToForm(new MainForm());
+            DirectToForm(new DashboardSalesForm());
         }
 
         private void CustomerNotesForm_Load(object sender, EventArgs e)

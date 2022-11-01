@@ -68,5 +68,12 @@ namespace Barroc_Intens
             this.Close();
         }
 
+        private void btnNewDashboard_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DashboardAdminForm dashboardAdminForm = new DashboardAdminForm();
+            dashboardAdminForm.ShowDialog();
+            this.Close();
+        }
     }
 }

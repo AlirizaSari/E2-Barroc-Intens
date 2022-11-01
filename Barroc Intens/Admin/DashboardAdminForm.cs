@@ -1,5 +1,4 @@
 ﻿using Barroc_Intens.Classes;
-using Barroc_Intens.Sales;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,37 +11,46 @@ using System.Windows.Forms;
 
 namespace Barroc_Intens
 {
-    public partial class DashboardSalesForm : Form
+    public partial class DashboardAdminForm : Form
     {
         private AppDbContext dbContext;
 
-        public DashboardSalesForm()
+        public DashboardAdminForm()
         {
             InitializeComponent();
             lblAccountName.Text = UserLoginInformation.LoginUserName;
             lblDepartment.Text = UserLoginInformation.ConvertRoleId(UserLoginInformation.LoginRolId);
-
-            if (UserLoginInformation.LoginRolId != 1)
-            {
-                btnBackToMain.Visible = false;
-                btnCustomerNotes.Location = new Point(52,117);
-                btnLocation3.Location = new Point(280, 117);
-            }
         }
 
-        private void DashboardSalesForm_Load(object sender, EventArgs e)
+        private void DashboardAdminForm_Load(object sender, EventArgs e)
         {
             this.dbContext = new AppDbContext();
         }
 
-        private void btnBackToMain_Click(object sender, EventArgs e)
+        private void DashboardAdminForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DirectToForm(new DashboardAdminForm());
+            this.dbContext?.Dispose();
+            this.dbContext = null;
         }
 
-        private void btnCustomerNotes_Click(object sender, EventArgs e)
+        private void btnDirectToFinances_Click(object sender, EventArgs e)
         {
-            DirectToForm(new CustomerNotesForm()); 
+            DirectToForm(new DashboardFinanceForm());
+        }
+
+        private void btnDirectToMarketing_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new DashboardInkoopForm());
+        }
+
+        private void btnDirectToMaintenance_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new DashboardMaintenanceForm());
+        }
+
+        private void btnDirectToSales_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new DashboardSalesForm());
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -56,5 +64,6 @@ namespace Barroc_Intens
             myForm.ShowDialog();
             this.Close();
         }
+
     }
 }

@@ -52,7 +52,7 @@ namespace Barroc_Intens
                 //admin
                 if (rec.RolId == 1)
                 {
-                    DirectToForm(new MainForm());
+                    DirectToForm(new DashboardAdminForm());
                 }
                 //finances
                 else if (rec.RolId == 2 || rec.RolId == 3)

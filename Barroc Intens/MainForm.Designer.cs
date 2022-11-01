@@ -33,6 +33,7 @@
             this.btnDirectToMaintenance = new System.Windows.Forms.Button();
             this.btnDirectToInkoop = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnNewDashboard = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +42,7 @@
             this.btnDirectToFinances.Location = new System.Drawing.Point(204, 101);
             this.btnDirectToFinances.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDirectToFinances.Name = "btnDirectToFinances";
-            this.btnDirectToFinances.Size = new System.Drawing.Size(104, 39);
+            this.btnDirectToFinances.Size = new System.Drawing.Size(167, 147);
             this.btnDirectToFinances.TabIndex = 0;
             this.btnDirectToFinances.Text = "Finances";
             this.btnDirectToFinances.UseVisualStyleBackColor = true;
@@ -49,10 +50,10 @@
             // 
             // btnDirectToSales
             // 
-            this.btnDirectToSales.Location = new System.Drawing.Point(595, 101);
+            this.btnDirectToSales.Location = new System.Drawing.Point(406, 285);
             this.btnDirectToSales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDirectToSales.Name = "btnDirectToSales";
-            this.btnDirectToSales.Size = new System.Drawing.Size(104, 39);
+            this.btnDirectToSales.Size = new System.Drawing.Size(167, 147);
             this.btnDirectToSales.TabIndex = 2;
             this.btnDirectToSales.Text = "Sales";
             this.btnDirectToSales.UseVisualStyleBackColor = true;
@@ -60,10 +61,10 @@
             // 
             // btnDirectToMaintenance
             // 
-            this.btnDirectToMaintenance.Location = new System.Drawing.Point(464, 101);
+            this.btnDirectToMaintenance.Location = new System.Drawing.Point(204, 285);
             this.btnDirectToMaintenance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDirectToMaintenance.Name = "btnDirectToMaintenance";
-            this.btnDirectToMaintenance.Size = new System.Drawing.Size(104, 39);
+            this.btnDirectToMaintenance.Size = new System.Drawing.Size(167, 147);
             this.btnDirectToMaintenance.TabIndex = 3;
             this.btnDirectToMaintenance.Text = "Maintenance";
             this.btnDirectToMaintenance.UseVisualStyleBackColor = true;
@@ -71,10 +72,10 @@
             // 
             // btnDirectToInkoop
             // 
-            this.btnDirectToInkoop.Location = new System.Drawing.Point(333, 101);
+            this.btnDirectToInkoop.Location = new System.Drawing.Point(406, 101);
             this.btnDirectToInkoop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDirectToInkoop.Name = "btnDirectToInkoop";
-            this.btnDirectToInkoop.Size = new System.Drawing.Size(104, 39);
+            this.btnDirectToInkoop.Size = new System.Drawing.Size(167, 147);
             this.btnDirectToInkoop.TabIndex = 4;
             this.btnDirectToInkoop.Text = "Inkoop";
             this.btnDirectToInkoop.UseVisualStyleBackColor = true;
@@ -91,11 +92,22 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // btnNewDashboard
+            // 
+            this.btnNewDashboard.Location = new System.Drawing.Point(661, 194);
+            this.btnNewDashboard.Name = "btnNewDashboard";
+            this.btnNewDashboard.Size = new System.Drawing.Size(133, 160);
+            this.btnNewDashboard.TabIndex = 5;
+            this.btnNewDashboard.Text = "admin dashboard";
+            this.btnNewDashboard.UseVisualStyleBackColor = true;
+            this.btnNewDashboard.Click += new System.EventHandler(this.btnNewDashboard_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 601);
+            this.Controls.Add(this.btnNewDashboard);
             this.Controls.Add(this.btnDirectToSales);
             this.Controls.Add(this.btnDirectToInkoop);
             this.Controls.Add(this.btnDirectToMaintenance);
@@ -117,6 +129,7 @@
         private System.Windows.Forms.Button btnDirectToSales;
         private System.Windows.Forms.Button btnDirectToMaintenance;
         private System.Windows.Forms.Button btnDirectToInkoop;
+        private System.Windows.Forms.Button btnNewDashboard;
     }
 }
 

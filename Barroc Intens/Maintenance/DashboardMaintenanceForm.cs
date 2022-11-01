@@ -31,12 +31,12 @@ namespace Barroc_Intens
 
         private void pboxLogo_Click(object sender, EventArgs e)
         {
-            DirectToForm(new MainForm());
+            DirectToForm(new DashboardAdminForm());
         }
 
         private void btnBackToMain_Click(object sender, EventArgs e)
         {
-            DirectToForm(new MainForm());
+            DirectToForm(new DashboardAdminForm());
         }
 
         private void btnMaintenancePlanner_Click(object sender, EventArgs e)
