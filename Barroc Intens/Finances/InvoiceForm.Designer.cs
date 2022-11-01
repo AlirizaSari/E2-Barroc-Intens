@@ -294,6 +294,7 @@
             // 
             this.cboxCompanyName.DataSource = this.companyBindingSource;
             this.cboxCompanyName.DisplayMember = "Name";
+            this.cboxCompanyName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCompanyName.FormattingEnabled = true;
             this.cboxCompanyName.Location = new System.Drawing.Point(212, 137);
             this.cboxCompanyName.Name = "cboxCompanyName";

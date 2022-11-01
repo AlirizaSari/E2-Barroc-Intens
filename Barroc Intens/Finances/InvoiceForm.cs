@@ -133,6 +133,8 @@ namespace Barroc_Intens.Finances
             this.dbContext.Companies.Load();
 
             this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
+
+            GetDatabaseInfo();
         }
 
         private void btnSaveToDatabase_Click(object sender, EventArgs e)
@@ -155,6 +157,11 @@ namespace Barroc_Intens.Finances
 
         private void cboxCompanyName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            GetDatabaseInfo();
+        }
+
+        private void GetDatabaseInfo()
+        {
             if (this.dbContext == null)
                 return;
 
@@ -162,6 +169,17 @@ namespace Barroc_Intens.Finances
 
             if (company == null)
                 return;
+
+            var isBkrChecked = company.IsBkrChecked;
+            if (isBkrChecked)
+            {
+                cbBkrCheck.Checked = true;
+            }
+            else
+            {
+                cbBkrCheck.Checked = false;
+            }
         }
+
     }
 }
