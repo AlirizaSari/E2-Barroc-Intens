@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.lblInvoice = new System.Windows.Forms.Label();
             this.btnCreateInvoice = new System.Windows.Forms.Button();
-            this.txbCompanyName = new System.Windows.Forms.TextBox();
             this.nudHoursWorked = new System.Windows.Forms.NumericUpDown();
             this.lblDivider = new System.Windows.Forms.Label();
             this.lblCompanyName = new System.Windows.Forms.Label();
@@ -83,14 +82,6 @@
             this.btnCreateInvoice.Text = "Creëer factuur";
             this.btnCreateInvoice.UseVisualStyleBackColor = true;
             this.btnCreateInvoice.Click += new System.EventHandler(this.btnCreateInvoice_Click);
-            // 
-            // txbCompanyName
-            // 
-            this.txbCompanyName.Location = new System.Drawing.Point(212, 140);
-            this.txbCompanyName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txbCompanyName.Name = "txbCompanyName";
-            this.txbCompanyName.Size = new System.Drawing.Size(218, 27);
-            this.txbCompanyName.TabIndex = 0;
             // 
             // nudHoursWorked
             // 
@@ -304,9 +295,9 @@
             this.cboxCompanyName.DataSource = this.companyBindingSource;
             this.cboxCompanyName.DisplayMember = "Name";
             this.cboxCompanyName.FormattingEnabled = true;
-            this.cboxCompanyName.Location = new System.Drawing.Point(212, 105);
+            this.cboxCompanyName.Location = new System.Drawing.Point(212, 137);
             this.cboxCompanyName.Name = "cboxCompanyName";
-            this.cboxCompanyName.Size = new System.Drawing.Size(121, 28);
+            this.cboxCompanyName.Size = new System.Drawing.Size(218, 28);
             this.cboxCompanyName.TabIndex = 25;
             this.cboxCompanyName.ValueMember = "CompanyId";
             this.cboxCompanyName.SelectedIndexChanged += new System.EventHandler(this.cboxCompanyName_SelectedIndexChanged);
@@ -343,7 +334,6 @@
             this.Controls.Add(this.lblCompanyName);
             this.Controls.Add(this.lblDivider);
             this.Controls.Add(this.nudHoursWorked);
-            this.Controls.Add(this.txbCompanyName);
             this.Controls.Add(this.btnCreateInvoice);
             this.Controls.Add(this.lblInvoice);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -365,7 +355,6 @@
 
         private System.Windows.Forms.Label lblInvoice;
         private System.Windows.Forms.Button btnCreateInvoice;
-        private System.Windows.Forms.TextBox txbCompanyName;
         private System.Windows.Forms.NumericUpDown nudHoursWorked;
         private System.Windows.Forms.Label lblDivider;
         private System.Windows.Forms.Label lblCompanyName;
