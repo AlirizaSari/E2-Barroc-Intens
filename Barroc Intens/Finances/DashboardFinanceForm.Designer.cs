@@ -44,6 +44,7 @@ namespace Barroc_Intens
             this.btnDirectToInvoice = new System.Windows.Forms.Button();
             this.btnBackToMain = new System.Windows.Forms.Button();
             this.dgvInvoices = new System.Windows.Forms.DataGridView();
+            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paidAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,7 +52,6 @@ namespace Barroc_Intens
             this.companyAdressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoursWorkedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -209,6 +209,10 @@ namespace Barroc_Intens
             this.dgvInvoices.TabIndex = 2;
             this.dgvInvoices.SelectionChanged += new System.EventHandler(this.dgvInvoices_SelectionChanged);
             // 
+            // customInvoiceBindingSource
+            // 
+            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
+            // 
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
@@ -261,7 +265,6 @@ namespace Barroc_Intens
             this.hoursWorkedDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hoursWorkedDataGridViewTextBoxColumn.Name = "hoursWorkedDataGridViewTextBoxColumn";
             this.hoursWorkedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hoursWorkedDataGridViewTextBoxColumn.Width = 125;
             // 
             // notesDataGridViewTextBoxColumn
             // 
@@ -271,10 +274,6 @@ namespace Barroc_Intens
             this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
             this.notesDataGridViewTextBoxColumn.ReadOnly = true;
             this.notesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customInvoiceBindingSource
-            // 
-            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
             // 
             // DashboardFinanceForm
             // 
@@ -315,6 +314,7 @@ namespace Barroc_Intens
         private System.Windows.Forms.Button btnBackToMain;
         private System.Windows.Forms.Button btnDirectToInvoice;
         private System.Windows.Forms.DataGridView dgvInvoices;
+        private System.Windows.Forms.BindingSource customInvoiceBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn paidAtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn;
@@ -322,6 +322,5 @@ namespace Barroc_Intens
         private System.Windows.Forms.DataGridViewTextBoxColumn companyAdressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoursWorkedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource customInvoiceBindingSource;
     }
 }
