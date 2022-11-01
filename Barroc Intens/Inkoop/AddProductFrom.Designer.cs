@@ -62,7 +62,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Name:";
+            this.label2.Text = "Naam:";
             // 
             // label3
             // 
@@ -78,7 +78,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 162);
+            this.label5.Location = new System.Drawing.Point(14, 150);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 4;
@@ -101,7 +101,7 @@
             // btnSaveProduct
             // 
             this.btnSaveProduct.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveProduct.Location = new System.Drawing.Point(133, 225);
+            this.btnSaveProduct.Location = new System.Drawing.Point(133, 193);
             this.btnSaveProduct.Name = "btnSaveProduct";
             this.btnSaveProduct.Size = new System.Drawing.Size(75, 23);
             this.btnSaveProduct.TabIndex = 9;
@@ -112,7 +112,7 @@
             // btnCancelProduct
             // 
             this.btnCancelProduct.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelProduct.Location = new System.Drawing.Point(214, 225);
+            this.btnCancelProduct.Location = new System.Drawing.Point(214, 193);
             this.btnCancelProduct.Name = "btnCancelProduct";
             this.btnCancelProduct.Size = new System.Drawing.Size(75, 23);
             this.btnCancelProduct.TabIndex = 10;
@@ -126,7 +126,7 @@
             this.newProductCategoryComboBox.DisplayMember = "Name";
             this.newProductCategoryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.newProductCategoryComboBox.FormattingEnabled = true;
-            this.newProductCategoryComboBox.Location = new System.Drawing.Point(133, 159);
+            this.newProductCategoryComboBox.Location = new System.Drawing.Point(133, 147);
             this.newProductCategoryComboBox.Name = "newProductCategoryComboBox";
             this.newProductCategoryComboBox.Size = new System.Drawing.Size(224, 21);
             this.newProductCategoryComboBox.TabIndex = 11;
@@ -157,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 260);
+            this.ClientSize = new System.Drawing.Size(369, 235);
             this.Controls.Add(this.txbBrandProduct);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.newProductCategoryComboBox);
