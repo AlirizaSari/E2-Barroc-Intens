@@ -10,16 +10,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Mail;
+using Microsoft.EntityFrameworkCore;
 
 namespace Barroc_Intens.Finances
 {
     public partial class InvoiceForm : Form
     {
+        private AppDbContext dbContext;
+
         string _companyName = "";
         string _companyEmail = "";
         string _companyAdress = "";
         string _comment;
-        string _date;
+        DateTime _date;
         decimal _hoursWorked;
         decimal _discount;
         decimal _pricePerHour;
@@ -35,15 +38,14 @@ namespace Barroc_Intens.Finances
             _companyEmail = txbEmailAdresCompany.Text;
             _companyAdress = txbCompanyAdress.Text;
             _comment = txbComment.Text;
-            _date = dtpDate.Text.ToString();
+            _date = dtpDate.Value;
             _hoursWorked = nudHoursWorked.Value;
             _discount = nudDiscount.Value;
             _pricePerHour = nudHourlyPrice.Value;
 
 
             if (stringInputValidation(_companyName) 
-                && stringInputValidation(_companyAdress) 
-                && stringInputValidation(_date)
+                && stringInputValidation(_companyAdress)
                 && decimalInputValidation(_hoursWorked)
                 && decimalInputValidation(_pricePerHour)
                 )
@@ -122,6 +124,44 @@ namespace Barroc_Intens.Finances
             this.Hide();
             myForm.ShowDialog();
             this.Close();
+        }
+
+        private void InvoiceForm_Load(object sender, EventArgs e)
+        {
+            this.dbContext = new AppDbContext();
+
+            this.dbContext.Companies.Load();
+
+            this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
+        }
+
+        private void btnSaveToDatabase_Click(object sender, EventArgs e)
+        {
+            var invoice = new CustomInvoice
+            {
+                Date = dtpDate.Value,
+                CompanyEmail = txbEmailAdresCompany.Text,
+                CompanyAdress = txbCompanyAdress.Text,
+                HoursWorked = (double)nudHoursWorked.Value,
+                Discount = (double)nudDiscount.Value,
+                PricePerHour = (double)nudHourlyPrice.Value,
+                Notes = txbComment.Text,
+
+                CompanyId = (int)cboxCompanyName.SelectedValue
+            };
+            dbContext.CustomInvoices.Add(invoice);
+            dbContext.SaveChanges();
+        }
+
+        private void cboxCompanyName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.dbContext == null)
+                return;
+
+            var company = (Company)cboxCompanyName.SelectedItem;
+
+            if (company == null)
+                return;
         }
     }
 }
