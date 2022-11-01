@@ -158,9 +158,9 @@ namespace Barroc_Intens.Finances
             if (this.dbContext == null)
                 return;
 
-            var category = (Category)cboxCompanyName.SelectedItem;
+            var company = (Company)cboxCompanyName.SelectedItem;
 
-            if (category == null)
+            if (company == null)
                 return;
         }
     }
