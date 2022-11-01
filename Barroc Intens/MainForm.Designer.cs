@@ -103,7 +103,7 @@
             this.Controls.Add(this.btnDirectToFinances);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "Dashboard voor admin";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -253,7 +253,7 @@
             this.Controls.Add(this.pboxLogo);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CustomerNotesForm";
-            this.Text = "CustomerNotesForm";
+            this.Text = "Klantennotities";
             this.Load += new System.EventHandler(this.CustomerNotesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyDataGridView)).EndInit();

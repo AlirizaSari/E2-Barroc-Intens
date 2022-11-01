@@ -65,7 +65,7 @@
             this.lblExtraInfo.AutoSize = true;
             this.lblExtraInfo.Location = new System.Drawing.Point(20, 322);
             this.lblExtraInfo.Name = "lblExtraInfo";
-            this.lblExtraInfo.Size = new System.Drawing.Size(91, 15);
+            this.lblExtraInfo.Size = new System.Drawing.Size(115, 20);
             this.lblExtraInfo.TabIndex = 6;
             this.lblExtraInfo.Text = "Extra Informatie";
             // 
@@ -92,7 +92,7 @@
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Location = new System.Drawing.Point(53, 249);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(52, 15);
+            this.lblDepartment.Size = new System.Drawing.Size(66, 20);
             this.lblDepartment.TabIndex = 3;
             this.lblDepartment.Text = "Afdeling";
             // 
@@ -101,7 +101,7 @@
             this.lblAccountName.AutoSize = true;
             this.lblAccountName.Location = new System.Drawing.Point(53, 220);
             this.lblAccountName.Name = "lblAccountName";
-            this.lblAccountName.Size = new System.Drawing.Size(87, 15);
+            this.lblAccountName.Size = new System.Drawing.Size(107, 20);
             this.lblAccountName.TabIndex = 2;
             this.lblAccountName.Text = "Account Naam";
             // 
@@ -135,7 +135,7 @@
             this.lblSystemName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSystemName.Location = new System.Drawing.Point(240, 34);
             this.lblSystemName.Name = "lblSystemName";
-            this.lblSystemName.Size = new System.Drawing.Size(162, 32);
+            this.lblSystemName.Size = new System.Drawing.Size(200, 41);
             this.lblSystemName.TabIndex = 3;
             this.lblSystemName.Text = "Maintenance";
             // 
@@ -171,7 +171,7 @@
             // 
             // DashboardMaintenanceForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.pnlTop);
@@ -179,6 +179,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DashboardMaintenanceForm";
+            this.Text = "Dashboard voor maintenance";
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();

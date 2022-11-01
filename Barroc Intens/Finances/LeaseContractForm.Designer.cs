@@ -34,13 +34,13 @@
             this.chbBkrCheckPositive = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvCompanys = new System.Windows.Forms.DataGridView();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnDirectToFinanceDash = new System.Windows.Forms.Button();
             this.companyIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bkrCheckedAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDirectToFinanceDash = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompanys)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +50,7 @@
             this.chbBkrCheckNegative.AutoSize = true;
             this.chbBkrCheckNegative.Location = new System.Drawing.Point(298, 79);
             this.chbBkrCheckNegative.Name = "chbBkrCheckNegative";
-            this.chbBkrCheckNegative.Size = new System.Drawing.Size(83, 21);
+            this.chbBkrCheckNegative.Size = new System.Drawing.Size(80, 20);
             this.chbBkrCheckNegative.TabIndex = 0;
             this.chbBkrCheckNegative.Text = "Negatief";
             this.chbBkrCheckNegative.UseVisualStyleBackColor = true;
@@ -70,7 +70,7 @@
             this.chbBkrCheckPositive.AutoSize = true;
             this.chbBkrCheckPositive.Location = new System.Drawing.Point(175, 79);
             this.chbBkrCheckPositive.Name = "chbBkrCheckPositive";
-            this.chbBkrCheckPositive.Size = new System.Drawing.Size(76, 21);
+            this.chbBkrCheckPositive.Size = new System.Drawing.Size(73, 20);
             this.chbBkrCheckPositive.TabIndex = 2;
             this.chbBkrCheckPositive.Text = "Positief";
             this.chbBkrCheckPositive.UseVisualStyleBackColor = true;
@@ -104,26 +104,6 @@
             this.dgvCompanys.Size = new System.Drawing.Size(375, 386);
             this.dgvCompanys.TabIndex = 6;
             this.dgvCompanys.SelectionChanged += new System.EventHandler(this.dgvCompanys_SelectionChanged);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(118, 386);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(173, 33);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "test save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnDirectToFinanceDash
-            // 
-            this.btnDirectToFinanceDash.Location = new System.Drawing.Point(609, 9);
-            this.btnDirectToFinanceDash.Name = "btnDirectToFinanceDash";
-            this.btnDirectToFinanceDash.Size = new System.Drawing.Size(179, 45);
-            this.btnDirectToFinanceDash.TabIndex = 25;
-            this.btnDirectToFinanceDash.Text = "Terug naar finances dashboard";
-            this.btnDirectToFinanceDash.UseVisualStyleBackColor = true;
-            this.btnDirectToFinanceDash.Click += new System.EventHandler(this.btnDirectToFinanceDash_Click);
             // 
             // companyIdDataGridViewTextBoxColumn
             // 
@@ -165,6 +145,26 @@
             // 
             this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(118, 386);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(173, 33);
+            this.btnSave.TabIndex = 7;
+            this.btnSave.Text = "test save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnDirectToFinanceDash
+            // 
+            this.btnDirectToFinanceDash.Location = new System.Drawing.Point(609, 9);
+            this.btnDirectToFinanceDash.Name = "btnDirectToFinanceDash";
+            this.btnDirectToFinanceDash.Size = new System.Drawing.Size(179, 45);
+            this.btnDirectToFinanceDash.TabIndex = 25;
+            this.btnDirectToFinanceDash.Text = "Terug naar finances dashboard";
+            this.btnDirectToFinanceDash.UseVisualStyleBackColor = true;
+            this.btnDirectToFinanceDash.Click += new System.EventHandler(this.btnDirectToFinanceDash_Click);
+            // 
             // LeaseContractForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -178,7 +178,7 @@
             this.Controls.Add(this.lblBkrCheckResult);
             this.Controls.Add(this.chbBkrCheckNegative);
             this.Name = "LeaseContractForm";
-            this.Text = "LeaseContractForm";
+            this.Text = "Leasecontracten";
             this.Load += new System.EventHandler(this.LeaseContractForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompanys)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();

@@ -176,7 +176,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DashboardSalesForm";
-            this.Text = "dashboardTemplateForm";
+            this.Text = "Dashboard voor sales";
             this.Load += new System.EventHandler(this.DashboardSalesForm_Load);
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();

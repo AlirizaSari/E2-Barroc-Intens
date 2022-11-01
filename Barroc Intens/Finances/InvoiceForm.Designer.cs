@@ -340,7 +340,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "InvoiceForm";
-            this.Text = "InvoiceForm";
+            this.Text = "Factuurpagina";
             this.Load += new System.EventHandler(this.InvoiceForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).EndInit();

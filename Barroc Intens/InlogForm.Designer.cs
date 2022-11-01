@@ -130,7 +130,7 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.txbUsername);
             this.Name = "InlogForm";
-            this.Text = "InlogForm";
+            this.Text = "Inloggen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InlogForm_FormClosing);
             this.Load += new System.EventHandler(this.InlogForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
