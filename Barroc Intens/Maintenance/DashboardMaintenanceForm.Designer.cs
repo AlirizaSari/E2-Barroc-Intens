@@ -144,7 +144,7 @@
             this.btnBackToMain.Location = new System.Drawing.Point(40, 117);
             this.btnBackToMain.Name = "btnBackToMain";
             this.btnBackToMain.Size = new System.Drawing.Size(172, 37);
-            this.btnBackToMain.TabIndex = 2;
+            this.btnBackToMain.TabIndex = 0;
             this.btnBackToMain.Text = "Home";
             this.btnBackToMain.UseVisualStyleBackColor = true;
             this.btnBackToMain.Click += new System.EventHandler(this.btnBackToMain_Click);
@@ -154,7 +154,7 @@
             this.btnMaintenancePlanner.Location = new System.Drawing.Point(495, 117);
             this.btnMaintenancePlanner.Name = "btnMaintenancePlanner";
             this.btnMaintenancePlanner.Size = new System.Drawing.Size(172, 37);
-            this.btnMaintenancePlanner.TabIndex = 1;
+            this.btnMaintenancePlanner.TabIndex = 2;
             this.btnMaintenancePlanner.Text = "Planner";
             this.btnMaintenancePlanner.UseVisualStyleBackColor = true;
             this.btnMaintenancePlanner.Click += new System.EventHandler(this.btnMaintenancePlanner_Click);
@@ -164,7 +164,7 @@
             this.btnMaintenance.Location = new System.Drawing.Point(264, 117);
             this.btnMaintenance.Name = "btnMaintenance";
             this.btnMaintenance.Size = new System.Drawing.Size(172, 37);
-            this.btnMaintenance.TabIndex = 0;
+            this.btnMaintenance.TabIndex = 1;
             this.btnMaintenance.Text = "Maintenance";
             this.btnMaintenance.UseVisualStyleBackColor = true;
             this.btnMaintenance.Click += new System.EventHandler(this.btnMaintenance_Click);
