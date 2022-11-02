@@ -32,10 +32,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txbNameCategory = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnSaveCategory = new System.Windows.Forms.Button();
             this.btnCancelCategory = new System.Windows.Forms.Button();
-            this.txbIsEmployeeOnlyCategory = new System.Windows.Forms.TextBox();
+            this.lblError = new System.Windows.Forms.Label();
+            this.cbEmployeeOnly = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -74,29 +74,18 @@
             // txbNameCategory
             // 
             this.txbNameCategory.Location = new System.Drawing.Point(227, 85);
-            this.txbNameCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbNameCategory.Margin = new System.Windows.Forms.Padding(4);
             this.txbNameCategory.Name = "txbNameCategory";
             this.txbNameCategory.Size = new System.Drawing.Size(309, 22);
-            this.txbNameCategory.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(325, 148);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 19);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "1 = Ja - 2 = Nee";
+            this.txbNameCategory.TabIndex = 0;
             // 
             // btnSaveCategory
             // 
             this.btnSaveCategory.Location = new System.Drawing.Point(281, 183);
-            this.btnSaveCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveCategory.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveCategory.Name = "btnSaveCategory";
             this.btnSaveCategory.Size = new System.Drawing.Size(100, 28);
-            this.btnSaveCategory.TabIndex = 7;
+            this.btnSaveCategory.TabIndex = 3;
             this.btnSaveCategory.Text = "Opslaan";
             this.btnSaveCategory.UseVisualStyleBackColor = true;
             this.btnSaveCategory.Click += new System.EventHandler(this.btnSaveCategory_Click);
@@ -104,36 +93,46 @@
             // btnCancelCategory
             // 
             this.btnCancelCategory.Location = new System.Drawing.Point(389, 183);
-            this.btnCancelCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelCategory.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelCategory.Name = "btnCancelCategory";
             this.btnCancelCategory.Size = new System.Drawing.Size(100, 28);
-            this.btnCancelCategory.TabIndex = 8;
+            this.btnCancelCategory.TabIndex = 4;
             this.btnCancelCategory.Text = "Annuleren";
             this.btnCancelCategory.UseVisualStyleBackColor = true;
             this.btnCancelCategory.Click += new System.EventHandler(this.btnCancelCategory_Click);
             // 
-            // txbIsEmployeeOnlyCategory
+            // lblError
             // 
-            this.txbIsEmployeeOnlyCategory.Location = new System.Drawing.Point(227, 118);
-            this.txbIsEmployeeOnlyCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txbIsEmployeeOnlyCategory.Name = "txbIsEmployeeOnlyCategory";
-            this.txbIsEmployeeOnlyCategory.Size = new System.Drawing.Size(309, 22);
-            this.txbIsEmployeeOnlyCategory.TabIndex = 9;
+            this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(224, 217);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 16);
+            this.lblError.TabIndex = 7;
+            // 
+            // cbEmployeeOnly
+            // 
+            this.cbEmployeeOnly.AutoSize = true;
+            this.cbEmployeeOnly.Location = new System.Drawing.Point(227, 124);
+            this.cbEmployeeOnly.Name = "cbEmployeeOnly";
+            this.cbEmployeeOnly.Size = new System.Drawing.Size(18, 17);
+            this.cbEmployeeOnly.TabIndex = 1;
+            this.cbEmployeeOnly.UseVisualStyleBackColor = true;
             // 
             // AddCategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 242);
-            this.Controls.Add(this.txbIsEmployeeOnlyCategory);
+            this.Controls.Add(this.cbEmployeeOnly);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnCancelCategory);
             this.Controls.Add(this.btnSaveCategory);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txbNameCategory);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddCategoryForm";
             this.Text = "Categorie toevoegen";
             this.Load += new System.EventHandler(this.AddCategoryForm_Load);
@@ -148,9 +147,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txbNameCategory;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSaveCategory;
         private System.Windows.Forms.Button btnCancelCategory;
-        private System.Windows.Forms.TextBox txbIsEmployeeOnlyCategory;
+        private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.CheckBox cbEmployeeOnly;
     }
 }

@@ -17,6 +17,7 @@ namespace Barroc_Intens.Inkoop
         public AddCategoryForm()
         {
             InitializeComponent();
+            this.AcceptButton = btnSaveCategory;
         }
 
         private void AddCategoryForm_Load(object sender, EventArgs e)
@@ -26,16 +27,27 @@ namespace Barroc_Intens.Inkoop
 
         private void btnSaveCategory_Click(object sender, EventArgs e)
         {
-            var category = new Category
+            int isChecked = cbEmployeeOnly.Checked ? 1 : 2;
+
+            if (!String.IsNullOrEmpty(txbNameCategory.Text))
             {
-                Name = txbNameCategory.Text,
-                IsEmployeeOnly = int.Parse(txbIsEmployeeOnlyCategory.Text)
+                var category = new Category
+                {
+                    Name = txbNameCategory.Text,
+                    IsEmployeeOnly = isChecked,
 
-            };
-            dbContext.Categories.Add(category);
-            dbContext.SaveChanges();
+                };
+                dbContext.Categories.Add(category);
+                dbContext.SaveChanges();
 
-            DirectToForm(new DashboardInkoopForm());
+                DirectToForm(new DashboardInkoopForm());
+            }
+            else
+            {
+                lblError.Text = "Zorg ervoor dat alle velden zijn ingevoerd.";
+            }
+
+            
         }
 
         private void btnCancelCategory_Click(object sender, EventArgs e)
