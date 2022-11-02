@@ -86,7 +86,7 @@
             this.lblExtraInfo.AutoSize = true;
             this.lblExtraInfo.Location = new System.Drawing.Point(20, 322);
             this.lblExtraInfo.Name = "lblExtraInfo";
-            this.lblExtraInfo.Size = new System.Drawing.Size(91, 15);
+            this.lblExtraInfo.Size = new System.Drawing.Size(115, 20);
             this.lblExtraInfo.TabIndex = 6;
             this.lblExtraInfo.Text = "Extra Informatie";
             // 
@@ -103,7 +103,7 @@
             this.btnLogout.Location = new System.Drawing.Point(24, 525);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(162, 50);
-            this.btnLogout.TabIndex = 4;
+            this.btnLogout.TabIndex = 9;
             this.btnLogout.Text = "Uitloggen";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
@@ -113,7 +113,7 @@
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Location = new System.Drawing.Point(53, 249);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(52, 15);
+            this.lblDepartment.Size = new System.Drawing.Size(66, 20);
             this.lblDepartment.TabIndex = 3;
             this.lblDepartment.Text = "Afdeling";
             // 
@@ -122,7 +122,7 @@
             this.lblAccountName.AutoSize = true;
             this.lblAccountName.Location = new System.Drawing.Point(53, 220);
             this.lblAccountName.Name = "lblAccountName";
-            this.lblAccountName.Size = new System.Drawing.Size(87, 15);
+            this.lblAccountName.Size = new System.Drawing.Size(107, 20);
             this.lblAccountName.TabIndex = 2;
             this.lblAccountName.Text = "Account Naam";
             // 
@@ -154,7 +154,7 @@
             this.lblInkoop.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInkoop.Location = new System.Drawing.Point(293, 30);
             this.lblInkoop.Name = "lblInkoop";
-            this.lblInkoop.Size = new System.Drawing.Size(95, 32);
+            this.lblInkoop.Size = new System.Drawing.Size(118, 41);
             this.lblInkoop.TabIndex = 3;
             this.lblInkoop.Text = "Inkoop";
             // 
@@ -163,7 +163,7 @@
             this.btnBackToMain.Location = new System.Drawing.Point(52, 117);
             this.btnBackToMain.Name = "btnBackToMain";
             this.btnBackToMain.Size = new System.Drawing.Size(172, 37);
-            this.btnBackToMain.TabIndex = 2;
+            this.btnBackToMain.TabIndex = 0;
             this.btnBackToMain.Text = "Home";
             this.btnBackToMain.UseVisualStyleBackColor = true;
             this.btnBackToMain.Click += new System.EventHandler(this.btnBackToMain_Click);
@@ -173,7 +173,7 @@
             this.btnStock.Location = new System.Drawing.Point(492, 117);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(172, 37);
-            this.btnStock.TabIndex = 1;
+            this.btnStock.TabIndex = 2;
             this.btnStock.Text = "Voorraad";
             this.btnStock.UseVisualStyleBackColor = true;
             // 
@@ -182,7 +182,7 @@
             this.btnInkoop.Location = new System.Drawing.Point(272, 117);
             this.btnInkoop.Name = "btnInkoop";
             this.btnInkoop.Size = new System.Drawing.Size(172, 37);
-            this.btnInkoop.TabIndex = 0;
+            this.btnInkoop.TabIndex = 1;
             this.btnInkoop.Text = "Inkopen";
             this.btnInkoop.UseVisualStyleBackColor = true;
             this.btnInkoop.Click += new System.EventHandler(this.btnInkoop_Click);
@@ -222,7 +222,7 @@
             this.btnAddCategory.Location = new System.Drawing.Point(537, 468);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(172, 37);
-            this.btnAddCategory.TabIndex = 7;
+            this.btnAddCategory.TabIndex = 6;
             this.btnAddCategory.Text = "Categorie Toevoegen";
             this.btnAddCategory.UseVisualStyleBackColor = true;
             this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
@@ -232,7 +232,7 @@
             this.btnEditCategory.Location = new System.Drawing.Point(537, 511);
             this.btnEditCategory.Name = "btnEditCategory";
             this.btnEditCategory.Size = new System.Drawing.Size(172, 37);
-            this.btnEditCategory.TabIndex = 8;
+            this.btnEditCategory.TabIndex = 7;
             this.btnEditCategory.Text = "Categorie Aanpassen";
             this.btnEditCategory.UseVisualStyleBackColor = true;
             this.btnEditCategory.Click += new System.EventHandler(this.btnEditCategory_Click);
@@ -242,7 +242,7 @@
             this.btnRemoveCategory.Location = new System.Drawing.Point(537, 554);
             this.btnRemoveCategory.Name = "btnRemoveCategory";
             this.btnRemoveCategory.Size = new System.Drawing.Size(172, 37);
-            this.btnRemoveCategory.TabIndex = 9;
+            this.btnRemoveCategory.TabIndex = 8;
             this.btnRemoveCategory.Text = "Categorie Verwijderen";
             this.btnRemoveCategory.UseVisualStyleBackColor = true;
             this.btnRemoveCategory.Click += new System.EventHandler(this.btnRemoveCategory_Click);
@@ -340,7 +340,7 @@
             // 
             // DashboardInkoopForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.categoriesDataGridView);
