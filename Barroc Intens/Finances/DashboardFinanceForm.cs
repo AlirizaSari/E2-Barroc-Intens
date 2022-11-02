@@ -91,5 +91,23 @@ namespace Barroc_Intens
             .Reference(i => i.Company)
             .Load();
         }
+
+        private void btnPaidInvoice_Click(object sender, EventArgs e)
+        {
+            DateTime thisDay = DateTime.Today;
+            //(dgvInvoices.CurrentCell.RowIndex + 1)
+            var invoice = dbContext.CustomInvoices.Where(u => u.CustomInvoiceId == (dgvInvoices.CurrentCell.RowIndex + 1)).FirstOrDefault();
+            
+            if (invoice != null)
+            {
+                invoice.PaidAt = thisDay;
+                dbContext.SaveChanges();
+                dgvInvoices.Refresh();
+            }
+
+            
+
+            
+        }
     }
 }
