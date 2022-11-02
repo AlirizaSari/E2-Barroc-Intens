@@ -315,7 +315,7 @@
             this.categoriesDataGridView.Name = "categoriesDataGridView";
             this.categoriesDataGridView.RowHeadersWidth = 51;
             this.categoriesDataGridView.Size = new System.Drawing.Size(302, 178);
-            this.categoriesDataGridView.TabIndex = 11;
+            this.categoriesDataGridView.TabIndex = 10;
             this.categoriesDataGridView.SelectionChanged += new System.EventHandler(this.categoriesDataGridView_SelectionChanged);
             // 
             // nameDataGridViewTextBoxColumn1
