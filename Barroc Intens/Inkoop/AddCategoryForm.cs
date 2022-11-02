@@ -27,6 +27,8 @@ namespace Barroc_Intens.Inkoop
 
         private void btnSaveCategory_Click(object sender, EventArgs e)
         {
+            //Ternary operator:
+            //Als cbEmployeeOnly is gechecked, zet isChecked op 1, anders 2
             int isChecked = cbEmployeeOnly.Checked ? 1 : 2;
 
             if (!String.IsNullOrEmpty(txbNameCategory.Text))

@@ -45,6 +45,8 @@ namespace Barroc_Intens
             this.btnBackToMain = new System.Windows.Forms.Button();
             this.dgvInvoices = new System.Windows.Forms.DataGridView();
             this.btnPaidInvoice = new System.Windows.Forms.Button();
+            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paidAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +54,6 @@ namespace Barroc_Intens
             this.companyAdressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoursWorkedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -193,6 +194,7 @@ namespace Barroc_Intens
             this.dgvInvoices.AutoGenerateColumns = false;
             this.dgvInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInvoices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
             this.dateDataGridViewTextBoxColumn,
             this.paidAtDataGridViewTextBoxColumn,
             this.companyDataGridViewTextBoxColumn,
@@ -219,6 +221,19 @@ namespace Barroc_Intens
             this.btnPaidInvoice.Text = "Betaald";
             this.btnPaidInvoice.UseVisualStyleBackColor = true;
             this.btnPaidInvoice.Click += new System.EventHandler(this.btnPaidInvoice_Click);
+            // 
+            // customInvoiceBindingSource
+            // 
+            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "CustomInvoiceId";
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 50;
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -283,10 +298,6 @@ namespace Barroc_Intens
             this.notesDataGridViewTextBoxColumn.ReadOnly = true;
             this.notesDataGridViewTextBoxColumn.Width = 125;
             // 
-            // customInvoiceBindingSource
-            // 
-            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
-            // 
             // DashboardFinanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -328,6 +339,8 @@ namespace Barroc_Intens
         private System.Windows.Forms.Button btnDirectToInvoice;
         private System.Windows.Forms.DataGridView dgvInvoices;
         private System.Windows.Forms.BindingSource customInvoiceBindingSource;
+        private System.Windows.Forms.Button btnPaidInvoice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn paidAtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn;
@@ -335,6 +348,5 @@ namespace Barroc_Intens
         private System.Windows.Forms.DataGridViewTextBoxColumn companyAdressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoursWorkedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnPaidInvoice;
     }
 }
