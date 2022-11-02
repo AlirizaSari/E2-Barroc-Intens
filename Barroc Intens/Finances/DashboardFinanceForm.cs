@@ -92,10 +92,15 @@ namespace Barroc_Intens
             .Load();
         }
 
+        /// <summary>
+        /// De status van de geselecteerde factuur wordt geupdate naar 'betaald'
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPaidInvoice_Click(object sender, EventArgs e)
         {
+            //Probleem: CustomInvoiceId match de nummers soms niet
             DateTime thisDay = DateTime.Today;
-            //(dgvInvoices.CurrentCell.RowIndex + 1)
             var invoice = dbContext.CustomInvoices.Where(u => u.CustomInvoiceId == (dgvInvoices.CurrentCell.RowIndex + 1)).FirstOrDefault();
             
             if (invoice != null)

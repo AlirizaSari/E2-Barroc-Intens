@@ -85,8 +85,14 @@
             // 
             // nudHoursWorked
             // 
+            this.nudHoursWorked.DecimalPlaces = 2;
             this.nudHoursWorked.Location = new System.Drawing.Point(212, 370);
             this.nudHoursWorked.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nudHoursWorked.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.nudHoursWorked.Name = "nudHoursWorked";
             this.nudHoursWorked.Size = new System.Drawing.Size(218, 27);
             this.nudHoursWorked.TabIndex = 4;
@@ -165,7 +171,7 @@
             this.txbCompanyAdress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbCompanyAdress.Name = "txbCompanyAdress";
             this.txbCompanyAdress.Size = new System.Drawing.Size(218, 27);
-            this.txbCompanyAdress.TabIndex = 1;
+            this.txbCompanyAdress.TabIndex = 2;
             // 
             // txbComment
             // 
@@ -182,10 +188,11 @@
             this.dtpDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(218, 27);
-            this.dtpDate.TabIndex = 2;
+            this.dtpDate.TabIndex = 3;
             // 
             // nudDiscount
             // 
+            this.nudDiscount.DecimalPlaces = 2;
             this.nudDiscount.Location = new System.Drawing.Point(212, 405);
             this.nudDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudDiscount.Name = "nudDiscount";
@@ -194,8 +201,14 @@
             // 
             // nudHourlyPrice
             // 
-            this.nudHourlyPrice.Location = new System.Drawing.Point(212, 440);
+            this.nudHourlyPrice.DecimalPlaces = 2;
+            this.nudHourlyPrice.Location = new System.Drawing.Point(213, 440);
             this.nudHourlyPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nudHourlyPrice.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
             this.nudHourlyPrice.Name = "nudHourlyPrice";
             this.nudHourlyPrice.Size = new System.Drawing.Size(218, 27);
             this.nudHourlyPrice.TabIndex = 6;
@@ -216,7 +229,7 @@
             this.btnSaveToDatabase.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSaveToDatabase.Name = "btnSaveToDatabase";
             this.btnSaveToDatabase.Size = new System.Drawing.Size(173, 60);
-            this.btnSaveToDatabase.TabIndex = 17;
+            this.btnSaveToDatabase.TabIndex = 9;
             this.btnSaveToDatabase.Text = "Opslaan naar database";
             this.btnSaveToDatabase.UseVisualStyleBackColor = true;
             this.btnSaveToDatabase.Click += new System.EventHandler(this.btnSaveToDatabase_Click);
@@ -251,6 +264,7 @@
             // 
             // cbBkrCheck
             // 
+            this.cbBkrCheck.AutoCheck = false;
             this.cbBkrCheck.AutoSize = true;
             this.cbBkrCheck.Location = new System.Drawing.Point(606, 139);
             this.cbBkrCheck.Name = "cbBkrCheck";
@@ -264,7 +278,7 @@
             this.btnSaveToFile.Location = new System.Drawing.Point(606, 489);
             this.btnSaveToFile.Name = "btnSaveToFile";
             this.btnSaveToFile.Size = new System.Drawing.Size(173, 59);
-            this.btnSaveToFile.TabIndex = 22;
+            this.btnSaveToFile.TabIndex = 10;
             this.btnSaveToFile.Text = "Opslaan naar bestand";
             this.btnSaveToFile.UseVisualStyleBackColor = true;
             // 
@@ -299,7 +313,7 @@
             this.cboxCompanyName.Location = new System.Drawing.Point(212, 137);
             this.cboxCompanyName.Name = "cboxCompanyName";
             this.cboxCompanyName.Size = new System.Drawing.Size(218, 28);
-            this.cboxCompanyName.TabIndex = 25;
+            this.cboxCompanyName.TabIndex = 0;
             this.cboxCompanyName.ValueMember = "CompanyId";
             this.cboxCompanyName.SelectedIndexChanged += new System.EventHandler(this.cboxCompanyName_SelectedIndexChanged);
             // 

@@ -71,6 +71,7 @@ namespace Barroc_Intens
                 new Category { CategoryId = 1, Name = "Automaten", IsEmployeeOnly = 2 },
                 new Category { CategoryId = 2, Name = "Koffiebonen", IsEmployeeOnly = 2 
                 });
+
             modelBuilder.Entity<MaintenanceAppointment>().HasData(
                 new MaintenanceAppointment { MaintenanceAppointmentId = 1, CompanyId = 1, Remark = "Koffiezet automaat 1 is ontploft", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime =  null, UserId = null, },
                 new MaintenanceAppointment { MaintenanceAppointmentId = 2, CompanyId = 1, Remark = "Koffiezet automaat 2 is ontploft", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime =  null, UserId = null, },
