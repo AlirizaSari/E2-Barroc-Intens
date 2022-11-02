@@ -62,7 +62,7 @@
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(189, 22);
-            this.txbPassword.TabIndex = 2;
+            this.txbPassword.TabIndex = 1;
             this.txbPassword.TextChanged += new System.EventHandler(this.txbPassword_TextChanged);
             // 
             // lblPassword
@@ -99,7 +99,7 @@
             this.btnLogin.Location = new System.Drawing.Point(200, 335);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(189, 66);
-            this.btnLogin.TabIndex = 6;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Inloggen";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
