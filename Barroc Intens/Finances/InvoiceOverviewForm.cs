@@ -28,9 +28,11 @@ namespace Barroc_Intens
         {
             this.dbContext = new AppDbContext();
             this.dbContext.CustomInvoices.Where(p => p.PaidAt != null).Load();
-            this.customInvoiceBindingSource.DataSource = dbContext.CustomInvoices.Local.ToBindingList();
+            this.dgvPaidInvoices.DataSource = dbContext.CustomInvoices.Local.ToBindingList();
 
-            
+            this.dbContext = new AppDbContext();
+            this.dbContext.CustomInvoices.Where(p => p.PaidAt == null).Load();
+            this.dgvNotPaidInvoices.DataSource = dbContext.CustomInvoices.Local.ToBindingList();
         }
         
         private void DirectToForm(Form myForm)
