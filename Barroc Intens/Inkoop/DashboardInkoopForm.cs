@@ -86,6 +86,7 @@ namespace Barroc_Intens
             {
                 dbContext.Products.Update(product);
                 dbContext.SaveChanges();
+                productsDataGridView.Refresh();
             }
             
         }
@@ -122,6 +123,7 @@ namespace Barroc_Intens
 
             dbContext.Categories.Update(category);
             dbContext.SaveChanges();
+            categoriesDataGridView.Refresh();
         }
 
         private void btnRemoveCategory_Click(object sender, EventArgs e)
