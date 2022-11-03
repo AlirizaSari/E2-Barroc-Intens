@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Barroc_Intens
 {
     public partial class InvoiceOverviewForm : Form
     {
+        private AppDbContext dbContext;
         public InvoiceOverviewForm()
         {
             InitializeComponent();
@@ -22,6 +24,15 @@ namespace Barroc_Intens
             DirectToForm(new DashboardFinanceForm());
         }
 
+        private void InvoiceOverviewForm_Load(object sender, EventArgs e)
+        {
+            this.dbContext = new AppDbContext();
+            this.dbContext.CustomInvoices.Where(p => p.PaidAt != null).Load();
+            this.customInvoiceBindingSource.DataSource = dbContext.CustomInvoices.Local.ToBindingList();
+
+            
+        }
+        
         private void DirectToForm(Form myForm)
         {
             this.Hide();
