@@ -366,6 +366,12 @@
     <Compile Include="InlogForm.Designer.cs">
       <DependentUpon>InlogForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finances\InvoiceOverviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finances\InvoiceOverviewForm.Designer.cs">
+      <DependentUpon>InvoiceOverviewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maintenance\DashboardMaintenanceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -410,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Finances\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finances\InvoiceOverviewForm.resx">
+      <DependentUpon>InvoiceOverviewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Finances\LeaseContractForm.resx">
       <DependentUpon>LeaseContractForm.cs</DependentUpon>

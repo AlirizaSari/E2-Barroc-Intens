@@ -37,16 +37,16 @@ namespace Barroc_Intens
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblDepartment = new System.Windows.Forms.Label();
             this.lblAccountName = new System.Windows.Forms.Label();
-            this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblSystemName = new System.Windows.Forms.Label();
             this.btnDirectToLeaseContract = new System.Windows.Forms.Button();
             this.btnDirectToInvoice = new System.Windows.Forms.Button();
             this.btnBackToMain = new System.Windows.Forms.Button();
             this.dgvInvoices = new System.Windows.Forms.DataGridView();
-            this.btnPaidInvoice = new System.Windows.Forms.Button();
-            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPaidInvoice = new System.Windows.Forms.Button();
+            this.btnDirectToInvoiceOverview = new System.Windows.Forms.Button();
+            this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paidAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,10 +54,11 @@ namespace Barroc_Intens
             this.companyAdressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoursWorkedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoices)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customInvoiceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,21 +124,10 @@ namespace Barroc_Intens
             this.lblAccountName.TabIndex = 2;
             this.lblAccountName.Text = "Account Naam";
             // 
-            // pboxLogo
-            // 
-            this.pboxLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxLogo.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
-            this.pboxLogo.Location = new System.Drawing.Point(61, 12);
-            this.pboxLogo.Name = "pboxLogo";
-            this.pboxLogo.Size = new System.Drawing.Size(100, 100);
-            this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pboxLogo.TabIndex = 1;
-            this.pboxLogo.TabStop = false;
-            this.pboxLogo.Click += new System.EventHandler(this.pboxLogo_Click);
-            // 
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlTop.Controls.Add(this.btnDirectToInvoiceOverview);
             this.pnlTop.Controls.Add(this.lblSystemName);
             this.pnlTop.Controls.Add(this.btnDirectToLeaseContract);
             this.pnlTop.Controls.Add(this.btnDirectToInvoice);
@@ -212,6 +202,15 @@ namespace Barroc_Intens
             this.dgvInvoices.TabIndex = 2;
             this.dgvInvoices.SelectionChanged += new System.EventHandler(this.dgvInvoices_SelectionChanged);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "CustomInvoiceId";
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 50;
+            // 
             // btnPaidInvoice
             // 
             this.btnPaidInvoice.Location = new System.Drawing.Point(297, 386);
@@ -222,18 +221,27 @@ namespace Barroc_Intens
             this.btnPaidInvoice.UseVisualStyleBackColor = true;
             this.btnPaidInvoice.Click += new System.EventHandler(this.btnPaidInvoice_Click);
             // 
-            // customInvoiceBindingSource
+            // btnDirectToInvoiceOverview
             // 
-            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
+            this.btnDirectToInvoiceOverview.Location = new System.Drawing.Point(716, 117);
+            this.btnDirectToInvoiceOverview.Name = "btnDirectToInvoiceOverview";
+            this.btnDirectToInvoiceOverview.Size = new System.Drawing.Size(172, 37);
+            this.btnDirectToInvoiceOverview.TabIndex = 4;
+            this.btnDirectToInvoiceOverview.Text = "Factuur overzicht";
+            this.btnDirectToInvoiceOverview.UseVisualStyleBackColor = true;
+            this.btnDirectToInvoiceOverview.Click += new System.EventHandler(this.btnDirectToInvoiceOverview_Click);
             // 
-            // Column1
+            // pboxLogo
             // 
-            this.Column1.DataPropertyName = "CustomInvoiceId";
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 50;
+            this.pboxLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pboxLogo.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
+            this.pboxLogo.Location = new System.Drawing.Point(61, 12);
+            this.pboxLogo.Name = "pboxLogo";
+            this.pboxLogo.Size = new System.Drawing.Size(100, 100);
+            this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboxLogo.TabIndex = 1;
+            this.pboxLogo.TabStop = false;
+            this.pboxLogo.Click += new System.EventHandler(this.pboxLogo_Click);
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -298,6 +306,10 @@ namespace Barroc_Intens
             this.notesDataGridViewTextBoxColumn.ReadOnly = true;
             this.notesDataGridViewTextBoxColumn.Width = 125;
             // 
+            // customInvoiceBindingSource
+            // 
+            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
+            // 
             // DashboardFinanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -314,10 +326,10 @@ namespace Barroc_Intens
             this.Load += new System.EventHandler(this.DashboardFinanceForm_Load);
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoices)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customInvoiceBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -348,5 +360,6 @@ namespace Barroc_Intens
         private System.Windows.Forms.DataGridViewTextBoxColumn companyAdressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoursWorkedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnDirectToInvoiceOverview;
     }
 }

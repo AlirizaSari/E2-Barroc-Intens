@@ -28,6 +28,7 @@ namespace Barroc_Intens
                 btnBackToMain.Visible = false;
                 btnDirectToInvoice.Location = new Point(46, 117);
                 btnDirectToLeaseContract.Location = new Point(279, 117);
+                btnDirectToInvoiceOverview.Location = new Point(496, 117);
             }
         }
 
@@ -70,6 +71,11 @@ namespace Barroc_Intens
             DirectToForm(new InlogForm());
         }
 
+        private void btnDirectToInvoiceOverview_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new InvoiceOverviewForm());
+        }
+
         private void DirectToForm(Form myForm)
         {
             this.Hide();
@@ -110,11 +116,8 @@ namespace Barroc_Intens
                 invoice.PaidAt = thisDay;
                 dbContext.SaveChanges();
                 dgvInvoices.Refresh();
-            }
-
-            
-
-            
+            }            
         }
+
     }
 }
