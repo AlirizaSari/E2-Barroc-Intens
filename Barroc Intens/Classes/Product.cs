@@ -19,7 +19,7 @@ namespace Barroc_Intens
 
         public string ImagePath { get; set; }
 
-        public decimal Price { get; set; }
+        public decimal? Price { get; set; }
 
         public int? AmountInStock { get; set; }
 
