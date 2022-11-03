@@ -71,11 +71,13 @@ namespace Barroc_Intens.Inkoop
                 return;
 
             lblProductName.Text = product?.Name;
-            lblProductDescription.Text = product?.Description;
+            //lblProductDescription.Text = product?.Description;
             lblProductBrand.Text = product?.Brand;
+            lblProductAmountInStock.Text = product?.AmountInStock.ToString();
 
             if (product.Category != null)
                 lblProductCategory.Text = product.Category.Name;
+
         }
 
         private void DirectToForm(Form myForm)
@@ -83,6 +85,16 @@ namespace Barroc_Intens.Inkoop
             this.Hide();
             myForm.ShowDialog();
             this.Close();
+        }
+
+        private void btnOrderProduct_Click(object sender, EventArgs e)
+        {
+            var product = (Product)this.productDataGridView.CurrentRow?.DataBoundItem;
+;
+            product.AmountInStock += (int?)nupAmountProduct.Value;
+
+            this.dbContext.SaveChanges();
+            this.productDataGridView.Refresh();
         }
     }
 }

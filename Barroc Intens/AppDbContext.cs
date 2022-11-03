@@ -73,15 +73,17 @@ namespace Barroc_Intens
                 });
 
             modelBuilder.Entity<Product>().HasData(
-                new Product { ProductId = 1, Name = "Barroc Intens Italian Light", Description = "S234FREKT\r\n\r\nLease contract: 499,- excl btw per maand\r\n\r\nInstallatiekosten vast: 289,- excl btw.", Brand = "Italian", CategoryId = 1 },
-                new Product { ProductId = 2, Name = "Barroc Intens Italian", Description = "S234KNDPF\r\n\r\nLease contract: 599 excl btw\r\n\r\nInstallatiekosten vast: 289,- excl btw.", Brand = "Italian", CategoryId = 1 },
-                new Product { ProductId = 3, Name = "Barroc Intens Italian Deluxe", Description = "S234NNBMV\r\n\r\nLease contract: 799 excl btw\r\n\r\nInstallatiekosten eenmalig vast: 375,- excl btw.", Brand = "Italian", CategoryId = 1 },
-                new Product { ProductId = 4, Name = "Barroc Intens Italian Deluxe Special", Description = "S234MMPLA\r\n\r\nLease contract: 999 excl btw\r\n\r\nInstallatiekosten eenmalig vast: 375,- excl btw.", Brand = "Italian", CategoryId = 1 },
-                new Product { ProductId = 5, Name = "Espresso Beneficio", Description = "S239KLIUP\r\n\r\nEen toegankelijke en zachte koffie. Hij is afkomstig van de Finca El Limoncillo, een weelderige plantage aan de rand van het regenwoud in de Matagalpa regio in Nicaragua.\r\n\r\nPer kg: 21.60 excl btw.", Brand = "Beneficio", CategoryId = 2 },
-                new Product { ProductId = 6, Name = "Yellow Bourbon Brasil", Description = "S239MNKLL\r\n\r\nKoffie van de oorspronkelijke koffiestruik (de Bourbon) met gele koffiebessen. Deze zeldzame koffie heeft de afgelopen 20 jaar steeds meer erkenning gekregen en vele prijzen gewonnen.\r\n\r\nPer kg: 23,20 excl btw.", Brand = "Bourbon Brasil", CategoryId = 2 },
-                new Product { ProductId = 7, Name = "Espresso Roma", Description = "S239IPPSD\r\n\r\nEen Italiaanse espresso met een krachtig karakter en een aromatische afdronk.\r\n\r\nPer kg: 20,80 excl btw.", Brand = "Roma", CategoryId = 2 },
-                new Product { ProductId = 8, Name = "Red Honey Honduras", Description = "S239EVVFS\r\n\r\nDe koffie is geproduceerd volgens de honey-methode. Hierbij wordt de koffieboon in haar vruchtvlees gedroogd, waardoor de zoete fruitsmaak diep in de boon trekt. Dit levert een éxtra zoete koffie op.\r\n\r\nPer kg: 27,80 excl btw.", Brand = "Honduras", CategoryId = 2 
-                });
+                new Product { ProductId = 1, Name = "Barroc Intens Italian Light", Description = "S234FREKT\r\n\r\nLease contract: 499,- excl btw per maand\r\n\r\nInstallatiekosten vast: 289,- excl btw.", Brand = "Italian", AmountInStock = 0, CategoryId = 1 },
+                new Product { ProductId = 2, Name = "Barroc Intens Italian", Description = "S234KNDPF\r\n\r\nLease contract: 599 excl btw\r\n\r\nInstallatiekosten vast: 289,- excl btw.", Brand = "Italian", AmountInStock = 0, CategoryId = 1 },
+                new Product { ProductId = 3, Name = "Barroc Intens Italian Deluxe", Description = "S234NNBMV\r\n\r\nLease contract: 799 excl btw\r\n\r\nInstallatiekosten eenmalig vast: 375,- excl btw.", Brand = "Italian", AmountInStock = 0, CategoryId = 1 },
+                new Product { ProductId = 4, Name = "Barroc Intens Italian Deluxe Special", Description = "S234MMPLA\r\n\r\nLease contract: 999 excl btw\r\n\r\nInstallatiekosten eenmalig vast: 375,- excl btw.", Brand = "Italian", AmountInStock = 0, CategoryId = 1 },
+                new Product { ProductId = 5, Name = "Espresso Beneficio", Description = "S239KLIUP\r\n\r\nEen toegankelijke en zachte koffie. Hij is afkomstig van de Finca El Limoncillo, een weelderige plantage aan de rand van het regenwoud in de Matagalpa regio in Nicaragua.\r\n\r\nPer kg: 21.60 excl btw.", Brand = "Beneficio", AmountInStock = 0, CategoryId = 2 },
+                new Product { ProductId = 6, Name = "Yellow Bourbon Brasil", Description = "S239MNKLL\r\n\r\nKoffie van de oorspronkelijke koffiestruik (de Bourbon) met gele koffiebessen. Deze zeldzame koffie heeft de afgelopen 20 jaar steeds meer erkenning gekregen en vele prijzen gewonnen.\r\n\r\nPer kg: 23,20 excl btw.", Brand = "Bourbon Brasil", AmountInStock = 0, CategoryId = 2 },
+                new Product { ProductId = 7, Name = "Espresso Roma", Description = "S239IPPSD\r\n\r\nEen Italiaanse espresso met een krachtig karakter en een aromatische afdronk.\r\n\r\nPer kg: 20,80 excl btw.", Brand = "Roma", AmountInStock = 0, CategoryId = 2 },
+                new Product { ProductId = 8, Name = "Red Honey Honduras", Description = "S239EVVFS\r\n\r\nDe koffie is geproduceerd volgens de honey-methode. Hierbij wordt de koffieboon in haar vruchtvlees gedroogd, waardoor de zoete fruitsmaak diep in de boon trekt. Dit levert een éxtra zoete koffie op.\r\n\r\nPer kg: 27,80 excl btw.", Brand = "Honduras",
+                    AmountInStock = 0,
+                    CategoryId = 2
+                }); ;
 
             modelBuilder.Entity<MaintenanceAppointment>().HasData(
                 new MaintenanceAppointment { MaintenanceAppointmentId = 1, CompanyId = 1, Remark = "Koffiezet automaat 1 is ontploft", Added = DateTime.Now, AppointmentDate =  null, AppointmentTime =  null, UserId = null, },
