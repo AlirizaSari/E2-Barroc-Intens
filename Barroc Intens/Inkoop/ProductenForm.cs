@@ -39,7 +39,7 @@ namespace Barroc_Intens.Inkoop
             DirectToForm(new DashboardInkoopForm());
         }
 
-        private void categoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void cboxCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             ShowProducts();
         }
@@ -50,7 +50,7 @@ namespace Barroc_Intens.Inkoop
             if (this.dbContext == null)
                 return;
 
-            var category = (Category)categoryComboBox.SelectedItem;
+            var category = (Category)cboxCategory.SelectedItem;
 
             if (category == null)
                 return;
@@ -60,12 +60,12 @@ namespace Barroc_Intens.Inkoop
                 .Load();
         }
 
-        private void productDataGridView_SelectionChanged(object sender, EventArgs e)
+        private void dgvProducts_SelectionChanged(object sender, EventArgs e)
         {
             if (this.dbContext == null)
                 return;
 
-            var product = (Product)this.productDataGridView.CurrentRow?.DataBoundItem;
+            var product = (Product)this.dgvProducts.CurrentRow?.DataBoundItem;
 
             if (product == null)
                 return;
@@ -89,12 +89,13 @@ namespace Barroc_Intens.Inkoop
 
         private void btnOrderProduct_Click(object sender, EventArgs e)
         {
-            var product = (Product)this.productDataGridView.CurrentRow?.DataBoundItem;
+            var product = (Product)this.dgvProducts.CurrentRow?.DataBoundItem;
 ;
             product.AmountInStock += (int?)nupAmountProduct.Value;
 
             this.dbContext.SaveChanges();
-            this.productDataGridView.Refresh();
+            this.dgvProducts.Refresh();
         }
+
     }
 }
