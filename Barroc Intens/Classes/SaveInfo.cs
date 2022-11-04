@@ -34,13 +34,6 @@ namespace Barroc_Intens.Classes
             set { notes = value; }
         }
 
-        private static DateTime invoicePaidAt;
-        public static DateTime InvoicePaidAt
-        {
-            get { return invoicePaidAt; }
-            set { invoicePaidAt = value; }
-        }
-
         private static double hoursWorked;
         public static double HoursWorked
         {
@@ -61,6 +54,14 @@ namespace Barroc_Intens.Classes
             get { return pricePerHour; }
             set { pricePerHour = value; }
         }
+
+        private static DateTime invoicePaidAt;
+        public static DateTime InvoicePaidAt
+        {
+            get { return invoicePaidAt; }
+            set { invoicePaidAt = value; }
+        }
+
 
     }
 }
