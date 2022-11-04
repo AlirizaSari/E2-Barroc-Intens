@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Barroc_Intens.Finances
 {
-    public partial class InvoiceInformation : Form
+    public partial class InvoiceInformationForm : Form
     {
-        public InvoiceInformation()
+        public InvoiceInformationForm()
         {
             InitializeComponent();
         }
