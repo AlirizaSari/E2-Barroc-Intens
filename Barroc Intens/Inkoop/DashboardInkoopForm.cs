@@ -57,12 +57,12 @@ namespace Barroc_Intens
 
         }
 
-        private void productsDataGridView_SelectionChanged(object sender, EventArgs e)
+        private void dgvProducts_SelectionChanged(object sender, EventArgs e)
         {
             if (this.dbContext == null)
                 return;
 
-            var product = (Product)this.productsDataGridView.CurrentRow?.DataBoundItem;
+            var product = (Product)this.dgvProducts.CurrentRow?.DataBoundItem;
 
             if (product == null)
                 return;
@@ -80,33 +80,33 @@ namespace Barroc_Intens
 
         private void btnEditProduct_Click(object sender, EventArgs e)
         {
-            var product = (Product)this.productsDataGridView.CurrentRow?.DataBoundItem;
+            var product = (Product)this.dgvProducts.CurrentRow?.DataBoundItem;
 
             if (product != null)
             {
                 dbContext.Products.Update(product);
                 dbContext.SaveChanges();
-                productsDataGridView.Refresh();
+                dgvProducts.Refresh();
             }
             
         }
 
         private void btnRemoveProduct_Click(object sender, EventArgs e)
         {
-            var product = (Product)this.productsDataGridView.CurrentRow?.DataBoundItem;
+            var product = (Product)this.dgvProducts.CurrentRow?.DataBoundItem;
 
-            productsDataGridView.Rows.RemoveAt(productsDataGridView.SelectedRows[0].Index);
+            dgvProducts.Rows.RemoveAt(dgvProducts.SelectedRows[0].Index);
 
             dbContext.Products.Remove(product);
             dbContext.SaveChanges();
         }
 
-        private void categoriesDataGridView_SelectionChanged(object sender, EventArgs e)
+        private void dgvCategories_SelectionChanged(object sender, EventArgs e)
         {
             if (this.dbContext == null)
                 return;
 
-            var category = (Category)this.categoriesDataGridView.CurrentRow?.DataBoundItem;
+            var category = (Category)this.dgvCategories.CurrentRow?.DataBoundItem;
 
             if (category == null)
                 return;
@@ -119,18 +119,18 @@ namespace Barroc_Intens
 
         private void btnEditCategory_Click(object sender, EventArgs e)
         {
-            var category = (Category)this.categoriesDataGridView.CurrentRow?.DataBoundItem;
+            var category = (Category)this.dgvCategories.CurrentRow?.DataBoundItem;
 
             dbContext.Categories.Update(category);
             dbContext.SaveChanges();
-            categoriesDataGridView.Refresh();
+            dgvCategories.Refresh();
         }
 
         private void btnRemoveCategory_Click(object sender, EventArgs e)
         {
-            var category = (Category)this.categoriesDataGridView.CurrentRow?.DataBoundItem;
+            var category = (Category)this.dgvCategories.CurrentRow?.DataBoundItem;
 
-            categoriesDataGridView.Rows.RemoveAt(categoriesDataGridView.SelectedRows[0].Index);
+            dgvCategories.Rows.RemoveAt(dgvCategories.SelectedRows[0].Index);
 
             dbContext.Categories.Remove(category);
             dbContext.SaveChanges();
