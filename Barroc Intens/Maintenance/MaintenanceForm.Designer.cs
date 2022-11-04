@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.maintenanceAppointmentDataGridView = new System.Windows.Forms.DataGridView();
+            this.dgvMaintenanceAppointment = new System.Windows.Forms.DataGridView();
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remarkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaintenanceAppointment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -57,29 +57,29 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // maintenanceAppointmentDataGridView
+            // dgvMaintenanceAppointment
             // 
-            this.maintenanceAppointmentDataGridView.AllowUserToAddRows = false;
-            this.maintenanceAppointmentDataGridView.AllowUserToDeleteRows = false;
-            this.maintenanceAppointmentDataGridView.AutoGenerateColumns = false;
-            this.maintenanceAppointmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.maintenanceAppointmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMaintenanceAppointment.AllowUserToAddRows = false;
+            this.dgvMaintenanceAppointment.AllowUserToDeleteRows = false;
+            this.dgvMaintenanceAppointment.AutoGenerateColumns = false;
+            this.dgvMaintenanceAppointment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMaintenanceAppointment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.companyDataGridViewTextBoxColumn,
             this.remarkDataGridViewTextBoxColumn,
             this.addedDataGridViewTextBoxColumn,
             this.AppointmentDate,
             this.AppointmentTime,
             this.User});
-            this.maintenanceAppointmentDataGridView.DataSource = this.maintenanceAppointmentBindingSource;
-            this.maintenanceAppointmentDataGridView.Location = new System.Drawing.Point(158, 130);
-            this.maintenanceAppointmentDataGridView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.maintenanceAppointmentDataGridView.Name = "maintenanceAppointmentDataGridView";
-            this.maintenanceAppointmentDataGridView.ReadOnly = true;
-            this.maintenanceAppointmentDataGridView.RowHeadersVisible = false;
-            this.maintenanceAppointmentDataGridView.RowHeadersWidth = 51;
-            this.maintenanceAppointmentDataGridView.Size = new System.Drawing.Size(762, 354);
-            this.maintenanceAppointmentDataGridView.TabIndex = 1;
-            this.maintenanceAppointmentDataGridView.SelectionChanged += new System.EventHandler(this.maintenanceAppointmentDataGridView_SelectionChanged);
+            this.dgvMaintenanceAppointment.DataSource = this.maintenanceAppointmentBindingSource;
+            this.dgvMaintenanceAppointment.Location = new System.Drawing.Point(158, 130);
+            this.dgvMaintenanceAppointment.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgvMaintenanceAppointment.Name = "dgvMaintenanceAppointment";
+            this.dgvMaintenanceAppointment.ReadOnly = true;
+            this.dgvMaintenanceAppointment.RowHeadersVisible = false;
+            this.dgvMaintenanceAppointment.RowHeadersWidth = 51;
+            this.dgvMaintenanceAppointment.Size = new System.Drawing.Size(762, 354);
+            this.dgvMaintenanceAppointment.TabIndex = 1;
+            this.dgvMaintenanceAppointment.SelectionChanged += new System.EventHandler(this.dgvMaintenanceAppointment_SelectionChanged);
             // 
             // companyDataGridViewTextBoxColumn
             // 
@@ -170,7 +170,7 @@
             this.ClientSize = new System.Drawing.Size(933, 519);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBackToMaintenance);
-            this.Controls.Add(this.maintenanceAppointmentDataGridView);
+            this.Controls.Add(this.dgvMaintenanceAppointment);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -178,7 +178,7 @@
             this.Text = "Maintenance";
             this.Load += new System.EventHandler(this.MaintenanceForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaintenanceAppointment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -189,7 +189,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView maintenanceAppointmentDataGridView;
+        private System.Windows.Forms.DataGridView dgvMaintenanceAppointment;
         private System.Windows.Forms.BindingSource maintenanceAppointmentBindingSource;
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.Button btnBackToMaintenance;
