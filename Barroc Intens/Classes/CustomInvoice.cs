@@ -22,5 +22,6 @@ namespace Barroc_Intens
         public string Notes { get; set; }
 
         public ObservableCollectionListSource<CustomInvoiceProduct> CustomInvoiceProducts { get; } = new ObservableCollectionListSource<CustomInvoiceProduct>();
+
     }
 }
