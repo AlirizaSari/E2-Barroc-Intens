@@ -26,7 +26,6 @@ namespace Barroc_Intens
             {
                 btnBackToMain.Visible = false;
                 btnCustomerNotes.Location = new Point(52,117);
-                btnLocation3.Location = new Point(280, 117);
             }
         }
 
