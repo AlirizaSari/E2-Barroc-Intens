@@ -310,6 +310,7 @@
     <Compile Include="Classes\Note.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Rol.cs" />
+    <Compile Include="Classes\SaveInfo.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\UserLoginInformation.cs" />
     <Compile Include="dashboardTemplateForm.cs">
@@ -329,6 +330,12 @@
     </Compile>
     <Compile Include="Finances\InvoiceForm.Designer.cs">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finances\InvoiceInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finances\InvoiceInformationForm.Designer.cs">
+      <DependentUpon>InvoiceInformationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Finances\LeaseContractForm.cs">
       <SubType>Form</SubType>
@@ -416,6 +423,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Finances\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finances\InvoiceInformationForm.resx">
+      <DependentUpon>InvoiceInformationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Finances\InvoiceOverviewForm.resx">
       <DependentUpon>InvoiceOverviewForm.cs</DependentUpon>
