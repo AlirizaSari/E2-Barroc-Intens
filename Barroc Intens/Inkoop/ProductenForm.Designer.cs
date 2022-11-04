@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.productDataGridView = new System.Windows.Forms.DataGridView();
+            this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.categoryComboBox = new System.Windows.Forms.ComboBox();
+            this.cboxCategory = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBackToInkoopDashboard = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAmountProduct)).BeginInit();
@@ -69,36 +69,36 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // productDataGridView
+            // dgvProducts
             // 
-            this.productDataGridView.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.productDataGridView.AllowUserToAddRows = false;
-            this.productDataGridView.AllowUserToDeleteRows = false;
-            this.productDataGridView.AllowUserToResizeColumns = false;
-            this.productDataGridView.AllowUserToResizeRows = false;
-            this.productDataGridView.AutoGenerateColumns = false;
-            this.productDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.productDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.productDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.productDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productDataGridView.ColumnHeadersVisible = false;
-            this.productDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProducts.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dgvProducts.AllowUserToAddRows = false;
+            this.dgvProducts.AllowUserToDeleteRows = false;
+            this.dgvProducts.AllowUserToResizeColumns = false;
+            this.dgvProducts.AllowUserToResizeRows = false;
+            this.dgvProducts.AutoGenerateColumns = false;
+            this.dgvProducts.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvProducts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducts.ColumnHeadersVisible = false;
+            this.dgvProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
-            this.productDataGridView.DataSource = this.productsBindingSource;
-            this.productDataGridView.EnableHeadersVisualStyles = false;
-            this.productDataGridView.Location = new System.Drawing.Point(123, 159);
-            this.productDataGridView.Name = "productDataGridView";
-            this.productDataGridView.ReadOnly = true;
-            this.productDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.productDataGridView.RowHeadersVisible = false;
-            this.productDataGridView.RowHeadersWidth = 51;
-            this.productDataGridView.ShowCellErrors = false;
-            this.productDataGridView.ShowCellToolTips = false;
-            this.productDataGridView.ShowEditingIcon = false;
-            this.productDataGridView.ShowRowErrors = false;
-            this.productDataGridView.Size = new System.Drawing.Size(422, 313);
-            this.productDataGridView.TabIndex = 1;
-            this.productDataGridView.SelectionChanged += new System.EventHandler(this.productDataGridView_SelectionChanged);
+            this.dgvProducts.DataSource = this.productsBindingSource;
+            this.dgvProducts.EnableHeadersVisualStyles = false;
+            this.dgvProducts.Location = new System.Drawing.Point(123, 159);
+            this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.ReadOnly = true;
+            this.dgvProducts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvProducts.RowHeadersVisible = false;
+            this.dgvProducts.RowHeadersWidth = 51;
+            this.dgvProducts.ShowCellErrors = false;
+            this.dgvProducts.ShowCellToolTips = false;
+            this.dgvProducts.ShowEditingIcon = false;
+            this.dgvProducts.ShowRowErrors = false;
+            this.dgvProducts.Size = new System.Drawing.Size(422, 313);
+            this.dgvProducts.TabIndex = 1;
+            this.dgvProducts.SelectionChanged += new System.EventHandler(this.dgvProducts_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -128,18 +128,18 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Producten:";
             // 
-            // categoryComboBox
+            // cboxCategory
             // 
-            this.categoryComboBox.DataSource = this.categoryBindingSource;
-            this.categoryComboBox.DisplayMember = "Name";
-            this.categoryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.categoryComboBox.FormattingEnabled = true;
-            this.categoryComboBox.Location = new System.Drawing.Point(123, 111);
-            this.categoryComboBox.Name = "categoryComboBox";
-            this.categoryComboBox.Size = new System.Drawing.Size(121, 21);
-            this.categoryComboBox.TabIndex = 0;
-            this.categoryComboBox.ValueMember = "CategoryId";
-            this.categoryComboBox.SelectedIndexChanged += new System.EventHandler(this.categoryComboBox_SelectedIndexChanged);
+            this.cboxCategory.DataSource = this.categoryBindingSource;
+            this.cboxCategory.DisplayMember = "Name";
+            this.cboxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxCategory.FormattingEnabled = true;
+            this.cboxCategory.Location = new System.Drawing.Point(123, 111);
+            this.cboxCategory.Name = "cboxCategory";
+            this.cboxCategory.Size = new System.Drawing.Size(121, 21);
+            this.cboxCategory.TabIndex = 0;
+            this.cboxCategory.ValueMember = "CategoryId";
+            this.cboxCategory.SelectedIndexChanged += new System.EventHandler(this.cboxCategory_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -327,15 +327,15 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBackToInkoopDashboard);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.categoryComboBox);
+            this.Controls.Add(this.cboxCategory);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.productDataGridView);
+            this.Controls.Add(this.dgvProducts);
             this.Controls.Add(this.pictureBox1);
             this.Name = "ProductenForm";
             this.Text = "Producten";
             this.Load += new System.EventHandler(this.ProductenForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAmountProduct)).EndInit();
@@ -347,9 +347,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView productDataGridView;
+        private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox categoryComboBox;
+        private System.Windows.Forms.ComboBox cboxCategory;
         private System.Windows.Forms.BindingSource categoryBindingSource;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBackToInkoopDashboard;

@@ -47,22 +47,22 @@
             this.btnAddCategory = new System.Windows.Forms.Button();
             this.btnEditCategory = new System.Windows.Forms.Button();
             this.btnRemoveCategory = new System.Windows.Forms.Button();
-            this.productsDataGridView = new System.Windows.Forms.DataGridView();
+            this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.categoriesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dgvCategories = new System.Windows.Forms.DataGridView();
             this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isEmployeeOnlyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +86,7 @@
             this.lblExtraInfo.AutoSize = true;
             this.lblExtraInfo.Location = new System.Drawing.Point(20, 322);
             this.lblExtraInfo.Name = "lblExtraInfo";
-            this.lblExtraInfo.Size = new System.Drawing.Size(115, 20);
+            this.lblExtraInfo.Size = new System.Drawing.Size(91, 15);
             this.lblExtraInfo.TabIndex = 6;
             this.lblExtraInfo.Text = "Extra Informatie";
             // 
@@ -113,7 +113,7 @@
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Location = new System.Drawing.Point(53, 249);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(66, 20);
+            this.lblDepartment.Size = new System.Drawing.Size(52, 15);
             this.lblDepartment.TabIndex = 3;
             this.lblDepartment.Text = "Afdeling";
             // 
@@ -122,7 +122,7 @@
             this.lblAccountName.AutoSize = true;
             this.lblAccountName.Location = new System.Drawing.Point(53, 220);
             this.lblAccountName.Name = "lblAccountName";
-            this.lblAccountName.Size = new System.Drawing.Size(107, 20);
+            this.lblAccountName.Size = new System.Drawing.Size(87, 15);
             this.lblAccountName.TabIndex = 2;
             this.lblAccountName.Text = "Account Naam";
             // 
@@ -154,7 +154,7 @@
             this.lblInkoop.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInkoop.Location = new System.Drawing.Point(293, 30);
             this.lblInkoop.Name = "lblInkoop";
-            this.lblInkoop.Size = new System.Drawing.Size(118, 41);
+            this.lblInkoop.Size = new System.Drawing.Size(95, 32);
             this.lblInkoop.TabIndex = 3;
             this.lblInkoop.Text = "Inkoop";
             // 
@@ -247,24 +247,23 @@
             this.btnRemoveCategory.UseVisualStyleBackColor = true;
             this.btnRemoveCategory.Click += new System.EventHandler(this.btnRemoveCategory_Click);
             // 
-            // productsDataGridView
+            // dgvProducts
             // 
-            this.productsDataGridView.AllowUserToAddRows = false;
-            this.productsDataGridView.AutoGenerateColumns = false;
-            this.productsDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.productsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProducts.AllowUserToAddRows = false;
+            this.dgvProducts.AutoGenerateColumns = false;
+            this.dgvProducts.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
             this.Brand,
             this.categoryDataGridViewTextBoxColumn});
-            this.productsDataGridView.DataSource = this.productBindingSource;
-            this.productsDataGridView.Location = new System.Drawing.Point(229, 164);
-            this.productsDataGridView.Name = "productsDataGridView";
-            this.productsDataGridView.RowHeadersWidth = 51;
-            this.productsDataGridView.Size = new System.Drawing.Size(673, 196);
-            this.productsDataGridView.TabIndex = 10;
-            this.productsDataGridView.SelectionChanged += new System.EventHandler(this.productsDataGridView_SelectionChanged);
+            this.dgvProducts.DataSource = this.productBindingSource;
+            this.dgvProducts.Location = new System.Drawing.Point(229, 164);
+            this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.RowHeadersWidth = 51;
+            this.dgvProducts.Size = new System.Drawing.Size(673, 196);
+            this.dgvProducts.TabIndex = 10;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -302,21 +301,21 @@
             // 
             this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
             // 
-            // categoriesDataGridView
+            // dgvCategories
             // 
-            this.categoriesDataGridView.AutoGenerateColumns = false;
-            this.categoriesDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.categoriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.categoriesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCategories.AutoGenerateColumns = false;
+            this.dgvCategories.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategories.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn1,
             this.isEmployeeOnlyDataGridViewTextBoxColumn});
-            this.categoriesDataGridView.DataSource = this.categoryBindingSource;
-            this.categoriesDataGridView.Location = new System.Drawing.Point(229, 410);
-            this.categoriesDataGridView.Name = "categoriesDataGridView";
-            this.categoriesDataGridView.RowHeadersWidth = 51;
-            this.categoriesDataGridView.Size = new System.Drawing.Size(302, 178);
-            this.categoriesDataGridView.TabIndex = 10;
-            this.categoriesDataGridView.SelectionChanged += new System.EventHandler(this.categoriesDataGridView_SelectionChanged);
+            this.dgvCategories.DataSource = this.categoryBindingSource;
+            this.dgvCategories.Location = new System.Drawing.Point(229, 410);
+            this.dgvCategories.Name = "dgvCategories";
+            this.dgvCategories.RowHeadersWidth = 51;
+            this.dgvCategories.Size = new System.Drawing.Size(302, 178);
+            this.dgvCategories.TabIndex = 10;
+            this.dgvCategories.SelectionChanged += new System.EventHandler(this.dgvCategories_SelectionChanged);
             // 
             // nameDataGridViewTextBoxColumn1
             // 
@@ -340,11 +339,11 @@
             // 
             // DashboardInkoopForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
-            this.Controls.Add(this.categoriesDataGridView);
-            this.Controls.Add(this.productsDataGridView);
+            this.Controls.Add(this.dgvCategories);
+            this.Controls.Add(this.dgvProducts);
             this.Controls.Add(this.btnRemoveCategory);
             this.Controls.Add(this.btnEditCategory);
             this.Controls.Add(this.btnAddCategory);
@@ -363,9 +362,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -393,8 +392,8 @@
         private System.Windows.Forms.Button btnAddCategory;
         private System.Windows.Forms.Button btnEditCategory;
         private System.Windows.Forms.Button btnRemoveCategory;
-        private System.Windows.Forms.DataGridView productsDataGridView;
-        private System.Windows.Forms.DataGridView categoriesDataGridView;
+        private System.Windows.Forms.DataGridView dgvProducts;
+        private System.Windows.Forms.DataGridView dgvCategories;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn isEmployeeOnlyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
