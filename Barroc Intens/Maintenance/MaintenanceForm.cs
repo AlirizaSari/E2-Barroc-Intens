@@ -34,7 +34,17 @@ namespace Barroc_Intens.Maintenance
 
         private void dgvMaintenanceAppointment_SelectionChanged(object sender, EventArgs e)
         {
+            if (this.dbContext == null)
+                return;
 
+            var maintenanceAppointment = (MaintenanceAppointment)this.dgvMaintenanceAppointment.CurrentRow?.DataBoundItem;
+
+            if (maintenanceAppointment == null)
+                return;
+
+            this.dbContext.Entry(maintenanceAppointment)
+            .Reference(m => m.Company)
+            .Load();
         }
 
         private void btnBackToMaintenance_Click(object sender, EventArgs e)
