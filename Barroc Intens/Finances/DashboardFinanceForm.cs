@@ -57,8 +57,10 @@ namespace Barroc_Intens
             txbExtraInfo.Text = "Dit is een test";
 
             this.dbContext = new AppDbContext();
-            this.dbContext.CustomInvoices.Load();
+            this.dbContext.CustomInvoices.Include(ci => ci.Company)
+                .Load();
             this.customInvoiceBindingSource.DataSource = dbContext.CustomInvoices.Local.ToBindingList();
+
         }
 
         private void btnDirectToLeaseContract_Click(object sender, EventArgs e)
@@ -85,17 +87,7 @@ namespace Barroc_Intens
 
         private void dgvInvoices_SelectionChanged(object sender, EventArgs e)
         {
-            if (this.dbContext == null)
-                return;
-
-            var invoice = (CustomInvoice)this.dgvInvoices.CurrentRow?.DataBoundItem;
-
-            if (invoice == null)
-                return;
-
-            this.dbContext.Entry(invoice)
-            .Reference(i => i.Company)
-            .Load();
+            
         }
 
         /// <summary>
