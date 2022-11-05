@@ -14,7 +14,6 @@ namespace Barroc_Intens.Maintenance
     public partial class PlannerForm : Form
     {
         private AppDbContext dbContext;
-        private int _recordCount;
 
         public PlannerForm()
         {
@@ -26,33 +25,12 @@ namespace Barroc_Intens.Maintenance
         private void PlannerForm_Load(object sender, EventArgs e)
         {
             this.dbContext = new AppDbContext();
-            this.dbContext.MaintenanceAppointments.Load();
-            this.maintenanceAppointmentBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
+            this.dbContext.MaintenanceAppointments.Include(ma => ma.Company).Load();
+            this.maintenanceAppointmentBindingSource.DataSource = dbContext.MaintenanceAppointments.Local.ToBindingList();
 
-            string maintenanceAppointmentsCount = dbContext.MaintenanceAppointments.Count().ToString();
-
-            lblCurrentNumberOfOpenTickets.Text = maintenanceAppointmentsCount;
-
-
-
-
-            //DateTime today = DateTime.Today;
-
-            //DateTime[] dates = { today.AddDays(1),
-            //today.AddDays(3), today.AddDays(5)};
-
-            //mcMaintanence.BoldedDates = dates;
-
-            //for (int r = 0; r < dates.GetLength(0); r++)
-            //{
-            //    DataGridViewRow gridView = new DataGridViewRow();
-            //    gridView.CreateCells(bsMaintenanceAppointmentData);
-
-            //    for (int c = 0; c < dates.GetLength(1); c++)
-            //    {
-            //        gridView.CreateCells[c].Value = dates;
-            //    }
-            //}
+            
+            //var maintenanceAppointmentsCount = dbContext.MaintenanceAppointments.Where(ma => ma.appointmentFinished == true).Count();
+            
         }
 
         private void btnBackToMaintenance_Click(object sender, EventArgs e)
@@ -64,6 +42,26 @@ namespace Barroc_Intens.Maintenance
             this.Hide();
             myForm.ShowDialog();
             this.Close();
+        }        
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            //show the remark of the current selected appointment
+            var selectedAppointment = (MaintenanceAppointment)dataGridView1.CurrentRow.DataBoundItem;
+            txbCommandsAppointment.Text = selectedAppointment.Remark;
+            //show the location of the current selected appointment
+            txbCompanyLocation.Text = selectedAppointment.Company.City;
+
+        }
+
+        private void mcMaintanence_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            // show all appointments on the selected date
+            var selectedDate = mcMaintanence.SelectionStart;
+            var selectedAppointments = dbContext.MaintenanceAppointments.Where(ma => ma.AppointmentDate == selectedDate).ToList();
+            dgvPlannedAppointments.DataSource = selectedAppointments;
+            
+
         }
     }
 }
