@@ -162,22 +162,24 @@ namespace Barroc_Intens.Finances
 
         private void btnSaveToDatabase_Click(object sender, EventArgs e)
         {
-            generateInvoice();
-
-            var invoice = new CustomInvoice
+            if (generateInvoice())
             {
-                Date = dtpDate.Value,
-                CompanyEmail = txbEmailAdresCompany.Text,
-                CompanyAdress = txbCompanyAdress.Text,
-                HoursWorked = (double)nudHoursWorked.Value,
-                Discount = (double)nudDiscount.Value,
-                PricePerHour = (double)nudHourlyPrice.Value,
-                Notes = txbComment.Text,
-                PaymentTerm = _paymentTerm,
+                var invoice = new CustomInvoice
+                {
+                    Date = dtpDate.Value,
+                    CompanyEmail = txbEmailAdresCompany.Text,
+                    CompanyAdress = txbCompanyAdress.Text,
+                    HoursWorked = (double)nudHoursWorked.Value,
+                    Discount = (double)nudDiscount.Value,
+                    PricePerHour = (double)nudHourlyPrice.Value,
+                    Notes = txbComment.Text,
+                    PaymentTerm = _paymentTerm,
 
-                CompanyId = (int)cboxCompanyName.SelectedValue
-            };
-            dbContext.CustomInvoices.Add(invoice);
+                    CompanyId = (int)cboxCompanyName.SelectedValue
+                };
+                dbContext.CustomInvoices.Add(invoice);
+            }
+
             dbContext.SaveChanges();
         }
 
