@@ -54,7 +54,13 @@ namespace Barroc_Intens
                 new User { UserId = 6, Name = "Inkoop Head", UserName = "InkoopHead", Password = "123", RolId = 6 },
                 new User { UserId = 7, Name = "Inkoop", UserName = "Inkoop", Password = "123", RolId = 7 },
                 new User { UserId = 8, Name = "Maintenance Head", UserName = "MaintenanceHead", Password = "123", RolId = 8 },
-                new User { UserId = 9, Name = "Mainentance", UserName = "Maintenance", Password = "123", RolId = 9 });
+                new User { UserId = 9, Name = "Mainentance", UserName = "Maintenance", Password = "123", RolId = 9 },
+
+                new User { UserId = 10, Name = "henk", UserName = "henk", Password = "123", RolId = 9 },
+                new User { UserId = 11, Name = "piet", UserName = "piet", Password = "123", RolId = 9 },
+                new User { UserId = 12, Name = "elsa", UserName = "elsa", Password = "123", RolId = 9 },
+                new User { UserId = 13, Name = "sharon", UserName = "sharon", Password = "123", RolId = 9 });
+
 
             modelBuilder.Entity<Company>().HasData(
                 new Company { CompanyId = 1, Name = "Curio", Phone = "0648686105", Street = "Terheidenseweg", HouseNumber = "350", City = "Breda", CountryCode = "31", IsBkrChecked = true, BkrCheckedAt = DateTime.Now, UserId = 1 },
