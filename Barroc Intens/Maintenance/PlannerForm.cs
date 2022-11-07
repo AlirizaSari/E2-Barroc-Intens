@@ -1,6 +1,6 @@
 ﻿using Barroc_Intens.Classes;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Exchange.WebServices.Data;
+//using Microsoft.Exchange.WebServices.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
