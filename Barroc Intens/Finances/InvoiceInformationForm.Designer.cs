@@ -37,9 +37,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txbCompany = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbCompanyEmail = new System.Windows.Forms.TextBox();
             this.txbCompanyAddress = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbInvoicePaid = new System.Windows.Forms.TextBox();
             this.txbNotes = new System.Windows.Forms.TextBox();
             this.nudHoursWorked = new System.Windows.Forms.NumericUpDown();
             this.nudPricePerHour = new System.Windows.Forms.NumericUpDown();
@@ -65,7 +65,7 @@
             // lblCompany
             // 
             this.lblCompany.AutoSize = true;
-            this.lblCompany.Location = new System.Drawing.Point(37, 149);
+            this.lblCompany.Location = new System.Drawing.Point(28, 150);
             this.lblCompany.Name = "lblCompany";
             this.lblCompany.Size = new System.Drawing.Size(45, 16);
             this.lblCompany.TabIndex = 1;
@@ -74,7 +74,7 @@
             // lblCompanyEmail
             // 
             this.lblCompanyEmail.AutoSize = true;
-            this.lblCompanyEmail.Location = new System.Drawing.Point(37, 177);
+            this.lblCompanyEmail.Location = new System.Drawing.Point(28, 178);
             this.lblCompanyEmail.Name = "lblCompanyEmail";
             this.lblCompanyEmail.Size = new System.Drawing.Size(85, 16);
             this.lblCompanyEmail.TabIndex = 2;
@@ -83,7 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 205);
+            this.label3.Location = new System.Drawing.Point(28, 206);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 3;
@@ -92,11 +92,11 @@
             // lblInvoicePaid
             // 
             this.lblInvoicePaid.AutoSize = true;
-            this.lblInvoicePaid.Location = new System.Drawing.Point(38, 233);
+            this.lblInvoicePaid.Location = new System.Drawing.Point(29, 234);
             this.lblInvoicePaid.Name = "lblInvoicePaid";
-            this.lblInvoicePaid.Size = new System.Drawing.Size(100, 16);
+            this.lblInvoicePaid.Size = new System.Drawing.Size(129, 16);
             this.lblInvoicePaid.TabIndex = 4;
-            this.lblInvoicePaid.Text = "Factuur betaald";
+            this.lblInvoicePaid.Text = "Factuur betaaldatum";
             // 
             // label5
             // 
@@ -127,31 +127,31 @@
             // 
             // txbCompany
             // 
-            this.txbCompany.Location = new System.Drawing.Point(144, 146);
+            this.txbCompany.Location = new System.Drawing.Point(161, 147);
             this.txbCompany.Name = "txbCompany";
             this.txbCompany.Size = new System.Drawing.Size(162, 22);
             this.txbCompany.TabIndex = 0;
             // 
-            // textBox2
+            // txbCompanyEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 174);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 22);
-            this.textBox2.TabIndex = 9;
+            this.txbCompanyEmail.Location = new System.Drawing.Point(161, 175);
+            this.txbCompanyEmail.Name = "txbCompanyEmail";
+            this.txbCompanyEmail.Size = new System.Drawing.Size(162, 22);
+            this.txbCompanyEmail.TabIndex = 9;
             // 
             // txbCompanyAddress
             // 
-            this.txbCompanyAddress.Location = new System.Drawing.Point(144, 202);
+            this.txbCompanyAddress.Location = new System.Drawing.Point(161, 203);
             this.txbCompanyAddress.Name = "txbCompanyAddress";
             this.txbCompanyAddress.Size = new System.Drawing.Size(162, 22);
             this.txbCompanyAddress.TabIndex = 10;
             // 
-            // textBox1
+            // txbInvoicePaid
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 230);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 22);
-            this.textBox1.TabIndex = 11;
+            this.txbInvoicePaid.Location = new System.Drawing.Point(161, 231);
+            this.txbInvoicePaid.Name = "txbInvoicePaid";
+            this.txbInvoicePaid.Size = new System.Drawing.Size(162, 22);
+            this.txbInvoicePaid.TabIndex = 11;
             // 
             // txbNotes
             // 
@@ -199,6 +199,7 @@
             this.btnBackToInvoiceOverview.TabIndex = 21;
             this.btnBackToInvoiceOverview.Text = "Terug naar factuuroverzicht";
             this.btnBackToInvoiceOverview.UseVisualStyleBackColor = true;
+            this.btnBackToInvoiceOverview.Click += new System.EventHandler(this.btnBackToInvoiceOverview_Click);
             // 
             // InvoiceInformationForm
             // 
@@ -211,9 +212,9 @@
             this.Controls.Add(this.nudPricePerHour);
             this.Controls.Add(this.nudHoursWorked);
             this.Controls.Add(this.txbNotes);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbInvoicePaid);
             this.Controls.Add(this.txbCompanyAddress);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txbCompanyEmail);
             this.Controls.Add(this.txbCompany);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -225,6 +226,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "InvoiceInformationForm";
             this.Text = "InvoiceInformation";
+            this.Load += new System.EventHandler(this.InvoiceInformationForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPricePerHour)).EndInit();
@@ -245,9 +247,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txbCompany;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbCompanyEmail;
         private System.Windows.Forms.TextBox txbCompanyAddress;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbInvoicePaid;
         private System.Windows.Forms.TextBox txbNotes;
         private System.Windows.Forms.NumericUpDown nudHoursWorked;
         private System.Windows.Forms.NumericUpDown nudPricePerHour;

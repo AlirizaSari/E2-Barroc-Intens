@@ -62,6 +62,13 @@ namespace Barroc_Intens.Classes
             set { invoicePaidAt = value; }
         }
 
+        private static DateTime createDate;
+        public static DateTime CreateDate
+        {
+            get { return createDate; }
+            set { createDate = value; }
+        }
+
 
     }
 }

@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Barroc_Intens.Classes;
+using Barroc_Intens.Finances;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,6 +48,28 @@ namespace Barroc_Intens
             this.Hide();
             myForm.ShowDialog();
             this.Close();
+        }
+
+        private void dgvPaidInvoices_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string companyName = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            DateTime invoicePaidAt = Convert.ToDateTime(dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[2].Value.ToString());
+            string companyEmail = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            string companyAddress = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            double hoursWorked = Convert.ToDouble(dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[5].Value.ToString());
+            double discount = Convert.ToDouble(dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[6].Value.ToString());
+            double pricePerHour = Convert.ToDouble(dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[7].Value.ToString());
+            string notes = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[8].Value.ToString();
+
+            InvoiceInformationForm invoiceInformationForm = new InvoiceInformationForm(companyName,
+                invoicePaidAt,
+                companyEmail,
+                companyAddress,
+                hoursWorked,
+                discount,
+                pricePerHour,
+                notes);
+            invoiceInformationForm.ShowDialog();
         }
     }
 }
