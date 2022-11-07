@@ -310,7 +310,6 @@
     <Compile Include="Classes\Note.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Rol.cs" />
-    <Compile Include="Classes\SaveInfo.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\UserLoginInformation.cs" />
     <Compile Include="dashboardTemplateForm.cs">

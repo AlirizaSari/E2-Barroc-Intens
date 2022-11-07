@@ -181,5 +181,15 @@ namespace Barroc_Intens.Finances
             }
         }
 
+        
+        private void cbYearly_Click(object sender, EventArgs e)
+        {
+            cbMonthly.Checked = false;
+        }
+
+        private void cbMonthly_Click(object sender, EventArgs e)
+        {
+            cbYearly.Checked = false;
+        }
     }
 }

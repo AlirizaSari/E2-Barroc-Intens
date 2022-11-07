@@ -55,6 +55,9 @@
             this.btnDirectToFinanceDash = new System.Windows.Forms.Button();
             this.cboxCompanyName = new System.Windows.Forms.ComboBox();
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbMonthly = new System.Windows.Forms.CheckBox();
+            this.cbYearly = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).BeginInit();
@@ -321,11 +324,46 @@
             // 
             this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
             // 
+            // cbMonthly
+            // 
+            this.cbMonthly.AutoSize = true;
+            this.cbMonthly.Location = new System.Drawing.Point(213, 276);
+            this.cbMonthly.Name = "cbMonthly";
+            this.cbMonthly.Size = new System.Drawing.Size(110, 24);
+            this.cbMonthly.TabIndex = 25;
+            this.cbMonthly.Text = "Maandelijks";
+            this.cbMonthly.UseVisualStyleBackColor = true;
+            this.cbMonthly.Click += new System.EventHandler(this.cbMonthly_Click);
+            // 
+            // cbYearly
+            // 
+            this.cbYearly.AutoSize = true;
+            this.cbYearly.Location = new System.Drawing.Point(329, 276);
+            this.cbYearly.Name = "cbYearly";
+            this.cbYearly.Size = new System.Drawing.Size(82, 24);
+            this.cbYearly.TabIndex = 26;
+            this.cbYearly.Text = "Jaarlijks";
+            this.cbYearly.UseVisualStyleBackColor = true;
+            this.cbYearly.Click += new System.EventHandler(this.cbYearly_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(60, 276);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 20);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Factuurperiode";
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbYearly);
+            this.Controls.Add(this.cbMonthly);
             this.Controls.Add(this.cboxCompanyName);
             this.Controls.Add(this.btnDirectToFinanceDash);
             this.Controls.Add(this.pboxLogo);
@@ -394,5 +432,8 @@
         private System.Windows.Forms.Button btnDirectToFinanceDash;
         private System.Windows.Forms.ComboBox cboxCompanyName;
         private System.Windows.Forms.BindingSource companyBindingSource;
+        private System.Windows.Forms.CheckBox cbMonthly;
+        private System.Windows.Forms.CheckBox cbYearly;
+        private System.Windows.Forms.Label label2;
     }
 }
