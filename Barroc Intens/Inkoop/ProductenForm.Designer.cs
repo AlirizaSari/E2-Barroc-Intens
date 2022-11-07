@@ -48,7 +48,7 @@
             this.lblProductBrand = new System.Windows.Forms.Label();
             this.lblProductCategory = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.lblProductAmountInStock = new System.Windows.Forms.Label();
+            this.lblProductStockStatus = new System.Windows.Forms.Label();
             this.btnOrderProduct = new System.Windows.Forms.Button();
             this.nupAmountProduct = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
@@ -256,18 +256,18 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(551, 267);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 13);
+            this.label8.Size = new System.Drawing.Size(86, 13);
             this.label8.TabIndex = 15;
-            this.label8.Text = "Voorraad:";
+            this.label8.Text = "Voorraad Status:";
             // 
-            // lblProductAmountInStock
+            // lblProductStockStatus
             // 
-            this.lblProductAmountInStock.AutoSize = true;
-            this.lblProductAmountInStock.Location = new System.Drawing.Point(652, 267);
-            this.lblProductAmountInStock.Name = "lblProductAmountInStock";
-            this.lblProductAmountInStock.Size = new System.Drawing.Size(117, 13);
-            this.lblProductAmountInStock.TabIndex = 16;
-            this.lblProductAmountInStock.Text = "ProductAmountInStock";
+            this.lblProductStockStatus.AutoSize = true;
+            this.lblProductStockStatus.Location = new System.Drawing.Point(652, 267);
+            this.lblProductStockStatus.Name = "lblProductStockStatus";
+            this.lblProductStockStatus.Size = new System.Drawing.Size(102, 13);
+            this.lblProductStockStatus.TabIndex = 16;
+            this.lblProductStockStatus.Text = "ProductStockStatus";
             // 
             // btnOrderProduct
             // 
@@ -282,6 +282,11 @@
             // nupAmountProduct
             // 
             this.nupAmountProduct.Location = new System.Drawing.Point(649, 335);
+            this.nupAmountProduct.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nupAmountProduct.Name = "nupAmountProduct";
             this.nupAmountProduct.Size = new System.Drawing.Size(120, 20);
             this.nupAmountProduct.TabIndex = 18;
@@ -314,7 +319,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.nupAmountProduct);
             this.Controls.Add(this.btnOrderProduct);
-            this.Controls.Add(this.lblProductAmountInStock);
+            this.Controls.Add(this.lblProductStockStatus);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblProductCategory);
             this.Controls.Add(this.lblProductBrand);
@@ -366,7 +371,7 @@
         private System.Windows.Forms.BindingSource productsBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblProductAmountInStock;
+        private System.Windows.Forms.Label lblProductStockStatus;
         private System.Windows.Forms.Button btnOrderProduct;
         private System.Windows.Forms.NumericUpDown nupAmountProduct;
         private System.Windows.Forms.Label label9;

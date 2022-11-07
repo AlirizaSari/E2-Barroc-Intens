@@ -62,6 +62,11 @@ namespace Barroc_Intens.Inkoop
 
         private void dgvProducts_SelectionChanged(object sender, EventArgs e)
         {
+            UpdateLabels();
+        }
+
+        private void UpdateLabels()
+        {
             if (this.dbContext == null)
                 return;
 
@@ -73,11 +78,10 @@ namespace Barroc_Intens.Inkoop
             lblProductName.Text = product?.Name;
             //lblProductDescription.Text = product?.Description;
             lblProductBrand.Text = product?.Brand;
-            lblProductAmountInStock.Text = product?.AmountInStock.ToString();
+            lblProductStockStatus.Text = product?.StockStatus;
 
             if (product.Category != null)
                 lblProductCategory.Text = product.Category.Name;
-
         }
 
         private void DirectToForm(Form myForm)
@@ -90,11 +94,31 @@ namespace Barroc_Intens.Inkoop
         private void btnOrderProduct_Click(object sender, EventArgs e)
         {
             var product = (Product)this.dgvProducts.CurrentRow?.DataBoundItem;
-;
+
             product.AmountInStock += (int?)nupAmountProduct.Value;
 
-            this.dbContext.SaveChanges();
+            if (product.AmountInStock > 0)
+            {
+                product.StockStatus = "Momenteel leverbaar";
+            }
+            else
+            {
+                product.StockStatus = "Uit voorraad";
+            }
+
+            if (nupAmountProduct.Value < 100)
+            {
+                this.dbContext.SaveChanges();
+            }
+            else
+            {
+                product.AmountInStock = 0;
+                product.StockStatus = "Besteld";
+                this.dbContext.SaveChanges();
+            }
+
             this.dgvProducts.Refresh();
+            UpdateLabels();
         }
 
     }
