@@ -92,6 +92,8 @@ namespace Barroc_Intens.Finances
                 _message += $"%0d%0aMet vriendelijke groeten,%0d%0a" +
                     $"Barroc Intens%0d%0a";
 
+                lblError.Text = "";
+
                 return true;
             }
             return false;
