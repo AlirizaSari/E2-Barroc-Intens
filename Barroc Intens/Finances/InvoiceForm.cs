@@ -22,6 +22,8 @@ namespace Barroc_Intens.Finances
         string _companyEmail = "";
         string _companyAdress = "";
         string _comment;
+        string _paymentTerm;
+        string _message;
         DateTime _date;
         decimal _hoursWorked;
         decimal _discount;
@@ -34,6 +36,15 @@ namespace Barroc_Intens.Finances
 
         private void btnCreateInvoice_Click(object sender, EventArgs e)
         {
+            if (generateInvoice())
+            {
+                Process.Start($"mailto:{_companyEmail}?subject=Factuur%20Installatie%20{_date.ToString()}&body={_message}");
+            }
+
+        }
+
+        private bool generateInvoice()
+        {
             _companyName = cboxCompanyName.Text;
             _companyEmail = txbEmailAdresCompany.Text;
             _companyAdress = txbCompanyAdress.Text;
@@ -43,38 +54,50 @@ namespace Barroc_Intens.Finances
             _discount = nudDiscount.Value;
             _pricePerHour = nudHourlyPrice.Value;
 
+            if (cbMonthly.Checked)
+            {
+                _paymentTerm = "Maandelijks";
+            }
+            else if (cbYearly.Checked)
+            {
+                _paymentTerm = "Jaarlijks";
+            }
 
-            if (stringInputValidation(_companyName) 
+            if (stringInputValidation(_companyName)
                 && stringInputValidation(_companyAdress)
                 && decimalInputValidation(_hoursWorked)
                 && decimalInputValidation(_pricePerHour)
-                )
+                && stringInputValidation(_paymentTerm))
             {
-                string message = $"hallo {_companyName},%0d%0a" +
+                _message = $"Hallo {_companyName},%0d%0a" +
                 $"%0d%0aOp {_date} is er een koffiezetapparaat geïnstalleerd.%0d%0a" +
                 $"Gelieve de volgende kosten zo snel mogelijk te betalen:%0d%0a%0d%0a" +
-                $"Uur gewerkt%20|%20Arbeidskosten per uur%20|%20Korting%20|%20total%0d%0a";
+                $"Uur gewerkt%20|%20Arbeidskosten per uur%20|%20Korting%20|%20total%0d%0a" +
+                $"Uw betaaltermijn is: {_paymentTerm}";
 
                 if (_discount > 0 && _discount <= 100)
                 {
-                    message += $"{_hoursWorked}%20|%20{_pricePerHour}%20|%20{_discount}%20|%20{_hoursWorked * _pricePerHour * (1 - (_discount / 100))}";
+                    _message += $"{_hoursWorked}%20|%20{_pricePerHour}%20|%20{_discount}%20|%20{_hoursWorked * _pricePerHour * (1 - (_discount / 100))}";
                 }
                 else
                 {
-                    message += $"{_hoursWorked}%20|%20{_pricePerHour}%20|%20{_discount}%20|%20{_hoursWorked * _pricePerHour * 1}";
+                    _message += $"{_hoursWorked}%20|%20{_pricePerHour}%20|%20{_discount}%20|%20{_hoursWorked * _pricePerHour * 1}";
                 }
 
                 if (!String.IsNullOrEmpty(_comment))
                 {
-                    message += $"%0d%0a{_comment}%0d%0a";
+                    _message += $"%0d%0a{_comment}%0d%0a";
                 }
 
-                message += $"%0d%0aMet vriendelijke groeten,%0d%0a" +
+                _message += $"%0d%0aMet vriendelijke groeten,%0d%0a" +
                     $"Barroc Intens%0d%0a";
 
-                Process.Start($"mailto:{_companyEmail}?subject=Factuur%20Installatie%20{_date.ToString()}&body={message}");
+                lblError.Text = "";
 
+                return true;
             }
+            return false;
+
         }
 
         /// <summary>
@@ -87,7 +110,7 @@ namespace Barroc_Intens.Finances
         {
             if (companyInformation == null)
             {
-                lblError.Text = "Zorg ervoor dat alle velden zijn ingevuld";
+                lblError.Text = "Zorg ervoor dat alle velden ingevuld zijn";
                 return false;
             }
             return true;
@@ -139,19 +162,24 @@ namespace Barroc_Intens.Finances
 
         private void btnSaveToDatabase_Click(object sender, EventArgs e)
         {
-            var invoice = new CustomInvoice
+            if (generateInvoice())
             {
-                Date = dtpDate.Value,
-                CompanyEmail = txbEmailAdresCompany.Text,
-                CompanyAdress = txbCompanyAdress.Text,
-                HoursWorked = (double)nudHoursWorked.Value,
-                Discount = (double)nudDiscount.Value,
-                PricePerHour = (double)nudHourlyPrice.Value,
-                Notes = txbComment.Text,
+                var invoice = new CustomInvoice
+                {
+                    Date = dtpDate.Value,
+                    CompanyEmail = txbEmailAdresCompany.Text,
+                    CompanyAdress = txbCompanyAdress.Text,
+                    HoursWorked = (double)nudHoursWorked.Value,
+                    Discount = (double)nudDiscount.Value,
+                    PricePerHour = (double)nudHourlyPrice.Value,
+                    Notes = txbComment.Text,
+                    PaymentTerm = _paymentTerm,
 
-                CompanyId = (int)cboxCompanyName.SelectedValue
-            };
-            dbContext.CustomInvoices.Add(invoice);
+                    CompanyId = (int)cboxCompanyName.SelectedValue
+                };
+                dbContext.CustomInvoices.Add(invoice);
+            }
+
             dbContext.SaveChanges();
         }
 
@@ -181,5 +209,15 @@ namespace Barroc_Intens.Finances
             }
         }
 
+        
+        private void cbYearly_Click(object sender, EventArgs e)
+        {
+            cbMonthly.Checked = false;
+        }
+
+        private void cbMonthly_Click(object sender, EventArgs e)
+        {
+            cbYearly.Checked = false;
+        }
     }
 }

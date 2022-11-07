@@ -40,6 +40,7 @@
             this.discountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pricePerHourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaymentTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvNotPaidInvoices = new System.Windows.Forms.DataGridView();
             this.customInvoiceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -48,15 +49,15 @@
             this.lblPaidInvoices = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CompanyEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CompanyAdress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PaidAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CompanyEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CompanyAdress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoursWorked = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PricePerHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customInvoiceIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaidInvoices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customInvoiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotPaidInvoices)).BeginInit();
@@ -90,7 +91,8 @@
             this.hoursWorkedDataGridViewTextBoxColumn,
             this.discountDataGridViewTextBoxColumn,
             this.pricePerHourDataGridViewTextBoxColumn,
-            this.notesDataGridViewTextBoxColumn});
+            this.notesDataGridViewTextBoxColumn,
+            this.PaymentTerm});
             this.dgvPaidInvoices.DataSource = this.customInvoiceBindingSource;
             this.dgvPaidInvoices.Location = new System.Drawing.Point(40, 105);
             this.dgvPaidInvoices.Name = "dgvPaidInvoices";
@@ -99,6 +101,7 @@
             this.dgvPaidInvoices.RowTemplate.Height = 24;
             this.dgvPaidInvoices.Size = new System.Drawing.Size(297, 364);
             this.dgvPaidInvoices.TabIndex = 1;
+            this.dgvPaidInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPaidInvoices_CellClick);
             // 
             // companyDataGridViewTextBoxColumn
             // 
@@ -181,6 +184,15 @@
             this.notesDataGridViewTextBoxColumn.ReadOnly = true;
             this.notesDataGridViewTextBoxColumn.Width = 125;
             // 
+            // PaymentTerm
+            // 
+            this.PaymentTerm.DataPropertyName = "PaymentTerm";
+            this.PaymentTerm.HeaderText = "PaymentTerm";
+            this.PaymentTerm.MinimumWidth = 6;
+            this.PaymentTerm.Name = "PaymentTerm";
+            this.PaymentTerm.ReadOnly = true;
+            this.PaymentTerm.Width = 125;
+            // 
             // customInvoiceBindingSource
             // 
             this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
@@ -195,15 +207,15 @@
             this.dgvNotPaidInvoices.ColumnHeadersVisible = false;
             this.dgvNotPaidInvoices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Company,
-            this.CompanyEmail,
-            this.CompanyAdress,
             this.Date,
             this.PaidAt,
+            this.CompanyEmail,
+            this.CompanyAdress,
             this.HoursWorked,
             this.Discount,
             this.PricePerHour,
             this.Notes,
-            this.customInvoiceIdDataGridViewTextBoxColumn1});
+            this.dataGridViewTextBoxColumn3});
             this.dgvNotPaidInvoices.DataSource = this.customInvoiceBindingSource1;
             this.dgvNotPaidInvoices.Location = new System.Drawing.Point(474, 105);
             this.dgvNotPaidInvoices.Name = "dgvNotPaidInvoices";
@@ -212,6 +224,7 @@
             this.dgvNotPaidInvoices.RowTemplate.Height = 24;
             this.dgvNotPaidInvoices.Size = new System.Drawing.Size(297, 364);
             this.dgvNotPaidInvoices.TabIndex = 2;
+            this.dgvNotPaidInvoices.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNotPaidInvoices_CellClick);
             // 
             // customInvoiceBindingSource1
             // 
@@ -263,24 +276,6 @@
             this.Company.ReadOnly = true;
             this.Company.Width = 125;
             // 
-            // CompanyEmail
-            // 
-            this.CompanyEmail.DataPropertyName = "CompanyEmail";
-            this.CompanyEmail.HeaderText = "CompanyEmail";
-            this.CompanyEmail.MinimumWidth = 6;
-            this.CompanyEmail.Name = "CompanyEmail";
-            this.CompanyEmail.ReadOnly = true;
-            this.CompanyEmail.Width = 125;
-            // 
-            // CompanyAdress
-            // 
-            this.CompanyAdress.DataPropertyName = "CompanyAdress";
-            this.CompanyAdress.HeaderText = "CompanyAdress";
-            this.CompanyAdress.MinimumWidth = 6;
-            this.CompanyAdress.Name = "CompanyAdress";
-            this.CompanyAdress.ReadOnly = true;
-            this.CompanyAdress.Width = 125;
-            // 
             // Date
             // 
             this.Date.DataPropertyName = "Date";
@@ -298,6 +293,24 @@
             this.PaidAt.Name = "PaidAt";
             this.PaidAt.ReadOnly = true;
             this.PaidAt.Width = 125;
+            // 
+            // CompanyEmail
+            // 
+            this.CompanyEmail.DataPropertyName = "CompanyEmail";
+            this.CompanyEmail.HeaderText = "CompanyEmail";
+            this.CompanyEmail.MinimumWidth = 6;
+            this.CompanyEmail.Name = "CompanyEmail";
+            this.CompanyEmail.ReadOnly = true;
+            this.CompanyEmail.Width = 125;
+            // 
+            // CompanyAdress
+            // 
+            this.CompanyAdress.DataPropertyName = "CompanyAdress";
+            this.CompanyAdress.HeaderText = "CompanyAdress";
+            this.CompanyAdress.MinimumWidth = 6;
+            this.CompanyAdress.Name = "CompanyAdress";
+            this.CompanyAdress.ReadOnly = true;
+            this.CompanyAdress.Width = 125;
             // 
             // HoursWorked
             // 
@@ -335,14 +348,14 @@
             this.Notes.ReadOnly = true;
             this.Notes.Width = 125;
             // 
-            // customInvoiceIdDataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn3
             // 
-            this.customInvoiceIdDataGridViewTextBoxColumn1.DataPropertyName = "CustomInvoiceId";
-            this.customInvoiceIdDataGridViewTextBoxColumn1.HeaderText = "CustomInvoiceId";
-            this.customInvoiceIdDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.customInvoiceIdDataGridViewTextBoxColumn1.Name = "customInvoiceIdDataGridViewTextBoxColumn1";
-            this.customInvoiceIdDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.customInvoiceIdDataGridViewTextBoxColumn1.Width = 50;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "PaymentTerm";
+            this.dataGridViewTextBoxColumn3.HeaderText = "PaymentTerm";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // InvoiceOverviewForm
             // 
@@ -375,6 +388,8 @@
         private System.Windows.Forms.BindingSource customInvoiceBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Label lblPaidInvoices;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn paidAtDataGridViewTextBoxColumn;
@@ -384,17 +399,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn discountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pricePerHourDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label lblPaidInvoices;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PaymentTerm;
         private System.Windows.Forms.DataGridViewTextBoxColumn Company;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CompanyEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CompanyAdress;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaidAt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CompanyEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CompanyAdress;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoursWorked;
         private System.Windows.Forms.DataGridViewTextBoxColumn Discount;
         private System.Windows.Forms.DataGridViewTextBoxColumn PricePerHour;
         private System.Windows.Forms.DataGridViewTextBoxColumn Notes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customInvoiceIdDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }
