@@ -64,12 +64,13 @@ namespace Barroc_Intens
 
             modelBuilder.Entity<Leasecontract>().HasData(
                 new Leasecontract { id = 1, CompanyId = 1, BkrChecked = 1, UserId = 1 }, 
-                new Leasecontract { id = 2, CompanyId = 2, BkrChecked = 0, UserId = 2,                 
+                new Leasecontract { id = 2, CompanyId = 2, BkrChecked = 0, UserId = 2                 
                 });
 
             modelBuilder.Entity<Category>().HasData(
                 new Category { CategoryId = 1, Name = "Automaten", IsEmployeeOnly = 2 },
-                new Category { CategoryId = 2, Name = "Koffiebonen", IsEmployeeOnly = 2 
+                new Category { CategoryId = 2, Name = "Koffiebonen", IsEmployeeOnly = 2 },
+                new Category { CategoryId = 3, Name = "Onderdelen", IsEmployeeOnly = 2 
                 });
 
             modelBuilder.Entity<CustomInvoice>().HasData(
