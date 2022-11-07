@@ -72,8 +72,14 @@ namespace Barroc_Intens
                 new Category { CategoryId = 2, Name = "Koffiebonen", IsEmployeeOnly = 2 
                 });
 
+            modelBuilder.Entity<CustomInvoice>().HasData(
+                new CustomInvoice { CustomInvoiceId=1, CompanyId=2, CompanyAdress= "Terheijdenseweg 350", CompanyEmail = "Hustle@bv.com", Date = DateTime.Today.AddDays(20), PricePerHour = 30, Discount = 0, HoursWorked = 10, PaidAt = null, Notes = "Koffiebonen ontbreken nog" },
+                new CustomInvoice { CustomInvoiceId=2, CompanyId=3, CompanyAdress= "Koekeloerestraat 123", CompanyEmail = "JarmoInc@email.com", Date = DateTime.Today, PricePerHour = 10, Discount = 0, HoursWorked = 4, PaidAt = null, Notes = "BKR is nog niet gechecked" },
+                new CustomInvoice { CustomInvoiceId=3, CompanyId=1, CompanyAdress= "Sesamstraat 123", CompanyEmail = "Curio@cur.io", Date = DateTime.Today.AddDays(-20), PricePerHour = 20, Discount = 10, HoursWorked = 40, PaidAt = DateTime.Today, Notes = "10 jaar klant" }
+                );
+
             modelBuilder.Entity<Product>().HasData(
-                new Product { ProductId = 1, Name = "Barroc Intens Italian Light", Description = "S234FREKT\r\n\r\nLease contract: 499,- excl btw per maand\r\n\r\nInstallatiekosten vast: 289,- excl btw.", Brand = "Italian", AmountInStock = 0, CategoryId = 1 },
+                new Product { ProductId = 1, Name = "Barroc Intens Italian Light", Description = "S234FREKT\r\n\r\nLease contract: 499,- excl btw per maand\r\n\r\nInstallatiekosten vast: 289,- excl btw.", Brand = "Italian", AmountInStock = 0,  CategoryId = 1 },
                 new Product { ProductId = 2, Name = "Barroc Intens Italian", Description = "S234KNDPF\r\n\r\nLease contract: 599 excl btw\r\n\r\nInstallatiekosten vast: 289,- excl btw.", Brand = "Italian", AmountInStock = 0, CategoryId = 1 },
                 new Product { ProductId = 3, Name = "Barroc Intens Italian Deluxe", Description = "S234NNBMV\r\n\r\nLease contract: 799 excl btw\r\n\r\nInstallatiekosten eenmalig vast: 375,- excl btw.", Brand = "Italian", AmountInStock = 0, CategoryId = 1 },
                 new Product { ProductId = 4, Name = "Barroc Intens Italian Deluxe Special", Description = "S234MMPLA\r\n\r\nLease contract: 999 excl btw\r\n\r\nInstallatiekosten eenmalig vast: 375,- excl btw.", Brand = "Italian", AmountInStock = 0, CategoryId = 1 },
