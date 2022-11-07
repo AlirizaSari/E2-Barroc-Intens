@@ -16,7 +16,12 @@ namespace Barroc_Intens
         public DateTime Added { get; set; }
         public DateTime? AppointmentDate { get; set; }
         public DateTime? AppointmentTime { get; set; }
+        public bool AppointmentIsPlanned { get; set; }
+        public bool IsRoutineAppointment { get; set; }
+        public string AppointmentDuration { get; set; }
+        public string AssignedEmployee { get; set; }
         public int? UserId { get; set; }
         public User User { get; set; }
+        
     }
 }
