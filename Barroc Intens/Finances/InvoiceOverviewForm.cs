@@ -53,13 +53,15 @@ namespace Barroc_Intens
         private void dgvPaidInvoices_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string companyName = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            DateTime invoicePaidAt = Convert.ToDateTime(dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[2].Value.ToString());
+            string invoicePaidAt = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[2].Value.ToString();
             string companyEmail = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[3].Value.ToString();
             string companyAddress = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[4].Value.ToString();
             double hoursWorked = Convert.ToDouble(dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[5].Value.ToString());
             double discount = Convert.ToDouble(dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[6].Value.ToString());
             double pricePerHour = Convert.ToDouble(dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[7].Value.ToString());
             string notes = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[8].Value.ToString();
+            string paymentTerm = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[9].Value.ToString();
+
 
             InvoiceInformationForm invoiceInformationForm = new InvoiceInformationForm(companyName,
                 invoicePaidAt,
@@ -68,8 +70,34 @@ namespace Barroc_Intens
                 hoursWorked,
                 discount,
                 pricePerHour,
-                notes);
+                notes,
+                paymentTerm);
             invoiceInformationForm.ShowDialog();
+        }
+
+        private void dgvNotPaidInvoices_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //string companyName = dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            //string invoicePaidAt = dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            //string companyEmail = dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            //string companyAddress = dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            //double hoursWorked = Convert.ToDouble(dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[5].Value.ToString());
+            //double discount = Convert.ToDouble(dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[6].Value.ToString());
+            //double pricePerHour = Convert.ToDouble(dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[7].Value.ToString());
+            //string notes = dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[8].Value.ToString();
+            //string paymentTerm = dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[9].Value.ToString();
+
+
+            //InvoiceInformationForm invoiceInformationForm = new InvoiceInformationForm(companyName,
+            //    invoicePaidAt,
+            //    companyEmail,
+            //    companyAddress,
+            //    hoursWorked,
+            //    discount,
+            //    pricePerHour,
+            //    notes,
+            //    paymentTerm);
+            //invoiceInformationForm.ShowDialog();
         }
     }
 }

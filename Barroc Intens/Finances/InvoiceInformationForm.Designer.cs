@@ -46,6 +46,9 @@
             this.nudDiscount = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBackToInvoiceOverview = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbMonthly = new System.Windows.Forms.CheckBox();
+            this.cbYearly = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPricePerHour)).BeginInit();
@@ -201,11 +204,45 @@
             this.btnBackToInvoiceOverview.UseVisualStyleBackColor = true;
             this.btnBackToInvoiceOverview.Click += new System.EventHandler(this.btnBackToInvoiceOverview_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 261);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 16);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Factuurtermijn";
+            // 
+            // cbMonthly
+            // 
+            this.cbMonthly.AutoCheck = false;
+            this.cbMonthly.AutoSize = true;
+            this.cbMonthly.Location = new System.Drawing.Point(161, 260);
+            this.cbMonthly.Name = "cbMonthly";
+            this.cbMonthly.Size = new System.Drawing.Size(102, 20);
+            this.cbMonthly.TabIndex = 23;
+            this.cbMonthly.Text = "Maandelijks";
+            this.cbMonthly.UseVisualStyleBackColor = true;
+            // 
+            // cbYearly
+            // 
+            this.cbYearly.AutoCheck = false;
+            this.cbYearly.AutoSize = true;
+            this.cbYearly.Location = new System.Drawing.Point(161, 286);
+            this.cbYearly.Name = "cbYearly";
+            this.cbYearly.Size = new System.Drawing.Size(79, 20);
+            this.cbYearly.TabIndex = 24;
+            this.cbYearly.Text = "Jaarlijks";
+            this.cbYearly.UseVisualStyleBackColor = true;
+            // 
             // InvoiceInformationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(683, 319);
+            this.Controls.Add(this.cbYearly);
+            this.Controls.Add(this.cbMonthly);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBackToInvoiceOverview);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nudDiscount);
@@ -256,5 +293,8 @@
         private System.Windows.Forms.NumericUpDown nudDiscount;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBackToInvoiceOverview;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox cbMonthly;
+        private System.Windows.Forms.CheckBox cbYearly;
     }
 }
