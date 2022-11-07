@@ -20,6 +20,7 @@ namespace Barroc_Intens
         public double Discount { get; set; }
         public double PricePerHour { get; set; }
         public string Notes { get; set; }
+        public string PaymentTerm { get; set; }
 
         public ObservableCollectionListSource<CustomInvoiceProduct> CustomInvoiceProducts { get; } = new ObservableCollectionListSource<CustomInvoiceProduct>();
 
