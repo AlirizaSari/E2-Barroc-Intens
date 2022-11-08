@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+﻿using Barroc_Intens.Classes;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,5 +31,6 @@ namespace Barroc_Intens
         public Category Category { get; set; } = null;
 
         public ObservableCollectionListSource<CustomInvoiceProduct> CustomInvoiceProducts { get; } = new ObservableCollectionListSource<CustomInvoiceProduct>();
+        public ObservableCollectionListSource<Leasecontract> LeaseContracts { get; } = new ObservableCollectionListSource<Leasecontract>();
     }
 }

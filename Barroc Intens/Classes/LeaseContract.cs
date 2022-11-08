@@ -13,11 +13,11 @@ namespace Barroc_Intens.Classes
         public int CompanyId { get; set; }
         public Company Company { get; set; }
         public int BkrChecked { get; set; }
+        public DateTime CreateDate { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
-        //public int ProductId { get; set; }
-        //public Product Product { get; set; } 
-        //public DateTime CreateDate { get; set; }
+        public int ProductId { get; set; }
+        public Product Product { get; set; }
     }
 }
 
