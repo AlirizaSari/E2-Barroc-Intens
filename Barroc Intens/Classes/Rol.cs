@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Barroc_Intens
 {
-    internal class Rol
+    public class Rol
     {
         public int RolId { get; set; }
 

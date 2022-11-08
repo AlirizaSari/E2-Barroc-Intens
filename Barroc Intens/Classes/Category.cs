@@ -2,7 +2,7 @@
 
 namespace Barroc_Intens
 {
-    internal class Category
+    public class Category
     {
         public int CategoryId { get; set; }
 

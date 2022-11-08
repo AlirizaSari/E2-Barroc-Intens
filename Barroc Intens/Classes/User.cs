@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Barroc_Intens
 {
-    internal class User
+    public class User
     {
         public int UserId { get; set; }
 

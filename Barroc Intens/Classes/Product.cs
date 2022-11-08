@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Barroc_Intens
 {
-    internal class Product
+    public class Product
     {
         public int ProductId { get; set; }
 
@@ -32,5 +32,6 @@ namespace Barroc_Intens
         public Category Category { get; set; } = null;
 
         public ObservableCollectionListSource<CustomInvoiceProduct> CustomInvoiceProducts { get; } = new ObservableCollectionListSource<CustomInvoiceProduct>();
+        public ObservableCollectionListSource<Leasecontract> LeaseContracts { get; } = new ObservableCollectionListSource<Leasecontract>();
     }
 }

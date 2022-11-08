@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Barroc_Intens
 {
-    internal class MaintenanceAppointment
+    public class MaintenanceAppointment
     {
         public int MaintenanceAppointmentId { get; set; }
         public int CompanyId { get; set; }

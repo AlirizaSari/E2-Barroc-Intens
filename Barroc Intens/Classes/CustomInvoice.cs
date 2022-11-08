@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Barroc_Intens
 {
-    internal class CustomInvoice
+    public class CustomInvoice
     {
         public int CustomInvoiceId { get; set; }
         public DateTime Date { get; set; }

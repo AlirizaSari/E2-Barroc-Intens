@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Barroc_Intens.Classes;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Barroc_Intens
 {
-    internal class Company
+    public class Company
     {
         public int CompanyId { get; set; }
 
@@ -33,7 +34,7 @@ namespace Barroc_Intens
         public ObservableCollectionListSource<Note> Notes { get; } = new ObservableCollectionListSource<Note>();
         public ObservableCollectionListSource<CustomInvoice> CustomInvoices { get; } = new ObservableCollectionListSource<CustomInvoice>();
         public ObservableCollectionListSource<MaintenanceAppointment> MaintenanceAppointments { get; } = new ObservableCollectionListSource<MaintenanceAppointment>();
-
+        public ObservableCollectionListSource<Leasecontract> Leasecontracts { get; } = new ObservableCollectionListSource<Leasecontract>();
         public override string ToString()
         {
             return this.Name;

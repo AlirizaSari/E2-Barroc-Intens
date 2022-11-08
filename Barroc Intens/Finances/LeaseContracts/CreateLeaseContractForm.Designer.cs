@@ -33,18 +33,23 @@
             this.lblCompanyName = new System.Windows.Forms.Label();
             this.cboxCompany = new System.Windows.Forms.ComboBox();
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbStreet = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.cboxProducts = new System.Windows.Forms.ComboBox();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblCompanyAddress = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txbTelephoneNumber = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txbCity = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txbHouseNumber = new System.Windows.Forms.TextBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -73,10 +78,11 @@
             // 
             this.cboxCompany.DataSource = this.companyBindingSource;
             this.cboxCompany.DisplayMember = "Name";
+            this.cboxCompany.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCompany.FormattingEnabled = true;
             this.cboxCompany.Location = new System.Drawing.Point(190, 142);
             this.cboxCompany.Name = "cboxCompany";
-            this.cboxCompany.Size = new System.Drawing.Size(189, 24);
+            this.cboxCompany.Size = new System.Drawing.Size(200, 24);
             this.cboxCompany.TabIndex = 2;
             this.cboxCompany.ValueMember = "CompanyId";
             // 
@@ -84,16 +90,16 @@
             // 
             this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
             // 
-            // textBox1
+            // txbStreet
             // 
-            this.textBox1.Location = new System.Drawing.Point(219, 286);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
+            this.txbStreet.Location = new System.Drawing.Point(190, 201);
+            this.txbStreet.Name = "txbStreet";
+            this.txbStreet.Size = new System.Drawing.Size(200, 22);
+            this.txbStreet.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(572, 297);
+            this.button1.Location = new System.Drawing.Point(595, 327);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 51);
             this.button1.TabIndex = 4;
@@ -105,9 +111,9 @@
             this.cboxProducts.DataSource = this.productBindingSource;
             this.cboxProducts.DisplayMember = "Name";
             this.cboxProducts.FormattingEnabled = true;
-            this.cboxProducts.Location = new System.Drawing.Point(190, 172);
+            this.cboxProducts.Location = new System.Drawing.Point(544, 138);
             this.cboxProducts.Name = "cboxProducts";
-            this.cboxProducts.Size = new System.Drawing.Size(189, 24);
+            this.cboxProducts.Size = new System.Drawing.Size(200, 24);
             this.cboxProducts.TabIndex = 5;
             this.cboxProducts.ValueMember = "ProductId";
             // 
@@ -118,7 +124,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 177);
+            this.label1.Location = new System.Drawing.Point(421, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 16);
             this.label1.TabIndex = 6;
@@ -127,85 +133,131 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(365, 225);
+            this.label2.Location = new System.Drawing.Point(421, 173);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 16);
+            this.label2.Size = new System.Drawing.Size(46, 16);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Bedrijfsnaam";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(373, 233);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 16);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Bedrijfsnaam";
+            this.label2.Text = "Datum";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(381, 241);
+            this.label4.Location = new System.Drawing.Point(68, 260);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 16);
+            this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Bedrijfsnaam";
+            this.label4.Text = "Telefoon";
             // 
-            // label5
+            // lblCompanyAddress
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(389, 249);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 16);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Bedrijfsnaam";
+            this.lblCompanyAddress.AutoSize = true;
+            this.lblCompanyAddress.Location = new System.Drawing.Point(67, 204);
+            this.lblCompanyAddress.Name = "lblCompanyAddress";
+            this.lblCompanyAddress.Size = new System.Drawing.Size(42, 16);
+            this.lblCompanyAddress.TabIndex = 12;
+            this.lblCompanyAddress.Text = "Straat";
             // 
-            // label6
+            // dateTimePicker1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(397, 257);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 16);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Bedrijfsnaam";
+            this.dateTimePicker1.Location = new System.Drawing.Point(544, 168);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 13;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(191, 285);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(102, 20);
+            this.checkBox1.TabIndex = 14;
+            this.checkBox1.Text = "Maandelijks";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // txbTelephoneNumber
+            // 
+            this.txbTelephoneNumber.Location = new System.Drawing.Point(191, 257);
+            this.txbTelephoneNumber.Name = "txbTelephoneNumber";
+            this.txbTelephoneNumber.Size = new System.Drawing.Size(200, 22);
+            this.txbTelephoneNumber.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(405, 265);
+            this.label7.Location = new System.Drawing.Point(67, 173);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 16);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Bedrijfsnaam";
+            this.label7.Size = new System.Drawing.Size(35, 16);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Stad";
             // 
-            // dateTimePicker1
+            // txbCity
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(-22, 226);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 13;
+            this.txbCity.Location = new System.Drawing.Point(190, 173);
+            this.txbCity.Name = "txbCity";
+            this.txbCity.Size = new System.Drawing.Size(200, 22);
+            this.txbCity.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(68, 232);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 16);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Huisnummer";
+            // 
+            // txbHouseNumber
+            // 
+            this.txbHouseNumber.Location = new System.Drawing.Point(191, 229);
+            this.txbHouseNumber.Name = "txbHouseNumber";
+            this.txbHouseNumber.Size = new System.Drawing.Size(200, 22);
+            this.txbHouseNumber.TabIndex = 18;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(311, 285);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(79, 20);
+            this.checkBox2.TabIndex = 20;
+            this.checkBox2.Text = "Jaarlijks";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(68, 286);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 16);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Betaaltermijn";
             // 
             // CreateLeaseContractForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txbHouseNumber);
+            this.Controls.Add(this.txbCity);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txbTelephoneNumber);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.lblCompanyAddress);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboxProducts);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbStreet);
             this.Controls.Add(this.cboxCompany);
             this.Controls.Add(this.lblCompanyName);
             this.Controls.Add(this.pictureBox1);
             this.Name = "CreateLeaseContractForm";
-            this.Text = "CreateInvoiceForm";
+            this.Text = "Creëer leasecontract";
             this.Load += new System.EventHandler(this.CreateInvoiceForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
@@ -220,18 +272,23 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblCompanyName;
         private System.Windows.Forms.ComboBox cboxCompany;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbStreet;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource companyBindingSource;
         private System.Windows.Forms.ComboBox cboxProducts;
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblCompanyAddress;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox txbTelephoneNumber;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txbCity;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txbHouseNumber;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label3;
     }
 }
