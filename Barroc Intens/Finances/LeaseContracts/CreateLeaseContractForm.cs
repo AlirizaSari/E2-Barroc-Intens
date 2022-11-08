@@ -19,7 +19,8 @@ namespace Barroc_Intens.Finances.LeaseContracts
         public CreateLeaseContractForm(string companyName)
         {
             InitializeComponent();
-            _companyName = companyName;        }
+            _companyName = companyName;        
+        }
 
         private void CreateInvoiceForm_Load(object sender, EventArgs e)
         {
