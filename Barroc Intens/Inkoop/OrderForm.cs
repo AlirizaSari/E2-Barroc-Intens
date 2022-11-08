@@ -24,9 +24,15 @@ namespace Barroc_Intens.Inkoop
         {
 
             this.dbContext = new AppDbContext();
-            this.dbContext.Products.Where(ss => ss.StockStatus == "Besteld")
+            this.dbContext.Products.Where(ss => ss.StockStatusId == 4)
                 .Include(c => c.Category)
+                .Include(ss => ss.StockStatus)
                 .Load();
+            this.dbContext.Products.Where(ss => ss.StockStatusId == 3)
+                .Include(c => c.Category)
+                .Include(ss => ss.StockStatus)
+                .Load();
+
             this.productBindingSource.DataSource = dbContext.Products.Local.ToBindingList();
 
         }
@@ -49,7 +55,7 @@ namespace Barroc_Intens.Inkoop
 
             product.AmountInStock += product.OrderAmount;
             product.OrderAmount = 0;
-            product.StockStatus = "Momenteel leverbaar";
+            product.StockStatusId = 2;
 
             dbContext.Products.Update(product);
             dbContext.SaveChanges();
@@ -63,18 +69,16 @@ namespace Barroc_Intens.Inkoop
             if (product.AmountInStock > 0)
             {
                 product.OrderAmount = 0;
-                product.StockStatus = "Momenteel leverbaar";
-                dbContext.Products.Update(product);
-                dbContext.SaveChanges();
+                product.StockStatusId = 2;
             }
             else
             {
                 product.OrderAmount = 0;
-                product.StockStatus = "Uit voorraad";
-                dbContext.Products.Update(product);
-                dbContext.SaveChanges();
+                product.StockStatusId = 1;
             }
 
+            dbContext.Products.Update(product);
+            dbContext.SaveChanges();
             dgvProductsOrders.Refresh();
         }
     }

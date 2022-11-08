@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Barroc_Intens.Classes;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Barroc_Intens.Inkoop
 {
@@ -26,11 +28,17 @@ namespace Barroc_Intens.Inkoop
 
             this.dbContext.Categories.Load();
 
+            this.dbContext.StockStatuses.Load();
+
             //this.dbContext.Products.Load();
 
             this.categoryBindingSource.DataSource = dbContext.Categories.Local.ToBindingList();
 
+            this.stockStatusBindingSource.DataSource = dbContext.StockStatuses.Local.ToBindingList();
+
             ShowProducts();
+
+            UpdateLabels();
 
         }
 
@@ -58,6 +66,7 @@ namespace Barroc_Intens.Inkoop
             this.dbContext.Entry(category)
                 .Collection(c => c.Products)
                 .Load();
+
         }
 
         private void dgvProducts_SelectionChanged(object sender, EventArgs e)
@@ -78,7 +87,9 @@ namespace Barroc_Intens.Inkoop
             lblProductName.Text = product?.Name;
             //lblProductDescription.Text = product?.Description;
             lblProductBrand.Text = product?.Brand;
-            lblProductStockStatus.Text = product?.StockStatus;
+
+            if (product.StockStatus != null)
+                lblProductStockStatus.Text = product.StockStatus.Name;
 
             if (product.Category != null)
                 lblProductCategory.Text = product.Category.Name;
@@ -97,21 +108,25 @@ namespace Barroc_Intens.Inkoop
 
             if (product.AmountInStock < 0)
             {
-                product.StockStatus = "Uit voorraad";
+                product.StockStatusId = 1;
             }
             else if (nupAmountProduct.Value < 100)
             {
                 product.AmountInStock += (int?)nupAmountProduct.Value;
-                product.StockStatus = "Momenteel leverbaar";
-                this.dbContext.SaveChanges();
-            }    
+                product.StockStatusId = 2;
+            }
+            else if (product.AmountInStock > 0)
+            {
+                product.OrderAmount += (int?)nupAmountProduct.Value;
+                product.StockStatusId = 3;
+            }
             else
             {
                 product.OrderAmount += (int?)nupAmountProduct.Value;
-                product.StockStatus = "Besteld";
-                this.dbContext.SaveChanges();
+                product.StockStatusId = 4;
             }
 
+            this.dbContext.SaveChanges();
             this.dgvProducts.Refresh();
             UpdateLabels();
         }

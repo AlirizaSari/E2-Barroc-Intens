@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -52,12 +53,15 @@
             this.nupAmountProduct = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cboxStockStatus = new System.Windows.Forms.ComboBox();
+            this.stockStatusBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAmountProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockStatusBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -99,6 +103,15 @@
             this.dgvProducts.Size = new System.Drawing.Size(422, 313);
             this.dgvProducts.TabIndex = 1;
             this.dgvProducts.SelectionChanged += new System.EventHandler(this.dgvProducts_SelectionChanged);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 175;
             // 
             // productsBindingSource
             // 
@@ -301,20 +314,39 @@
             this.label10.TabIndex = 20;
             this.label10.Text = "Product Bestellen:";
             // 
-            // dataGridViewTextBoxColumn1
+            // cboxStockStatus
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 175;
+            this.cboxStockStatus.DataSource = this.stockStatusBindingSource;
+            this.cboxStockStatus.DisplayMember = "Name";
+            this.cboxStockStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxStockStatus.FormattingEnabled = true;
+            this.cboxStockStatus.Location = new System.Drawing.Point(424, 111);
+            this.cboxStockStatus.Name = "cboxStockStatus";
+            this.cboxStockStatus.Size = new System.Drawing.Size(121, 21);
+            this.cboxStockStatus.TabIndex = 21;
+            this.cboxStockStatus.ValueMember = "StockStatusId";
+            // 
+            // stockStatusBindingSource
+            // 
+            this.stockStatusBindingSource.DataSource = typeof(Barroc_Intens.StockStatus);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(421, 91);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(46, 17);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Status:";
             // 
             // ProductenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 496);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.cboxStockStatus);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.nupAmountProduct);
@@ -344,6 +376,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAmountProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockStatusBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,5 +409,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.ComboBox cboxStockStatus;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.BindingSource stockStatusBindingSource;
     }
 }

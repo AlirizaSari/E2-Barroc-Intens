@@ -40,6 +40,7 @@ namespace Barroc_Intens.Inkoop
                 Brand = txbBrandProduct.Text,
                 AmountInStock = 0,
                 OrderAmount = 0,
+                StockStatusId = 1,
                 CategoryId = (int)cboxNewProductCategory.SelectedValue
             };
             dbContext.Products.Add(product);
