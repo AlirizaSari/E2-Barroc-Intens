@@ -1,6 +1,9 @@
 ﻿//using Microsoft.Exchange.WebServices.Data;
+using Barroc_Intens.Classes;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace Barroc_Intens.Maintenance
 {
@@ -44,7 +47,7 @@ namespace Barroc_Intens.Maintenance
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             //show the remark of the current selected appointment
-            _appointment = (MaintenanceAppointment)dgvNewAppointmentsx.CurrentRow.DataBoundItem;
+            _appointment = (MaintenanceAppointment)dgvNewAppointments.CurrentRow.DataBoundItem;
             txbCommandsAppointment.Text = _appointment.Remark;
             //show the location of the current selected appointment
             txbCompanyLocation.Text = _appointment.Company.City;
@@ -84,7 +87,7 @@ namespace Barroc_Intens.Maintenance
             //    {
             //        Console.WriteLine(appointment.Company + " : " + appointment.Remark);
             //    }
-            }
+            //}
 
             // show the amount of appointments on the selected date
             //var selectedAppointmentsCount = dbContext.MaintenanceAppointments.Where(ma => ma.AppointmentDate == selectedDate).Count();
@@ -95,26 +98,26 @@ namespace Barroc_Intens.Maintenance
         private void btnCreateAppointment_Click(object sender, EventArgs e)
         {
             //select the current appointment selected in 
-            //var selectedAppointment = (MaintenanceAppointment)dgvNewAppointmentsx.CurrentRow.DataBoundItem;
+            var selectedAppointment = (MaintenanceAppointment)dgvNewAppointments.CurrentRow.DataBoundItem;
 
-            ////change the appointment date to the selected date in the month calendar
-            //selectedAppointment.AppointmentDate = mcMaintanence.SelectionStart;
-            ////change the appointment time to the selected time in the time picker
-            //selectedAppointment.AppointmentTime = dtpAppointmentTimeSet.Value;
-            ////change the appointment employee to the selected employee 
-            //selectedAppointment.AssignedEmployee = UserLoginInformation.LoginUserName;
-            ////change the appointment duration to the selected duration in the textbox
-            //selectedAppointment.AppointmentDuration = txbVisitDuration.Text;
-            ////change the appointment finished to true
-            //selectedAppointment.AppointmentIsPlanned = true;
-            ////change empty userid to current user who is logged in and clicked create
-            //selectedAppointment.UserId = UserLoginInformation.LoginUserId;
+            //change the appointment date to the selected date in the month calendar
+            selectedAppointment.AppointmentDate = mcMaintanence.SelectionStart;
+            //change the appointment time to the selected time in the time picker
+            selectedAppointment.AppointmentTime = dtpAppointmentTimeSet.Value;
+            //change the appointment employee to the selected employee 
+            selectedAppointment.AssignedEmployee = UserLoginInformation.LoginUserName;
+            //change the appointment duration to the selected duration in the textbox
+            selectedAppointment.AppointmentDuration = txbVisitDuration.Text;
+            //change the appointment finished to true
+            selectedAppointment.AppointmentIsPlanned = true;
+            //change empty userid to current user who is logged in and clicked create
+            selectedAppointment.UserId = UserLoginInformation.LoginUserId;
 
 
-            //// the code below will save and refresh the database
+            // the code below will save and refresh the database
 
-            //dbContext.SaveChanges();
-            //this.dgvNewAppointmentsx.Refresh();
+            dbContext.SaveChanges();
+            this.dgvNewAppointments.Refresh();
 
         }
 

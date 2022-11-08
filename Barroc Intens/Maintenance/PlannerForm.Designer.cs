@@ -66,7 +66,7 @@
             this.pnlAppointmentDetails = new System.Windows.Forms.Panel();
             this.txbCompanyLocation = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvNewAppointmentsx = new System.Windows.Forms.DataGridView();
+            this.dgvNewAppointments = new System.Windows.Forms.DataGridView();
             this.isRoutineAppointmentDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.addedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,7 +85,7 @@
             this.pnlAppointmentList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlannedAppointments)).BeginInit();
             this.pnlAppointmentDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNewAppointmentsx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNewAppointments)).BeginInit();
             this.SuspendLayout();
             // 
             // mySqlCommand1
@@ -386,7 +386,7 @@
             // 
             this.pnlAppointmentDetails.Controls.Add(this.txbCompanyLocation);
             this.pnlAppointmentDetails.Controls.Add(this.label1);
-            this.pnlAppointmentDetails.Controls.Add(this.dgvNewAppointmentsx);
+            this.pnlAppointmentDetails.Controls.Add(this.dgvNewAppointments);
             this.pnlAppointmentDetails.Controls.Add(this.lblInfoTextNewAppointment);
             this.pnlAppointmentDetails.Controls.Add(this.lblSectionNewAppointmentsHeader);
             this.pnlAppointmentDetails.Controls.Add(this.button1);
@@ -418,9 +418,9 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Locatie:";
             // 
-            // dgvNewAppointmentsx
+            // dgvNewAppointments
             // 
-            this.dgvNewAppointmentsx.AutoGenerateColumns = false;
+            this.dgvNewAppointments.AutoGenerateColumns = false;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -428,13 +428,13 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNewAppointmentsx.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvNewAppointmentsx.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNewAppointmentsx.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvNewAppointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvNewAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNewAppointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.isRoutineAppointmentDataGridViewCheckBoxColumn,
             this.addedDataGridViewTextBoxColumn,
             this.companyDataGridViewTextBoxColumn});
-            this.dgvNewAppointmentsx.DataSource = this.maintenanceAppointmentBindingSource;
+            this.dgvNewAppointments.DataSource = this.maintenanceAppointmentBindingSource;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -442,10 +442,10 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvNewAppointmentsx.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvNewAppointmentsx.Location = new System.Drawing.Point(6, 86);
-            this.dgvNewAppointmentsx.Name = "dgvNewAppointmentsx";
-            this.dgvNewAppointmentsx.ReadOnly = true;
+            this.dgvNewAppointments.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvNewAppointments.Location = new System.Drawing.Point(6, 86);
+            this.dgvNewAppointments.Name = "dgvNewAppointments";
+            this.dgvNewAppointments.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -453,14 +453,14 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNewAppointmentsx.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvNewAppointmentsx.RowHeadersVisible = false;
-            this.dgvNewAppointmentsx.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dgvNewAppointmentsx.RowTemplate.Height = 24;
-            this.dgvNewAppointmentsx.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNewAppointmentsx.Size = new System.Drawing.Size(568, 349);
-            this.dgvNewAppointmentsx.TabIndex = 19;
-            this.dgvNewAppointmentsx.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            this.dgvNewAppointments.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvNewAppointments.RowHeadersVisible = false;
+            this.dgvNewAppointments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgvNewAppointments.RowTemplate.Height = 24;
+            this.dgvNewAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvNewAppointments.Size = new System.Drawing.Size(568, 349);
+            this.dgvNewAppointments.TabIndex = 19;
+            this.dgvNewAppointments.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // isRoutineAppointmentDataGridViewCheckBoxColumn
             // 
@@ -580,7 +580,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlannedAppointments)).EndInit();
             this.pnlAppointmentDetails.ResumeLayout(false);
             this.pnlAppointmentDetails.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNewAppointmentsx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNewAppointments)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -616,7 +616,7 @@
         private System.Windows.Forms.Label lblInfoTextNewAppointment;
         private System.Windows.Forms.Label lblSectionNewAppointmentsHeader;
         private System.Windows.Forms.DataGridView dgvPlannedAppointments;
-        private System.Windows.Forms.DataGridView dgvNewAppointmentsx;
+        private System.Windows.Forms.DataGridView dgvNewAppointments;
         private System.Windows.Forms.TextBox txbCompanyLocation;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isRoutineAppointmentDataGridViewCheckBoxColumn;
