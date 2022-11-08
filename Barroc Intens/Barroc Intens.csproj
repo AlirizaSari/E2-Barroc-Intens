@@ -324,22 +324,22 @@
     <Compile Include="Finances\DashboardFinanceForm.Designer.cs">
       <DependentUpon>DashboardFinanceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Finances\InvoiceForm.cs">
+    <Compile Include="Finances\Invoices\InvoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Finances\InvoiceForm.Designer.cs">
+    <Compile Include="Finances\Invoices\InvoiceForm.Designer.cs">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Finances\InvoiceInformationForm.cs">
+    <Compile Include="Finances\Invoices\InvoiceInformationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Finances\InvoiceInformationForm.Designer.cs">
+    <Compile Include="Finances\Invoices\InvoiceInformationForm.Designer.cs">
       <DependentUpon>InvoiceInformationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Finances\LeaseContractForm.cs">
+    <Compile Include="Finances\LeaseContracts\LeaseContractForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Finances\LeaseContractForm.Designer.cs">
+    <Compile Include="Finances\LeaseContracts\LeaseContractForm.Designer.cs">
       <DependentUpon>LeaseContractForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Inkoop\AddCategoryForm.cs">
@@ -372,10 +372,10 @@
     <Compile Include="InlogForm.Designer.cs">
       <DependentUpon>InlogForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Finances\InvoiceOverviewForm.cs">
+    <Compile Include="Finances\Invoices\InvoiceOverviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Finances\InvoiceOverviewForm.Designer.cs">
+    <Compile Include="Finances\Invoices\InvoiceOverviewForm.Designer.cs">
       <DependentUpon>InvoiceOverviewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Maintenance\DashboardMaintenanceForm.cs">
@@ -420,16 +420,16 @@
     <EmbeddedResource Include="Finances\DashboardFinanceForm.resx">
       <DependentUpon>DashboardFinanceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Finances\InvoiceForm.resx">
+    <EmbeddedResource Include="Finances\Invoices\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Finances\InvoiceInformationForm.resx">
+    <EmbeddedResource Include="Finances\Invoices\InvoiceInformationForm.resx">
       <DependentUpon>InvoiceInformationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Finances\InvoiceOverviewForm.resx">
+    <EmbeddedResource Include="Finances\Invoices\InvoiceOverviewForm.resx">
       <DependentUpon>InvoiceOverviewForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Finances\LeaseContractForm.resx">
+    <EmbeddedResource Include="Finances\LeaseContracts\LeaseContractForm.resx">
       <DependentUpon>LeaseContractForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inkoop\AddCategoryForm.resx">
@@ -513,8 +513,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Finances\LeaseContracts\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
