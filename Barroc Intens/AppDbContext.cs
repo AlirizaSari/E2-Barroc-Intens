@@ -56,10 +56,10 @@ namespace Barroc_Intens
                 new User { UserId = 8, Name = "Maintenance Head", UserName = "MaintenanceHead", Password = "123", RolId = 8 },
                 new User { UserId = 9, Name = "Mainentance", UserName = "Maintenance", Password = "123", RolId = 9 },
 
-                new User { UserId = 10, Name = "henk", UserName = "henk", Password = "123", RolId = 9 },
-                new User { UserId = 11, Name = "piet", UserName = "piet", Password = "123", RolId = 9 },
-                new User { UserId = 12, Name = "elsa", UserName = "elsa", Password = "123", RolId = 9 },
-                new User { UserId = 13, Name = "sharon", UserName = "sharon", Password = "123", RolId = 9 });
+                new User { UserId = 10, Name = "Henk", UserName = "Henk", Password = "123", RolId = 9 },
+                new User { UserId = 11, Name = "Piet", UserName = "Piet", Password = "123", RolId = 9 },
+                new User { UserId = 12, Name = "Elsa", UserName = "Elsa", Password = "123", RolId = 9 },
+                new User { UserId = 13, Name = "Sharon", UserName = "Sharon", Password = "123", RolId = 9 });
 
 
             modelBuilder.Entity<Company>().HasData(
