@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Barroc_Intens.Classes;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace Barroc_Intens.Finances.LeaseContracts
     {
         private AppDbContext dbContext;
         Company _company;
+        string _paymentTerm;
 
         public CreateLeaseContractForm(Company myCompany)
         {
@@ -34,6 +36,38 @@ namespace Barroc_Intens.Finances.LeaseContracts
             this.dbContext.Products.Load();
             this.companyBindingSource.DataSource = dbContext.Companies.Local.Where(comp => comp.Name == _company.Name);
             this.productBindingSource.DataSource = dbContext.Products.Local.ToBindingList();
+        }
+
+        private void btnCreateLeaseContract_Click(object sender, EventArgs e)
+        {
+            if (cbMonthly.Checked)
+            {
+                _paymentTerm = "Maandelijks";
+            }
+            else if (cbYearly.Checked)
+            {
+                _paymentTerm = "Jaarlijks";
+            }
+
+            int thisProduct = cboxProducts.SelectedIndex;
+
+            if (!string.IsNullOrEmpty(_paymentTerm))
+            {
+                var leaseContract = new Leasecontract()
+                {
+                    CreateDate = dtpCreateDate.Value,
+                    PaymentTerm = _paymentTerm,
+                    ProductId = (int)cboxProducts.SelectedValue,
+                    CompanyId = (int)cboxCompany.SelectedValue
+                };
+
+                dbContext.LeaseContracts.Add(leaseContract);
+                dbContext.SaveChanges();
+            }
+            
+
+            
+            
         }
     }
 }
