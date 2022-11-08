@@ -46,6 +46,7 @@
             this.txbVisitDuration = new System.Windows.Forms.TextBox();
             this.lblCurrentNumberOfOpenTickets = new System.Windows.Forms.Label();
             this.cbEmployeeAsigned = new System.Windows.Forms.ComboBox();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblOpenMaintenceTicketsCounter = new System.Windows.Forms.Label();
             this.lblVisitDuration = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,16 +54,9 @@
             this.lblCalanderHeader = new System.Windows.Forms.Label();
             this.mcMaintanence = new System.Windows.Forms.MonthCalendar();
             this.lblSelectedDate = new System.Windows.Forms.Label();
+            this.maintenanceAppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlAppointmentList = new System.Windows.Forms.Panel();
             this.dgvPlannedAppointments = new System.Windows.Forms.DataGridView();
-            this.companyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remarkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addedDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appointmentDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appointmentTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.userDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maintenanceAppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblSelectedDateTitle = new System.Windows.Forms.Label();
             this.lblAppointmentListHeader = new System.Windows.Forms.Label();
             this.pnlAppointmentDetails = new System.Windows.Forms.Panel();
@@ -79,12 +73,17 @@
             this.btnEditDetails = new System.Windows.Forms.Button();
             this.txbCommandsAppointment = new System.Windows.Forms.TextBox();
             this.lblCommentsCompanyHeader = new System.Windows.Forms.Label();
+            this.companyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.appointmentTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isRoutineAppointmentDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.userDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTopMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlCalander.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentBindingSource)).BeginInit();
             this.pnlAppointmentList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlannedAppointments)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentBindingSource)).BeginInit();
             this.pnlAppointmentDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNewAppointmentsx)).BeginInit();
             this.SuspendLayout();
@@ -195,11 +194,18 @@
             // 
             // cbEmployeeAsigned
             // 
+            this.cbEmployeeAsigned.DataSource = this.userBindingSource;
+            this.cbEmployeeAsigned.DisplayMember = "Name";
             this.cbEmployeeAsigned.FormattingEnabled = true;
             this.cbEmployeeAsigned.Location = new System.Drawing.Point(210, 403);
             this.cbEmployeeAsigned.Name = "cbEmployeeAsigned";
             this.cbEmployeeAsigned.Size = new System.Drawing.Size(230, 24);
             this.cbEmployeeAsigned.TabIndex = 8;
+            this.cbEmployeeAsigned.ValueMember = "UserId";
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(Barroc_Intens.User);
             // 
             // lblOpenMaintenceTicketsCounter
             // 
@@ -266,6 +272,10 @@
             this.lblSelectedDate.TabIndex = 1;
             this.lblSelectedDate.Text = "DD/MM/YYYY";
             // 
+            // maintenanceAppointmentBindingSource
+            // 
+            this.maintenanceAppointmentBindingSource.DataSource = typeof(Barroc_Intens.MaintenanceAppointment);
+            // 
             // pnlAppointmentList
             // 
             this.pnlAppointmentList.Controls.Add(this.dgvPlannedAppointments);
@@ -290,9 +300,6 @@
             this.dgvPlannedAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPlannedAppointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.companyDataGridViewTextBoxColumn1,
-            this.remarkDataGridViewTextBoxColumn,
-            this.addedDataGridViewTextBoxColumn1,
-            this.appointmentDateDataGridViewTextBoxColumn,
             this.appointmentTimeDataGridViewTextBoxColumn,
             this.isRoutineAppointmentDataGridViewCheckBoxColumn1,
             this.userDataGridViewTextBoxColumn});
@@ -320,66 +327,6 @@
             this.dgvPlannedAppointments.RowTemplate.Height = 24;
             this.dgvPlannedAppointments.Size = new System.Drawing.Size(568, 648);
             this.dgvPlannedAppointments.TabIndex = 21;
-            // 
-            // companyDataGridViewTextBoxColumn1
-            // 
-            this.companyDataGridViewTextBoxColumn1.DataPropertyName = "Company";
-            this.companyDataGridViewTextBoxColumn1.HeaderText = "Company";
-            this.companyDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.companyDataGridViewTextBoxColumn1.Name = "companyDataGridViewTextBoxColumn1";
-            this.companyDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // remarkDataGridViewTextBoxColumn
-            // 
-            this.remarkDataGridViewTextBoxColumn.DataPropertyName = "Remark";
-            this.remarkDataGridViewTextBoxColumn.HeaderText = "Remark";
-            this.remarkDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.remarkDataGridViewTextBoxColumn.Name = "remarkDataGridViewTextBoxColumn";
-            this.remarkDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // addedDataGridViewTextBoxColumn1
-            // 
-            this.addedDataGridViewTextBoxColumn1.DataPropertyName = "Added";
-            this.addedDataGridViewTextBoxColumn1.HeaderText = "Added";
-            this.addedDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.addedDataGridViewTextBoxColumn1.Name = "addedDataGridViewTextBoxColumn1";
-            this.addedDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // appointmentDateDataGridViewTextBoxColumn
-            // 
-            this.appointmentDateDataGridViewTextBoxColumn.DataPropertyName = "AppointmentDate";
-            this.appointmentDateDataGridViewTextBoxColumn.HeaderText = "AppointmentDate";
-            this.appointmentDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.appointmentDateDataGridViewTextBoxColumn.Name = "appointmentDateDataGridViewTextBoxColumn";
-            this.appointmentDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // appointmentTimeDataGridViewTextBoxColumn
-            // 
-            this.appointmentTimeDataGridViewTextBoxColumn.DataPropertyName = "AppointmentTime";
-            this.appointmentTimeDataGridViewTextBoxColumn.HeaderText = "AppointmentTime";
-            this.appointmentTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.appointmentTimeDataGridViewTextBoxColumn.Name = "appointmentTimeDataGridViewTextBoxColumn";
-            this.appointmentTimeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // isRoutineAppointmentDataGridViewCheckBoxColumn1
-            // 
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.DataPropertyName = "IsRoutineAppointment";
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.HeaderText = "IsRoutineAppointment";
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.MinimumWidth = 6;
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.Name = "isRoutineAppointmentDataGridViewCheckBoxColumn1";
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.Width = 125;
-            // 
-            // userDataGridViewTextBoxColumn
-            // 
-            this.userDataGridViewTextBoxColumn.DataPropertyName = "User";
-            this.userDataGridViewTextBoxColumn.HeaderText = "User";
-            this.userDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userDataGridViewTextBoxColumn.Name = "userDataGridViewTextBoxColumn";
-            this.userDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // maintenanceAppointmentBindingSource
-            // 
-            this.maintenanceAppointmentBindingSource.DataSource = typeof(Barroc_Intens.MaintenanceAppointment);
             // 
             // lblSelectedDateTitle
             // 
@@ -564,7 +511,6 @@
             this.txbCommandsAppointment.ReadOnly = true;
             this.txbCommandsAppointment.Size = new System.Drawing.Size(462, 116);
             this.txbCommandsAppointment.TabIndex = 6;
-            this.txbCommandsAppointment.TextChanged += new System.EventHandler(this.txbCommandsAppointment_TextChanged);
             // 
             // lblCommentsCompanyHeader
             // 
@@ -575,6 +521,38 @@
             this.lblCommentsCompanyHeader.Size = new System.Drawing.Size(101, 16);
             this.lblCommentsCompanyHeader.TabIndex = 4;
             this.lblCommentsCompanyHeader.Text = "opmerkingen:";
+            // 
+            // companyDataGridViewTextBoxColumn1
+            // 
+            this.companyDataGridViewTextBoxColumn1.DataPropertyName = "Company";
+            this.companyDataGridViewTextBoxColumn1.HeaderText = "Company";
+            this.companyDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.companyDataGridViewTextBoxColumn1.Name = "companyDataGridViewTextBoxColumn1";
+            this.companyDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // appointmentTimeDataGridViewTextBoxColumn
+            // 
+            this.appointmentTimeDataGridViewTextBoxColumn.DataPropertyName = "AppointmentTime";
+            this.appointmentTimeDataGridViewTextBoxColumn.HeaderText = "AppointmentTime";
+            this.appointmentTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.appointmentTimeDataGridViewTextBoxColumn.Name = "appointmentTimeDataGridViewTextBoxColumn";
+            this.appointmentTimeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // isRoutineAppointmentDataGridViewCheckBoxColumn1
+            // 
+            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.DataPropertyName = "IsRoutineAppointment";
+            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.HeaderText = "IsRoutineAppointment";
+            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.MinimumWidth = 6;
+            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.Name = "isRoutineAppointmentDataGridViewCheckBoxColumn1";
+            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.Width = 125;
+            // 
+            // userDataGridViewTextBoxColumn
+            // 
+            this.userDataGridViewTextBoxColumn.DataPropertyName = "User";
+            this.userDataGridViewTextBoxColumn.HeaderText = "User";
+            this.userDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userDataGridViewTextBoxColumn.Name = "userDataGridViewTextBoxColumn";
+            this.userDataGridViewTextBoxColumn.Width = 125;
             // 
             // PlannerForm
             // 
@@ -594,10 +572,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             this.pnlCalander.ResumeLayout(false);
             this.pnlCalander.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentBindingSource)).EndInit();
             this.pnlAppointmentList.ResumeLayout(false);
             this.pnlAppointmentList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlannedAppointments)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentBindingSource)).EndInit();
             this.pnlAppointmentDetails.ResumeLayout(false);
             this.pnlAppointmentDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNewAppointmentsx)).EndInit();
@@ -642,14 +621,12 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn isRoutineAppointmentDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn remarkDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addedDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn appointmentDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn appointmentTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn appointmentFinishedDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DateTimePicker dtpAppointmentTimeSet;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn appointmentTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isRoutineAppointmentDataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn userDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DateTimePicker dtpAppointmentTimeSet;
     }
 }

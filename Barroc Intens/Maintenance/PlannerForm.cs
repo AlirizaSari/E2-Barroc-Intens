@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +18,7 @@ namespace Barroc_Intens.Maintenance
     {
         private AppDbContext dbContext;
         private MaintenanceAppointment _appointment;
-
+        
         public PlannerForm()
         {
             InitializeComponent();            
@@ -29,6 +30,14 @@ namespace Barroc_Intens.Maintenance
             this.dbContext.MaintenanceAppointments.Include(ma => ma.Company).Load();
             this.maintenanceAppointmentBindingSource.DataSource = dbContext.MaintenanceAppointments.Local.ToBindingList();            
             lblCurrentNumberOfOpenTickets.Text = dbContext.MaintenanceAppointments.Where(ma => ma.AppointmentIsPlanned == true).Count().ToString();
+
+            this.dbContext.Users.Load();
+
+            //this.dbContext.Products.Load();
+
+            this.userBindingSource.DataSource = dbContext.Users.Local.ToBindingList();
+
+            //showEmployeeName();
         }
 
         private void btnBackToMaintenance_Click(object sender, EventArgs e)
@@ -58,15 +67,14 @@ namespace Barroc_Intens.Maintenance
             var selectedDate = mcMaintanence.SelectionStart;
             var selectedAppointments = dbContext.MaintenanceAppointments.Where(ma => ma.AppointmentDate == selectedDate).ToList();
             dgvPlannedAppointments.DataSource = selectedAppointments;
+            
             // change the font weight of the selected date
             mcMaintanence.BoldedDates = new DateTime[] { selectedDate };
+            
             // show the amount of appointments on the selected date
             var selectedAppointmentsCount = dbContext.MaintenanceAppointments.Where(ma => ma.AppointmentDate == selectedDate).Count();
             lblSelectedDate.Text = selectedDate.ToString("dd-MM-yyyy");
-            lblCurrentNumberOfOpenTickets.Text = selectedAppointmentsCount.ToString();   
-            
-
-
+            lblCurrentNumberOfOpenTickets.Text = selectedAppointmentsCount.ToString();
         }
 
         private void btnCreateAppointment_Click(object sender, EventArgs e)
@@ -89,11 +97,6 @@ namespace Barroc_Intens.Maintenance
 
             dbContext.SaveChanges();
             this.dgvNewAppointmentsx.Refresh();
-
-        }
-
-        private void txbCommandsAppointment_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }
