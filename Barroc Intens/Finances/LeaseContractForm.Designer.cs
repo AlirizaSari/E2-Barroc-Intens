@@ -33,14 +33,15 @@
             this.lblBkrCheckResult = new System.Windows.Forms.Label();
             this.cbBkrPositive = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvCompanys = new System.Windows.Forms.DataGridView();
+            this.dgvCompanies = new System.Windows.Forms.DataGridView();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDirectToFinanceDash = new System.Windows.Forms.Button();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bkrCheckedAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCompanys)).BeginInit();
+            this.btnCreateLeaseContract = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompanies)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,25 +89,25 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "lease contract opstellen";
             // 
-            // dgvCompanys
+            // dgvCompanies
             // 
-            this.dgvCompanys.AutoGenerateColumns = false;
-            this.dgvCompanys.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCompanys.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCompanies.AutoGenerateColumns = false;
+            this.dgvCompanies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCompanies.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
             this.bkrCheckedAtDataGridViewTextBoxColumn,
             this.User});
-            this.dgvCompanys.DataSource = this.companyBindingSource;
-            this.dgvCompanys.Location = new System.Drawing.Point(413, 60);
-            this.dgvCompanys.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvCompanys.Name = "dgvCompanys";
-            this.dgvCompanys.RowHeadersVisible = false;
-            this.dgvCompanys.RowHeadersWidth = 51;
-            this.dgvCompanys.RowTemplate.Height = 24;
-            this.dgvCompanys.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCompanys.Size = new System.Drawing.Size(479, 386);
-            this.dgvCompanys.TabIndex = 6;
-            this.dgvCompanys.SelectionChanged += new System.EventHandler(this.dgvCompanys_SelectionChanged);
+            this.dgvCompanies.DataSource = this.companyBindingSource;
+            this.dgvCompanies.Location = new System.Drawing.Point(413, 60);
+            this.dgvCompanies.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvCompanies.Name = "dgvCompanies";
+            this.dgvCompanies.RowHeadersVisible = false;
+            this.dgvCompanies.RowHeadersWidth = 51;
+            this.dgvCompanies.RowTemplate.Height = 24;
+            this.dgvCompanies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCompanies.Size = new System.Drawing.Size(479, 386);
+            this.dgvCompanies.TabIndex = 6;
+            this.dgvCompanies.SelectionChanged += new System.EventHandler(this.dgvCompanys_SelectionChanged);
             // 
             // btnSave
             // 
@@ -160,14 +161,25 @@
             // 
             this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
             // 
+            // btnCreateLeaseContract
+            // 
+            this.btnCreateLeaseContract.Location = new System.Drawing.Point(117, 349);
+            this.btnCreateLeaseContract.Name = "btnCreateLeaseContract";
+            this.btnCreateLeaseContract.Size = new System.Drawing.Size(173, 32);
+            this.btnCreateLeaseContract.TabIndex = 26;
+            this.btnCreateLeaseContract.Text = "Creëer leasecontract";
+            this.btnCreateLeaseContract.UseVisualStyleBackColor = true;
+            this.btnCreateLeaseContract.Click += new System.EventHandler(this.btnCreateLeaseContract_Click);
+            // 
             // LeaseContractForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 450);
+            this.Controls.Add(this.btnCreateLeaseContract);
             this.Controls.Add(this.btnDirectToFinanceDash);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.dgvCompanys);
+            this.Controls.Add(this.dgvCompanies);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbBkrPositive);
             this.Controls.Add(this.lblBkrCheckResult);
@@ -176,7 +188,7 @@
             this.Name = "LeaseContractForm";
             this.Text = "Leasecontracten";
             this.Load += new System.EventHandler(this.LeaseContractForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCompanys)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompanies)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -190,11 +202,12 @@
         private System.Windows.Forms.CheckBox cbBkrPositive;
         private System.Windows.Forms.BindingSource companyBindingSource;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvCompanys;
+        private System.Windows.Forms.DataGridView dgvCompanies;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDirectToFinanceDash;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bkrCheckedAtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn User;
+        private System.Windows.Forms.Button btnCreateLeaseContract;
     }
 }

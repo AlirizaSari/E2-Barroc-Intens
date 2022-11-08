@@ -52,15 +52,15 @@ namespace Barroc_Intens
 
         private void dgvPaidInvoices_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string companyName = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            string invoicePaidAt = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[2].Value.ToString();
-            string companyEmail = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[3].Value.ToString();
-            string companyAddress = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[4].Value.ToString();
-            double hoursWorked = Convert.ToDouble(dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[5].Value.ToString());
-            double discount = Convert.ToDouble(dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[6].Value.ToString());
-            double pricePerHour = Convert.ToDouble(dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[7].Value.ToString());
-            string notes = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[8].Value.ToString();
-            string paymentTerm = dgvPaidInvoices.Rows[dgvPaidInvoices.CurrentCell.RowIndex].Cells[9].Value.ToString();
+            string companyName = dgvPaidInvoices.CurrentRow.Cells[0].Value.ToString();
+            string invoicePaidAt = dgvPaidInvoices.CurrentRow.Cells[2].Value.ToString();
+            string companyEmail = dgvPaidInvoices.CurrentRow.Cells[3].Value.ToString();
+            string companyAddress = dgvPaidInvoices.CurrentRow.Cells[4].Value.ToString();
+            double hoursWorked = Convert.ToDouble(dgvPaidInvoices.CurrentRow.Cells[5].Value.ToString());
+            double discount = Convert.ToDouble(dgvPaidInvoices.CurrentRow.Cells[6].Value.ToString());
+            double pricePerHour = Convert.ToDouble(dgvPaidInvoices.CurrentRow.Cells[7].Value.ToString());
+            string notes = dgvPaidInvoices.CurrentRow.Cells[8].Value.ToString();
+            string paymentTerm = dgvPaidInvoices.CurrentRow.Cells[9].Value.ToString();
 
 
             InvoiceInformationForm invoiceInformationForm = new InvoiceInformationForm(companyName,
@@ -77,15 +77,15 @@ namespace Barroc_Intens
 
         private void dgvNotPaidInvoices_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string companyName = dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            string companyName = dgvNotPaidInvoices.CurrentRow.Cells[0].Value.ToString();
             string invoicePaidAt = "";
-            string companyEmail = dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[3].Value.ToString();
-            string companyAddress = dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[4].Value.ToString();
-            double hoursWorked = Convert.ToDouble(dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[5].Value.ToString());
-            double discount = Convert.ToDouble(dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[6].Value.ToString());
-            double pricePerHour = Convert.ToDouble(dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[7].Value.ToString());
-            string notes = dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[8].Value.ToString();
-            string paymentTerm = dgvNotPaidInvoices.Rows[dgvNotPaidInvoices.CurrentCell.RowIndex].Cells[9].Value.ToString();
+            string companyEmail = dgvNotPaidInvoices.CurrentRow.Cells[3].Value.ToString();
+            string companyAddress = dgvNotPaidInvoices.CurrentRow.Cells[4].Value.ToString();
+            double hoursWorked = Convert.ToDouble(dgvNotPaidInvoices.CurrentRow.Cells[5].Value.ToString());
+            double discount = Convert.ToDouble(dgvNotPaidInvoices.CurrentRow.Cells[6].Value.ToString());
+            double pricePerHour = Convert.ToDouble(dgvNotPaidInvoices.CurrentRow.Cells[7].Value.ToString());
+            string notes = dgvNotPaidInvoices.CurrentRow.Cells[8].Value.ToString();
+            string paymentTerm = dgvNotPaidInvoices.CurrentRow.Cells[9].Value.ToString();
 
 
             InvoiceInformationForm invoiceInformationForm = new InvoiceInformationForm(companyName,

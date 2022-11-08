@@ -40,7 +40,7 @@ namespace Barroc_Intens.Finances
             if (this.dbContext == null)
                 return;
 
-            var companies = (Company)this.dgvCompanys.CurrentRow?.DataBoundItem;
+            var companies = (Company)this.dgvCompanies.CurrentRow?.DataBoundItem;
 
             if (companies == null)
                 return;
@@ -71,7 +71,7 @@ namespace Barroc_Intens.Finances
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            var companies = (Company)this.dgvCompanys.CurrentRow?.DataBoundItem;
+            var companies = (Company)this.dgvCompanies.CurrentRow?.DataBoundItem;
             int bkrResult;
             if (cbBkrNegative.Checked != true)
             {
@@ -115,6 +115,11 @@ namespace Barroc_Intens.Finances
         private void cbBkrNegative_Click(object sender, EventArgs e)
         {
             cbBkrPositive.Checked = false;
+        }
+
+        private void btnCreateLeaseContract_Click(object sender, EventArgs e)
+        {
+            string company = dgvCompanies.CurrentRow.Cells[0].Value.ToString();
         }
     }
 }
