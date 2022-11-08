@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Barroc_Intens
 {
-    internal class StockStatus
+    public class StockStatus
     {
         public int StockStatusId { get; set; }
 
