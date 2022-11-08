@@ -120,10 +120,20 @@ namespace Barroc_Intens.Finances
 
         private void btnCreateLeaseContract_Click(object sender, EventArgs e)
         {
+            lblError.Text = "";
             string company = dgvCompanies.CurrentRow.Cells[0].Value.ToString();
+            var companyInformation = (Company)dgvCompanies.CurrentRow.DataBoundItem;
 
-            CreateLeaseContractForm createLeaseContractForm = new CreateLeaseContractForm(company);
-            createLeaseContractForm.ShowDialog();
+            if (cbBkrPositive.Checked)
+            {
+                CreateLeaseContractForm createLeaseContractForm = new CreateLeaseContractForm(/*companyInformation*/);
+                createLeaseContractForm.ShowDialog();
+            }
+            else
+            {
+                lblError.Text = $"Negatieve BKR van {companyInformation.Name}";
+            }
+            
         }
     }
 }

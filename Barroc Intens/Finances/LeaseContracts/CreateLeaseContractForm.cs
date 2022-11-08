@@ -14,12 +14,12 @@ namespace Barroc_Intens.Finances.LeaseContracts
     public partial class CreateLeaseContractForm : Form
     {
         private AppDbContext dbContext;
-        string _companyName;
+        Company _company;
 
-        public CreateLeaseContractForm(string companyName)
+        public CreateLeaseContractForm(/*Company myCompany*/)
         {
             InitializeComponent();
-            _companyName = companyName;        
+            //
         }
 
         private void CreateInvoiceForm_Load(object sender, EventArgs e)

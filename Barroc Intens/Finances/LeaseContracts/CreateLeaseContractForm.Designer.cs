@@ -45,6 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -76,7 +77,7 @@
             this.cboxCompany.FormattingEnabled = true;
             this.cboxCompany.Location = new System.Drawing.Point(190, 142);
             this.cboxCompany.Name = "cboxCompany";
-            this.cboxCompany.Size = new System.Drawing.Size(189, 24);
+            this.cboxCompany.Size = new System.Drawing.Size(200, 24);
             this.cboxCompany.TabIndex = 2;
             this.cboxCompany.ValueMember = "CompanyId";
             // 
@@ -107,7 +108,7 @@
             this.cboxProducts.FormattingEnabled = true;
             this.cboxProducts.Location = new System.Drawing.Point(190, 172);
             this.cboxProducts.Name = "cboxProducts";
-            this.cboxProducts.Size = new System.Drawing.Size(189, 24);
+            this.cboxProducts.Size = new System.Drawing.Size(200, 24);
             this.cboxProducts.TabIndex = 5;
             this.cboxProducts.ValueMember = "ProductId";
             // 
@@ -136,7 +137,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(373, 233);
+            this.label3.Location = new System.Drawing.Point(501, 286);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 16);
             this.label3.TabIndex = 8;
@@ -180,16 +181,27 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(-22, 226);
+            this.dateTimePicker1.Location = new System.Drawing.Point(190, 202);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 13;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(372, 368);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(95, 20);
+            this.checkBox1.TabIndex = 14;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // CreateLeaseContractForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -233,5 +245,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

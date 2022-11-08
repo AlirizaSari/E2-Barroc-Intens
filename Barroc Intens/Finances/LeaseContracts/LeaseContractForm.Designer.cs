@@ -34,13 +34,14 @@
             this.cbBkrPositive = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvCompanies = new System.Windows.Forms.DataGridView();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnDirectToFinanceDash = new System.Windows.Forms.Button();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bkrCheckedAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDirectToFinanceDash = new System.Windows.Forms.Button();
             this.btnCreateLeaseContract = new System.Windows.Forms.Button();
+            this.lblError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompanies)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -109,28 +110,6 @@
             this.dgvCompanies.TabIndex = 6;
             this.dgvCompanies.SelectionChanged += new System.EventHandler(this.dgvCompanys_SelectionChanged);
             // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(117, 386);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(173, 33);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "test save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnDirectToFinanceDash
-            // 
-            this.btnDirectToFinanceDash.Location = new System.Drawing.Point(713, 10);
-            this.btnDirectToFinanceDash.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDirectToFinanceDash.Name = "btnDirectToFinanceDash";
-            this.btnDirectToFinanceDash.Size = new System.Drawing.Size(179, 46);
-            this.btnDirectToFinanceDash.TabIndex = 25;
-            this.btnDirectToFinanceDash.Text = "Terug naar finances dashboard";
-            this.btnDirectToFinanceDash.UseVisualStyleBackColor = true;
-            this.btnDirectToFinanceDash.Click += new System.EventHandler(this.btnDirectToFinanceDash_Click);
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
@@ -161,6 +140,28 @@
             // 
             this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(117, 386);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(173, 33);
+            this.btnSave.TabIndex = 7;
+            this.btnSave.Text = "test save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnDirectToFinanceDash
+            // 
+            this.btnDirectToFinanceDash.Location = new System.Drawing.Point(713, 10);
+            this.btnDirectToFinanceDash.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDirectToFinanceDash.Name = "btnDirectToFinanceDash";
+            this.btnDirectToFinanceDash.Size = new System.Drawing.Size(179, 46);
+            this.btnDirectToFinanceDash.TabIndex = 25;
+            this.btnDirectToFinanceDash.Text = "Terug naar finances dashboard";
+            this.btnDirectToFinanceDash.UseVisualStyleBackColor = true;
+            this.btnDirectToFinanceDash.Click += new System.EventHandler(this.btnDirectToFinanceDash_Click);
+            // 
             // btnCreateLeaseContract
             // 
             this.btnCreateLeaseContract.Location = new System.Drawing.Point(117, 349);
@@ -171,11 +172,22 @@
             this.btnCreateLeaseContract.UseVisualStyleBackColor = true;
             this.btnCreateLeaseContract.Click += new System.EventHandler(this.btnCreateLeaseContract_Click);
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(40, 429);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 20);
+            this.lblError.TabIndex = 27;
+            // 
             // LeaseContractForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 450);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnCreateLeaseContract);
             this.Controls.Add(this.btnDirectToFinanceDash);
             this.Controls.Add(this.btnSave);
@@ -209,5 +221,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bkrCheckedAtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn User;
         private System.Windows.Forms.Button btnCreateLeaseContract;
+        private System.Windows.Forms.Label lblError;
     }
 }
