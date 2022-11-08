@@ -51,13 +51,15 @@ namespace Barroc_Intens.Finances
             {
                 if (companies.BkrCheckedAt != null)
                 {
-                    chbBkrCheckPositive.Checked = true;
-                    chbBkrCheckNegative.CheckState = CheckState.Unchecked;
+                    cbBkrPositive.Checked = true;
+                    cbBkrNegative.Checked = false;
+                    //cbBkrNegative.CheckState = CheckState.Unchecked;
                 }
                 else
                 {
-                    chbBkrCheckNegative.Checked = true;
-                    chbBkrCheckPositive.CheckState = CheckState.Unchecked;
+                    cbBkrNegative.Checked = true;
+                    cbBkrPositive.Checked = false;
+                    //cbBkrPositive.CheckState = CheckState.Unchecked;
                 }
                 
             }
@@ -71,7 +73,7 @@ namespace Barroc_Intens.Finances
         {
             var companies = (Company)this.dgvCompanys.CurrentRow?.DataBoundItem;
             int bkrResult;
-            if (chbBkrCheckNegative.Checked != true)
+            if (cbBkrNegative.Checked != true)
             {
                 bkrResult = 1;
             }
@@ -103,6 +105,16 @@ namespace Barroc_Intens.Finances
             this.Hide();
             myForm.ShowDialog();
             this.Close();
+        }
+
+        private void cbBkrPositive_Click(object sender, EventArgs e)
+        {
+            cbBkrNegative.Checked = false;
+        }
+
+        private void cbBkrNegative_Click(object sender, EventArgs e)
+        {
+            cbBkrPositive.Checked = false;
         }
     }
 }

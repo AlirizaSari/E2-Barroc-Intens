@@ -29,31 +29,32 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.chbBkrCheckNegative = new System.Windows.Forms.CheckBox();
+            this.cbBkrNegative = new System.Windows.Forms.CheckBox();
             this.lblBkrCheckResult = new System.Windows.Forms.Label();
-            this.chbBkrCheckPositive = new System.Windows.Forms.CheckBox();
+            this.cbBkrPositive = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvCompanys = new System.Windows.Forms.DataGridView();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDirectToFinanceDash = new System.Windows.Forms.Button();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bkrCheckedAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnDirectToFinanceDash = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompanys)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // chbBkrCheckNegative
+            // cbBkrNegative
             // 
-            this.chbBkrCheckNegative.AutoSize = true;
-            this.chbBkrCheckNegative.Location = new System.Drawing.Point(299, 79);
-            this.chbBkrCheckNegative.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbBkrCheckNegative.Name = "chbBkrCheckNegative";
-            this.chbBkrCheckNegative.Size = new System.Drawing.Size(80, 20);
-            this.chbBkrCheckNegative.TabIndex = 1;
-            this.chbBkrCheckNegative.Text = "Negatief";
-            this.chbBkrCheckNegative.UseVisualStyleBackColor = true;
+            this.cbBkrNegative.AutoSize = true;
+            this.cbBkrNegative.Location = new System.Drawing.Point(282, 79);
+            this.cbBkrNegative.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbBkrNegative.Name = "cbBkrNegative";
+            this.cbBkrNegative.Size = new System.Drawing.Size(80, 20);
+            this.cbBkrNegative.TabIndex = 1;
+            this.cbBkrNegative.Text = "Negatief";
+            this.cbBkrNegative.UseVisualStyleBackColor = true;
+            this.cbBkrNegative.Click += new System.EventHandler(this.cbBkrNegative_Click);
             // 
             // lblBkrCheckResult
             // 
@@ -65,16 +66,17 @@
             this.lblBkrCheckResult.TabIndex = 1;
             this.lblBkrCheckResult.Text = "Bkr-Check:\r\nnegatief/positief:";
             // 
-            // chbBkrCheckPositive
+            // cbBkrPositive
             // 
-            this.chbBkrCheckPositive.AutoSize = true;
-            this.chbBkrCheckPositive.Location = new System.Drawing.Point(175, 79);
-            this.chbBkrCheckPositive.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbBkrCheckPositive.Name = "chbBkrCheckPositive";
-            this.chbBkrCheckPositive.Size = new System.Drawing.Size(73, 20);
-            this.chbBkrCheckPositive.TabIndex = 0;
-            this.chbBkrCheckPositive.Text = "Positief";
-            this.chbBkrCheckPositive.UseVisualStyleBackColor = true;
+            this.cbBkrPositive.AutoSize = true;
+            this.cbBkrPositive.Location = new System.Drawing.Point(175, 79);
+            this.cbBkrPositive.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbBkrPositive.Name = "cbBkrPositive";
+            this.cbBkrPositive.Size = new System.Drawing.Size(73, 20);
+            this.cbBkrPositive.TabIndex = 0;
+            this.cbBkrPositive.Text = "Positief";
+            this.cbBkrPositive.UseVisualStyleBackColor = true;
+            this.cbBkrPositive.Click += new System.EventHandler(this.cbBkrPositive_Click);
             // 
             // label2
             // 
@@ -106,6 +108,28 @@
             this.dgvCompanys.TabIndex = 6;
             this.dgvCompanys.SelectionChanged += new System.EventHandler(this.dgvCompanys_SelectionChanged);
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(117, 386);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(173, 33);
+            this.btnSave.TabIndex = 7;
+            this.btnSave.Text = "test save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnDirectToFinanceDash
+            // 
+            this.btnDirectToFinanceDash.Location = new System.Drawing.Point(713, 10);
+            this.btnDirectToFinanceDash.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDirectToFinanceDash.Name = "btnDirectToFinanceDash";
+            this.btnDirectToFinanceDash.Size = new System.Drawing.Size(179, 46);
+            this.btnDirectToFinanceDash.TabIndex = 25;
+            this.btnDirectToFinanceDash.Text = "Terug naar finances dashboard";
+            this.btnDirectToFinanceDash.UseVisualStyleBackColor = true;
+            this.btnDirectToFinanceDash.Click += new System.EventHandler(this.btnDirectToFinanceDash_Click);
+            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
@@ -136,28 +160,6 @@
             // 
             this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
             // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(117, 386);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(173, 33);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "test save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnDirectToFinanceDash
-            // 
-            this.btnDirectToFinanceDash.Location = new System.Drawing.Point(713, 10);
-            this.btnDirectToFinanceDash.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDirectToFinanceDash.Name = "btnDirectToFinanceDash";
-            this.btnDirectToFinanceDash.Size = new System.Drawing.Size(179, 46);
-            this.btnDirectToFinanceDash.TabIndex = 25;
-            this.btnDirectToFinanceDash.Text = "Terug naar finances dashboard";
-            this.btnDirectToFinanceDash.UseVisualStyleBackColor = true;
-            this.btnDirectToFinanceDash.Click += new System.EventHandler(this.btnDirectToFinanceDash_Click);
-            // 
             // LeaseContractForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -167,9 +169,9 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dgvCompanys);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.chbBkrCheckPositive);
+            this.Controls.Add(this.cbBkrPositive);
             this.Controls.Add(this.lblBkrCheckResult);
-            this.Controls.Add(this.chbBkrCheckNegative);
+            this.Controls.Add(this.cbBkrNegative);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LeaseContractForm";
             this.Text = "Leasecontracten";
@@ -183,9 +185,9 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox chbBkrCheckNegative;
+        private System.Windows.Forms.CheckBox cbBkrNegative;
         private System.Windows.Forms.Label lblBkrCheckResult;
-        private System.Windows.Forms.CheckBox chbBkrCheckPositive;
+        private System.Windows.Forms.CheckBox cbBkrPositive;
         private System.Windows.Forms.BindingSource companyBindingSource;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvCompanys;
