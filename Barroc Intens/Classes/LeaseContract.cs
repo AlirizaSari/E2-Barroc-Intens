@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Barroc_Intens.Classes
 {
-    internal class Leasecontract
+    public class Leasecontract
     {
         public int id { get; set; }
         public int CompanyId { get; set; }

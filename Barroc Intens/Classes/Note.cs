@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Barroc_Intens
 {
-    internal class Note
+    public class Note
     {
         public int NoteId { get; set; }
 

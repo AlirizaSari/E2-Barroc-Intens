@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Barroc_Intens
 {
-    internal class CustomInvoiceProduct
+    public class CustomInvoiceProduct
     {
         public int CustomInvoiceProductId { get; set; }
         public int CustomInvoiceId { get; set; }

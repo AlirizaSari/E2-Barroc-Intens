@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Barroc_Intens
 {
-    internal class Company
+    public class Company
     {
         public int CompanyId { get; set; }
 
