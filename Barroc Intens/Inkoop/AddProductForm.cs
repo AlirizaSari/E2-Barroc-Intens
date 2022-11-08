@@ -39,6 +39,7 @@ namespace Barroc_Intens.Inkoop
                 Description = txbDescriptionProduct.Text,
                 Brand = txbBrandProduct.Text,
                 AmountInStock = 0,
+                OrderAmount = 0,
                 CategoryId = (int)cboxNewProductCategory.SelectedValue
             };
             dbContext.Products.Add(product);

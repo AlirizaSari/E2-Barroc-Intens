@@ -40,6 +40,7 @@ namespace Barroc_Intens
                 btnAddCategory.Visible = false;
                 btnEditCategory.Visible = false;
                 btnRemoveCategory.Visible = false;
+                btnOrders.Visible = false;
             }
         }
 
@@ -156,6 +157,11 @@ namespace Barroc_Intens
         private void btnLogout_Click(object sender, EventArgs e)
         {
             DirectToForm(new InlogForm());
+        }
+
+        private void btnOrders_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new OrderForm());
         }
     }
 }

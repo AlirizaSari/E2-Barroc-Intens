@@ -95,24 +95,19 @@ namespace Barroc_Intens.Inkoop
         {
             var product = (Product)this.dgvProducts.CurrentRow?.DataBoundItem;
 
-            product.AmountInStock += (int?)nupAmountProduct.Value;
-
-            if (product.AmountInStock > 0)
-            {
-                product.StockStatus = "Momenteel leverbaar";
-            }
-            else
+            if (product.AmountInStock < 0)
             {
                 product.StockStatus = "Uit voorraad";
             }
-
-            if (nupAmountProduct.Value < 100)
+            else if (nupAmountProduct.Value < 100)
             {
+                product.AmountInStock += (int?)nupAmountProduct.Value;
+                product.StockStatus = "Momenteel leverbaar";
                 this.dbContext.SaveChanges();
-            }
+            }    
             else
             {
-                product.AmountInStock = 0;
+                product.OrderAmount += (int?)nupAmountProduct.Value;
                 product.StockStatus = "Besteld";
                 this.dbContext.SaveChanges();
             }

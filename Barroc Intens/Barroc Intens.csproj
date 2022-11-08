@@ -360,6 +360,12 @@
     <Compile Include="Inkoop\DashboardInkoopForm.Designer.cs">
       <DependentUpon>DashboardInkoopForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inkoop\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inkoop\OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inkoop\ProductenForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -440,6 +446,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inkoop\DashboardInkoopForm.resx">
       <DependentUpon>DashboardInkoopForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inkoop\OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inkoop\ProductenForm.resx">
       <DependentUpon>ProductenForm.cs</DependentUpon>
