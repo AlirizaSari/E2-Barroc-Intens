@@ -310,6 +310,7 @@
     <Compile Include="Classes\Note.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Rol.cs" />
+    <Compile Include="Classes\StockStatus.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\UserLoginInformation.cs" />
     <Compile Include="dashboardTemplateForm.cs">
@@ -492,6 +493,7 @@
     </EmbeddedResource>
     <None Include="bin\Debug\Barroc Intens.exe.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Barroc_Intens.Classes.StockStatus.datasource" />
     <None Include="Properties\DataSources\Barroc_Intens.Sales.CustomerNotesForm.datasource" />
     <None Include="Properties\DataSources\Category.datasource" />
     <None Include="Properties\DataSources\Company.datasource" />
@@ -499,6 +501,7 @@
     <None Include="Properties\DataSources\MaintenanceAppointment.datasource" />
     <None Include="Properties\DataSources\Note.datasource" />
     <None Include="Properties\DataSources\Product.datasource" />
+    <None Include="Properties\DataSources\StockStatus.datasource" />
     <None Include="Properties\DataSources\User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

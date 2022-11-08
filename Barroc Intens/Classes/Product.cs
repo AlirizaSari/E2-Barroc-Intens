@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+﻿using Barroc_Intens.Classes;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,8 @@ namespace Barroc_Intens
 
         public int? AmountInStock { get; set; }
 
-        public string StockStatus { get; set; }
+        public int StockStatusId { get; set; }
+        public StockStatus StockStatus { get; set; }
         public int? OrderAmount { get; set; }
 
         public int CategoryId { get; set; }
