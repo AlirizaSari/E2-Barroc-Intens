@@ -57,6 +57,10 @@
             this.maintenanceAppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlAppointmentList = new System.Windows.Forms.Panel();
             this.dgvPlannedAppointments = new System.Windows.Forms.DataGridView();
+            this.companyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.appointmentTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isRoutineAppointmentDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.userDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSelectedDateTitle = new System.Windows.Forms.Label();
             this.lblAppointmentListHeader = new System.Windows.Forms.Label();
             this.pnlAppointmentDetails = new System.Windows.Forms.Panel();
@@ -73,10 +77,6 @@
             this.btnEditDetails = new System.Windows.Forms.Button();
             this.txbCommandsAppointment = new System.Windows.Forms.TextBox();
             this.lblCommentsCompanyHeader = new System.Windows.Forms.Label();
-            this.companyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appointmentTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.userDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTopMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlCalander.SuspendLayout();
@@ -327,6 +327,39 @@
             this.dgvPlannedAppointments.RowTemplate.Height = 24;
             this.dgvPlannedAppointments.Size = new System.Drawing.Size(568, 648);
             this.dgvPlannedAppointments.TabIndex = 21;
+            this.dgvPlannedAppointments.DataMemberChanged += new System.EventHandler(this.dgvPlannedAppointments_DataMemberChanged);
+            // 
+            // companyDataGridViewTextBoxColumn1
+            // 
+            this.companyDataGridViewTextBoxColumn1.DataPropertyName = "Company";
+            this.companyDataGridViewTextBoxColumn1.HeaderText = "Company";
+            this.companyDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.companyDataGridViewTextBoxColumn1.Name = "companyDataGridViewTextBoxColumn1";
+            this.companyDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // appointmentTimeDataGridViewTextBoxColumn
+            // 
+            this.appointmentTimeDataGridViewTextBoxColumn.DataPropertyName = "AppointmentTime";
+            this.appointmentTimeDataGridViewTextBoxColumn.HeaderText = "AppointmentTime";
+            this.appointmentTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.appointmentTimeDataGridViewTextBoxColumn.Name = "appointmentTimeDataGridViewTextBoxColumn";
+            this.appointmentTimeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // isRoutineAppointmentDataGridViewCheckBoxColumn1
+            // 
+            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.DataPropertyName = "IsRoutineAppointment";
+            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.HeaderText = "IsRoutineAppointment";
+            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.MinimumWidth = 6;
+            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.Name = "isRoutineAppointmentDataGridViewCheckBoxColumn1";
+            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.Width = 125;
+            // 
+            // userDataGridViewTextBoxColumn
+            // 
+            this.userDataGridViewTextBoxColumn.DataPropertyName = "User";
+            this.userDataGridViewTextBoxColumn.HeaderText = "User";
+            this.userDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userDataGridViewTextBoxColumn.Name = "userDataGridViewTextBoxColumn";
+            this.userDataGridViewTextBoxColumn.Width = 125;
             // 
             // lblSelectedDateTitle
             // 
@@ -521,38 +554,6 @@
             this.lblCommentsCompanyHeader.Size = new System.Drawing.Size(101, 16);
             this.lblCommentsCompanyHeader.TabIndex = 4;
             this.lblCommentsCompanyHeader.Text = "opmerkingen:";
-            // 
-            // companyDataGridViewTextBoxColumn1
-            // 
-            this.companyDataGridViewTextBoxColumn1.DataPropertyName = "Company";
-            this.companyDataGridViewTextBoxColumn1.HeaderText = "Company";
-            this.companyDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.companyDataGridViewTextBoxColumn1.Name = "companyDataGridViewTextBoxColumn1";
-            this.companyDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // appointmentTimeDataGridViewTextBoxColumn
-            // 
-            this.appointmentTimeDataGridViewTextBoxColumn.DataPropertyName = "AppointmentTime";
-            this.appointmentTimeDataGridViewTextBoxColumn.HeaderText = "AppointmentTime";
-            this.appointmentTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.appointmentTimeDataGridViewTextBoxColumn.Name = "appointmentTimeDataGridViewTextBoxColumn";
-            this.appointmentTimeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // isRoutineAppointmentDataGridViewCheckBoxColumn1
-            // 
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.DataPropertyName = "IsRoutineAppointment";
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.HeaderText = "IsRoutineAppointment";
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.MinimumWidth = 6;
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.Name = "isRoutineAppointmentDataGridViewCheckBoxColumn1";
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.Width = 125;
-            // 
-            // userDataGridViewTextBoxColumn
-            // 
-            this.userDataGridViewTextBoxColumn.DataPropertyName = "User";
-            this.userDataGridViewTextBoxColumn.HeaderText = "User";
-            this.userDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userDataGridViewTextBoxColumn.Name = "userDataGridViewTextBoxColumn";
-            this.userDataGridViewTextBoxColumn.Width = 125;
             // 
             // PlannerForm
             // 
