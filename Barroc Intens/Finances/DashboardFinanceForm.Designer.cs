@@ -45,8 +45,6 @@ namespace Barroc_Intens
             this.btnDirectToInvoice = new System.Windows.Forms.Button();
             this.btnBackToMain = new System.Windows.Forms.Button();
             this.dgvInvoices = new System.Windows.Forms.DataGridView();
-            this.btnPaidInvoice = new System.Windows.Forms.Button();
-            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paidAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +53,8 @@ namespace Barroc_Intens
             this.companyAdressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoursWorkedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnPaidInvoice = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -151,7 +151,7 @@ namespace Barroc_Intens
             // 
             // btnDirectToInvoiceOverview
             // 
-            this.btnDirectToInvoiceOverview.Location = new System.Drawing.Point(716, 117);
+            this.btnDirectToInvoiceOverview.Location = new System.Drawing.Point(496, 117);
             this.btnDirectToInvoiceOverview.Name = "btnDirectToInvoiceOverview";
             this.btnDirectToInvoiceOverview.Size = new System.Drawing.Size(172, 37);
             this.btnDirectToInvoiceOverview.TabIndex = 4;
@@ -171,7 +171,7 @@ namespace Barroc_Intens
             // 
             // btnDirectToLeaseContract
             // 
-            this.btnDirectToLeaseContract.Location = new System.Drawing.Point(496, 117);
+            this.btnDirectToLeaseContract.Location = new System.Drawing.Point(716, 117);
             this.btnDirectToLeaseContract.Name = "btnDirectToLeaseContract";
             this.btnDirectToLeaseContract.Size = new System.Drawing.Size(172, 37);
             this.btnDirectToLeaseContract.TabIndex = 2;
@@ -223,20 +223,6 @@ namespace Barroc_Intens
             this.dgvInvoices.Size = new System.Drawing.Size(882, 182);
             this.dgvInvoices.TabIndex = 2;
             this.dgvInvoices.SelectionChanged += new System.EventHandler(this.dgvInvoices_SelectionChanged);
-            // 
-            // btnPaidInvoice
-            // 
-            this.btnPaidInvoice.Location = new System.Drawing.Point(297, 386);
-            this.btnPaidInvoice.Name = "btnPaidInvoice";
-            this.btnPaidInvoice.Size = new System.Drawing.Size(143, 59);
-            this.btnPaidInvoice.TabIndex = 3;
-            this.btnPaidInvoice.Text = "Betaald";
-            this.btnPaidInvoice.UseVisualStyleBackColor = true;
-            this.btnPaidInvoice.Click += new System.EventHandler(this.btnPaidInvoice_Click);
-            // 
-            // customInvoiceBindingSource
-            // 
-            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
             // 
             // Column1
             // 
@@ -309,6 +295,20 @@ namespace Barroc_Intens
             this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
             this.notesDataGridViewTextBoxColumn.ReadOnly = true;
             this.notesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customInvoiceBindingSource
+            // 
+            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
+            // 
+            // btnPaidInvoice
+            // 
+            this.btnPaidInvoice.Location = new System.Drawing.Point(297, 386);
+            this.btnPaidInvoice.Name = "btnPaidInvoice";
+            this.btnPaidInvoice.Size = new System.Drawing.Size(143, 59);
+            this.btnPaidInvoice.TabIndex = 3;
+            this.btnPaidInvoice.Text = "Betaald";
+            this.btnPaidInvoice.UseVisualStyleBackColor = true;
+            this.btnPaidInvoice.Click += new System.EventHandler(this.btnPaidInvoice_Click);
             // 
             // DashboardFinanceForm
             // 
