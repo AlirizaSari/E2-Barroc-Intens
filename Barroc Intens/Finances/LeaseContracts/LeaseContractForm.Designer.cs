@@ -38,12 +38,11 @@
             this.btnDirectToFinanceDash = new System.Windows.Forms.Button();
             this.btnCreateLeaseContract = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
+            this.btnEditLeaseContract = new System.Windows.Forms.Button();
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bkrCheckedAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsBkrChecked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditLeaseContract = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompanies)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -95,21 +94,21 @@
             // dgvCompanies
             // 
             this.dgvCompanies.AutoGenerateColumns = false;
+            this.dgvCompanies.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCompanies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompanies.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
             this.bkrCheckedAtDataGridViewTextBoxColumn,
-            this.IsBkrChecked,
-            this.User});
+            this.IsBkrChecked});
             this.dgvCompanies.DataSource = this.companyBindingSource;
-            this.dgvCompanies.Location = new System.Drawing.Point(413, 60);
+            this.dgvCompanies.Location = new System.Drawing.Point(424, 60);
             this.dgvCompanies.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvCompanies.Name = "dgvCompanies";
             this.dgvCompanies.RowHeadersVisible = false;
             this.dgvCompanies.RowHeadersWidth = 51;
             this.dgvCompanies.RowTemplate.Height = 24;
             this.dgvCompanies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCompanies.Size = new System.Drawing.Size(479, 386);
+            this.dgvCompanies.Size = new System.Drawing.Size(378, 386);
             this.dgvCompanies.TabIndex = 6;
             this.dgvCompanies.SelectionChanged += new System.EventHandler(this.dgvCompanys_SelectionChanged);
             // 
@@ -126,7 +125,7 @@
             // 
             // btnDirectToFinanceDash
             // 
-            this.btnDirectToFinanceDash.Location = new System.Drawing.Point(713, 10);
+            this.btnDirectToFinanceDash.Location = new System.Drawing.Point(623, 9);
             this.btnDirectToFinanceDash.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDirectToFinanceDash.Name = "btnDirectToFinanceDash";
             this.btnDirectToFinanceDash.Size = new System.Drawing.Size(179, 46);
@@ -150,48 +149,10 @@
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(40, 429);
+            this.lblError.Location = new System.Drawing.Point(12, 421);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 20);
             this.lblError.TabIndex = 27;
-            // 
-            // companyBindingSource
-            // 
-            this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // bkrCheckedAtDataGridViewTextBoxColumn
-            // 
-            this.bkrCheckedAtDataGridViewTextBoxColumn.DataPropertyName = "BkrCheckedAt";
-            this.bkrCheckedAtDataGridViewTextBoxColumn.HeaderText = "BkrCheckedAt";
-            this.bkrCheckedAtDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bkrCheckedAtDataGridViewTextBoxColumn.Name = "bkrCheckedAtDataGridViewTextBoxColumn";
-            this.bkrCheckedAtDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bkrCheckedAtDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // IsBkrChecked
-            // 
-            this.IsBkrChecked.DataPropertyName = "IsBkrChecked";
-            this.IsBkrChecked.HeaderText = "IsBkrChecked";
-            this.IsBkrChecked.MinimumWidth = 6;
-            this.IsBkrChecked.Name = "IsBkrChecked";
-            this.IsBkrChecked.Width = 125;
-            // 
-            // User
-            // 
-            this.User.DataPropertyName = "User";
-            this.User.HeaderText = "User";
-            this.User.MinimumWidth = 6;
-            this.User.Name = "User";
-            this.User.Width = 125;
             // 
             // btnEditLeaseContract
             // 
@@ -202,11 +163,41 @@
             this.btnEditLeaseContract.Text = "Leasecontract bewerken";
             this.btnEditLeaseContract.UseVisualStyleBackColor = true;
             // 
+            // companyBindingSource
+            // 
+            this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Bedrijf";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bkrCheckedAtDataGridViewTextBoxColumn
+            // 
+            this.bkrCheckedAtDataGridViewTextBoxColumn.DataPropertyName = "BkrCheckedAt";
+            this.bkrCheckedAtDataGridViewTextBoxColumn.HeaderText = "BKR checkdatum";
+            this.bkrCheckedAtDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bkrCheckedAtDataGridViewTextBoxColumn.Name = "bkrCheckedAtDataGridViewTextBoxColumn";
+            this.bkrCheckedAtDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bkrCheckedAtDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // IsBkrChecked
+            // 
+            this.IsBkrChecked.DataPropertyName = "IsBkrChecked";
+            this.IsBkrChecked.HeaderText = "BKR-check";
+            this.IsBkrChecked.MinimumWidth = 6;
+            this.IsBkrChecked.Name = "IsBkrChecked";
+            this.IsBkrChecked.Width = 125;
+            // 
             // LeaseContractForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 450);
+            this.ClientSize = new System.Drawing.Size(812, 450);
             this.Controls.Add(this.btnEditLeaseContract);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnCreateLeaseContract);
@@ -240,10 +231,9 @@
         private System.Windows.Forms.Button btnDirectToFinanceDash;
         private System.Windows.Forms.Button btnCreateLeaseContract;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Button btnEditLeaseContract;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bkrCheckedAtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IsBkrChecked;
-        private System.Windows.Forms.DataGridViewTextBoxColumn User;
-        private System.Windows.Forms.Button btnEditLeaseContract;
     }
 }

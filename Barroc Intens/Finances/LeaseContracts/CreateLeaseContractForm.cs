@@ -16,9 +16,14 @@ namespace Barroc_Intens.Finances.LeaseContracts
         private AppDbContext dbContext;
         Company _company;
 
-        public CreateLeaseContractForm(/*Company myCompany*/)
+        public CreateLeaseContractForm(Company myCompany)
         {
             InitializeComponent();
+            txbCity.Text = myCompany.City;
+            txbHouseNumber.Text = myCompany.HouseNumber;
+            txbStreet.Text = myCompany.Street;
+            txbTelephoneNumber.Text = myCompany.Phone;
+            _company = myCompany;
             //
         }
 
@@ -27,7 +32,7 @@ namespace Barroc_Intens.Finances.LeaseContracts
             this.dbContext = new AppDbContext();
             this.dbContext.Companies.Load();
             this.dbContext.Products.Load();
-            this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
+            this.companyBindingSource.DataSource = dbContext.Companies.Local.Where(comp => comp.Name == _company.Name);
             this.productBindingSource.DataSource = dbContext.Products.Local.ToBindingList();
         }
     }

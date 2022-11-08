@@ -126,7 +126,7 @@ namespace Barroc_Intens.Finances
 
             if (cbBkrPositive.Checked)
             {
-                CreateLeaseContractForm createLeaseContractForm = new CreateLeaseContractForm(/*companyInformation*/);
+                CreateLeaseContractForm createLeaseContractForm = new CreateLeaseContractForm(companyInformation);
                 createLeaseContractForm.ShowDialog();
             }
             else
