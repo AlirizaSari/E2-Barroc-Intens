@@ -34,21 +34,21 @@
             this.cboxCompany = new System.Windows.Forms.ComboBox();
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txbStreet = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCreateLeaseContract = new System.Windows.Forms.Button();
             this.cboxProducts = new System.Windows.Forms.ComboBox();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblCompanyAddress = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dtpCreateDate = new System.Windows.Forms.DateTimePicker();
+            this.cbMonthly = new System.Windows.Forms.CheckBox();
             this.txbTelephoneNumber = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txbCity = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txbHouseNumber = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.cbYearly = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
@@ -97,14 +97,15 @@
             this.txbStreet.Size = new System.Drawing.Size(200, 22);
             this.txbStreet.TabIndex = 3;
             // 
-            // button1
+            // btnCreateLeaseContract
             // 
-            this.button1.Location = new System.Drawing.Point(595, 327);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 51);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Creëer leasecontract";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCreateLeaseContract.Location = new System.Drawing.Point(606, 260);
+            this.btnCreateLeaseContract.Name = "btnCreateLeaseContract";
+            this.btnCreateLeaseContract.Size = new System.Drawing.Size(138, 51);
+            this.btnCreateLeaseContract.TabIndex = 4;
+            this.btnCreateLeaseContract.Text = "Creëer leasecontract";
+            this.btnCreateLeaseContract.UseVisualStyleBackColor = true;
+            this.btnCreateLeaseContract.Click += new System.EventHandler(this.btnCreateLeaseContract_Click);
             // 
             // cboxProducts
             // 
@@ -157,22 +158,22 @@
             this.lblCompanyAddress.TabIndex = 12;
             this.lblCompanyAddress.Text = "Straat";
             // 
-            // dateTimePicker1
+            // dtpCreateDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(544, 168);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 13;
+            this.dtpCreateDate.Location = new System.Drawing.Point(544, 168);
+            this.dtpCreateDate.Name = "dtpCreateDate";
+            this.dtpCreateDate.Size = new System.Drawing.Size(200, 22);
+            this.dtpCreateDate.TabIndex = 13;
             // 
-            // checkBox1
+            // cbMonthly
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(191, 285);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(102, 20);
-            this.checkBox1.TabIndex = 14;
-            this.checkBox1.Text = "Maandelijks";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbMonthly.AutoSize = true;
+            this.cbMonthly.Location = new System.Drawing.Point(191, 285);
+            this.cbMonthly.Name = "cbMonthly";
+            this.cbMonthly.Size = new System.Drawing.Size(102, 20);
+            this.cbMonthly.TabIndex = 14;
+            this.cbMonthly.Text = "Maandelijks";
+            this.cbMonthly.UseVisualStyleBackColor = true;
             // 
             // txbTelephoneNumber
             // 
@@ -213,15 +214,15 @@
             this.txbHouseNumber.Size = new System.Drawing.Size(200, 22);
             this.txbHouseNumber.TabIndex = 18;
             // 
-            // checkBox2
+            // cbYearly
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(311, 285);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(79, 20);
-            this.checkBox2.TabIndex = 20;
-            this.checkBox2.Text = "Jaarlijks";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbYearly.AutoSize = true;
+            this.cbYearly.Location = new System.Drawing.Point(311, 285);
+            this.cbYearly.Name = "cbYearly";
+            this.cbYearly.Size = new System.Drawing.Size(79, 20);
+            this.cbYearly.TabIndex = 20;
+            this.cbYearly.Text = "Jaarlijks";
+            this.cbYearly.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -238,20 +239,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.cbYearly);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txbHouseNumber);
             this.Controls.Add(this.txbCity);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txbTelephoneNumber);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.cbMonthly);
+            this.Controls.Add(this.dtpCreateDate);
             this.Controls.Add(this.lblCompanyAddress);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboxProducts);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCreateLeaseContract);
             this.Controls.Add(this.txbStreet);
             this.Controls.Add(this.cboxCompany);
             this.Controls.Add(this.lblCompanyName);
@@ -273,7 +274,7 @@
         private System.Windows.Forms.Label lblCompanyName;
         private System.Windows.Forms.ComboBox cboxCompany;
         private System.Windows.Forms.TextBox txbStreet;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCreateLeaseContract;
         private System.Windows.Forms.BindingSource companyBindingSource;
         private System.Windows.Forms.ComboBox cboxProducts;
         private System.Windows.Forms.BindingSource productBindingSource;
@@ -281,14 +282,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblCompanyAddress;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.DateTimePicker dtpCreateDate;
+        private System.Windows.Forms.CheckBox cbMonthly;
         private System.Windows.Forms.TextBox txbTelephoneNumber;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txbCity;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txbHouseNumber;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox cbYearly;
         private System.Windows.Forms.Label label3;
     }
 }
