@@ -1,4 +1,5 @@
 ﻿using Barroc_Intens.Classes;
+using Barroc_Intens.Finances.LeaseContracts;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -120,6 +121,9 @@ namespace Barroc_Intens.Finances
         private void btnCreateLeaseContract_Click(object sender, EventArgs e)
         {
             string company = dgvCompanies.CurrentRow.Cells[0].Value.ToString();
+
+            CreateLeaseContractForm createLeaseContractForm = new CreateLeaseContractForm(company);
+            createLeaseContractForm.ShowDialog();
         }
     }
 }
