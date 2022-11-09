@@ -131,5 +131,10 @@ namespace Barroc_Intens.Inkoop
             UpdateLabels();
         }
 
+        private void cboxStockStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            //ToDo
+        }
     }
 }
