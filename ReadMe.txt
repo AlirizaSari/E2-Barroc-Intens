@@ -18,7 +18,7 @@ Parameters zijn camelCase
 Locale variabelen camelCase
 private functies camelcase
 public functions PascalCase
-Linq-expressie = x als variabelenaam
+Linq-expressie = camelCase
 Variabelen moeten een duidelijke naam hebben.
 Magic numbers = niet doen.
 Niet met errors pushen.

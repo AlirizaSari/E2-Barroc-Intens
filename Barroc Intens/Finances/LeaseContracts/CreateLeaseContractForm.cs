@@ -18,14 +18,22 @@ namespace Barroc_Intens.Finances.LeaseContracts
         Company _company;
         string _paymentTerm;
 
-        public CreateLeaseContractForm(Company myCompany)
+        public CreateLeaseContractForm(/*Company myCompany*/)
         {
             InitializeComponent();
-            txbCity.Text = myCompany.City;
-            txbHouseNumber.Text = myCompany.HouseNumber;
-            txbStreet.Text = myCompany.Street;
-            txbTelephoneNumber.Text = myCompany.Phone;
-            _company = myCompany;
+            //txbCity.Text = myCompany.City;
+            //txbHouseNumber.Text = myCompany.HouseNumber;
+            //txbStreet.Text = myCompany.Street;
+            //txbTelephoneNumber.Text = myCompany.Phone;
+            //_company = myCompany;
+            //if (myCompany.IsBkrChecked)
+            //{
+            //    cbBkr.Checked = true;
+            //}
+            //else
+            //{
+            //    cbBkr.Checked = false;
+            //}
             //
         }
 
@@ -34,8 +42,27 @@ namespace Barroc_Intens.Finances.LeaseContracts
             this.dbContext = new AppDbContext();
             this.dbContext.Companies.Load();
             this.dbContext.Products.Load();
-            this.companyBindingSource.DataSource = dbContext.Companies.Local.Where(comp => comp.Name == _company.Name);
+            //this.companyBindingSource.DataSource = dbContext.Companies.Local.Where(comp => comp.Name == _company.Name);
+            this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
             this.productBindingSource.DataSource = dbContext.Products.Local.ToBindingList();
+
+            var firstCompany = (Company)cboxCompany.SelectedItem;
+
+            txbCity.Text = firstCompany.City;
+            txbHouseNumber.Text = firstCompany.HouseNumber;
+            txbStreet.Text = firstCompany.Street;
+            txbTelephoneNumber.Text = firstCompany.Phone;
+            _company = firstCompany;
+            if (firstCompany.IsBkrChecked)
+            {
+                cbBkr.Checked = true;
+            }
+            else
+            {
+                cbBkr.Checked = false;
+            }
+
+
         }
 
         private void btnCreateLeaseContract_Click(object sender, EventArgs e)
@@ -51,7 +78,7 @@ namespace Barroc_Intens.Finances.LeaseContracts
 
             int thisProduct = cboxProducts.SelectedIndex;
 
-            if (!string.IsNullOrEmpty(_paymentTerm))
+            if (!string.IsNullOrEmpty(_paymentTerm) && cbBkr.Checked)
             {
                 var leaseContract = new Leasecontract()
                 {
@@ -63,11 +90,42 @@ namespace Barroc_Intens.Finances.LeaseContracts
 
                 dbContext.LeaseContracts.Add(leaseContract);
                 dbContext.SaveChanges();
+                DirectToForm(new LeaseContractForm());
+            }
+            else if (!cbBkr.Checked)
+            {
+                lblError.Text = "BKR is (nog) niet gekeurd";
+            }
+            else
+            {
+                lblError.Text = "Vink de betaaltermijn aan";
             }
             
+        }
 
-            
-            
+        private void cboxCompany_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var currSelect = (Company)cboxCompany.SelectedItem;
+            txbCity.Text = currSelect.City;
+            txbHouseNumber.Text = currSelect.HouseNumber;
+            txbStreet.Text = currSelect.Street;
+            txbTelephoneNumber.Text = currSelect.Phone;
+            _company = currSelect;
+            if (currSelect.IsBkrChecked)
+            {
+                cbBkr.Checked = true;
+            }
+            else
+            {
+                cbBkr.Checked = false;
+            }
+        }
+
+        private void DirectToForm(Form myForm)
+        {
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
         }
     }
 }
