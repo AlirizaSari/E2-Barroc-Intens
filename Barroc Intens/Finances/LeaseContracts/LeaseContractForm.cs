@@ -38,66 +38,7 @@ namespace Barroc_Intens.Finances
             
         }
 
-        private void dgvCompanys_SelectionChanged(object sender, EventArgs e)
-        {
-            
-            if (this.dbContext == null)
-                return;
-
-            var companies = (Company)this.dgvCompanies.CurrentRow?.DataBoundItem;
-
-            if (companies == null)
-                return;
-            else
-            
-            // you may now make a selection of a company in the datagridview. depending on the data it finds about a bkrRegistration it wil check a box if this data is registerd or not. s.smit
-            
-            {
-                if (companies.BkrCheckedAt != null)
-                {
-                    cbBkrPositive.Checked = true;
-                    cbBkrNegative.Checked = false;
-                    //cbBkrNegative.CheckState = CheckState.Unchecked;
-                }
-                else
-                {
-                    cbBkrNegative.Checked = true;
-                    cbBkrPositive.Checked = false;
-                    //cbBkrPositive.CheckState = CheckState.Unchecked;
-                }
-                
-            }
-
-            this.dbContext.Entry(companies)
-            .Reference(c => c.User)
-            .Load();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            var companies = (Company)this.dgvCompanies.CurrentRow?.DataBoundItem;
-            int bkrResult;
-            if (cbBkrNegative.Checked != true)
-            {
-                bkrResult = 1;
-            }
-            else
-            {
-                bkrResult = 0;
-            }
-            
-
-            var leaseContract = new Leasecontract
-            {
-                CompanyId = companies.CompanyId,
-                BkrChecked = bkrResult,
-                UserId = companies.UserId,
-            };
-
-            dbContext.LeaseContracts.Add(leaseContract);
-            dbContext.SaveChanges();
-
-        }
+        
 
         private void btnDirectToFinanceDash_Click(object sender, EventArgs e)
         {
@@ -111,32 +52,18 @@ namespace Barroc_Intens.Finances
             this.Close();
         }
 
-        private void cbBkrPositive_Click(object sender, EventArgs e)
-        {
-            cbBkrNegative.Checked = false;
-        }
-
-        private void cbBkrNegative_Click(object sender, EventArgs e)
-        {
-            cbBkrPositive.Checked = false;
-        }
-
+        
         private void btnCreateLeaseContract_Click(object sender, EventArgs e)
         {
             lblError.Text = "";
-            string company = dgvCompanies.CurrentRow.Cells[0].Value.ToString();
-            var companyInformation = (Company)dgvCompanies.CurrentRow.DataBoundItem;
-
-            if (cbBkrPositive.Checked)
-            {
-                CreateLeaseContractForm createLeaseContractForm = new CreateLeaseContractForm(companyInformation);
-                createLeaseContractForm.ShowDialog();
-            }
-            else
-            {
-                lblError.Text = $"Negatieve BKR van {companyInformation.Name}";
-            }
             
+            CreateLeaseContractForm createLeaseContractForm = new CreateLeaseContractForm();
+            createLeaseContractForm.ShowDialog();
+        }
+
+        private void dgvLeaseContracts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
