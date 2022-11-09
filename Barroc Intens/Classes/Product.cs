@@ -33,5 +33,10 @@ namespace Barroc_Intens
 
         public ObservableCollectionListSource<CustomInvoiceProduct> CustomInvoiceProducts { get; } = new ObservableCollectionListSource<CustomInvoiceProduct>();
         public ObservableCollectionListSource<Leasecontract> LeaseContracts { get; } = new ObservableCollectionListSource<Leasecontract>();
+        public override string ToString()
+        {
+            return this.Name;
+        }
+
     }
 }

@@ -27,12 +27,15 @@ namespace Barroc_Intens.Finances
 
         private void LeaseContractForm_Load(object sender, EventArgs e)
         {
-        this.dbContext = new AppDbContext();
+            this.dbContext = new AppDbContext();
 
-        this.dbContext.Companies.Load();
-        this.dbContext.LeaseContracts.Load();
+            this.dbContext.Companies.Load();
+            this.dbContext.LeaseContracts.Load();
+            this.dbContext.Products.Load();
 
-        this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
+            this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
+            this.leasecontractBindingSource.DataSource = dbContext.LeaseContracts.Local.ToBindingList();
+            
         }
 
         private void dgvCompanys_SelectionChanged(object sender, EventArgs e)

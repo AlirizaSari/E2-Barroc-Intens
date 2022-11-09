@@ -34,7 +34,8 @@ namespace Barroc_Intens.Finances.LeaseContracts
             this.dbContext = new AppDbContext();
             this.dbContext.Companies.Load();
             this.dbContext.Products.Load();
-            this.companyBindingSource.DataSource = dbContext.Companies.Local.Where(comp => comp.Name == _company.Name);
+            //this.companyBindingSource.DataSource = dbContext.Companies.Local.Where(comp => comp.Name == _company.Name);
+            this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
             this.productBindingSource.DataSource = dbContext.Products.Local.ToBindingList();
         }
 
@@ -63,11 +64,19 @@ namespace Barroc_Intens.Finances.LeaseContracts
 
                 dbContext.LeaseContracts.Add(leaseContract);
                 dbContext.SaveChanges();
+                this.Close();
             }
             
+        }
 
-            
-            
+        private void cboxCompany_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var currSelect = (Company)cboxCompany.SelectedItem;
+            txbCity.Text = currSelect.City;
+            txbHouseNumber.Text = currSelect.HouseNumber;
+            txbStreet.Text = currSelect.Street;
+            txbTelephoneNumber.Text = currSelect.Phone;
+            _company = currSelect;
         }
     }
 }

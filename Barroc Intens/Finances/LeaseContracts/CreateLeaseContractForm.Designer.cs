@@ -85,6 +85,7 @@
             this.cboxCompany.Size = new System.Drawing.Size(200, 24);
             this.cboxCompany.TabIndex = 2;
             this.cboxCompany.ValueMember = "CompanyId";
+            this.cboxCompany.SelectedIndexChanged += new System.EventHandler(this.cboxCompany_SelectedIndexChanged);
             // 
             // companyBindingSource
             // 
