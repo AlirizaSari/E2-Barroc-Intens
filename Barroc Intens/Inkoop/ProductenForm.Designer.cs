@@ -325,6 +325,7 @@
             this.cboxStockStatus.Size = new System.Drawing.Size(182, 21);
             this.cboxStockStatus.TabIndex = 21;
             this.cboxStockStatus.ValueMember = "StockStatusId";
+            this.cboxStockStatus.SelectedIndexChanged += new System.EventHandler(this.cboxStockStatus_SelectedIndexChanged);
             // 
             // stockStatusBindingSource
             // 
