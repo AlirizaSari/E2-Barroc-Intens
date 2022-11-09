@@ -31,6 +31,7 @@ namespace Barroc_Intens
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardFinanceForm));
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.lblExtraInfo = new System.Windows.Forms.Label();
             this.txbExtraInfo = new System.Windows.Forms.TextBox();
@@ -45,6 +46,8 @@ namespace Barroc_Intens
             this.btnDirectToInvoice = new System.Windows.Forms.Button();
             this.btnBackToMain = new System.Windows.Forms.Button();
             this.dgvInvoices = new System.Windows.Forms.DataGridView();
+            this.btnPaidInvoice = new System.Windows.Forms.Button();
+            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paidAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,8 +56,6 @@ namespace Barroc_Intens
             this.companyAdressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoursWorkedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnPaidInvoice = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -82,7 +83,7 @@ namespace Barroc_Intens
             this.lblExtraInfo.AutoSize = true;
             this.lblExtraInfo.Location = new System.Drawing.Point(20, 322);
             this.lblExtraInfo.Name = "lblExtraInfo";
-            this.lblExtraInfo.Size = new System.Drawing.Size(115, 20);
+            this.lblExtraInfo.Size = new System.Drawing.Size(144, 25);
             this.lblExtraInfo.TabIndex = 6;
             this.lblExtraInfo.Text = "Extra Informatie";
             // 
@@ -111,7 +112,7 @@ namespace Barroc_Intens
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Location = new System.Drawing.Point(53, 249);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(66, 20);
+            this.lblDepartment.Size = new System.Drawing.Size(83, 25);
             this.lblDepartment.TabIndex = 3;
             this.lblDepartment.Text = "Afdeling";
             // 
@@ -120,7 +121,7 @@ namespace Barroc_Intens
             this.lblAccountName.AutoSize = true;
             this.lblAccountName.Location = new System.Drawing.Point(53, 220);
             this.lblAccountName.Name = "lblAccountName";
-            this.lblAccountName.Size = new System.Drawing.Size(107, 20);
+            this.lblAccountName.Size = new System.Drawing.Size(134, 25);
             this.lblAccountName.TabIndex = 2;
             this.lblAccountName.Text = "Account Naam";
             // 
@@ -155,7 +156,7 @@ namespace Barroc_Intens
             this.btnDirectToInvoiceOverview.Name = "btnDirectToInvoiceOverview";
             this.btnDirectToInvoiceOverview.Size = new System.Drawing.Size(172, 37);
             this.btnDirectToInvoiceOverview.TabIndex = 4;
-            this.btnDirectToInvoiceOverview.Text = "Factuur overzicht";
+            this.btnDirectToInvoiceOverview.Text = "Betaal overzicht";
             this.btnDirectToInvoiceOverview.UseVisualStyleBackColor = true;
             this.btnDirectToInvoiceOverview.Click += new System.EventHandler(this.btnDirectToInvoiceOverview_Click);
             // 
@@ -204,6 +205,8 @@ namespace Barroc_Intens
             this.dgvInvoices.AllowUserToAddRows = false;
             this.dgvInvoices.AllowUserToDeleteRows = false;
             this.dgvInvoices.AutoGenerateColumns = false;
+            this.dgvInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvInvoices.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInvoices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -215,7 +218,7 @@ namespace Barroc_Intens
             this.hoursWorkedDataGridViewTextBoxColumn,
             this.notesDataGridViewTextBoxColumn});
             this.dgvInvoices.DataSource = this.customInvoiceBindingSource;
-            this.dgvInvoices.Location = new System.Drawing.Point(228, 160);
+            this.dgvInvoices.Location = new System.Drawing.Point(228, 175);
             this.dgvInvoices.Name = "dgvInvoices";
             this.dgvInvoices.ReadOnly = true;
             this.dgvInvoices.RowHeadersWidth = 51;
@@ -223,82 +226,6 @@ namespace Barroc_Intens
             this.dgvInvoices.Size = new System.Drawing.Size(882, 182);
             this.dgvInvoices.TabIndex = 2;
             this.dgvInvoices.SelectionChanged += new System.EventHandler(this.dgvInvoices_SelectionChanged);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "CustomInvoiceId";
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 50;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dateDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // paidAtDataGridViewTextBoxColumn
-            // 
-            this.paidAtDataGridViewTextBoxColumn.DataPropertyName = "PaidAt";
-            this.paidAtDataGridViewTextBoxColumn.HeaderText = "PaidAt";
-            this.paidAtDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.paidAtDataGridViewTextBoxColumn.Name = "paidAtDataGridViewTextBoxColumn";
-            this.paidAtDataGridViewTextBoxColumn.ReadOnly = true;
-            this.paidAtDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // companyDataGridViewTextBoxColumn
-            // 
-            this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
-            this.companyDataGridViewTextBoxColumn.HeaderText = "Company";
-            this.companyDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
-            this.companyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.companyDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // companyEmailDataGridViewTextBoxColumn
-            // 
-            this.companyEmailDataGridViewTextBoxColumn.DataPropertyName = "CompanyEmail";
-            this.companyEmailDataGridViewTextBoxColumn.HeaderText = "CompanyEmail";
-            this.companyEmailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.companyEmailDataGridViewTextBoxColumn.Name = "companyEmailDataGridViewTextBoxColumn";
-            this.companyEmailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.companyEmailDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // companyAdressDataGridViewTextBoxColumn
-            // 
-            this.companyAdressDataGridViewTextBoxColumn.DataPropertyName = "CompanyAdress";
-            this.companyAdressDataGridViewTextBoxColumn.HeaderText = "CompanyAdress";
-            this.companyAdressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.companyAdressDataGridViewTextBoxColumn.Name = "companyAdressDataGridViewTextBoxColumn";
-            this.companyAdressDataGridViewTextBoxColumn.ReadOnly = true;
-            this.companyAdressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // hoursWorkedDataGridViewTextBoxColumn
-            // 
-            this.hoursWorkedDataGridViewTextBoxColumn.DataPropertyName = "HoursWorked";
-            this.hoursWorkedDataGridViewTextBoxColumn.HeaderText = "HoursWorked";
-            this.hoursWorkedDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.hoursWorkedDataGridViewTextBoxColumn.Name = "hoursWorkedDataGridViewTextBoxColumn";
-            this.hoursWorkedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hoursWorkedDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // notesDataGridViewTextBoxColumn
-            // 
-            this.notesDataGridViewTextBoxColumn.DataPropertyName = "Notes";
-            this.notesDataGridViewTextBoxColumn.HeaderText = "Notes";
-            this.notesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
-            this.notesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.notesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customInvoiceBindingSource
-            // 
-            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
             // 
             // btnPaidInvoice
             // 
@@ -310,6 +237,82 @@ namespace Barroc_Intens
             this.btnPaidInvoice.UseVisualStyleBackColor = true;
             this.btnPaidInvoice.Click += new System.EventHandler(this.btnPaidInvoice_Click);
             // 
+            // customInvoiceBindingSource
+            // 
+            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "CustomInvoiceId";
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 53;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Datum";
+            this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn.Width = 83;
+            // 
+            // paidAtDataGridViewTextBoxColumn
+            // 
+            this.paidAtDataGridViewTextBoxColumn.DataPropertyName = "PaidAt";
+            this.paidAtDataGridViewTextBoxColumn.HeaderText = "Betaaldatum";
+            this.paidAtDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.paidAtDataGridViewTextBoxColumn.Name = "paidAtDataGridViewTextBoxColumn";
+            this.paidAtDataGridViewTextBoxColumn.ReadOnly = true;
+            this.paidAtDataGridViewTextBoxColumn.Width = 123;
+            // 
+            // companyDataGridViewTextBoxColumn
+            // 
+            this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
+            this.companyDataGridViewTextBoxColumn.HeaderText = "Bedrijf";
+            this.companyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
+            this.companyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.companyDataGridViewTextBoxColumn.Width = 82;
+            // 
+            // companyEmailDataGridViewTextBoxColumn
+            // 
+            this.companyEmailDataGridViewTextBoxColumn.DataPropertyName = "CompanyEmail";
+            this.companyEmailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.companyEmailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.companyEmailDataGridViewTextBoxColumn.Name = "companyEmailDataGridViewTextBoxColumn";
+            this.companyEmailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.companyEmailDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // companyAdressDataGridViewTextBoxColumn
+            // 
+            this.companyAdressDataGridViewTextBoxColumn.DataPropertyName = "CompanyAdress";
+            this.companyAdressDataGridViewTextBoxColumn.HeaderText = "Adres";
+            this.companyAdressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.companyAdressDataGridViewTextBoxColumn.Name = "companyAdressDataGridViewTextBoxColumn";
+            this.companyAdressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.companyAdressDataGridViewTextBoxColumn.Width = 76;
+            // 
+            // hoursWorkedDataGridViewTextBoxColumn
+            // 
+            this.hoursWorkedDataGridViewTextBoxColumn.DataPropertyName = "HoursWorked";
+            this.hoursWorkedDataGridViewTextBoxColumn.HeaderText = "Uur gewerkt";
+            this.hoursWorkedDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hoursWorkedDataGridViewTextBoxColumn.Name = "hoursWorkedDataGridViewTextBoxColumn";
+            this.hoursWorkedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hoursWorkedDataGridViewTextBoxColumn.Width = 118;
+            // 
+            // notesDataGridViewTextBoxColumn
+            // 
+            this.notesDataGridViewTextBoxColumn.DataPropertyName = "Notes";
+            this.notesDataGridViewTextBoxColumn.HeaderText = "Notities";
+            this.notesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
+            this.notesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.notesDataGridViewTextBoxColumn.Width = 90;
+            // 
             // DashboardFinanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -320,6 +323,7 @@ namespace Barroc_Intens
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlLeft);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DashboardFinanceForm";
             this.Text = "Dashboard voor financiën";
