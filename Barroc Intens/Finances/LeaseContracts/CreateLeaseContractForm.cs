@@ -90,7 +90,7 @@ namespace Barroc_Intens.Finances.LeaseContracts
 
                 dbContext.LeaseContracts.Add(leaseContract);
                 dbContext.SaveChanges();
-                this.Close();
+                DirectToForm(new LeaseContractForm());
             }
             else if (!cbBkr.Checked)
             {
@@ -119,6 +119,13 @@ namespace Barroc_Intens.Finances.LeaseContracts
             {
                 cbBkr.Checked = false;
             }
+        }
+
+        private void DirectToForm(Form myForm)
+        {
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
         }
     }
 }

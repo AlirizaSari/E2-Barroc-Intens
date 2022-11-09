@@ -56,14 +56,21 @@ namespace Barroc_Intens.Finances
         private void btnCreateLeaseContract_Click(object sender, EventArgs e)
         {
             lblError.Text = "";
-            
-            CreateLeaseContractForm createLeaseContractForm = new CreateLeaseContractForm();
-            createLeaseContractForm.ShowDialog();
+
+            DirectToForm(new CreateLeaseContractForm());
         }
 
         private void dgvLeaseContracts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnDeleteLeaseContract_Click(object sender, EventArgs e)
+        {
+            var currSelect = (Leasecontract)dgvLeaseContracts.CurrentRow?.DataBoundItem;
+
+            this.dbContext.Remove(currSelect);
+            this.dbContext.SaveChanges();
         }
     }
 }

@@ -42,6 +42,7 @@
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leasecontractBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnDeleteLeaseContract = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLeaseContracts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leasecontractBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
@@ -94,7 +95,7 @@
             this.btnEditLeaseContract.Name = "btnEditLeaseContract";
             this.btnEditLeaseContract.Size = new System.Drawing.Size(173, 44);
             this.btnEditLeaseContract.TabIndex = 28;
-            this.btnEditLeaseContract.Text = "Leasecontract bewerken";
+            this.btnEditLeaseContract.Text = "Bewerken";
             this.btnEditLeaseContract.UseVisualStyleBackColor = true;
             // 
             // dgvLeaseContracts
@@ -160,11 +161,22 @@
             // 
             this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
             // 
+            // btnDeleteLeaseContract
+            // 
+            this.btnDeleteLeaseContract.Location = new System.Drawing.Point(941, 361);
+            this.btnDeleteLeaseContract.Name = "btnDeleteLeaseContract";
+            this.btnDeleteLeaseContract.Size = new System.Drawing.Size(173, 44);
+            this.btnDeleteLeaseContract.TabIndex = 30;
+            this.btnDeleteLeaseContract.Text = "Verwijder";
+            this.btnDeleteLeaseContract.UseVisualStyleBackColor = true;
+            this.btnDeleteLeaseContract.Click += new System.EventHandler(this.btnDeleteLeaseContract_Click);
+            // 
             // LeaseContractForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1199, 637);
+            this.Controls.Add(this.btnDeleteLeaseContract);
             this.Controls.Add(this.dgvLeaseContracts);
             this.Controls.Add(this.btnEditLeaseContract);
             this.Controls.Add(this.lblError);
@@ -197,5 +209,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn createDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentTermDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnDeleteLeaseContract;
     }
 }
