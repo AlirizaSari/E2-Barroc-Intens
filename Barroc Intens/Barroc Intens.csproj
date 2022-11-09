@@ -529,6 +529,7 @@
     <Content Include="bin\Debug\Barroc Intens.exe" />
     <Content Include="bin\Debug\Barroc Intens.pdb" />
     <Content Include="Resources\Logo6_groot.png" />
+    <Content Include="Resources\Logo6_klein.ico" />
     <Content Include="Resources\Logo6_klein.png" />
   </ItemGroup>
   <ItemGroup>
