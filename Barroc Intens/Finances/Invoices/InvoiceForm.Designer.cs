@@ -51,7 +51,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txbEmailAdresCompany = new System.Windows.Forms.TextBox();
             this.cbBkrCheck = new System.Windows.Forms.CheckBox();
-            this.btnSaveToFile = new System.Windows.Forms.Button();
             this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.btnDirectToFinanceDash = new System.Windows.Forms.Button();
             this.cboxCompanyName = new System.Windows.Forms.ComboBox();
@@ -78,7 +77,7 @@
             // 
             // btnCreateInvoice
             // 
-            this.btnCreateInvoice.Location = new System.Drawing.Point(606, 354);
+            this.btnCreateInvoice.Location = new System.Drawing.Point(606, 370);
             this.btnCreateInvoice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreateInvoice.Name = "btnCreateInvoice";
             this.btnCreateInvoice.Size = new System.Drawing.Size(173, 60);
@@ -229,12 +228,12 @@
             // 
             // btnSaveToDatabase
             // 
-            this.btnSaveToDatabase.Location = new System.Drawing.Point(606, 422);
+            this.btnSaveToDatabase.Location = new System.Drawing.Point(606, 438);
             this.btnSaveToDatabase.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSaveToDatabase.Name = "btnSaveToDatabase";
             this.btnSaveToDatabase.Size = new System.Drawing.Size(173, 60);
             this.btnSaveToDatabase.TabIndex = 9;
-            this.btnSaveToDatabase.Text = "Opslaan naar database";
+            this.btnSaveToDatabase.Text = "Opslaan";
             this.btnSaveToDatabase.UseVisualStyleBackColor = true;
             this.btnSaveToDatabase.Click += new System.EventHandler(this.btnSaveToDatabase_Click);
             // 
@@ -276,15 +275,6 @@
             this.cbBkrCheck.TabIndex = 21;
             this.cbBkrCheck.Text = "BKR-check";
             this.cbBkrCheck.UseVisualStyleBackColor = true;
-            // 
-            // btnSaveToFile
-            // 
-            this.btnSaveToFile.Location = new System.Drawing.Point(606, 489);
-            this.btnSaveToFile.Name = "btnSaveToFile";
-            this.btnSaveToFile.Size = new System.Drawing.Size(173, 59);
-            this.btnSaveToFile.TabIndex = 10;
-            this.btnSaveToFile.Text = "Opslaan naar bestand";
-            this.btnSaveToFile.UseVisualStyleBackColor = true;
             // 
             // pboxLogo
             // 
@@ -368,7 +358,6 @@
             this.Controls.Add(this.cboxCompanyName);
             this.Controls.Add(this.btnDirectToFinanceDash);
             this.Controls.Add(this.pboxLogo);
-            this.Controls.Add(this.btnSaveToFile);
             this.Controls.Add(this.cbBkrCheck);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbEmailAdresCompany);
@@ -429,7 +418,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbEmailAdresCompany;
         private System.Windows.Forms.CheckBox cbBkrCheck;
-        private System.Windows.Forms.Button btnSaveToFile;
         private System.Windows.Forms.PictureBox pboxLogo;
         private System.Windows.Forms.Button btnDirectToFinanceDash;
         private System.Windows.Forms.ComboBox cboxCompanyName;

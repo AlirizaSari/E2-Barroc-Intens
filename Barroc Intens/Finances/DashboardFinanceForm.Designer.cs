@@ -50,7 +50,7 @@ namespace Barroc_Intens
             this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paidAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaidAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyAdressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoursWorkedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -210,7 +210,7 @@ namespace Barroc_Intens
             this.dgvInvoices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.companyDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn,
-            this.paidAtDataGridViewTextBoxColumn,
+            this.PaidAt,
             this.companyEmailDataGridViewTextBoxColumn,
             this.companyAdressDataGridViewTextBoxColumn,
             this.hoursWorkedDataGridViewTextBoxColumn,
@@ -257,14 +257,14 @@ namespace Barroc_Intens
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateDataGridViewTextBoxColumn.Width = 83;
             // 
-            // paidAtDataGridViewTextBoxColumn
+            // PaidAt
             // 
-            this.paidAtDataGridViewTextBoxColumn.DataPropertyName = "Datum van betaling";
-            this.paidAtDataGridViewTextBoxColumn.HeaderText = "Betaaldatum";
-            this.paidAtDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.paidAtDataGridViewTextBoxColumn.Name = "paidAtDataGridViewTextBoxColumn";
-            this.paidAtDataGridViewTextBoxColumn.ReadOnly = true;
-            this.paidAtDataGridViewTextBoxColumn.Width = 123;
+            this.PaidAt.DataPropertyName = "PaidAt";
+            this.PaidAt.HeaderText = "Betaaldatum";
+            this.PaidAt.MinimumWidth = 6;
+            this.PaidAt.Name = "PaidAt";
+            this.PaidAt.ReadOnly = true;
+            this.PaidAt.Width = 123;
             // 
             // companyEmailDataGridViewTextBoxColumn
             // 
@@ -348,7 +348,7 @@ namespace Barroc_Intens
         private System.Windows.Forms.Button btnDirectToInvoiceOverview;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paidAtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PaidAt;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyEmailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyAdressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoursWorkedDataGridViewTextBoxColumn;
