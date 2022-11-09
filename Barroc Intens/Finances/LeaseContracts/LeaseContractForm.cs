@@ -72,5 +72,11 @@ namespace Barroc_Intens.Finances
             this.dbContext.Remove(currSelect);
             this.dbContext.SaveChanges();
         }
+
+        private void btnEditLeaseContract_Click(object sender, EventArgs e)
+        {
+            var currSelect = (Leasecontract)dgvLeaseContracts.CurrentRow?.DataBoundItem;
+            DirectToForm(new EditLeaseContractForm(currSelect));
+        }
     }
 }

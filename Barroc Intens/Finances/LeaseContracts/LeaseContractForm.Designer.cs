@@ -36,13 +36,13 @@
             this.lblError = new System.Windows.Forms.Label();
             this.btnEditLeaseContract = new System.Windows.Forms.Button();
             this.dgvLeaseContracts = new System.Windows.Forms.DataGridView();
+            this.btnDeleteLeaseContract = new System.Windows.Forms.Button();
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paymentTermDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leasecontractBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnDeleteLeaseContract = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLeaseContracts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leasecontractBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
@@ -97,6 +97,7 @@
             this.btnEditLeaseContract.TabIndex = 28;
             this.btnEditLeaseContract.Text = "Bewerken";
             this.btnEditLeaseContract.UseVisualStyleBackColor = true;
+            this.btnEditLeaseContract.Click += new System.EventHandler(this.btnEditLeaseContract_Click);
             // 
             // dgvLeaseContracts
             // 
@@ -120,6 +121,16 @@
             this.dgvLeaseContracts.Size = new System.Drawing.Size(858, 386);
             this.dgvLeaseContracts.TabIndex = 29;
             this.dgvLeaseContracts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLeaseContracts_CellClick);
+            // 
+            // btnDeleteLeaseContract
+            // 
+            this.btnDeleteLeaseContract.Location = new System.Drawing.Point(941, 361);
+            this.btnDeleteLeaseContract.Name = "btnDeleteLeaseContract";
+            this.btnDeleteLeaseContract.Size = new System.Drawing.Size(173, 44);
+            this.btnDeleteLeaseContract.TabIndex = 30;
+            this.btnDeleteLeaseContract.Text = "Verwijder";
+            this.btnDeleteLeaseContract.UseVisualStyleBackColor = true;
+            this.btnDeleteLeaseContract.Click += new System.EventHandler(this.btnDeleteLeaseContract_Click);
             // 
             // companyDataGridViewTextBoxColumn
             // 
@@ -160,16 +171,6 @@
             // companyBindingSource
             // 
             this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
-            // 
-            // btnDeleteLeaseContract
-            // 
-            this.btnDeleteLeaseContract.Location = new System.Drawing.Point(941, 361);
-            this.btnDeleteLeaseContract.Name = "btnDeleteLeaseContract";
-            this.btnDeleteLeaseContract.Size = new System.Drawing.Size(173, 44);
-            this.btnDeleteLeaseContract.TabIndex = 30;
-            this.btnDeleteLeaseContract.Text = "Verwijder";
-            this.btnDeleteLeaseContract.UseVisualStyleBackColor = true;
-            this.btnDeleteLeaseContract.Click += new System.EventHandler(this.btnDeleteLeaseContract_Click);
             // 
             // LeaseContractForm
             // 
