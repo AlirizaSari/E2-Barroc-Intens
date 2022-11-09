@@ -43,16 +43,18 @@
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leasecontractBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pboxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLeaseContracts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leasecontractBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 19);
+            this.label2.Location = new System.Drawing.Point(474, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(172, 25);
             this.label2.TabIndex = 5;
@@ -111,7 +113,7 @@
             this.paymentTermDataGridViewTextBoxColumn,
             this.productDataGridViewTextBoxColumn});
             this.dgvLeaseContracts.DataSource = this.leasecontractBindingSource;
-            this.dgvLeaseContracts.Location = new System.Drawing.Point(18, 79);
+            this.dgvLeaseContracts.Location = new System.Drawing.Point(18, 117);
             this.dgvLeaseContracts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvLeaseContracts.Name = "dgvLeaseContracts";
             this.dgvLeaseContracts.RowHeadersVisible = false;
@@ -172,11 +174,22 @@
             // 
             this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
             // 
+            // pboxLogo
+            // 
+            this.pboxLogo.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
+            this.pboxLogo.Location = new System.Drawing.Point(16, 12);
+            this.pboxLogo.Name = "pboxLogo";
+            this.pboxLogo.Size = new System.Drawing.Size(100, 100);
+            this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboxLogo.TabIndex = 31;
+            this.pboxLogo.TabStop = false;
+            // 
             // LeaseContractForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1199, 637);
+            this.Controls.Add(this.pboxLogo);
             this.Controls.Add(this.btnDeleteLeaseContract);
             this.Controls.Add(this.dgvLeaseContracts);
             this.Controls.Add(this.btnEditLeaseContract);
@@ -192,6 +205,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvLeaseContracts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leasecontractBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +225,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentTermDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnDeleteLeaseContract;
+        private System.Windows.Forms.PictureBox pboxLogo;
     }
 }

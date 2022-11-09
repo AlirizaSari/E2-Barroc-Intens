@@ -144,6 +144,7 @@
             this.cbMonthly.TabIndex = 14;
             this.cbMonthly.Text = "Maandelijks";
             this.cbMonthly.UseVisualStyleBackColor = true;
+            this.cbMonthly.Click += new System.EventHandler(this.cbMonthly_Click);
             // 
             // cbYearly
             // 
@@ -154,6 +155,7 @@
             this.cbYearly.TabIndex = 20;
             this.cbYearly.Text = "Jaarlijks";
             this.cbYearly.UseVisualStyleBackColor = true;
+            this.cbYearly.Click += new System.EventHandler(this.cbYearly_Click);
             // 
             // label3
             // 

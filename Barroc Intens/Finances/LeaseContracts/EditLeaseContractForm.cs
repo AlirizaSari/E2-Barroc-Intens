@@ -15,14 +15,14 @@ namespace Barroc_Intens.Finances.LeaseContracts
     public partial class EditLeaseContractForm : Form
     {
         private AppDbContext dbContext;
-        Leasecontract _leaseCcontract;
+        Leasecontract _leaseContract;
         string _paymentTerm;
 
         public EditLeaseContractForm(Leasecontract myLeaseContract)
         {
             InitializeComponent();
             
-            _leaseCcontract = myLeaseContract;
+            _leaseContract = myLeaseContract;
             dtpCreateDate.Value = myLeaseContract.CreateDate;
             
             if (myLeaseContract.PaymentTerm == "Maandelijks")
@@ -42,50 +42,16 @@ namespace Barroc_Intens.Finances.LeaseContracts
             this.dbContext = new AppDbContext();
             this.dbContext.Companies.Load();
             this.dbContext.Products.Load();
+            //this.dbContext.LeaseContracts.Where(l => l == _leaseContract).Load();
             //this.companyBindingSource.DataSource = dbContext.Companies.Local.Where(comp => comp.Name == _company.Name);
             this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
             this.productBindingSource.DataSource = dbContext.Products.Local.ToBindingList();
-
-            cboxCompany.SelectedIndex = cboxCompany.FindStringExact(_leaseCcontract.Company.ToString());
-            cboxProducts.SelectedIndex = cboxProducts.FindStringExact(_leaseCcontract.Product.Name);
-
-        }
-
-        private void EditLeaseContractForm_Click(object sender, EventArgs e)
-        {
-            if (cbMonthly.Checked)
-            {
-                _paymentTerm = "Maandelijks";
-            }
-            else if (cbYearly.Checked)
-            {
-                _paymentTerm = "Jaarlijks";
-            }
-
-            int thisProduct = cboxProducts.SelectedIndex;
-
-            if (!string.IsNullOrEmpty(_paymentTerm))
-            {
-                var leaseContract = new Leasecontract()
-                {
-                    CreateDate = dtpCreateDate.Value,
-                    PaymentTerm = _paymentTerm,
-                    ProductId = (int)cboxProducts.SelectedValue,
-                    CompanyId = (int)cboxCompany.SelectedValue
-                };
-
-                dbContext.LeaseContracts.Add(leaseContract);
-                dbContext.SaveChanges();
-                DirectToForm(new LeaseContractForm());
-            }
-            else
-            {
-                lblError.Text = "Vink de betaaltermijn aan";
-            }
             
-        }
 
-       
+            cboxCompany.SelectedIndex = cboxCompany.FindStringExact(_leaseContract.Company.ToString());
+            cboxProducts.SelectedIndex = cboxProducts.FindStringExact(_leaseContract.Product.Name);
+
+        }
 
         private void DirectToForm(Form myForm)
         {
@@ -96,7 +62,47 @@ namespace Barroc_Intens.Finances.LeaseContracts
 
         private void btnEditLeaseContract_Click(object sender, EventArgs e)
         {
+            var currSelect = (Company)cboxCompany.SelectedItem;
+            var saveLease = dbContext.LeaseContracts.Where(l => l == _leaseContract).FirstOrDefault();
 
+            if (cbMonthly.Checked)
+            {
+                _paymentTerm = "Maandelijks";
+            }
+            else if (cbYearly.Checked)
+            {
+                _paymentTerm = "Jaarlijks";
+            }
+
+            if (!string.IsNullOrEmpty(_paymentTerm) && currSelect.IsBkrChecked)
+            {
+
+                saveLease.CreateDate = dtpCreateDate.Value;
+                saveLease.PaymentTerm = _paymentTerm;
+                saveLease.ProductId = (int)cboxProducts.SelectedValue;
+                saveLease.CompanyId = (int)cboxCompany.SelectedValue;
+
+                dbContext.SaveChanges();
+                DirectToForm(new LeaseContractForm());
+            }
+            else if(!currSelect.IsBkrChecked)
+            {
+                lblError.Text = $"BKR van {currSelect.Name}";
+            }
+            else
+            {
+                lblError.Text = "Vink de betaaltermijn aan";
+            }
+        }
+
+        private void cbMonthly_Click(object sender, EventArgs e)
+        {
+            cbYearly.Checked = false;
+        }
+
+        private void cbYearly_Click(object sender, EventArgs e)
+        {
+            cbMonthly.Checked = false;
         }
     }
 }
