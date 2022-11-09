@@ -26,6 +26,14 @@ namespace Barroc_Intens.Finances.LeaseContracts
             txbStreet.Text = myCompany.Street;
             txbTelephoneNumber.Text = myCompany.Phone;
             _company = myCompany;
+            if (myCompany.IsBkrChecked)
+            {
+                cbBkr.Checked = true;
+            }
+            else
+            {
+                cbBkr.Checked = false;
+            }
             //
         }
 
@@ -52,7 +60,7 @@ namespace Barroc_Intens.Finances.LeaseContracts
 
             int thisProduct = cboxProducts.SelectedIndex;
 
-            if (!string.IsNullOrEmpty(_paymentTerm))
+            if (!string.IsNullOrEmpty(_paymentTerm) && cbBkr.Checked)
             {
                 var leaseContract = new Leasecontract()
                 {
@@ -66,6 +74,14 @@ namespace Barroc_Intens.Finances.LeaseContracts
                 dbContext.SaveChanges();
                 this.Close();
             }
+            else if (!cbBkr.Checked)
+            {
+                lblError.Text = "BKR is (nog) niet gekeurd";
+            }
+            else
+            {
+                lblError.Text = "Vink de betaaltermijn aan";
+            }
             
         }
 
@@ -77,6 +93,14 @@ namespace Barroc_Intens.Finances.LeaseContracts
             txbStreet.Text = currSelect.Street;
             txbTelephoneNumber.Text = currSelect.Phone;
             _company = currSelect;
+            if (currSelect.IsBkrChecked)
+            {
+                cbBkr.Checked = true;
+            }
+            else
+            {
+                cbBkr.Checked = false;
+            }
         }
     }
 }

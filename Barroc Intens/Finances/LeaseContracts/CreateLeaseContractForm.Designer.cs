@@ -50,6 +50,9 @@
             this.txbHouseNumber = new System.Windows.Forms.TextBox();
             this.cbYearly = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.cbBkr = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -169,7 +172,7 @@
             // cbMonthly
             // 
             this.cbMonthly.AutoSize = true;
-            this.cbMonthly.Location = new System.Drawing.Point(191, 285);
+            this.cbMonthly.Location = new System.Drawing.Point(191, 288);
             this.cbMonthly.Name = "cbMonthly";
             this.cbMonthly.Size = new System.Drawing.Size(102, 20);
             this.cbMonthly.TabIndex = 14;
@@ -218,7 +221,7 @@
             // cbYearly
             // 
             this.cbYearly.AutoSize = true;
-            this.cbYearly.Location = new System.Drawing.Point(311, 285);
+            this.cbYearly.Location = new System.Drawing.Point(311, 288);
             this.cbYearly.Name = "cbYearly";
             this.cbYearly.Size = new System.Drawing.Size(79, 20);
             this.cbYearly.TabIndex = 20;
@@ -228,17 +231,48 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(68, 286);
+            this.label3.Location = new System.Drawing.Point(68, 288);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 16);
             this.label3.TabIndex = 21;
             this.label3.Text = "Betaaltermijn";
+            // 
+            // cbBkr
+            // 
+            this.cbBkr.AutoSize = true;
+            this.cbBkr.Location = new System.Drawing.Point(191, 316);
+            this.cbBkr.Name = "cbBkr";
+            this.cbBkr.Size = new System.Drawing.Size(18, 17);
+            this.cbBkr.TabIndex = 22;
+            this.cbBkr.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(68, 316);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 16);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "BKR-check";
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(66, 421);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 20);
+            this.lblError.TabIndex = 24;
             // 
             // CreateLeaseContractForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblError);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbBkr);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbYearly);
             this.Controls.Add(this.label8);
@@ -292,5 +326,8 @@
         private System.Windows.Forms.TextBox txbHouseNumber;
         private System.Windows.Forms.CheckBox cbYearly;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox cbBkr;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblError;
     }
 }
