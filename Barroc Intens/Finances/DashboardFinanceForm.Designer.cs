@@ -48,10 +48,9 @@ namespace Barroc_Intens
             this.dgvInvoices = new System.Windows.Forms.DataGridView();
             this.btnPaidInvoice = new System.Windows.Forms.Button();
             this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paidAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyAdressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoursWorkedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,7 +82,7 @@ namespace Barroc_Intens
             this.lblExtraInfo.AutoSize = true;
             this.lblExtraInfo.Location = new System.Drawing.Point(20, 322);
             this.lblExtraInfo.Name = "lblExtraInfo";
-            this.lblExtraInfo.Size = new System.Drawing.Size(144, 25);
+            this.lblExtraInfo.Size = new System.Drawing.Size(115, 20);
             this.lblExtraInfo.TabIndex = 6;
             this.lblExtraInfo.Text = "Extra Informatie";
             // 
@@ -112,7 +111,7 @@ namespace Barroc_Intens
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Location = new System.Drawing.Point(53, 249);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(83, 25);
+            this.lblDepartment.Size = new System.Drawing.Size(66, 20);
             this.lblDepartment.TabIndex = 3;
             this.lblDepartment.Text = "Afdeling";
             // 
@@ -121,7 +120,7 @@ namespace Barroc_Intens
             this.lblAccountName.AutoSize = true;
             this.lblAccountName.Location = new System.Drawing.Point(53, 220);
             this.lblAccountName.Name = "lblAccountName";
-            this.lblAccountName.Size = new System.Drawing.Size(134, 25);
+            this.lblAccountName.Size = new System.Drawing.Size(107, 20);
             this.lblAccountName.TabIndex = 2;
             this.lblAccountName.Text = "Account Naam";
             // 
@@ -209,10 +208,9 @@ namespace Barroc_Intens
             this.dgvInvoices.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInvoices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
+            this.companyDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn,
             this.paidAtDataGridViewTextBoxColumn,
-            this.companyDataGridViewTextBoxColumn,
             this.companyEmailDataGridViewTextBoxColumn,
             this.companyAdressDataGridViewTextBoxColumn,
             this.hoursWorkedDataGridViewTextBoxColumn,
@@ -241,14 +239,14 @@ namespace Barroc_Intens
             // 
             this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
             // 
-            // Column1
+            // companyDataGridViewTextBoxColumn
             // 
-            this.Column1.DataPropertyName = "CustomInvoiceId";
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 53;
+            this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
+            this.companyDataGridViewTextBoxColumn.HeaderText = "Bedrijf";
+            this.companyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
+            this.companyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.companyDataGridViewTextBoxColumn.Width = 82;
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -261,21 +259,12 @@ namespace Barroc_Intens
             // 
             // paidAtDataGridViewTextBoxColumn
             // 
-            this.paidAtDataGridViewTextBoxColumn.DataPropertyName = "PaidAt";
+            this.paidAtDataGridViewTextBoxColumn.DataPropertyName = "Datum van betaling";
             this.paidAtDataGridViewTextBoxColumn.HeaderText = "Betaaldatum";
             this.paidAtDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.paidAtDataGridViewTextBoxColumn.Name = "paidAtDataGridViewTextBoxColumn";
             this.paidAtDataGridViewTextBoxColumn.ReadOnly = true;
             this.paidAtDataGridViewTextBoxColumn.Width = 123;
-            // 
-            // companyDataGridViewTextBoxColumn
-            // 
-            this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
-            this.companyDataGridViewTextBoxColumn.HeaderText = "Bedrijf";
-            this.companyDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
-            this.companyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.companyDataGridViewTextBoxColumn.Width = 82;
             // 
             // companyEmailDataGridViewTextBoxColumn
             // 
@@ -357,10 +346,9 @@ namespace Barroc_Intens
         private System.Windows.Forms.BindingSource customInvoiceBindingSource;
         private System.Windows.Forms.Button btnPaidInvoice;
         private System.Windows.Forms.Button btnDirectToInvoiceOverview;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn paidAtDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyEmailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyAdressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoursWorkedDataGridViewTextBoxColumn;

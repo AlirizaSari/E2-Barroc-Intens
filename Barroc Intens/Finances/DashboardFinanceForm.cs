@@ -97,11 +97,11 @@ namespace Barroc_Intens
         /// <param name="e"></param>
         private void btnPaidInvoice_Click(object sender, EventArgs e)
         {
-            int getRowData = Convert.ToInt32(dgvInvoices.Rows[dgvInvoices.CurrentCell.RowIndex].Cells[0].Value.ToString());
+            var getRowData = (CustomInvoice)dgvInvoices.CurrentRow?.DataBoundItem;
 
-            //Probleem: CustomInvoiceId match de nummers soms niet
             DateTime thisDay = DateTime.Today;
-            var invoice = dbContext.CustomInvoices.Where(u => u.CustomInvoiceId == getRowData).FirstOrDefault();
+            
+            var invoice = dbContext.CustomInvoices.Where(u => u.CustomInvoiceId == getRowData.CustomInvoiceId).FirstOrDefault();
             
             if (invoice != null)
             {
