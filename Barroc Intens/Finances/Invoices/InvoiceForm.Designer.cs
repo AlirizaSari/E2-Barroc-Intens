@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceForm));
             this.lblInvoice = new System.Windows.Forms.Label();
             this.btnCreateInvoice = new System.Windows.Forms.Button();
             this.nudHoursWorked = new System.Windows.Forms.NumericUpDown();
@@ -390,6 +391,7 @@
             this.Controls.Add(this.btnCreateInvoice);
             this.Controls.Add(this.lblInvoice);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "InvoiceForm";
             this.Text = "Factuurpagina";

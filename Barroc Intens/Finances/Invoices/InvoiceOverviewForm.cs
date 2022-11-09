@@ -52,51 +52,17 @@ namespace Barroc_Intens
 
         private void dgvPaidInvoices_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string companyName = dgvPaidInvoices.CurrentRow.Cells[0].Value.ToString();
-            string invoicePaidAt = dgvPaidInvoices.CurrentRow.Cells[2].Value.ToString();
-            string companyEmail = dgvPaidInvoices.CurrentRow.Cells[3].Value.ToString();
-            string companyAddress = dgvPaidInvoices.CurrentRow.Cells[4].Value.ToString();
-            double hoursWorked = Convert.ToDouble(dgvPaidInvoices.CurrentRow.Cells[5].Value.ToString());
-            double discount = Convert.ToDouble(dgvPaidInvoices.CurrentRow.Cells[6].Value.ToString());
-            double pricePerHour = Convert.ToDouble(dgvPaidInvoices.CurrentRow.Cells[7].Value.ToString());
-            string notes = dgvPaidInvoices.CurrentRow.Cells[8].Value.ToString();
-            string paymentTerm = dgvPaidInvoices.CurrentRow.Cells[9].Value.ToString();
+            var currSelect = (CustomInvoice)dgvPaidInvoices.CurrentRow?.DataBoundItem;
 
-
-            InvoiceInformationForm invoiceInformationForm = new InvoiceInformationForm(companyName,
-                invoicePaidAt,
-                companyEmail,
-                companyAddress,
-                hoursWorked,
-                discount,
-                pricePerHour,
-                notes,
-                paymentTerm);
+            InvoiceInformationForm invoiceInformationForm = new InvoiceInformationForm(currSelect);
             invoiceInformationForm.ShowDialog();
         }
 
         private void dgvNotPaidInvoices_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string companyName = dgvNotPaidInvoices.CurrentRow.Cells[0].Value.ToString();
-            string invoicePaidAt = "";
-            string companyEmail = dgvNotPaidInvoices.CurrentRow.Cells[3].Value.ToString();
-            string companyAddress = dgvNotPaidInvoices.CurrentRow.Cells[4].Value.ToString();
-            double hoursWorked = Convert.ToDouble(dgvNotPaidInvoices.CurrentRow.Cells[5].Value.ToString());
-            double discount = Convert.ToDouble(dgvNotPaidInvoices.CurrentRow.Cells[6].Value.ToString());
-            double pricePerHour = Convert.ToDouble(dgvNotPaidInvoices.CurrentRow.Cells[7].Value.ToString());
-            string notes = dgvNotPaidInvoices.CurrentRow.Cells[8].Value.ToString();
-            string paymentTerm = dgvNotPaidInvoices.CurrentRow.Cells[9].Value.ToString();
+            var currSelect = (CustomInvoice)dgvNotPaidInvoices.CurrentRow?.DataBoundItem;
 
-
-            InvoiceInformationForm invoiceInformationForm = new InvoiceInformationForm(companyName,
-                invoicePaidAt,
-                companyEmail,
-                companyAddress,
-                hoursWorked,
-                discount,
-                pricePerHour,
-                notes,
-                paymentTerm);
+            InvoiceInformationForm invoiceInformationForm = new InvoiceInformationForm(currSelect);
             invoiceInformationForm.ShowDialog();
         }
     }

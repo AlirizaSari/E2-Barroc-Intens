@@ -29,8 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceOverviewForm));
             this.btnBackToFinanceDashboard = new System.Windows.Forms.Button();
             this.dgvPaidInvoices = new System.Windows.Forms.DataGridView();
+            this.companyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paidAtDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyEmailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyAdressDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoursWorkedDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.discountDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pricePerHourDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentTermDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PaymentTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,20 +67,9 @@
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.companyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paidAtDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyEmailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyAdressDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoursWorkedDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.discountDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pricePerHourDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paymentTermDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaidInvoices)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNotPaidInvoices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customInvoiceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotPaidInvoices)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBackToFinanceDashboard
@@ -109,6 +110,100 @@
             this.dgvPaidInvoices.Size = new System.Drawing.Size(297, 364);
             this.dgvPaidInvoices.TabIndex = 1;
             this.dgvPaidInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPaidInvoices_CellClick);
+            // 
+            // companyDataGridViewTextBoxColumn1
+            // 
+            this.companyDataGridViewTextBoxColumn1.DataPropertyName = "Company";
+            this.companyDataGridViewTextBoxColumn1.HeaderText = "Company";
+            this.companyDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.companyDataGridViewTextBoxColumn1.Name = "companyDataGridViewTextBoxColumn1";
+            this.companyDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.companyDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dateDataGridViewTextBoxColumn1
+            // 
+            this.dateDataGridViewTextBoxColumn1.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn1.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
+            this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // paidAtDataGridViewTextBoxColumn1
+            // 
+            this.paidAtDataGridViewTextBoxColumn1.DataPropertyName = "PaidAt";
+            this.paidAtDataGridViewTextBoxColumn1.HeaderText = "PaidAt";
+            this.paidAtDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.paidAtDataGridViewTextBoxColumn1.Name = "paidAtDataGridViewTextBoxColumn1";
+            this.paidAtDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.paidAtDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // companyEmailDataGridViewTextBoxColumn1
+            // 
+            this.companyEmailDataGridViewTextBoxColumn1.DataPropertyName = "CompanyEmail";
+            this.companyEmailDataGridViewTextBoxColumn1.HeaderText = "CompanyEmail";
+            this.companyEmailDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.companyEmailDataGridViewTextBoxColumn1.Name = "companyEmailDataGridViewTextBoxColumn1";
+            this.companyEmailDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.companyEmailDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // companyAdressDataGridViewTextBoxColumn1
+            // 
+            this.companyAdressDataGridViewTextBoxColumn1.DataPropertyName = "CompanyAdress";
+            this.companyAdressDataGridViewTextBoxColumn1.HeaderText = "CompanyAdress";
+            this.companyAdressDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.companyAdressDataGridViewTextBoxColumn1.Name = "companyAdressDataGridViewTextBoxColumn1";
+            this.companyAdressDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.companyAdressDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // hoursWorkedDataGridViewTextBoxColumn1
+            // 
+            this.hoursWorkedDataGridViewTextBoxColumn1.DataPropertyName = "HoursWorked";
+            this.hoursWorkedDataGridViewTextBoxColumn1.HeaderText = "HoursWorked";
+            this.hoursWorkedDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.hoursWorkedDataGridViewTextBoxColumn1.Name = "hoursWorkedDataGridViewTextBoxColumn1";
+            this.hoursWorkedDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.hoursWorkedDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // discountDataGridViewTextBoxColumn1
+            // 
+            this.discountDataGridViewTextBoxColumn1.DataPropertyName = "Discount";
+            this.discountDataGridViewTextBoxColumn1.HeaderText = "Discount";
+            this.discountDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.discountDataGridViewTextBoxColumn1.Name = "discountDataGridViewTextBoxColumn1";
+            this.discountDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.discountDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // pricePerHourDataGridViewTextBoxColumn1
+            // 
+            this.pricePerHourDataGridViewTextBoxColumn1.DataPropertyName = "PricePerHour";
+            this.pricePerHourDataGridViewTextBoxColumn1.HeaderText = "PricePerHour";
+            this.pricePerHourDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.pricePerHourDataGridViewTextBoxColumn1.Name = "pricePerHourDataGridViewTextBoxColumn1";
+            this.pricePerHourDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.pricePerHourDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // notesDataGridViewTextBoxColumn1
+            // 
+            this.notesDataGridViewTextBoxColumn1.DataPropertyName = "Notes";
+            this.notesDataGridViewTextBoxColumn1.HeaderText = "Notes";
+            this.notesDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.notesDataGridViewTextBoxColumn1.Name = "notesDataGridViewTextBoxColumn1";
+            this.notesDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.notesDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // paymentTermDataGridViewTextBoxColumn1
+            // 
+            this.paymentTermDataGridViewTextBoxColumn1.DataPropertyName = "PaymentTerm";
+            this.paymentTermDataGridViewTextBoxColumn1.HeaderText = "PaymentTerm";
+            this.paymentTermDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.paymentTermDataGridViewTextBoxColumn1.Name = "paymentTermDataGridViewTextBoxColumn1";
+            this.paymentTermDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.paymentTermDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // customInvoiceBindingSource
+            // 
+            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
             // 
             // PaymentTerm
             // 
@@ -224,6 +319,7 @@
             this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 125;
             // 
             // dgvNotPaidInvoices
             // 
@@ -344,100 +440,6 @@
             this.dataGridViewTextBoxColumn20.ReadOnly = true;
             this.dataGridViewTextBoxColumn20.Width = 125;
             // 
-            // customInvoiceBindingSource
-            // 
-            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
-            // 
-            // companyDataGridViewTextBoxColumn1
-            // 
-            this.companyDataGridViewTextBoxColumn1.DataPropertyName = "Company";
-            this.companyDataGridViewTextBoxColumn1.HeaderText = "Company";
-            this.companyDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.companyDataGridViewTextBoxColumn1.Name = "companyDataGridViewTextBoxColumn1";
-            this.companyDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.companyDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dateDataGridViewTextBoxColumn1
-            // 
-            this.dateDataGridViewTextBoxColumn1.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn1.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
-            this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dateDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // paidAtDataGridViewTextBoxColumn1
-            // 
-            this.paidAtDataGridViewTextBoxColumn1.DataPropertyName = "PaidAt";
-            this.paidAtDataGridViewTextBoxColumn1.HeaderText = "PaidAt";
-            this.paidAtDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.paidAtDataGridViewTextBoxColumn1.Name = "paidAtDataGridViewTextBoxColumn1";
-            this.paidAtDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.paidAtDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // companyEmailDataGridViewTextBoxColumn1
-            // 
-            this.companyEmailDataGridViewTextBoxColumn1.DataPropertyName = "CompanyEmail";
-            this.companyEmailDataGridViewTextBoxColumn1.HeaderText = "CompanyEmail";
-            this.companyEmailDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.companyEmailDataGridViewTextBoxColumn1.Name = "companyEmailDataGridViewTextBoxColumn1";
-            this.companyEmailDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.companyEmailDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // companyAdressDataGridViewTextBoxColumn1
-            // 
-            this.companyAdressDataGridViewTextBoxColumn1.DataPropertyName = "CompanyAdress";
-            this.companyAdressDataGridViewTextBoxColumn1.HeaderText = "CompanyAdress";
-            this.companyAdressDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.companyAdressDataGridViewTextBoxColumn1.Name = "companyAdressDataGridViewTextBoxColumn1";
-            this.companyAdressDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.companyAdressDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // hoursWorkedDataGridViewTextBoxColumn1
-            // 
-            this.hoursWorkedDataGridViewTextBoxColumn1.DataPropertyName = "HoursWorked";
-            this.hoursWorkedDataGridViewTextBoxColumn1.HeaderText = "HoursWorked";
-            this.hoursWorkedDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.hoursWorkedDataGridViewTextBoxColumn1.Name = "hoursWorkedDataGridViewTextBoxColumn1";
-            this.hoursWorkedDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.hoursWorkedDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // discountDataGridViewTextBoxColumn1
-            // 
-            this.discountDataGridViewTextBoxColumn1.DataPropertyName = "Discount";
-            this.discountDataGridViewTextBoxColumn1.HeaderText = "Discount";
-            this.discountDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.discountDataGridViewTextBoxColumn1.Name = "discountDataGridViewTextBoxColumn1";
-            this.discountDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.discountDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // pricePerHourDataGridViewTextBoxColumn1
-            // 
-            this.pricePerHourDataGridViewTextBoxColumn1.DataPropertyName = "PricePerHour";
-            this.pricePerHourDataGridViewTextBoxColumn1.HeaderText = "PricePerHour";
-            this.pricePerHourDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.pricePerHourDataGridViewTextBoxColumn1.Name = "pricePerHourDataGridViewTextBoxColumn1";
-            this.pricePerHourDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.pricePerHourDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // notesDataGridViewTextBoxColumn1
-            // 
-            this.notesDataGridViewTextBoxColumn1.DataPropertyName = "Notes";
-            this.notesDataGridViewTextBoxColumn1.HeaderText = "Notes";
-            this.notesDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.notesDataGridViewTextBoxColumn1.Name = "notesDataGridViewTextBoxColumn1";
-            this.notesDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.notesDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // paymentTermDataGridViewTextBoxColumn1
-            // 
-            this.paymentTermDataGridViewTextBoxColumn1.DataPropertyName = "PaymentTerm";
-            this.paymentTermDataGridViewTextBoxColumn1.HeaderText = "PaymentTerm";
-            this.paymentTermDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.paymentTermDataGridViewTextBoxColumn1.Name = "paymentTermDataGridViewTextBoxColumn1";
-            this.paymentTermDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.paymentTermDataGridViewTextBoxColumn1.Width = 125;
-            // 
             // InvoiceOverviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -448,12 +450,13 @@
             this.Controls.Add(this.lblPaidInvoices);
             this.Controls.Add(this.dgvPaidInvoices);
             this.Controls.Add(this.btnBackToFinanceDashboard);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InvoiceOverviewForm";
             this.Text = "InvoiceOverviewForm";
             this.Load += new System.EventHandler(this.InvoiceOverviewForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaidInvoices)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNotPaidInvoices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customInvoiceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotPaidInvoices)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

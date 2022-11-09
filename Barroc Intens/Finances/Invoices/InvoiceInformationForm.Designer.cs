@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceInformationForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCompany = new System.Windows.Forms.Label();
             this.lblCompanyEmail = new System.Windows.Forms.Label();
@@ -261,6 +262,7 @@
             this.Controls.Add(this.lblCompanyEmail);
             this.Controls.Add(this.lblCompany);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InvoiceInformationForm";
             this.Text = "InvoiceInformation";
             this.Load += new System.EventHandler(this.InvoiceInformationForm_Load);
