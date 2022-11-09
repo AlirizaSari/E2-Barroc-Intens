@@ -163,7 +163,7 @@ namespace Barroc_Intens
             // 
             this.lblSystemName.AutoSize = true;
             this.lblSystemName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSystemName.Location = new System.Drawing.Point(273, 24);
+            this.lblSystemName.Location = new System.Drawing.Point(417, 24);
             this.lblSystemName.Name = "lblSystemName";
             this.lblSystemName.Size = new System.Drawing.Size(138, 41);
             this.lblSystemName.TabIndex = 3;
@@ -175,7 +175,7 @@ namespace Barroc_Intens
             this.btnDirectToLeaseContract.Name = "btnDirectToLeaseContract";
             this.btnDirectToLeaseContract.Size = new System.Drawing.Size(172, 37);
             this.btnDirectToLeaseContract.TabIndex = 2;
-            this.btnDirectToLeaseContract.Text = "Lease contracten";
+            this.btnDirectToLeaseContract.Text = "Leasecontracten";
             this.btnDirectToLeaseContract.UseVisualStyleBackColor = true;
             this.btnDirectToLeaseContract.Click += new System.EventHandler(this.btnDirectToLeaseContract_Click);
             // 
