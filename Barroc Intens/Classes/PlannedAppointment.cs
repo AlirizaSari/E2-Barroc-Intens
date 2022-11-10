@@ -12,8 +12,8 @@ namespace Barroc_Intens.Classes
         public int PlannedAppointmentId { get; set; }
         public int CompanyId { get; set; }
         public Company Company { get; set; }
-        public DateTime? AppointmentDate { get; set; }
-        public DateTime? AppointmentTime { get; set; }
+        public DateTime AppointmentDate { get; set; }
+        public DateTime AppointmentTime { get; set; }
         public string AppointmentDuration { get; set; }
         public string AssignedEmployee { get; set; }
         public int UserId { get; internal set; }

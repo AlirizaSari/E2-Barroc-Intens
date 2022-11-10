@@ -52,52 +52,29 @@ namespace Barroc_Intens.Maintenance
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            //show the remark of the current selected appointment
-            _appointment = (MaintenanceAppointment)dgvNewAppointments.CurrentRow.DataBoundItem;
-            txbCommandsAppointment.Text = _appointment.Remark;
-            //show the location of the current selected appointment
-            txbCompanyLocation.Text = _appointment.Company.City;
+            //when a date is selected show only the planned appointments of that date
+            if (dgvPlannedAppointments.SelectedRows.Count > 0)
+            {
+                var selectedDate = (DateTime)dgvPlannedAppointments.SelectedRows[0].Cells[0].Value;
+                this.plannedAppointmentBindingSource.DataSource = dbContext.PlannedAppointment.Where(pa => pa.AppointmentDate == selectedDate).ToList();
+            }
+
 
         }
 
         private void mcMaintanence_DateSelected(object sender, DateRangeEventArgs e)
         {
-            this.plannedAppointmentBindingSource.DataSource = dbContext.MaintenanceAppointments.Local.ToBindingList();
-            // show all appointments on the selected date
-            var selectedDate = mcMaintanence.SelectionStart;
-            //var selectedAppointment = dgvPlannedAppointments.DataSource.GetType();
-            //if (selectedAppointment)
-            //{
-
-            //}
-            //dgvPlannedAppointments.DataSource = selectedAppointments;
-
-            
+            this.plannedAppointmentBindingSource.DataSource = dbContext.PlannedAppointment.Where(pa => pa.AppointmentDate == mcMaintanence.SelectionStart).ToList();
+            lblSelectedDate.Text = mcMaintanence.SelectionStart.ToShortDateString().ToString();
 
 
-            ////change the font weight of the selected date
-            ////when clicked on a date with appointments the font weight will be bold
-            ////when clicked on a date without appointments the font weight will be normal 
-            //// based on the existence of appointments on the selected date
-            //if (selectedAppointments.Count > 0)
-            //{
-            //    mcMaintanence.BoldedDates = new DateTime[] { selectedDate };
-            //}
-            //else
-            //{
-            //    mcMaintanence.BoldedDates = new DateTime[] { };
-            //}
-
-
-
-            // show the amount of appointments on the selected date
-            lblSelectedDate.Text = selectedDate.ToString("dd-MM-yyyy");
         }
 
         private void btnCreateAppointment_Click(object sender, EventArgs e)
         {
-            //select the current appointment selected in 
-            var selectedAppointment = (MaintenanceAppointment)dgvNewAppointments.CurrentRow.DataBoundItem;
+        var selectedAppointment = (MaintenanceAppointment)dgvNewAppointments.CurrentRow.DataBoundItem;
+            
+        //select the current appointment selected in 
 
             //this will add the selected appoint to the planned appointment table
             var appointment = new PlannedAppointment()
@@ -110,30 +87,40 @@ namespace Barroc_Intens.Maintenance
                 CompanyId = selectedAppointment.CompanyId,
                 Company = selectedAppointment.Company
             };
-            
+
             if (selectedAppointment != null)
             {
                 dbContext.PlannedAppointment.Add(appointment);
-            //    dbContext.PlannedAppointment.Update(newAppointment);
+                //    dbContext.PlannedAppointment.Update(newAppointment);
                 dbContext.SaveChanges();
                 dgvPlannedAppointments.Refresh();
             }
 
             // this will remove the new appointment
-            
+
 
             dgvNewAppointments.Rows.RemoveAt(dgvNewAppointments.SelectedRows[0].Index);
 
             dbContext.MaintenanceAppointments.Remove(selectedAppointment);
             dbContext.SaveChanges();
 
+            //when a date is selected show only the planned appointments of that date
+            
+            // highlight dates that have a appointment
+            var datesWithAppointments = dbContext.PlannedAppointment.Select(pa => pa.AppointmentDate).Distinct().ToList();
+            mcMaintanence.BoldedDates = datesWithAppointments.ToArray();
+            mcMaintanence.UpdateBoldedDates();
             // the code below will save and refresh the database
 
-            
+
             lblMsgAppointmentPlannend.Text = "afspraak is in geplent";
             lblMsgAppointmentPlannend.Visible = true;
             this.dgvNewAppointments.Refresh();
             lblMsgAppointmentPlannend.Visible = false;
+            
+            txbVisitDuration.Text = "";
+
+
 
         }
 

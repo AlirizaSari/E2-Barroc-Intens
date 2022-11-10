@@ -41,6 +41,7 @@
             this.lblFormTitle = new System.Windows.Forms.Label();
             this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.pnlCalander = new System.Windows.Forms.Panel();
+            this.lblErrorMsgNoAppointments = new System.Windows.Forms.Label();
             this.lblMsgAppointmentPlannend = new System.Windows.Forms.Label();
             this.dtpAppointmentTimeSet = new System.Windows.Forms.DateTimePicker();
             this.btnCreateAppointment = new System.Windows.Forms.Button();
@@ -136,6 +137,7 @@
             // 
             // pnlCalander
             // 
+            this.pnlCalander.Controls.Add(this.lblErrorMsgNoAppointments);
             this.pnlCalander.Controls.Add(this.lblMsgAppointmentPlannend);
             this.pnlCalander.Controls.Add(this.dtpAppointmentTimeSet);
             this.pnlCalander.Controls.Add(this.btnCreateAppointment);
@@ -153,6 +155,16 @@
             this.pnlCalander.Name = "pnlCalander";
             this.pnlCalander.Size = new System.Drawing.Size(378, 719);
             this.pnlCalander.TabIndex = 5;
+            // 
+            // lblErrorMsgNoAppointments
+            // 
+            this.lblErrorMsgNoAppointments.AutoSize = true;
+            this.lblErrorMsgNoAppointments.Location = new System.Drawing.Point(65, 569);
+            this.lblErrorMsgNoAppointments.Name = "lblErrorMsgNoAppointments";
+            this.lblErrorMsgNoAppointments.Size = new System.Drawing.Size(64, 16);
+            this.lblErrorMsgNoAppointments.TabIndex = 23;
+            this.lblErrorMsgNoAppointments.Text = "error msg";
+            this.lblErrorMsgNoAppointments.Visible = false;
             // 
             // lblMsgAppointmentPlannend
             // 
@@ -181,6 +193,7 @@
             this.btnCreateAppointment.TabIndex = 10;
             this.btnCreateAppointment.Text = "Inplannen";
             this.btnCreateAppointment.UseVisualStyleBackColor = true;
+
             this.btnCreateAppointment.Click += new System.EventHandler(this.btnCreateAppointment_Click);
             // 
             // txbVisitDuration
@@ -672,5 +685,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isRoutineAppointmentDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Added;
+        private System.Windows.Forms.Label lblErrorMsgNoAppointments;
     }
 }
