@@ -186,6 +186,7 @@ namespace Barroc_Intens.Finances
         private void cboxCompanyName_SelectedIndexChanged(object sender, EventArgs e)
         {
             GetDatabaseInfo();
+             
         }
 
         private void GetDatabaseInfo()
@@ -194,6 +195,9 @@ namespace Barroc_Intens.Finances
                 return;
 
             var company = (Company)cboxCompanyName.SelectedItem;
+            //txbEmailAdresCompany.Text = 
+            txbCompanyAdress.Text = $"{company.Street} {company.HouseNumber}";
+            
 
             if (company == null)
                 return;
