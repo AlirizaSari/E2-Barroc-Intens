@@ -22,27 +22,21 @@ namespace Barroc_Intens.Finances
         double _discount;
         double _pricePerHour;
         string _invoicePaidAt;
+        CustomInvoice _customInvoice;
 
-        public InvoiceInformationForm(string companyName, 
-            string invoicePaidAt, 
-            string companyEmail,
-            string companyAddress,
-            double hoursWorked,
-            double discount,
-            double pricePerHour,
-            string notes,
-            string paymentTerm)
+        public InvoiceInformationForm(CustomInvoice chosenInvoice)
         {
             InitializeComponent();
-            _companyName = companyName;
-            _companyEmail = companyEmail;
-            _companyAddress = companyAddress;
-            _hoursWorked = hoursWorked;
-            _discount = discount;
-            _pricePerHour = pricePerHour;
-            _notes = notes;
-            _invoicePaidAt = invoicePaidAt;
-            _paymentTerm = paymentTerm;
+            _companyName = chosenInvoice.Company.ToString();
+            _companyEmail = chosenInvoice.CompanyEmail;
+            _companyAddress = chosenInvoice.CompanyAdress;
+            _hoursWorked = chosenInvoice.HoursWorked;
+            _discount = chosenInvoice.Discount;
+            _pricePerHour = chosenInvoice.PricePerHour;
+            _notes = chosenInvoice.Notes;
+            _invoicePaidAt = Convert.ToString(chosenInvoice.PaidAt);
+            _paymentTerm = chosenInvoice.PaymentTerm;
+            _customInvoice = chosenInvoice;
         }
 
         private void InvoiceInformationForm_Load(object sender, EventArgs e)

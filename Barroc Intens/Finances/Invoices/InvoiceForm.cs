@@ -72,8 +72,7 @@ namespace Barroc_Intens.Finances
                 _message = $"Hallo {_companyName},%0d%0a" +
                 $"%0d%0aOp {_date} is er een koffiezetapparaat geïnstalleerd.%0d%0a" +
                 $"Gelieve de volgende kosten zo snel mogelijk te betalen:%0d%0a%0d%0a" +
-                $"Uur gewerkt%20|%20Arbeidskosten per uur%20|%20Korting%20|%20total%0d%0a" +
-                $"Uw betaaltermijn is: {_paymentTerm}";
+                $"Uur gewerkt%20|%20Arbeidskosten per uur%20|%20Korting%20|%20total%0d%0a";
 
                 if (_discount > 0 && _discount <= 100)
                 {
@@ -88,9 +87,10 @@ namespace Barroc_Intens.Finances
                 {
                     _message += $"%0d%0a{_comment}%0d%0a";
                 }
+                _message += $"Uw betaaltermijn is: {_paymentTerm}%0d%0a";
 
                 _message += $"%0d%0aMet vriendelijke groeten,%0d%0a" +
-                    $"Barroc Intens%0d%0a";
+                    $"Barroc Intens%0d%0a%0d%0a";
 
                 lblError.Text = "";
 
@@ -186,6 +186,7 @@ namespace Barroc_Intens.Finances
         private void cboxCompanyName_SelectedIndexChanged(object sender, EventArgs e)
         {
             GetDatabaseInfo();
+             
         }
 
         private void GetDatabaseInfo()
@@ -194,6 +195,9 @@ namespace Barroc_Intens.Finances
                 return;
 
             var company = (Company)cboxCompanyName.SelectedItem;
+            //txbEmailAdresCompany.Text = 
+            txbCompanyAdress.Text = $"{company.Street} {company.HouseNumber}";
+            
 
             if (company == null)
                 return;

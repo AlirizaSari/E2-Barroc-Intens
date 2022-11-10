@@ -65,9 +65,10 @@ namespace Barroc_Intens
 
             modelBuilder.Entity<Company>().HasData(
                 new Company { CompanyId = 1, Name = "Curio", Phone = "0648686105", EmailAddress = "curio@curio.com",Street = "Terheidenseweg", HouseNumber = "350", City = "Breda", CountryCode = "31", IsBkrChecked = true, BkrCheckedAt = DateTime.Now, UserId = 1 },
-                new Company { CompanyId = 2, Name = "Hustllebv", Phone = "0658686185", EmailAddress = "hustllebv@hustle.nl",Street = "Poolseweg", HouseNumber = "50", City = "Tilburg", CountryCode = "31", IsBkrChecked = true, BkrCheckedAt = DateTime.Today.AddDays(-10), UserId = 2 },
-                new Company { CompanyId = 3, Name = "Jarmo Inc.", Phone = "267-555-0100", EmailAddress = "Jarmo@Jarmo.nl",Street = "Grove Street", HouseNumber = "204", City = "LazyTown", CountryCode = "69", IsBkrChecked = false, BkrCheckedAt = null, UserId = 3
-                });
+                new Company { CompanyId = 2, Name = "Hustllebv", Phone = "0658686185", EmailAddress = "hustlebv@hustle.nl"Street = "Poolseweg", HouseNumber = "50", City = "Tilburg", CountryCode = "31", IsBkrChecked = true, BkrCheckedAt = DateTime.Today.AddDays(-10), UserId = 2 },
+                new Company { CompanyId = 3, Name = "Jarmo Inc.", Phone = "267-555-0100", EmailAddress = "jarmo@jarmo.nl"Street = "Grove Street", HouseNumber = "204", City = "Hanga Roa", CountryCode = "69", IsBkrChecked = false, BkrCheckedAt = null, UserId = 3 },
+                new Company { CompanyId = 4, Name = "Robbie Rotten corp.", Phone = "06-12345678", EmailAddress = "rotten@robbie.nl"Street = "BillboardStreet", HouseNumber = "1", City = "Lazy Town", CountryCode = "97", IsBkrChecked = false, BkrCheckedAt = null, UserId = 4 }
+                );
 
             modelBuilder.Entity<Leasecontract>().HasData(
                 new Leasecontract { id = 1, CompanyId = 1, BkrChecked = 1, UserId = 1, ProductId = 2, PaymentTerm = "Jaarlijks", CreateDate = DateTime.Today.AddMonths(-1) }, 
