@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateLeaseContractForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCompanyName = new System.Windows.Forms.Label();
             this.cboxCompany = new System.Windows.Forms.ComboBox();
@@ -292,6 +293,7 @@
             this.Controls.Add(this.cboxCompany);
             this.Controls.Add(this.lblCompanyName);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateLeaseContractForm";
             this.Text = "Creëer leasecontract";
             this.Load += new System.EventHandler(this.CreateInvoiceForm_Load);

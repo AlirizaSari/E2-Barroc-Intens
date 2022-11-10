@@ -50,9 +50,10 @@
             // pboxLogo
             // 
             this.pboxLogo.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
-            this.pboxLogo.Location = new System.Drawing.Point(12, 12);
+            this.pboxLogo.Location = new System.Drawing.Point(16, 15);
+            this.pboxLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pboxLogo.Name = "pboxLogo";
-            this.pboxLogo.Size = new System.Drawing.Size(100, 100);
+            this.pboxLogo.Size = new System.Drawing.Size(133, 123);
             this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboxLogo.TabIndex = 2;
             this.pboxLogo.TabStop = false;
@@ -61,9 +62,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(142, 12);
+            this.label1.Location = new System.Drawing.Point(189, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 31);
+            this.label1.Size = new System.Drawing.Size(204, 39);
             this.label1.TabIndex = 3;
             this.label1.Text = "Bestellingen";
             // 
@@ -84,17 +86,20 @@
             this.stockStatusDataGridViewTextBoxColumn});
             this.dgvProductsOrders.DataSource = this.productBindingSource;
             this.dgvProductsOrders.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvProductsOrders.Location = new System.Drawing.Point(148, 60);
+            this.dgvProductsOrders.Location = new System.Drawing.Point(197, 74);
+            this.dgvProductsOrders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvProductsOrders.Name = "dgvProductsOrders";
             this.dgvProductsOrders.ReadOnly = true;
             this.dgvProductsOrders.RowHeadersVisible = false;
-            this.dgvProductsOrders.Size = new System.Drawing.Size(640, 311);
+            this.dgvProductsOrders.RowHeadersWidth = 51;
+            this.dgvProductsOrders.Size = new System.Drawing.Size(853, 383);
             this.dgvProductsOrders.TabIndex = 4;
             // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Naam";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             this.nameDataGridViewTextBoxColumn.Width = 175;
@@ -103,27 +108,34 @@
             // 
             this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
             this.categoryDataGridViewTextBoxColumn.HeaderText = "Categorie";
+            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
             this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
+            this.categoryDataGridViewTextBoxColumn.Width = 125;
             // 
             // amountInStockDataGridViewTextBoxColumn
             // 
             this.amountInStockDataGridViewTextBoxColumn.DataPropertyName = "AmountInStock";
             this.amountInStockDataGridViewTextBoxColumn.HeaderText = "Vooraad";
+            this.amountInStockDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.amountInStockDataGridViewTextBoxColumn.Name = "amountInStockDataGridViewTextBoxColumn";
             this.amountInStockDataGridViewTextBoxColumn.ReadOnly = true;
+            this.amountInStockDataGridViewTextBoxColumn.Width = 125;
             // 
             // OrderAmount
             // 
             this.OrderAmount.DataPropertyName = "OrderAmount";
             this.OrderAmount.HeaderText = "Voorraad Besteld";
+            this.OrderAmount.MinimumWidth = 6;
             this.OrderAmount.Name = "OrderAmount";
             this.OrderAmount.ReadOnly = true;
+            this.OrderAmount.Width = 125;
             // 
             // stockStatusDataGridViewTextBoxColumn
             // 
             this.stockStatusDataGridViewTextBoxColumn.DataPropertyName = "StockStatus";
             this.stockStatusDataGridViewTextBoxColumn.HeaderText = "VoorraadStatus";
+            this.stockStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.stockStatusDataGridViewTextBoxColumn.Name = "stockStatusDataGridViewTextBoxColumn";
             this.stockStatusDataGridViewTextBoxColumn.ReadOnly = true;
             this.stockStatusDataGridViewTextBoxColumn.Width = 150;
@@ -134,9 +146,10 @@
             // 
             // btnAcceptOrder
             // 
-            this.btnAcceptOrder.Location = new System.Drawing.Point(148, 388);
+            this.btnAcceptOrder.Location = new System.Drawing.Point(197, 478);
+            this.btnAcceptOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAcceptOrder.Name = "btnAcceptOrder";
-            this.btnAcceptOrder.Size = new System.Drawing.Size(141, 34);
+            this.btnAcceptOrder.Size = new System.Drawing.Size(188, 42);
             this.btnAcceptOrder.TabIndex = 5;
             this.btnAcceptOrder.Text = "Accepteren";
             this.btnAcceptOrder.UseVisualStyleBackColor = true;
@@ -144,9 +157,10 @@
             // 
             // btnCancelOrder
             // 
-            this.btnCancelOrder.Location = new System.Drawing.Point(295, 388);
+            this.btnCancelOrder.Location = new System.Drawing.Point(393, 478);
+            this.btnCancelOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelOrder.Name = "btnCancelOrder";
-            this.btnCancelOrder.Size = new System.Drawing.Size(141, 34);
+            this.btnCancelOrder.Size = new System.Drawing.Size(188, 42);
             this.btnCancelOrder.TabIndex = 6;
             this.btnCancelOrder.Text = "Annuleren";
             this.btnCancelOrder.UseVisualStyleBackColor = true;
@@ -154,9 +168,10 @@
             // 
             // btnBackToDashbaord
             // 
-            this.btnBackToDashbaord.Location = new System.Drawing.Point(647, 12);
+            this.btnBackToDashbaord.Location = new System.Drawing.Point(863, 15);
+            this.btnBackToDashbaord.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBackToDashbaord.Name = "btnBackToDashbaord";
-            this.btnBackToDashbaord.Size = new System.Drawing.Size(141, 34);
+            this.btnBackToDashbaord.Size = new System.Drawing.Size(188, 42);
             this.btnBackToDashbaord.TabIndex = 7;
             this.btnBackToDashbaord.Text = "Terug naar Dashboard";
             this.btnBackToDashbaord.UseVisualStyleBackColor = true;
@@ -164,9 +179,9 @@
             // 
             // OrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnBackToDashbaord);
             this.Controls.Add(this.btnCancelOrder);
             this.Controls.Add(this.btnAcceptOrder);
@@ -174,6 +189,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pboxLogo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "OrderForm";
             this.Text = "Bestellingen van Producten";
             this.Load += new System.EventHandler(this.OrderForm_Load);

@@ -130,6 +130,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddCategoryForm";
             this.Text = "Categorie toevoegen";
             this.Load += new System.EventHandler(this.AddCategoryForm_Load);
