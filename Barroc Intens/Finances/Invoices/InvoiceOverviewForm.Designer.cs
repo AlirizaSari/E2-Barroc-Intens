@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceOverviewForm));
             this.btnBackToFinanceDashboard = new System.Windows.Forms.Button();
             this.dgvPaidInvoices = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PaymentTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,14 +47,13 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvNotPaidInvoices = new System.Windows.Forms.DataGridView();
-            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.companyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paidAtDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaidInvoices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotPaidInvoices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customInvoiceBindingSource)).BeginInit();
@@ -74,6 +74,7 @@
             this.dgvPaidInvoices.AllowUserToAddRows = false;
             this.dgvPaidInvoices.AllowUserToDeleteRows = false;
             this.dgvPaidInvoices.AutoGenerateColumns = false;
+            this.dgvPaidInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPaidInvoices.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvPaidInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPaidInvoices.ColumnHeadersVisible = false;
@@ -91,6 +92,15 @@
             this.dgvPaidInvoices.Size = new System.Drawing.Size(297, 364);
             this.dgvPaidInvoices.TabIndex = 1;
             this.dgvPaidInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPaidInvoices_CellClick);
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "PaymentTerm";
+            this.dataGridViewTextBoxColumn13.HeaderText = "PaymentTerm";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 6;
             // 
             // PaymentTerm
             // 
@@ -213,6 +223,7 @@
             this.dgvNotPaidInvoices.AllowUserToAddRows = false;
             this.dgvNotPaidInvoices.AllowUserToDeleteRows = false;
             this.dgvNotPaidInvoices.AutoGenerateColumns = false;
+            this.dgvNotPaidInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvNotPaidInvoices.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvNotPaidInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNotPaidInvoices.ColumnHeadersVisible = false;
@@ -230,10 +241,6 @@
             this.dgvNotPaidInvoices.TabIndex = 5;
             this.dgvNotPaidInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNotPaidInvoices_CellClick);
             // 
-            // customInvoiceBindingSource
-            // 
-            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
-            // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Company";
@@ -241,7 +248,7 @@
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 125;
+            this.dataGridViewTextBoxColumn3.Width = 6;
             // 
             // dataGridViewTextBoxColumn12
             // 
@@ -250,7 +257,7 @@
             this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 125;
+            this.dataGridViewTextBoxColumn12.Width = 6;
             // 
             // dataGridViewTextBoxColumn20
             // 
@@ -259,7 +266,11 @@
             this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             this.dataGridViewTextBoxColumn20.ReadOnly = true;
-            this.dataGridViewTextBoxColumn20.Width = 125;
+            this.dataGridViewTextBoxColumn20.Width = 6;
+            // 
+            // customInvoiceBindingSource
+            // 
+            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
             // 
             // companyDataGridViewTextBoxColumn1
             // 
@@ -268,7 +279,7 @@
             this.companyDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.companyDataGridViewTextBoxColumn1.Name = "companyDataGridViewTextBoxColumn1";
             this.companyDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.companyDataGridViewTextBoxColumn1.Width = 125;
+            this.companyDataGridViewTextBoxColumn1.Width = 6;
             // 
             // dateDataGridViewTextBoxColumn1
             // 
@@ -277,7 +288,7 @@
             this.dateDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
             this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dateDataGridViewTextBoxColumn1.Width = 125;
+            this.dateDataGridViewTextBoxColumn1.Width = 6;
             // 
             // paidAtDataGridViewTextBoxColumn1
             // 
@@ -286,16 +297,7 @@
             this.paidAtDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.paidAtDataGridViewTextBoxColumn1.Name = "paidAtDataGridViewTextBoxColumn1";
             this.paidAtDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.paidAtDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "PaymentTerm";
-            this.dataGridViewTextBoxColumn13.HeaderText = "PaymentTerm";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 125;
+            this.paidAtDataGridViewTextBoxColumn1.Width = 6;
             // 
             // InvoiceOverviewForm
             // 
