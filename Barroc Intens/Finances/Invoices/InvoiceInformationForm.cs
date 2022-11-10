@@ -28,8 +28,8 @@ namespace Barroc_Intens.Finances
         {
             InitializeComponent();
             _companyName = chosenInvoice.Company.ToString();
-            _companyEmail = chosenInvoice.CompanyEmail;
-            _companyAddress = chosenInvoice.CompanyAdress;
+            //_companyEmail = chosenInvoice.CompanyEmail;
+            //_companyAddress = chosenInvoice.CompanyAdress;
             _hoursWorked = chosenInvoice.HoursWorked;
             _discount = chosenInvoice.Discount;
             _pricePerHour = chosenInvoice.PricePerHour;

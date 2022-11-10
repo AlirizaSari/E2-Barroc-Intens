@@ -24,11 +24,7 @@ namespace Barroc_Intens.Inkoop
         {
 
             this.dbContext = new AppDbContext();
-            this.dbContext.Products.Where(ss => ss.StockStatusId == 4)
-                .Include(c => c.Category)
-                .Include(ss => ss.StockStatus)
-                .Load();
-            this.dbContext.Products.Where(ss => ss.StockStatusId == 3)
+            this.dbContext.Products.Where(p => p.StockStatusId == 3 || p.StockStatusId == 4)
                 .Include(c => c.Category)
                 .Include(ss => ss.StockStatus)
                 .Load();
