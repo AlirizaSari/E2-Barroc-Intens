@@ -100,25 +100,24 @@ namespace Barroc_Intens.Maintenance
             var selectedAppointment = (MaintenanceAppointment)dgvNewAppointments.CurrentRow.DataBoundItem;
 
             //this will add the selected appoint to the planned appointment table
-            //var newAppointment = new PlannedAppointment()
-            //{
-                  
-            //    AppointmentDate = mcMaintanence.SelectionStart,
-            //    AppointmentTime = mcMaintanence.SelectionStart.ToLocalTime(),
-            //    AppointmentDuration = txbVisitDuration.Text,
-            //    AssignedEmployee = cbEmployeeAsigned.Text,
-            //    UserId = UserLoginInformation.LoginUserId,
-            //    CompanyId = selectedAppointment.CompanyId,
-            //    Company = selectedAppointment.Company
-            //};
+            var appointment = new PlannedAppointment()
+            {
+                AppointmentDate = mcMaintanence.SelectionStart,
+                AppointmentTime = mcMaintanence.SelectionStart.ToLocalTime(),
+                AppointmentDuration = txbVisitDuration.Text,
+                AssignedEmployee = cbEmployeeAsigned.Text,
+                UserId = UserLoginInformation.LoginUserId,
+                CompanyId = selectedAppointment.CompanyId,
+                Company = selectedAppointment.Company
+            };
             
-            //if (selectedAppointment != null)
-            //{
-            //    this.dbContext.PlannedAppointment.Add(newAppointment);
+            if (selectedAppointment != null)
+            {
+                dbContext.PlannedAppointment.Add(appointment);
             //    dbContext.PlannedAppointment.Update(newAppointment);
-            //    dbContext.SaveChanges();
-            //    dgvPlannedAppointments.Refresh();
-            //}
+                dbContext.SaveChanges();
+                dgvPlannedAppointments.Refresh();
+            }
 
             // this will remove the new appointment
             
