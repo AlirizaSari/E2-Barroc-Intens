@@ -133,7 +133,6 @@ namespace Barroc_Intens.Inkoop
 
         private void cboxStockStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             //ToDo
         }
     }

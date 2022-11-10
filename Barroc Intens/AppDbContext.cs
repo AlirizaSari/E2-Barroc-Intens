@@ -64,9 +64,9 @@ namespace Barroc_Intens
 
 
             modelBuilder.Entity<Company>().HasData(
-                new Company { CompanyId = 1, Name = "Curio", Phone = "0648686105", Street = "Terheidenseweg", HouseNumber = "350", City = "Breda", CountryCode = "31", IsBkrChecked = true, BkrCheckedAt = DateTime.Now, UserId = 1 },
-                new Company { CompanyId = 2, Name = "Hustllebv", Phone = "0658686185", Street = "Poolseweg", HouseNumber = "50", City = "Tilburg", CountryCode = "31", IsBkrChecked = true, BkrCheckedAt = DateTime.Today.AddDays(-10), UserId = 2 },
-                new Company { CompanyId = 3, Name = "Jarmo Inc.", Phone = "267-555-0100", Street = "Grove Street", HouseNumber = "204", City = "LazyTown", CountryCode = "69", IsBkrChecked = false, BkrCheckedAt = null, UserId = 3
+                new Company { CompanyId = 1, Name = "Curio", Phone = "0648686105", EmailAddress = "curio@curio.com",Street = "Terheidenseweg", HouseNumber = "350", City = "Breda", CountryCode = "31", IsBkrChecked = true, BkrCheckedAt = DateTime.Now, UserId = 1 },
+                new Company { CompanyId = 2, Name = "Hustllebv", Phone = "0658686185", EmailAddress = "hustllebv@hustle.nl",Street = "Poolseweg", HouseNumber = "50", City = "Tilburg", CountryCode = "31", IsBkrChecked = true, BkrCheckedAt = DateTime.Today.AddDays(-10), UserId = 2 },
+                new Company { CompanyId = 3, Name = "Jarmo Inc.", Phone = "267-555-0100", EmailAddress = "Jarmo@Jarmo.nl",Street = "Grove Street", HouseNumber = "204", City = "LazyTown", CountryCode = "69", IsBkrChecked = false, BkrCheckedAt = null, UserId = 3
                 });
 
             modelBuilder.Entity<Leasecontract>().HasData(
@@ -81,9 +81,9 @@ namespace Barroc_Intens
                 });
 
             modelBuilder.Entity<CustomInvoice>().HasData(
-                new CustomInvoice { CustomInvoiceId=1, CompanyId=2, CompanyAdress= "Terheijdenseweg 350", CompanyEmail = "Hustle@bv.com", Date = DateTime.Today.AddDays(20), PricePerHour = 30, Discount = 0, HoursWorked = 10, PaidAt = null, Notes = "Koffiebonen ontbreken nog", PaymentTerm = "Jaarlijks" },
-                new CustomInvoice { CustomInvoiceId=2, CompanyId=3, CompanyAdress= "Koekeloerestraat 123", CompanyEmail = "JarmoInc@email.com", Date = DateTime.Today, PricePerHour = 10, Discount = 0, HoursWorked = 4, PaidAt = null, Notes = "BKR is nog niet gechecked", PaymentTerm = "Maandelijks" },
-                new CustomInvoice { CustomInvoiceId=3, CompanyId=1, CompanyAdress= "Sesamstraat 123", CompanyEmail = "Curio@cur.io", Date = DateTime.Today.AddDays(-20), PricePerHour = 20, Discount = 10, HoursWorked = 40, PaidAt = DateTime.Today, Notes = "10 jaar klant", PaymentTerm = "Jaarlijks" }
+                new CustomInvoice { CustomInvoiceId=1, CompanyId=2, Date = DateTime.Today.AddDays(20), PricePerHour = 30, Discount = 0, HoursWorked = 10, PaidAt = null, Notes = "Koffiebonen ontbreken nog", PaymentTerm = "Jaarlijks" },
+                new CustomInvoice { CustomInvoiceId=2, CompanyId=3, Date = DateTime.Today, PricePerHour = 10, Discount = 0, HoursWorked = 4, PaidAt = null, Notes = "BKR is nog niet gechecked", PaymentTerm = "Maandelijks" },
+                new CustomInvoice { CustomInvoiceId=3, CompanyId=1, Date = DateTime.Today.AddDays(-20), PricePerHour = 20, Discount = 10, HoursWorked = 40, PaidAt = DateTime.Today, Notes = "10 jaar klant", PaymentTerm = "Jaarlijks" }
                 );
 
             modelBuilder.Entity<StockStatus>().HasData(
