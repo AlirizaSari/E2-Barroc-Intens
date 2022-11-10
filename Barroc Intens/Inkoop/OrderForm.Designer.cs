@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProductsOrders = new System.Windows.Forms.DataGridView();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnAcceptOrder = new System.Windows.Forms.Button();
-            this.btnCancelOrder = new System.Windows.Forms.Button();
-            this.btnBackToDashbaord = new System.Windows.Forms.Button();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountInStockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnAcceptOrder = new System.Windows.Forms.Button();
+            this.btnCancelOrder = new System.Windows.Forms.Button();
+            this.btnBackToDashbaord = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductsOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -90,40 +91,6 @@
             this.dgvProductsOrders.Size = new System.Drawing.Size(640, 311);
             this.dgvProductsOrders.TabIndex = 4;
             // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
-            // 
-            // btnAcceptOrder
-            // 
-            this.btnAcceptOrder.Location = new System.Drawing.Point(148, 388);
-            this.btnAcceptOrder.Name = "btnAcceptOrder";
-            this.btnAcceptOrder.Size = new System.Drawing.Size(141, 34);
-            this.btnAcceptOrder.TabIndex = 5;
-            this.btnAcceptOrder.Text = "Accepteren";
-            this.btnAcceptOrder.UseVisualStyleBackColor = true;
-            this.btnAcceptOrder.Click += new System.EventHandler(this.btnAcceptOrder_Click);
-            // 
-            // btnCancelOrder
-            // 
-            this.btnCancelOrder.Location = new System.Drawing.Point(295, 388);
-            this.btnCancelOrder.Name = "btnCancelOrder";
-            this.btnCancelOrder.Size = new System.Drawing.Size(141, 34);
-            this.btnCancelOrder.TabIndex = 6;
-            this.btnCancelOrder.Text = "Annuleren";
-            this.btnCancelOrder.UseVisualStyleBackColor = true;
-            this.btnCancelOrder.Click += new System.EventHandler(this.btnCancelOrder_Click);
-            // 
-            // btnBackToDashbaord
-            // 
-            this.btnBackToDashbaord.Location = new System.Drawing.Point(647, 12);
-            this.btnBackToDashbaord.Name = "btnBackToDashbaord";
-            this.btnBackToDashbaord.Size = new System.Drawing.Size(141, 34);
-            this.btnBackToDashbaord.TabIndex = 7;
-            this.btnBackToDashbaord.Text = "Terug naar Dashboard";
-            this.btnBackToDashbaord.UseVisualStyleBackColor = true;
-            this.btnBackToDashbaord.Click += new System.EventHandler(this.btnBackToDashbaord_Click);
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
@@ -161,6 +128,40 @@
             this.stockStatusDataGridViewTextBoxColumn.ReadOnly = true;
             this.stockStatusDataGridViewTextBoxColumn.Width = 150;
             // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
+            // 
+            // btnAcceptOrder
+            // 
+            this.btnAcceptOrder.Location = new System.Drawing.Point(148, 388);
+            this.btnAcceptOrder.Name = "btnAcceptOrder";
+            this.btnAcceptOrder.Size = new System.Drawing.Size(141, 34);
+            this.btnAcceptOrder.TabIndex = 5;
+            this.btnAcceptOrder.Text = "Accepteren";
+            this.btnAcceptOrder.UseVisualStyleBackColor = true;
+            this.btnAcceptOrder.Click += new System.EventHandler(this.btnAcceptOrder_Click);
+            // 
+            // btnCancelOrder
+            // 
+            this.btnCancelOrder.Location = new System.Drawing.Point(295, 388);
+            this.btnCancelOrder.Name = "btnCancelOrder";
+            this.btnCancelOrder.Size = new System.Drawing.Size(141, 34);
+            this.btnCancelOrder.TabIndex = 6;
+            this.btnCancelOrder.Text = "Annuleren";
+            this.btnCancelOrder.UseVisualStyleBackColor = true;
+            this.btnCancelOrder.Click += new System.EventHandler(this.btnCancelOrder_Click);
+            // 
+            // btnBackToDashbaord
+            // 
+            this.btnBackToDashbaord.Location = new System.Drawing.Point(647, 12);
+            this.btnBackToDashbaord.Name = "btnBackToDashbaord";
+            this.btnBackToDashbaord.Size = new System.Drawing.Size(141, 34);
+            this.btnBackToDashbaord.TabIndex = 7;
+            this.btnBackToDashbaord.Text = "Terug naar Dashboard";
+            this.btnBackToDashbaord.UseVisualStyleBackColor = true;
+            this.btnBackToDashbaord.Click += new System.EventHandler(this.btnBackToDashbaord_Click);
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +173,7 @@
             this.Controls.Add(this.dgvProductsOrders);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pboxLogo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OrderForm";
             this.Text = "Bestellingen van Producten";
             this.Load += new System.EventHandler(this.OrderForm_Load);

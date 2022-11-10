@@ -61,6 +61,9 @@ namespace Barroc_Intens
             this.Close();
         }
 
- 
+        private void btnPartsForm_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new PartsForm());
+        }
     }
 }

@@ -409,6 +409,12 @@
     <Compile Include="Maintenance\MaintenanceForm.Designer.cs">
       <DependentUpon>MaintenanceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Maintenance\PartsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\PartsForm.Designer.cs">
+      <DependentUpon>PartsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maintenance\PlannerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -479,6 +485,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Maintenance\MaintenanceForm.resx">
       <DependentUpon>MaintenanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\PartsForm.resx">
+      <DependentUpon>PartsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintenance\PlannerForm.resx">
       <DependentUpon>PlannerForm.cs</DependentUpon>
