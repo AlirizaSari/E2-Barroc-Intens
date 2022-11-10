@@ -55,17 +55,14 @@ namespace Barroc_Intens.Inkoop
         private void ShowProducts()
         {
 
-            if (this.dbContext == null)
-                return;
+            var stockstatus = (StockStatus)cboxStockStatus.SelectedItem;
 
             var category = (Category)cboxCategory.SelectedItem;
 
-            if (category == null)
-                return;
+            var productsWithStatus = this.dbContext.Products.Where(p => p.StockStatusId == stockstatus.StockStatusId && p.CategoryId == category.CategoryId)
+                .ToList();
 
-            this.dbContext.Entry(category)
-                .Collection(c => c.Products)
-                .Load();
+            this.productsBindingSource.DataSource = productsWithStatus;
 
         }
 
@@ -133,7 +130,7 @@ namespace Barroc_Intens.Inkoop
 
         private void cboxStockStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //ToDo
+            ShowProducts();
         }
     }
 }
