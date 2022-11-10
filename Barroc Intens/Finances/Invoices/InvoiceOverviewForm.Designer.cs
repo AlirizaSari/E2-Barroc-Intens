@@ -311,7 +311,7 @@
             this.Controls.Add(this.btnBackToFinanceDashboard);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InvoiceOverviewForm";
-            this.Text = "InvoiceOverviewForm";
+            this.Text = "Factuur overview";
             this.Load += new System.EventHandler(this.InvoiceOverviewForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaidInvoices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotPaidInvoices)).EndInit();

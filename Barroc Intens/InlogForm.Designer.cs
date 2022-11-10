@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InlogForm));
             this.txbUsername = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.txbPassword = new System.Windows.Forms.TextBox();
@@ -129,6 +130,7 @@
             this.Controls.Add(this.txbPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.txbUsername);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InlogForm";
             this.Text = "Inloggen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InlogForm_FormClosing);

@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlannerForm));
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.btnBackToMaintenance = new System.Windows.Forms.Button();
             this.pnlTopMenu = new System.Windows.Forms.Panel();
@@ -564,6 +565,7 @@
             this.Controls.Add(this.pnlAppointmentDetails);
             this.Controls.Add(this.pnlAppointmentList);
             this.Controls.Add(this.pnlTopMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PlannerForm";
             this.Text = "Agenda";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

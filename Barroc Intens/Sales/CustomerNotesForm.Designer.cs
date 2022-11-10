@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerNotesForm));
             this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.btnBackToMain = new System.Windows.Forms.Button();
             this.lblConversationReport = new System.Windows.Forms.Label();
@@ -251,6 +252,7 @@
             this.Controls.Add(this.btnSaveToDb);
             this.Controls.Add(this.btnBackToMain);
             this.Controls.Add(this.pboxLogo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CustomerNotesForm";
             this.Text = "Klantennotities";
