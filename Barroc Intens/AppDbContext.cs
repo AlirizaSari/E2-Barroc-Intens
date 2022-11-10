@@ -1,4 +1,5 @@
 ﻿using Barroc_Intens.Classes;
+using Barroc_Intens.Maintenance;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -17,6 +18,7 @@ namespace Barroc_Intens
         public DbSet<Company> Companies { get; set; }
         public DbSet<MaintenanceAppointment> MaintenanceAppointments { get; set; }
         public DbSet<MaintenanceAppointmentProduct> MaintenanceAppointmentProducts { get; set; }
+        public DbSet<PlannedAppointment> PlannedAppointment { get; set; }
         public DbSet<CustomInvoice> CustomInvoices { get; set; }
         public DbSet<CustomInvoiceProduct> CustomInvoiceProducts { get; set; }
         public DbSet<Product> Products { get; set; }
@@ -119,6 +121,11 @@ namespace Barroc_Intens
                 new MaintenanceAppointment { MaintenanceAppointmentId = 7, CompanyId = 2, Remark = "Koffiezet automaat 3 is ontploft", Added = DateTime.Now, AppointmentDate = null, AppointmentTime = null, AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = false, },
                 new MaintenanceAppointment{ MaintenanceAppointmentId = 8,CompanyId = 2,Remark = "Koffiezet automaat 4 is ontploft",Added = DateTime.Now,AppointmentDate = null,AppointmentTime = null, AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null,IsRoutineAppointment = false,                
                 });
+
+            modelBuilder.Entity<PlannedAppointment>().HasData(
+                new PlannedAppointment { PlannedAppointmentId = 1, AppointmentDate = DateTime.Now.Date, AppointmentDuration = "",AppointmentTime = DateTime.Now, AssignedEmployee = "", CompanyId = 1 , UserId = 1
+                }); 
+
         }
     }
 }
