@@ -173,6 +173,7 @@
             this.txbCompanyAdress.Location = new System.Drawing.Point(212, 208);
             this.txbCompanyAdress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbCompanyAdress.Name = "txbCompanyAdress";
+            this.txbCompanyAdress.ReadOnly = true;
             this.txbCompanyAdress.Size = new System.Drawing.Size(218, 27);
             this.txbCompanyAdress.TabIndex = 2;
             // 
@@ -262,6 +263,7 @@
             this.txbEmailAdresCompany.Location = new System.Drawing.Point(212, 174);
             this.txbEmailAdresCompany.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbEmailAdresCompany.Name = "txbEmailAdresCompany";
+            this.txbEmailAdresCompany.ReadOnly = true;
             this.txbEmailAdresCompany.Size = new System.Drawing.Size(218, 27);
             this.txbEmailAdresCompany.TabIndex = 1;
             // 
