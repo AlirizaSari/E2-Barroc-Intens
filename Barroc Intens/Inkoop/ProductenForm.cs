@@ -90,6 +90,7 @@ namespace Barroc_Intens.Inkoop
 
             if (product.Category != null)
                 lblProductCategory.Text = product.Category.Name;
+
         }
 
         private void DirectToForm(Form myForm)
