@@ -57,7 +57,7 @@ namespace Barroc_Intens
             txbExtraInfo.Text = "Dit is een test";
 
             this.dbContext = new AppDbContext();
-            this.dbContext.CustomInvoices.Include(ci => ci.Company)
+            this.dbContext.CustomInvoices.Include(ci => ci.Company).Include(pro => pro.Product)
                 .Load();
             this.customInvoiceBindingSource.DataSource = dbContext.CustomInvoices.Local.ToBindingList();
 

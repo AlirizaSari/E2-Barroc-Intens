@@ -154,8 +154,10 @@ namespace Barroc_Intens.Finances
             this.dbContext = new AppDbContext();
 
             this.dbContext.Companies.Load();
+            this.dbContext.Products.Where(pr => pr.CategoryId == 1).Load();
 
             this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
+            this.productBindingSource.DataSource = dbContext.Products.Local.ToBindingList();
 
             GetDatabaseInfo();
         }
@@ -173,6 +175,7 @@ namespace Barroc_Intens.Finances
                     Notes = txbComment.Text,
                     PaymentTerm = _paymentTerm,
 
+                    ProductId = (int)cboxProduct.SelectedValue,
                     CompanyId = (int)cboxCompanyName.SelectedValue
                 };
                 dbContext.CustomInvoices.Add(invoice);

@@ -82,9 +82,9 @@ namespace Barroc_Intens
                 });
 
             modelBuilder.Entity<CustomInvoice>().HasData(
-                new CustomInvoice { CustomInvoiceId=1, CompanyId=2, Date = DateTime.Today.AddDays(20), PricePerHour = 30, Discount = 0, HoursWorked = 10, PaidAt = null, Notes = "Koffiebonen ontbreken nog", PaymentTerm = "Jaarlijks" },
-                new CustomInvoice { CustomInvoiceId=2, CompanyId=3, Date = DateTime.Today, PricePerHour = 10, Discount = 0, HoursWorked = 4, PaidAt = null, Notes = "BKR is nog niet gechecked", PaymentTerm = "Maandelijks" },
-                new CustomInvoice { CustomInvoiceId=3, CompanyId=1, Date = DateTime.Today.AddDays(-20), PricePerHour = 20, Discount = 10, HoursWorked = 40, PaidAt = DateTime.Today, Notes = "10 jaar klant", PaymentTerm = "Jaarlijks" }
+                new CustomInvoice { CustomInvoiceId=1, CompanyId=2, Date = DateTime.Today.AddDays(20), PricePerHour = 30, Discount = 0, HoursWorked = 10, PaidAt = null, Notes = "Koffiebonen ontbreken nog", PaymentTerm = "Jaarlijks", ProductId = 1 },
+                new CustomInvoice { CustomInvoiceId=2, CompanyId=3, Date = DateTime.Today, PricePerHour = 10, Discount = 0, HoursWorked = 4, PaidAt = null, Notes = "BKR is nog niet gechecked", PaymentTerm = "Maandelijks", ProductId = 2 },
+                new CustomInvoice { CustomInvoiceId=3, CompanyId=1, Date = DateTime.Today.AddDays(-20), PricePerHour = 20, Discount = 10, HoursWorked = 40, PaidAt = DateTime.Today, Notes = "10 jaar klant", PaymentTerm = "Jaarlijks",ProductId = 3 }
                 );
 
             modelBuilder.Entity<StockStatus>().HasData(

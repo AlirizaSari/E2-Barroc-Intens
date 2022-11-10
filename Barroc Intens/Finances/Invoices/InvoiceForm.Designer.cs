@@ -58,11 +58,15 @@
             this.cbMonthly = new System.Windows.Forms.CheckBox();
             this.cbYearly = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cboxProduct = new System.Windows.Forms.ComboBox();
+            this.lblProduct = new System.Windows.Forms.Label();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInvoice
@@ -103,7 +107,7 @@
             // lblDivider
             // 
             this.lblDivider.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDivider.Location = new System.Drawing.Point(-9, 318);
+            this.lblDivider.Location = new System.Drawing.Point(-12, 355);
             this.lblDivider.Name = "lblDivider";
             this.lblDivider.Size = new System.Drawing.Size(932, 2);
             this.lblDivider.TabIndex = 4;
@@ -112,7 +116,7 @@
             // 
             this.lblCompanyName.AutoSize = true;
             this.lblCompanyName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompanyName.Location = new System.Drawing.Point(60, 143);
+            this.lblCompanyName.Location = new System.Drawing.Point(61, 140);
             this.lblCompanyName.Name = "lblCompanyName";
             this.lblCompanyName.Size = new System.Drawing.Size(97, 20);
             this.lblCompanyName.TabIndex = 5;
@@ -122,7 +126,7 @@
             // 
             this.lblCompanyAdress.AutoSize = true;
             this.lblCompanyAdress.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompanyAdress.Location = new System.Drawing.Point(60, 211);
+            this.lblCompanyAdress.Location = new System.Drawing.Point(60, 243);
             this.lblCompanyAdress.Name = "lblCompanyAdress";
             this.lblCompanyAdress.Size = new System.Drawing.Size(95, 20);
             this.lblCompanyAdress.TabIndex = 6;
@@ -132,7 +136,7 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(60, 247);
+            this.lblDate.Location = new System.Drawing.Point(60, 279);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(54, 20);
             this.lblDate.TabIndex = 7;
@@ -170,7 +174,7 @@
             // 
             // txbCompanyAdress
             // 
-            this.txbCompanyAdress.Location = new System.Drawing.Point(212, 208);
+            this.txbCompanyAdress.Location = new System.Drawing.Point(212, 240);
             this.txbCompanyAdress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbCompanyAdress.Name = "txbCompanyAdress";
             this.txbCompanyAdress.ReadOnly = true;
@@ -188,7 +192,7 @@
             // 
             // dtpDate
             // 
-            this.dtpDate.Location = new System.Drawing.Point(212, 242);
+            this.dtpDate.Location = new System.Drawing.Point(212, 274);
             this.dtpDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(218, 27);
@@ -252,7 +256,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 178);
+            this.label1.Location = new System.Drawing.Point(60, 209);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 20;
@@ -260,7 +264,7 @@
             // 
             // txbEmailAdresCompany
             // 
-            this.txbEmailAdresCompany.Location = new System.Drawing.Point(212, 174);
+            this.txbEmailAdresCompany.Location = new System.Drawing.Point(212, 206);
             this.txbEmailAdresCompany.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbEmailAdresCompany.Name = "txbEmailAdresCompany";
             this.txbEmailAdresCompany.ReadOnly = true;
@@ -320,7 +324,7 @@
             // cbMonthly
             // 
             this.cbMonthly.AutoSize = true;
-            this.cbMonthly.Location = new System.Drawing.Point(213, 276);
+            this.cbMonthly.Location = new System.Drawing.Point(213, 308);
             this.cbMonthly.Name = "cbMonthly";
             this.cbMonthly.Size = new System.Drawing.Size(110, 24);
             this.cbMonthly.TabIndex = 25;
@@ -331,7 +335,7 @@
             // cbYearly
             // 
             this.cbYearly.AutoSize = true;
-            this.cbYearly.Location = new System.Drawing.Point(329, 276);
+            this.cbYearly.Location = new System.Drawing.Point(329, 308);
             this.cbYearly.Name = "cbYearly";
             this.cbYearly.Size = new System.Drawing.Size(82, 24);
             this.cbYearly.TabIndex = 26;
@@ -343,17 +347,45 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 276);
+            this.label2.Location = new System.Drawing.Point(60, 308);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 20);
             this.label2.TabIndex = 27;
             this.label2.Text = "Factuurperiode";
             // 
+            // cboxProduct
+            // 
+            this.cboxProduct.DataSource = this.productBindingSource;
+            this.cboxProduct.DisplayMember = "Name";
+            this.cboxProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxProduct.FormattingEnabled = true;
+            this.cboxProduct.Location = new System.Drawing.Point(212, 171);
+            this.cboxProduct.Name = "cboxProduct";
+            this.cboxProduct.Size = new System.Drawing.Size(218, 28);
+            this.cboxProduct.TabIndex = 28;
+            this.cboxProduct.ValueMember = "ProductId";
+            // 
+            // lblProduct
+            // 
+            this.lblProduct.AutoSize = true;
+            this.lblProduct.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct.Location = new System.Drawing.Point(61, 174);
+            this.lblProduct.Name = "lblProduct";
+            this.lblProduct.Size = new System.Drawing.Size(60, 20);
+            this.lblProduct.TabIndex = 29;
+            this.lblProduct.Text = "Product";
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(919, 721);
+            this.Controls.Add(this.lblProduct);
+            this.Controls.Add(this.cboxProduct);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbYearly);
             this.Controls.Add(this.cbMonthly);
@@ -392,6 +424,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,5 +460,8 @@
         private System.Windows.Forms.CheckBox cbMonthly;
         private System.Windows.Forms.CheckBox cbYearly;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cboxProduct;
+        private System.Windows.Forms.Label lblProduct;
+        private System.Windows.Forms.BindingSource productBindingSource;
     }
 }

@@ -19,6 +19,8 @@ namespace Barroc_Intens
         public double PricePerHour { get; set; }
         public string Notes { get; set; }
         public string PaymentTerm { get; set; }
+        public int ProductId { get; set; }
+        public Product Product { get; set; }
 
         public ObservableCollectionListSource<CustomInvoiceProduct> CustomInvoiceProducts { get; } = new ObservableCollectionListSource<CustomInvoiceProduct>();
 
@@ -39,6 +41,11 @@ namespace Barroc_Intens
         public string CompanyHouseNumber
         {
             get { return Company.HouseNumber; }
+        }
+
+        public string ProductName
+        {
+            get { return Product.Name; }
         }
     }
 }
