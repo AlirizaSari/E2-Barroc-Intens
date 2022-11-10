@@ -14,8 +14,6 @@ namespace Barroc_Intens.Finances
     public partial class InvoiceInformationForm : Form
     {
         string _companyName;
-        string _companyEmail;
-        string _companyAddress;
         string _notes;
         string _paymentTerm;
         double _hoursWorked;
@@ -27,28 +25,20 @@ namespace Barroc_Intens.Finances
         public InvoiceInformationForm(CustomInvoice chosenInvoice)
         {
             InitializeComponent();
-            _companyName = chosenInvoice.Company.ToString();
-            //_companyEmail = chosenInvoice.CompanyEmail;
-            //_companyAddress = chosenInvoice.CompanyAdress;
-            _hoursWorked = chosenInvoice.HoursWorked;
-            _discount = chosenInvoice.Discount;
-            _pricePerHour = chosenInvoice.PricePerHour;
-            _notes = chosenInvoice.Notes;
-            _invoicePaidAt = Convert.ToString(chosenInvoice.PaidAt);
-            _paymentTerm = chosenInvoice.PaymentTerm;
             _customInvoice = chosenInvoice;
         }
 
         private void InvoiceInformationForm_Load(object sender, EventArgs e)
         {
-            txbCompany.Text = _companyName;
-            txbCompanyEmail.Text = _companyEmail;
-            txbCompanyAddress.Text = _companyAddress;
-            txbInvoicePaid.Text = _invoicePaidAt;
-            nudHoursWorked.Value = (decimal)_hoursWorked;
-            nudDiscount.Value = (decimal)_discount;
-            nudPricePerHour.Value = (decimal)_pricePerHour;
-            txbNotes.Text = _notes;
+
+            txbCompany.Text = _customInvoice.Company.Name;
+            txbCompanyEmail.Text = _customInvoice.Company.EmailAddress;
+            txbCompanyAddress.Text = $"{_customInvoice.Company.Street} {_customInvoice.Company.HouseNumber}";
+            txbInvoicePaid.Text = Convert.ToString(_customInvoice.PaidAt);
+            nudHoursWorked.Value = (decimal)_customInvoice.HoursWorked;
+            nudDiscount.Value = (decimal)_customInvoice.Discount;
+            nudPricePerHour.Value = (decimal)_customInvoice.PricePerHour;
+            txbNotes.Text = _customInvoice.Notes;
 
             if (_paymentTerm == "Maandelijks")
             {

@@ -167,8 +167,6 @@ namespace Barroc_Intens.Finances
                 var invoice = new CustomInvoice
                 {
                     Date = dtpDate.Value,
-                    //CompanyEmail = txbEmailAdresCompany.Text,
-                    //CompanyAdress = txbCompanyAdress.Text,
                     HoursWorked = (double)nudHoursWorked.Value,
                     Discount = (double)nudDiscount.Value,
                     PricePerHour = (double)nudHourlyPrice.Value,
@@ -197,7 +195,7 @@ namespace Barroc_Intens.Finances
             var company = (Company)cboxCompanyName.SelectedItem;
             //txbEmailAdresCompany.Text = 
             txbCompanyAdress.Text = $"{company.Street} {company.HouseNumber}";
-            
+            txbEmailAdresCompany.Text = company.EmailAddress;
 
             if (company == null)
                 return;
