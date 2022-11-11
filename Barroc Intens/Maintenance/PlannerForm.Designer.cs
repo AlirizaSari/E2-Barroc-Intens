@@ -36,12 +36,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlannerForm));
-            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.btnBackToMaintenance = new System.Windows.Forms.Button();
             this.pnlTopMenu = new System.Windows.Forms.Panel();
             this.lblFormTitle = new System.Windows.Forms.Label();
             this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.pnlCalander = new System.Windows.Forms.Panel();
+            this.lblErrorMsgNoAppointments = new System.Windows.Forms.Label();
+            this.lblMsgAppointmentPlannend = new System.Windows.Forms.Label();
             this.dtpAppointmentTimeSet = new System.Windows.Forms.DateTimePicker();
             this.btnCreateAppointment = new System.Windows.Forms.Button();
             this.txbVisitDuration = new System.Windows.Forms.TextBox();
@@ -59,18 +60,21 @@
             this.pnlAppointmentList = new System.Windows.Forms.Panel();
             this.dgvPlannedAppointments = new System.Windows.Forms.DataGridView();
             this.companyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appointmentTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.AppointmentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AppointmentTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AppointmentDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AssignedEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plannedAppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblSelectedDateTitle = new System.Windows.Forms.Label();
             this.lblAppointmentListHeader = new System.Windows.Forms.Label();
             this.pnlAppointmentDetails = new System.Windows.Forms.Panel();
             this.txbCompanyLocation = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvNewAppointments = new System.Windows.Forms.DataGridView();
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.addedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isRoutineAppointmentDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Added = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblInfoTextNewAppointment = new System.Windows.Forms.Label();
             this.lblSectionNewAppointmentsHeader = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -85,16 +89,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.maintenanceAppointmentBindingSource)).BeginInit();
             this.pnlAppointmentList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlannedAppointments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plannedAppointmentBindingSource)).BeginInit();
             this.pnlAppointmentDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNewAppointments)).BeginInit();
             this.SuspendLayout();
-            // 
-            // mySqlCommand1
-            // 
-            this.mySqlCommand1.CommandTimeout = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.Transaction = null;
-            this.mySqlCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
             // 
             // btnBackToMaintenance
             // 
@@ -139,6 +137,8 @@
             // 
             // pnlCalander
             // 
+            this.pnlCalander.Controls.Add(this.lblErrorMsgNoAppointments);
+            this.pnlCalander.Controls.Add(this.lblMsgAppointmentPlannend);
             this.pnlCalander.Controls.Add(this.dtpAppointmentTimeSet);
             this.pnlCalander.Controls.Add(this.btnCreateAppointment);
             this.pnlCalander.Controls.Add(this.txbVisitDuration);
@@ -151,15 +151,34 @@
             this.pnlCalander.Controls.Add(this.lblCalanderHeader);
             this.pnlCalander.Controls.Add(this.mcMaintanence);
             this.pnlCalander.Controls.Add(this.lblSelectedDate);
-            this.pnlCalander.Location = new System.Drawing.Point(623, 146);
+            this.pnlCalander.Location = new System.Drawing.Point(615, 146);
             this.pnlCalander.Name = "pnlCalander";
-            this.pnlCalander.Size = new System.Drawing.Size(571, 719);
+            this.pnlCalander.Size = new System.Drawing.Size(378, 719);
             this.pnlCalander.TabIndex = 5;
+            // 
+            // lblErrorMsgNoAppointments
+            // 
+            this.lblErrorMsgNoAppointments.AutoSize = true;
+            this.lblErrorMsgNoAppointments.Location = new System.Drawing.Point(65, 569);
+            this.lblErrorMsgNoAppointments.Name = "lblErrorMsgNoAppointments";
+            this.lblErrorMsgNoAppointments.Size = new System.Drawing.Size(64, 16);
+            this.lblErrorMsgNoAppointments.TabIndex = 23;
+            this.lblErrorMsgNoAppointments.Text = "error msg";
+            this.lblErrorMsgNoAppointments.Visible = false;
+            // 
+            // lblMsgAppointmentPlannend
+            // 
+            this.lblMsgAppointmentPlannend.AutoSize = true;
+            this.lblMsgAppointmentPlannend.Location = new System.Drawing.Point(264, 479);
+            this.lblMsgAppointmentPlannend.Name = "lblMsgAppointmentPlannend";
+            this.lblMsgAppointmentPlannend.Size = new System.Drawing.Size(0, 16);
+            this.lblMsgAppointmentPlannend.TabIndex = 22;
+            this.lblMsgAppointmentPlannend.Visible = false;
             // 
             // dtpAppointmentTimeSet
             // 
             this.dtpAppointmentTimeSet.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpAppointmentTimeSet.Location = new System.Drawing.Point(210, 358);
+            this.dtpAppointmentTimeSet.Location = new System.Drawing.Point(118, 359);
             this.dtpAppointmentTimeSet.Name = "dtpAppointmentTimeSet";
             this.dtpAppointmentTimeSet.ShowUpDown = true;
             this.dtpAppointmentTimeSet.Size = new System.Drawing.Size(230, 22);
@@ -168,17 +187,18 @@
             // 
             // btnCreateAppointment
             // 
-            this.btnCreateAppointment.Location = new System.Drawing.Point(209, 498);
+            this.btnCreateAppointment.Location = new System.Drawing.Point(118, 499);
             this.btnCreateAppointment.Name = "btnCreateAppointment";
             this.btnCreateAppointment.Size = new System.Drawing.Size(158, 63);
             this.btnCreateAppointment.TabIndex = 10;
             this.btnCreateAppointment.Text = "Inplannen";
             this.btnCreateAppointment.UseVisualStyleBackColor = true;
+
             this.btnCreateAppointment.Click += new System.EventHandler(this.btnCreateAppointment_Click);
             // 
             // txbVisitDuration
             // 
-            this.txbVisitDuration.Location = new System.Drawing.Point(209, 446);
+            this.txbVisitDuration.Location = new System.Drawing.Point(117, 447);
             this.txbVisitDuration.Name = "txbVisitDuration";
             this.txbVisitDuration.Size = new System.Drawing.Size(230, 22);
             this.txbVisitDuration.TabIndex = 9;
@@ -187,7 +207,7 @@
             // 
             this.lblCurrentNumberOfOpenTickets.AutoSize = true;
             this.lblCurrentNumberOfOpenTickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrentNumberOfOpenTickets.Location = new System.Drawing.Point(152, 642);
+            this.lblCurrentNumberOfOpenTickets.Location = new System.Drawing.Point(60, 643);
             this.lblCurrentNumberOfOpenTickets.Name = "lblCurrentNumberOfOpenTickets";
             this.lblCurrentNumberOfOpenTickets.Size = new System.Drawing.Size(105, 20);
             this.lblCurrentNumberOfOpenTickets.TabIndex = 3;
@@ -198,7 +218,7 @@
             this.cbEmployeeAsigned.DataSource = this.userBindingSource;
             this.cbEmployeeAsigned.DisplayMember = "Name";
             this.cbEmployeeAsigned.FormattingEnabled = true;
-            this.cbEmployeeAsigned.Location = new System.Drawing.Point(210, 403);
+            this.cbEmployeeAsigned.Location = new System.Drawing.Point(118, 404);
             this.cbEmployeeAsigned.Name = "cbEmployeeAsigned";
             this.cbEmployeeAsigned.Size = new System.Drawing.Size(230, 24);
             this.cbEmployeeAsigned.TabIndex = 8;
@@ -212,7 +232,7 @@
             // 
             this.lblOpenMaintenceTicketsCounter.AutoSize = true;
             this.lblOpenMaintenceTicketsCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOpenMaintenceTicketsCounter.Location = new System.Drawing.Point(153, 625);
+            this.lblOpenMaintenceTicketsCounter.Location = new System.Drawing.Point(61, 626);
             this.lblOpenMaintenceTicketsCounter.Name = "lblOpenMaintenceTicketsCounter";
             this.lblOpenMaintenceTicketsCounter.Size = new System.Drawing.Size(274, 16);
             this.lblOpenMaintenceTicketsCounter.TabIndex = 2;
@@ -221,7 +241,7 @@
             // lblVisitDuration
             // 
             this.lblVisitDuration.AutoSize = true;
-            this.lblVisitDuration.Location = new System.Drawing.Point(108, 449);
+            this.lblVisitDuration.Location = new System.Drawing.Point(16, 450);
             this.lblVisitDuration.Name = "lblVisitDuration";
             this.lblVisitDuration.Size = new System.Drawing.Size(85, 16);
             this.lblVisitDuration.TabIndex = 5;
@@ -230,7 +250,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(111, 406);
+            this.label3.Location = new System.Drawing.Point(19, 407);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 16);
             this.label3.TabIndex = 4;
@@ -239,7 +259,7 @@
             // lblAppointmentTime
             // 
             this.lblAppointmentTime.AutoSize = true;
-            this.lblAppointmentTime.Location = new System.Drawing.Point(110, 363);
+            this.lblAppointmentTime.Location = new System.Drawing.Point(18, 364);
             this.lblAppointmentTime.Name = "lblAppointmentTime";
             this.lblAppointmentTime.Size = new System.Drawing.Size(84, 16);
             this.lblAppointmentTime.TabIndex = 2;
@@ -249,7 +269,7 @@
             // 
             this.lblCalanderHeader.AutoSize = true;
             this.lblCalanderHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalanderHeader.Location = new System.Drawing.Point(205, 14);
+            this.lblCalanderHeader.Location = new System.Drawing.Point(113, 15);
             this.lblCalanderHeader.Name = "lblCalanderHeader";
             this.lblCalanderHeader.Size = new System.Drawing.Size(172, 40);
             this.lblCalanderHeader.TabIndex = 1;
@@ -258,7 +278,7 @@
             // 
             // mcMaintanence
             // 
-            this.mcMaintanence.Location = new System.Drawing.Point(160, 63);
+            this.mcMaintanence.Location = new System.Drawing.Point(68, 64);
             this.mcMaintanence.Name = "mcMaintanence";
             this.mcMaintanence.TabIndex = 0;
             this.mcMaintanence.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.mcMaintanence_DateSelected);
@@ -267,7 +287,7 @@
             // 
             this.lblSelectedDate.AutoSize = true;
             this.lblSelectedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedDate.Location = new System.Drawing.Point(239, 309);
+            this.lblSelectedDate.Location = new System.Drawing.Point(147, 310);
             this.lblSelectedDate.Name = "lblSelectedDate";
             this.lblSelectedDate.Size = new System.Drawing.Size(113, 20);
             this.lblSelectedDate.TabIndex = 1;
@@ -282,9 +302,9 @@
             this.pnlAppointmentList.Controls.Add(this.dgvPlannedAppointments);
             this.pnlAppointmentList.Controls.Add(this.lblSelectedDateTitle);
             this.pnlAppointmentList.Controls.Add(this.lblAppointmentListHeader);
-            this.pnlAppointmentList.Location = new System.Drawing.Point(1210, 144);
+            this.pnlAppointmentList.Location = new System.Drawing.Point(999, 144);
             this.pnlAppointmentList.Name = "pnlAppointmentList";
-            this.pnlAppointmentList.Size = new System.Drawing.Size(585, 719);
+            this.pnlAppointmentList.Size = new System.Drawing.Size(796, 719);
             this.pnlAppointmentList.TabIndex = 6;
             // 
             // dgvPlannedAppointments
@@ -301,10 +321,12 @@
             this.dgvPlannedAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPlannedAppointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.companyDataGridViewTextBoxColumn1,
-            this.appointmentTimeDataGridViewTextBoxColumn,
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1,
+            this.AppointmentDate,
+            this.AppointmentTime,
+            this.AppointmentDuration,
+            this.AssignedEmployee,
             this.userDataGridViewTextBoxColumn});
-            this.dgvPlannedAppointments.DataSource = this.maintenanceAppointmentBindingSource;
+            this.dgvPlannedAppointments.DataSource = this.plannedAppointmentBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -315,6 +337,7 @@
             this.dgvPlannedAppointments.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPlannedAppointments.Location = new System.Drawing.Point(12, 70);
             this.dgvPlannedAppointments.Name = "dgvPlannedAppointments";
+            this.dgvPlannedAppointments.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -326,7 +349,7 @@
             this.dgvPlannedAppointments.RowHeadersVisible = false;
             this.dgvPlannedAppointments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgvPlannedAppointments.RowTemplate.Height = 24;
-            this.dgvPlannedAppointments.Size = new System.Drawing.Size(568, 648);
+            this.dgvPlannedAppointments.Size = new System.Drawing.Size(781, 648);
             this.dgvPlannedAppointments.TabIndex = 21;
             this.dgvPlannedAppointments.DataMemberChanged += new System.EventHandler(this.dgvPlannedAppointments_DataMemberChanged);
             // 
@@ -336,23 +359,44 @@
             this.companyDataGridViewTextBoxColumn1.HeaderText = "Company";
             this.companyDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.companyDataGridViewTextBoxColumn1.Name = "companyDataGridViewTextBoxColumn1";
+            this.companyDataGridViewTextBoxColumn1.ReadOnly = true;
             this.companyDataGridViewTextBoxColumn1.Width = 125;
             // 
-            // appointmentTimeDataGridViewTextBoxColumn
+            // AppointmentDate
             // 
-            this.appointmentTimeDataGridViewTextBoxColumn.DataPropertyName = "AppointmentTime";
-            this.appointmentTimeDataGridViewTextBoxColumn.HeaderText = "AppointmentTime";
-            this.appointmentTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.appointmentTimeDataGridViewTextBoxColumn.Name = "appointmentTimeDataGridViewTextBoxColumn";
-            this.appointmentTimeDataGridViewTextBoxColumn.Width = 125;
+            this.AppointmentDate.DataPropertyName = "AppointmentDate";
+            this.AppointmentDate.HeaderText = "AppointmentDate";
+            this.AppointmentDate.MinimumWidth = 6;
+            this.AppointmentDate.Name = "AppointmentDate";
+            this.AppointmentDate.ReadOnly = true;
+            this.AppointmentDate.Width = 125;
             // 
-            // isRoutineAppointmentDataGridViewCheckBoxColumn1
+            // AppointmentTime
             // 
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.DataPropertyName = "IsRoutineAppointment";
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.HeaderText = "IsRoutineAppointment";
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.MinimumWidth = 6;
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.Name = "isRoutineAppointmentDataGridViewCheckBoxColumn1";
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn1.Width = 125;
+            this.AppointmentTime.DataPropertyName = "AppointmentTime";
+            this.AppointmentTime.HeaderText = "AppointmentTime";
+            this.AppointmentTime.MinimumWidth = 6;
+            this.AppointmentTime.Name = "AppointmentTime";
+            this.AppointmentTime.ReadOnly = true;
+            this.AppointmentTime.Width = 125;
+            // 
+            // AppointmentDuration
+            // 
+            this.AppointmentDuration.DataPropertyName = "AppointmentDuration";
+            this.AppointmentDuration.HeaderText = "AppointmentDuration";
+            this.AppointmentDuration.MinimumWidth = 6;
+            this.AppointmentDuration.Name = "AppointmentDuration";
+            this.AppointmentDuration.ReadOnly = true;
+            this.AppointmentDuration.Width = 125;
+            // 
+            // AssignedEmployee
+            // 
+            this.AssignedEmployee.DataPropertyName = "AssignedEmployee";
+            this.AssignedEmployee.HeaderText = "AssignedEmployee";
+            this.AssignedEmployee.MinimumWidth = 6;
+            this.AssignedEmployee.Name = "AssignedEmployee";
+            this.AssignedEmployee.ReadOnly = true;
+            this.AssignedEmployee.Width = 125;
             // 
             // userDataGridViewTextBoxColumn
             // 
@@ -360,7 +404,12 @@
             this.userDataGridViewTextBoxColumn.HeaderText = "User";
             this.userDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.userDataGridViewTextBoxColumn.Name = "userDataGridViewTextBoxColumn";
+            this.userDataGridViewTextBoxColumn.ReadOnly = true;
             this.userDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // plannedAppointmentBindingSource
+            // 
+            this.plannedAppointmentBindingSource.DataSource = typeof(Barroc_Intens.Classes.PlannedAppointment);
             // 
             // lblSelectedDateTitle
             // 
@@ -432,9 +481,9 @@
             this.dgvNewAppointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvNewAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNewAppointments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.companyDataGridViewTextBoxColumn,
             this.isRoutineAppointmentDataGridViewCheckBoxColumn,
-            this.addedDataGridViewTextBoxColumn,
-            this.companyDataGridViewTextBoxColumn});
+            this.Added});
             this.dgvNewAppointments.DataSource = this.maintenanceAppointmentBindingSource;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
@@ -463,6 +512,15 @@
             this.dgvNewAppointments.TabIndex = 19;
             this.dgvNewAppointments.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
+            // companyDataGridViewTextBoxColumn
+            // 
+            this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
+            this.companyDataGridViewTextBoxColumn.HeaderText = "Company";
+            this.companyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
+            this.companyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.companyDataGridViewTextBoxColumn.Width = 125;
+            // 
             // isRoutineAppointmentDataGridViewCheckBoxColumn
             // 
             this.isRoutineAppointmentDataGridViewCheckBoxColumn.DataPropertyName = "IsRoutineAppointment";
@@ -472,23 +530,14 @@
             this.isRoutineAppointmentDataGridViewCheckBoxColumn.ReadOnly = true;
             this.isRoutineAppointmentDataGridViewCheckBoxColumn.Width = 125;
             // 
-            // addedDataGridViewTextBoxColumn
+            // Added
             // 
-            this.addedDataGridViewTextBoxColumn.DataPropertyName = "Added";
-            this.addedDataGridViewTextBoxColumn.HeaderText = "Added";
-            this.addedDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.addedDataGridViewTextBoxColumn.Name = "addedDataGridViewTextBoxColumn";
-            this.addedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.addedDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // companyDataGridViewTextBoxColumn
-            // 
-            this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
-            this.companyDataGridViewTextBoxColumn.HeaderText = "Company";
-            this.companyDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
-            this.companyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.companyDataGridViewTextBoxColumn.Width = 125;
+            this.Added.DataPropertyName = "Added";
+            this.Added.HeaderText = "Added";
+            this.Added.MinimumWidth = 6;
+            this.Added.Name = "Added";
+            this.Added.ReadOnly = true;
+            this.Added.Width = 125;
             // 
             // lblInfoTextNewAppointment
             // 
@@ -580,6 +629,7 @@
             this.pnlAppointmentList.ResumeLayout(false);
             this.pnlAppointmentList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlannedAppointments)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plannedAppointmentBindingSource)).EndInit();
             this.pnlAppointmentDetails.ResumeLayout(false);
             this.pnlAppointmentDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNewAppointments)).EndInit();
@@ -588,7 +638,6 @@
         }
 
         #endregion
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private System.Windows.Forms.Button btnBackToMaintenance;
         private System.Windows.Forms.Panel pnlTopMenu;
         private System.Windows.Forms.Label lblFormTitle;
@@ -621,15 +670,21 @@
         private System.Windows.Forms.DataGridView dgvNewAppointments;
         private System.Windows.Forms.TextBox txbCompanyLocation;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn isRoutineAppointmentDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn appointmentFinishedDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DateTimePicker dtpAppointmentTimeSet;
         private System.Windows.Forms.BindingSource userBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn appointmentTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn isRoutineAppointmentDataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.Label lblMsgAppointmentPlannend;
+        private System.Windows.Forms.BindingSource plannedAppointmentBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentDuration;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AssignedEmployee;
         private System.Windows.Forms.DataGridViewTextBoxColumn userDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn isRoutineAppointmentDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Added;
+        private System.Windows.Forms.Label lblErrorMsgNoAppointments;
     }
 }

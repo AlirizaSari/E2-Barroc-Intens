@@ -308,6 +308,7 @@
     <Compile Include="Classes\MaintenanceAppointment.cs" />
     <Compile Include="Classes\MaintenanceAppointmentProduct.cs" />
     <Compile Include="Classes\Note.cs" />
+    <Compile Include="Classes\PlannedAppointment.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Rol.cs" />
     <Compile Include="Classes\StockStatus.cs" />
@@ -511,6 +512,7 @@
     <None Include="bin\Debug\Barroc Intens.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Barroc_Intens.Classes.Leasecontract.datasource" />
+    <None Include="Properties\DataSources\Barroc_Intens.Classes.PlannedAppointment.datasource" />
     <None Include="Properties\DataSources\Barroc_Intens.Classes.StockStatus.datasource" />
     <None Include="Properties\DataSources\Barroc_Intens.Sales.CustomerNotesForm.datasource" />
     <None Include="Properties\DataSources\Category.datasource" />
