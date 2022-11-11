@@ -37,11 +37,11 @@
             this.lblAccountName = new System.Windows.Forms.Label();
             this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.btnPartsForm = new System.Windows.Forms.Button();
             this.lblSystemName = new System.Windows.Forms.Label();
             this.btnBackToMain = new System.Windows.Forms.Button();
             this.btnMaintenancePlanner = new System.Windows.Forms.Button();
             this.btnMaintenance = new System.Windows.Forms.Button();
-            this.btnPartsForm = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -67,7 +67,7 @@
             this.lblExtraInfo.AutoSize = true;
             this.lblExtraInfo.Location = new System.Drawing.Point(20, 322);
             this.lblExtraInfo.Name = "lblExtraInfo";
-            this.lblExtraInfo.Size = new System.Drawing.Size(91, 15);
+            this.lblExtraInfo.Size = new System.Drawing.Size(115, 20);
             this.lblExtraInfo.TabIndex = 6;
             this.lblExtraInfo.Text = "Extra Informatie";
             // 
@@ -94,7 +94,7 @@
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Location = new System.Drawing.Point(53, 249);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(52, 15);
+            this.lblDepartment.Size = new System.Drawing.Size(66, 20);
             this.lblDepartment.TabIndex = 3;
             this.lblDepartment.Text = "Afdeling";
             // 
@@ -103,7 +103,7 @@
             this.lblAccountName.AutoSize = true;
             this.lblAccountName.Location = new System.Drawing.Point(53, 220);
             this.lblAccountName.Name = "lblAccountName";
-            this.lblAccountName.Size = new System.Drawing.Size(87, 15);
+            this.lblAccountName.Size = new System.Drawing.Size(107, 20);
             this.lblAccountName.TabIndex = 2;
             this.lblAccountName.Text = "Account Naam";
             // 
@@ -132,13 +132,23 @@
             this.pnlTop.Size = new System.Drawing.Size(923, 157);
             this.pnlTop.TabIndex = 1;
             // 
+            // btnPartsForm
+            // 
+            this.btnPartsForm.Location = new System.Drawing.Point(722, 117);
+            this.btnPartsForm.Name = "btnPartsForm";
+            this.btnPartsForm.Size = new System.Drawing.Size(172, 37);
+            this.btnPartsForm.TabIndex = 4;
+            this.btnPartsForm.Text = "Onderdelen";
+            this.btnPartsForm.UseVisualStyleBackColor = true;
+            this.btnPartsForm.Click += new System.EventHandler(this.btnPartsForm_Click);
+            // 
             // lblSystemName
             // 
             this.lblSystemName.AutoSize = true;
             this.lblSystemName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSystemName.Location = new System.Drawing.Point(385, 39);
             this.lblSystemName.Name = "lblSystemName";
-            this.lblSystemName.Size = new System.Drawing.Size(162, 32);
+            this.lblSystemName.Size = new System.Drawing.Size(200, 41);
             this.lblSystemName.TabIndex = 3;
             this.lblSystemName.Text = "Maintenance";
             // 
@@ -168,23 +178,13 @@
             this.btnMaintenance.Name = "btnMaintenance";
             this.btnMaintenance.Size = new System.Drawing.Size(172, 37);
             this.btnMaintenance.TabIndex = 1;
-            this.btnMaintenance.Text = "Maintenance";
+            this.btnMaintenance.Text = "Storingsafspraken";
             this.btnMaintenance.UseVisualStyleBackColor = true;
             this.btnMaintenance.Click += new System.EventHandler(this.btnMaintenance_Click);
             // 
-            // btnPartsForm
-            // 
-            this.btnPartsForm.Location = new System.Drawing.Point(722, 117);
-            this.btnPartsForm.Name = "btnPartsForm";
-            this.btnPartsForm.Size = new System.Drawing.Size(172, 37);
-            this.btnPartsForm.TabIndex = 4;
-            this.btnPartsForm.Text = "Onderdelen";
-            this.btnPartsForm.UseVisualStyleBackColor = true;
-            this.btnPartsForm.Click += new System.EventHandler(this.btnPartsForm_Click);
-            // 
             // DashboardMaintenanceForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1146, 600);
             this.Controls.Add(this.pnlTop);
