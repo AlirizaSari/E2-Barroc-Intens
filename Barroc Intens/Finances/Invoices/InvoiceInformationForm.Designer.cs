@@ -50,6 +50,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbMonthly = new System.Windows.Forms.CheckBox();
             this.cbYearly = new System.Windows.Forms.CheckBox();
+            this.txbProduct = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPricePerHour)).BeginInit();
@@ -78,7 +80,7 @@
             // lblCompanyEmail
             // 
             this.lblCompanyEmail.AutoSize = true;
-            this.lblCompanyEmail.Location = new System.Drawing.Point(28, 178);
+            this.lblCompanyEmail.Location = new System.Drawing.Point(28, 208);
             this.lblCompanyEmail.Name = "lblCompanyEmail";
             this.lblCompanyEmail.Size = new System.Drawing.Size(85, 16);
             this.lblCompanyEmail.TabIndex = 2;
@@ -87,7 +89,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 206);
+            this.label3.Location = new System.Drawing.Point(28, 236);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 3;
@@ -96,7 +98,7 @@
             // lblInvoicePaid
             // 
             this.lblInvoicePaid.AutoSize = true;
-            this.lblInvoicePaid.Location = new System.Drawing.Point(29, 234);
+            this.lblInvoicePaid.Location = new System.Drawing.Point(29, 264);
             this.lblInvoicePaid.Name = "lblInvoicePaid";
             this.lblInvoicePaid.Size = new System.Drawing.Size(129, 16);
             this.lblInvoicePaid.TabIndex = 4;
@@ -133,28 +135,28 @@
             // 
             this.txbCompany.Location = new System.Drawing.Point(161, 147);
             this.txbCompany.Name = "txbCompany";
-            this.txbCompany.Size = new System.Drawing.Size(162, 22);
+            this.txbCompany.Size = new System.Drawing.Size(194, 22);
             this.txbCompany.TabIndex = 0;
             // 
             // txbCompanyEmail
             // 
-            this.txbCompanyEmail.Location = new System.Drawing.Point(161, 175);
+            this.txbCompanyEmail.Location = new System.Drawing.Point(161, 205);
             this.txbCompanyEmail.Name = "txbCompanyEmail";
-            this.txbCompanyEmail.Size = new System.Drawing.Size(162, 22);
+            this.txbCompanyEmail.Size = new System.Drawing.Size(194, 22);
             this.txbCompanyEmail.TabIndex = 9;
             // 
             // txbCompanyAddress
             // 
-            this.txbCompanyAddress.Location = new System.Drawing.Point(161, 203);
+            this.txbCompanyAddress.Location = new System.Drawing.Point(161, 233);
             this.txbCompanyAddress.Name = "txbCompanyAddress";
-            this.txbCompanyAddress.Size = new System.Drawing.Size(162, 22);
+            this.txbCompanyAddress.Size = new System.Drawing.Size(194, 22);
             this.txbCompanyAddress.TabIndex = 10;
             // 
             // txbInvoicePaid
             // 
-            this.txbInvoicePaid.Location = new System.Drawing.Point(161, 231);
+            this.txbInvoicePaid.Location = new System.Drawing.Point(161, 261);
             this.txbInvoicePaid.Name = "txbInvoicePaid";
-            this.txbInvoicePaid.Size = new System.Drawing.Size(162, 22);
+            this.txbInvoicePaid.Size = new System.Drawing.Size(194, 22);
             this.txbInvoicePaid.TabIndex = 11;
             // 
             // txbNotes
@@ -208,7 +210,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 261);
+            this.label2.Location = new System.Drawing.Point(29, 291);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 16);
             this.label2.TabIndex = 22;
@@ -218,7 +220,7 @@
             // 
             this.cbMonthly.AutoCheck = false;
             this.cbMonthly.AutoSize = true;
-            this.cbMonthly.Location = new System.Drawing.Point(161, 260);
+            this.cbMonthly.Location = new System.Drawing.Point(161, 290);
             this.cbMonthly.Name = "cbMonthly";
             this.cbMonthly.Size = new System.Drawing.Size(102, 20);
             this.cbMonthly.TabIndex = 23;
@@ -229,18 +231,36 @@
             // 
             this.cbYearly.AutoCheck = false;
             this.cbYearly.AutoSize = true;
-            this.cbYearly.Location = new System.Drawing.Point(161, 286);
+            this.cbYearly.Location = new System.Drawing.Point(161, 316);
             this.cbYearly.Name = "cbYearly";
             this.cbYearly.Size = new System.Drawing.Size(79, 20);
             this.cbYearly.TabIndex = 24;
             this.cbYearly.Text = "Jaarlijks";
             this.cbYearly.UseVisualStyleBackColor = true;
             // 
+            // txbProduct
+            // 
+            this.txbProduct.Location = new System.Drawing.Point(161, 177);
+            this.txbProduct.Name = "txbProduct";
+            this.txbProduct.Size = new System.Drawing.Size(194, 22);
+            this.txbProduct.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(29, 181);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 16);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Product";
+            // 
             // InvoiceInformationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 319);
+            this.ClientSize = new System.Drawing.Size(683, 382);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txbProduct);
             this.Controls.Add(this.cbYearly);
             this.Controls.Add(this.cbMonthly);
             this.Controls.Add(this.label2);
@@ -298,5 +318,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox cbMonthly;
         private System.Windows.Forms.CheckBox cbYearly;
+        private System.Windows.Forms.TextBox txbProduct;
+        private System.Windows.Forms.Label label4;
     }
 }

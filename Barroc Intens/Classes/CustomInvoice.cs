@@ -43,9 +43,9 @@ namespace Barroc_Intens
             get { return Company.HouseNumber; }
         }
 
-        public string ProductName
-        {
-            get { return Product.Name; }
-        }
+        //public string ProductName
+        //{
+        //    get { return Product.Name; }
+        //}
     }
 }
