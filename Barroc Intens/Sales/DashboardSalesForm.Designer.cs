@@ -40,6 +40,7 @@
             this.lblSystemName = new System.Windows.Forms.Label();
             this.btnCustomerNotes = new System.Windows.Forms.Button();
             this.btnBackToMain = new System.Windows.Forms.Button();
+            this.btnOfferte = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -118,6 +119,7 @@
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlTop.Controls.Add(this.btnOfferte);
             this.pnlTop.Controls.Add(this.lblSystemName);
             this.pnlTop.Controls.Add(this.btnCustomerNotes);
             this.pnlTop.Controls.Add(this.btnBackToMain);
@@ -156,6 +158,16 @@
             this.btnBackToMain.UseVisualStyleBackColor = true;
             this.btnBackToMain.Click += new System.EventHandler(this.btnBackToMain_Click);
             // 
+            // btnOfferte
+            // 
+            this.btnOfferte.Location = new System.Drawing.Point(508, 117);
+            this.btnOfferte.Name = "btnOfferte";
+            this.btnOfferte.Size = new System.Drawing.Size(172, 37);
+            this.btnOfferte.TabIndex = 4;
+            this.btnOfferte.Text = "Offertes";
+            this.btnOfferte.UseVisualStyleBackColor = true;
+            this.btnOfferte.Click += new System.EventHandler(this.btnOfferte_Click);
+            // 
             // DashboardSalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -191,5 +203,6 @@
         private System.Windows.Forms.Label lblSystemName;
         private System.Windows.Forms.Button btnCustomerNotes;
         private System.Windows.Forms.Button btnBackToMain;
+        private System.Windows.Forms.Button btnOfferte;
     }
 }

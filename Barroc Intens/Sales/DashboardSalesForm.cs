@@ -55,5 +55,10 @@ namespace Barroc_Intens
             myForm.ShowDialog();
             this.Close();
         }
+
+        private void btnOfferte_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new OfferteForm());
+        }
     }
 }
