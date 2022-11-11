@@ -31,6 +31,7 @@ namespace Barroc_Intens
             this.dbContext = new AppDbContext();
             this.dbContext.CustomInvoices.Where(ccc => ccc.PaidAt != null)
                 .Include(ci => ci.Company)
+                .Include(ci => ci.Product)
                 .Load();
             this.dgvPaidInvoices.DataSource = dbContext.CustomInvoices.Local
                 .ToBindingList();
@@ -38,6 +39,7 @@ namespace Barroc_Intens
             this.dbContext = new AppDbContext();
             this.dbContext.CustomInvoices.Where(np => np.PaidAt == null)
                 .Include(cu => cu.Company)
+                .Include(ci => ci.Product)
                 .Load();
             this.dgvNotPaidInvoices.DataSource = dbContext.CustomInvoices.Local.ToBindingList();
 

@@ -1,4 +1,5 @@
 ﻿using Barroc_Intens.Classes;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace Barroc_Intens.Finances
 {
     public partial class InvoiceInformationForm : Form
     {
+        private AppDbContext dbContext;
         string _companyName;
         string _notes;
         string _paymentTerm;
@@ -30,8 +32,18 @@ namespace Barroc_Intens.Finances
 
         private void InvoiceInformationForm_Load(object sender, EventArgs e)
         {
+            this.dbContext = new AppDbContext();
+
+
+            //Because there is another dbContext, this has no influence on _customInvoice because that is from that other dbContext.
+            //this.dbContext.CustomInvoices.Where(ci => ci.CustomInvoiceId == _customInvoice.CustomInvoiceId)
+            //    .Include(ci => ci.Product)
+            //    .Load();
+
+
 
             txbCompany.Text = _customInvoice.Company.Name;
+            txbProduct.Text = _customInvoice.Product.Name;
             txbCompanyEmail.Text = _customInvoice.Company.EmailAddress;
             txbCompanyAddress.Text = $"{_customInvoice.Company.Street} {_customInvoice.Company.HouseNumber}";
             txbInvoicePaid.Text = Convert.ToString(_customInvoice.PaidAt);
