@@ -1,5 +1,6 @@
 ﻿using Barroc_Intens.Classes;
 using Barroc_Intens.Sales;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,11 +28,20 @@ namespace Barroc_Intens
                 btnBackToMain.Visible = false;
                 btnCustomerNotes.Location = new Point(52,117);
             }
+
+            if (UserLoginInformation.LoginRolId != 1 && UserLoginInformation.LoginRolId != 4)
+            {
+                btnAddCompany.Visible = false;
+            }
         }
 
         private void DashboardSalesForm_Load(object sender, EventArgs e)
         {
             this.dbContext = new AppDbContext();
+
+            this.dbContext.Companies.Load();
+
+            this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
         }
 
         private void btnBackToMain_Click(object sender, EventArgs e)
@@ -59,6 +69,11 @@ namespace Barroc_Intens
         private void btnOfferte_Click(object sender, EventArgs e)
         {
             DirectToForm(new OfferteForm());
+        }
+        
+        private void btnAddCompany_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new AddCompanyForm());
         }
     }
 }

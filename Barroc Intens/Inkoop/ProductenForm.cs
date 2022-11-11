@@ -85,11 +85,13 @@ namespace Barroc_Intens.Inkoop
             //lblProductDescription.Text = product?.Description;
             lblProductBrand.Text = product?.Brand;
 
+            if (product.Category != null)
+                lblProductCategory.Text = product.Category.Name;
+
             if (product.StockStatus != null)
                 lblProductStockStatus.Text = product.StockStatus.Name;
 
-            if (product.Category != null)
-                lblProductCategory.Text = product.Category.Name;
+            lblProductStockAmount.Text = product?.AmountInStock.ToString();
 
         }
 
@@ -108,7 +110,7 @@ namespace Barroc_Intens.Inkoop
             {
                 product.StockStatusId = 1;
             }
-            else if (nupAmountProduct.Value < 100)
+            else if (nupAmountProduct.Value < 5000)
             {
                 product.AmountInStock += (int?)nupAmountProduct.Value;
                 product.StockStatusId = 2;

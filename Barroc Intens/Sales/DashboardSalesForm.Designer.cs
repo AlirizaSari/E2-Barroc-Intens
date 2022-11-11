@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardSalesForm));
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.lblExtraInfo = new System.Windows.Forms.Label();
@@ -41,9 +42,22 @@
             this.btnCustomerNotes = new System.Windows.Forms.Button();
             this.btnBackToMain = new System.Windows.Forms.Button();
             this.btnOfferte = new System.Windows.Forms.Button();
+            this.dgvCompany = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAddCompany = new System.Windows.Forms.Button();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.streetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.houseNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countryCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompany)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLeft
@@ -58,7 +72,7 @@
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(222, 600);
+            this.pnlLeft.Size = new System.Drawing.Size(222, 653);
             this.pnlLeft.TabIndex = 0;
             // 
             // lblExtraInfo
@@ -66,7 +80,7 @@
             this.lblExtraInfo.AutoSize = true;
             this.lblExtraInfo.Location = new System.Drawing.Point(20, 322);
             this.lblExtraInfo.Name = "lblExtraInfo";
-            this.lblExtraInfo.Size = new System.Drawing.Size(115, 20);
+            this.lblExtraInfo.Size = new System.Drawing.Size(91, 15);
             this.lblExtraInfo.TabIndex = 6;
             this.lblExtraInfo.Text = "Extra Informatie";
             // 
@@ -93,7 +107,7 @@
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Location = new System.Drawing.Point(20, 250);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(66, 20);
+            this.lblDepartment.Size = new System.Drawing.Size(52, 15);
             this.lblDepartment.TabIndex = 3;
             this.lblDepartment.Text = "Afdeling";
             // 
@@ -102,7 +116,7 @@
             this.lblAccountName.AutoSize = true;
             this.lblAccountName.Location = new System.Drawing.Point(20, 220);
             this.lblAccountName.Name = "lblAccountName";
-            this.lblAccountName.Size = new System.Drawing.Size(107, 20);
+            this.lblAccountName.Size = new System.Drawing.Size(87, 15);
             this.lblAccountName.TabIndex = 2;
             this.lblAccountName.Text = "Account Naam";
             // 
@@ -125,7 +139,7 @@
             this.pnlTop.Controls.Add(this.btnBackToMain);
             this.pnlTop.Location = new System.Drawing.Point(222, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(692, 157);
+            this.pnlTop.Size = new System.Drawing.Size(802, 157);
             this.pnlTop.TabIndex = 1;
             // 
             // lblSystemName
@@ -134,7 +148,7 @@
             this.lblSystemName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSystemName.Location = new System.Drawing.Point(312, 32);
             this.lblSystemName.Name = "lblSystemName";
-            this.lblSystemName.Size = new System.Drawing.Size(89, 41);
+            this.lblSystemName.Size = new System.Drawing.Size(71, 32);
             this.lblSystemName.TabIndex = 3;
             this.lblSystemName.Text = "Sales";
             // 
@@ -167,12 +181,121 @@
             this.btnOfferte.Text = "Offertes";
             this.btnOfferte.UseVisualStyleBackColor = true;
             this.btnOfferte.Click += new System.EventHandler(this.btnOfferte_Click);
+            // dgvCompany
+            // 
+            this.dgvCompany.AllowUserToAddRows = false;
+            this.dgvCompany.AllowUserToDeleteRows = false;
+            this.dgvCompany.AllowUserToResizeColumns = false;
+            this.dgvCompany.AllowUserToResizeRows = false;
+            this.dgvCompany.AutoGenerateColumns = false;
+            this.dgvCompany.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvCompany.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvCompany.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCompany.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn,
+            this.phoneDataGridViewTextBoxColumn,
+            this.emailAddressDataGridViewTextBoxColumn,
+            this.streetDataGridViewTextBoxColumn,
+            this.houseNumberDataGridViewTextBoxColumn,
+            this.cityDataGridViewTextBoxColumn,
+            this.countryCodeDataGridViewTextBoxColumn});
+            this.dgvCompany.DataSource = this.companyBindingSource;
+            this.dgvCompany.Location = new System.Drawing.Point(228, 220);
+            this.dgvCompany.MultiSelect = false;
+            this.dgvCompany.Name = "dgvCompany";
+            this.dgvCompany.ReadOnly = true;
+            this.dgvCompany.RowHeadersVisible = false;
+            this.dgvCompany.Size = new System.Drawing.Size(785, 368);
+            this.dgvCompany.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(223, 192);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Bedrijven/Klanten";
+            // 
+            // btnAddCompany
+            // 
+            this.btnAddCompany.Location = new System.Drawing.Point(228, 594);
+            this.btnAddCompany.Name = "btnAddCompany";
+            this.btnAddCompany.Size = new System.Drawing.Size(175, 47);
+            this.btnAddCompany.TabIndex = 4;
+            this.btnAddCompany.Text = "Toevoegen";
+            this.btnAddCompany.UseVisualStyleBackColor = true;
+            this.btnAddCompany.Click += new System.EventHandler(this.btnAddCompany_Click);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Naam";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 64;
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "Telefoon";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phoneDataGridViewTextBoxColumn.Width = 77;
+            // 
+            // emailAddressDataGridViewTextBoxColumn
+            // 
+            this.emailAddressDataGridViewTextBoxColumn.DataPropertyName = "EmailAddress";
+            this.emailAddressDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailAddressDataGridViewTextBoxColumn.Name = "emailAddressDataGridViewTextBoxColumn";
+            this.emailAddressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailAddressDataGridViewTextBoxColumn.Width = 61;
+            // 
+            // streetDataGridViewTextBoxColumn
+            // 
+            this.streetDataGridViewTextBoxColumn.DataPropertyName = "Street";
+            this.streetDataGridViewTextBoxColumn.HeaderText = "Straat";
+            this.streetDataGridViewTextBoxColumn.Name = "streetDataGridViewTextBoxColumn";
+            this.streetDataGridViewTextBoxColumn.ReadOnly = true;
+            this.streetDataGridViewTextBoxColumn.Width = 62;
+            // 
+            // houseNumberDataGridViewTextBoxColumn
+            // 
+            this.houseNumberDataGridViewTextBoxColumn.DataPropertyName = "HouseNumber";
+            this.houseNumberDataGridViewTextBoxColumn.HeaderText = "Huisnummer";
+            this.houseNumberDataGridViewTextBoxColumn.Name = "houseNumberDataGridViewTextBoxColumn";
+            this.houseNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.houseNumberDataGridViewTextBoxColumn.Width = 102;
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "Stad";
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.cityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cityDataGridViewTextBoxColumn.Width = 55;
+            // 
+            // countryCodeDataGridViewTextBoxColumn
+            // 
+            this.countryCodeDataGridViewTextBoxColumn.DataPropertyName = "CountryCode";
+            this.countryCodeDataGridViewTextBoxColumn.HeaderText = "Landcode";
+            this.countryCodeDataGridViewTextBoxColumn.Name = "countryCodeDataGridViewTextBoxColumn";
+            this.countryCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.countryCodeDataGridViewTextBoxColumn.Width = 84;
+            // 
+            // companyBindingSource
+            // 
+            this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
             // 
             // DashboardSalesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(1025, 653);
+            this.Controls.Add(this.btnAddCompany);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvCompany);
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlLeft);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,7 +309,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompany)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -204,5 +330,16 @@
         private System.Windows.Forms.Button btnCustomerNotes;
         private System.Windows.Forms.Button btnBackToMain;
         private System.Windows.Forms.Button btnOfferte;
+        private System.Windows.Forms.DataGridView dgvCompany;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailAddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn streetDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn houseNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countryCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource companyBindingSource;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAddCompany;
     }
 }

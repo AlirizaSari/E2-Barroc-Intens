@@ -424,6 +424,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sales\AddCompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\AddCompanyForm.Designer.cs">
+      <DependentUpon>AddCompanyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\CustomerNotesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -509,6 +515,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Sales\AddCompanyForm.resx">
+      <DependentUpon>AddCompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\CustomerNotesForm.resx">
       <DependentUpon>CustomerNotesForm.cs</DependentUpon>
     </EmbeddedResource>

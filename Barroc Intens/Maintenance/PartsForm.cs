@@ -65,6 +65,7 @@ namespace Barroc_Intens.Maintenance
             lblProductName.Text = product?.Name;
             //lblProductDescription.Text = product?.Description;
             lblProductBrand.Text = product?.Brand;
+            lblProductStockAmount.Text = product?.AmountInStock.ToString();
 
             if (product.StockStatus != null)
                 lblProductStockStatus.Text = product.StockStatus.Name;

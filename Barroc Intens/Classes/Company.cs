@@ -30,7 +30,7 @@ namespace Barroc_Intens
 
         public DateTime? BkrCheckedAt { get; set; }
 
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
         public User User { get; set; } = null;
 
         public ObservableCollectionListSource<Note> Notes { get; } = new ObservableCollectionListSource<Note>();
