@@ -83,7 +83,7 @@ namespace Barroc_Intens.Finances
                 }
                 else
                 {
-                    _message += $"Totaal €{Math.Round(_hoursWorked * _pricePerHour * 1, 2)}";
+                    _message += $"Totaal €{Math.Round(_hoursWorked * _pricePerHour * 1, 2)}%0d%0a";
                 }
 
                 if (!String.IsNullOrEmpty(_comment))
@@ -156,7 +156,7 @@ namespace Barroc_Intens.Finances
         {
             this.dbContext = new AppDbContext();
 
-            this.dbContext.Companies.Load();
+            this.dbContext.Companies.OrderBy(c => c.Name).Load();
             this.dbContext.Products.Where(pr => pr.CategoryId == 1).Load();
 
             this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
