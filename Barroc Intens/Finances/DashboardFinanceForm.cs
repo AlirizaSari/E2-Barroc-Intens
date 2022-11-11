@@ -111,5 +111,18 @@ namespace Barroc_Intens
             }            
         }
 
+        private void btnNotPaid_Click(object sender, EventArgs e)
+        {
+            var getRowData = (CustomInvoice)dgvInvoices.CurrentRow?.DataBoundItem;
+
+            var invoice = dbContext.CustomInvoices.Where(u => u.CustomInvoiceId == getRowData.CustomInvoiceId).FirstOrDefault();
+
+            if (invoice != null)
+            {
+                invoice.PaidAt = null;
+                dbContext.SaveChanges();
+                dgvInvoices.Refresh();
+            }
+        }
     }
 }
