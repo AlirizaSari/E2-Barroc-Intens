@@ -37,17 +37,17 @@
             this.btnEditLeaseContract = new System.Windows.Forms.Button();
             this.dgvLeaseContracts = new System.Windows.Forms.DataGridView();
             this.btnDeleteLeaseContract = new System.Windows.Forms.Button();
+            this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paymentTermDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leasecontractBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pboxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLeaseContracts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leasecontractBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -65,7 +65,7 @@
             this.btnDirectToFinanceDash.Location = new System.Drawing.Point(1008, 11);
             this.btnDirectToFinanceDash.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDirectToFinanceDash.Name = "btnDirectToFinanceDash";
-            this.btnDirectToFinanceDash.Size = new System.Drawing.Size(179, 46);
+            this.btnDirectToFinanceDash.Size = new System.Drawing.Size(179, 61);
             this.btnDirectToFinanceDash.TabIndex = 25;
             this.btnDirectToFinanceDash.Text = "Terug naar finances dashboard";
             this.btnDirectToFinanceDash.UseVisualStyleBackColor = true;
@@ -103,6 +103,8 @@
             // 
             // dgvLeaseContracts
             // 
+            this.dgvLeaseContracts.AllowUserToAddRows = false;
+            this.dgvLeaseContracts.AllowUserToDeleteRows = false;
             this.dgvLeaseContracts.AutoGenerateColumns = false;
             this.dgvLeaseContracts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvLeaseContracts.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -116,6 +118,7 @@
             this.dgvLeaseContracts.Location = new System.Drawing.Point(18, 117);
             this.dgvLeaseContracts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvLeaseContracts.Name = "dgvLeaseContracts";
+            this.dgvLeaseContracts.ReadOnly = true;
             this.dgvLeaseContracts.RowHeadersVisible = false;
             this.dgvLeaseContracts.RowHeadersWidth = 51;
             this.dgvLeaseContracts.RowTemplate.Height = 24;
@@ -134,46 +137,6 @@
             this.btnDeleteLeaseContract.UseVisualStyleBackColor = true;
             this.btnDeleteLeaseContract.Click += new System.EventHandler(this.btnDeleteLeaseContract_Click);
             // 
-            // companyDataGridViewTextBoxColumn
-            // 
-            this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
-            this.companyDataGridViewTextBoxColumn.HeaderText = "Bedrijf";
-            this.companyDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
-            this.companyDataGridViewTextBoxColumn.Width = 74;
-            // 
-            // createDateDataGridViewTextBoxColumn
-            // 
-            this.createDateDataGridViewTextBoxColumn.DataPropertyName = "CreateDate";
-            this.createDateDataGridViewTextBoxColumn.HeaderText = "Datum";
-            this.createDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.createDateDataGridViewTextBoxColumn.Name = "createDateDataGridViewTextBoxColumn";
-            this.createDateDataGridViewTextBoxColumn.Width = 75;
-            // 
-            // paymentTermDataGridViewTextBoxColumn
-            // 
-            this.paymentTermDataGridViewTextBoxColumn.DataPropertyName = "PaymentTerm";
-            this.paymentTermDataGridViewTextBoxColumn.HeaderText = "Betaaltermijn";
-            this.paymentTermDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.paymentTermDataGridViewTextBoxColumn.Name = "paymentTermDataGridViewTextBoxColumn";
-            this.paymentTermDataGridViewTextBoxColumn.Width = 114;
-            // 
-            // productDataGridViewTextBoxColumn
-            // 
-            this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
-            this.productDataGridViewTextBoxColumn.HeaderText = "Koffiezetapparaat";
-            this.productDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
-            this.productDataGridViewTextBoxColumn.Width = 141;
-            // 
-            // leasecontractBindingSource
-            // 
-            this.leasecontractBindingSource.DataSource = typeof(Barroc_Intens.Classes.Leasecontract);
-            // 
-            // companyBindingSource
-            // 
-            this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
-            // 
             // pboxLogo
             // 
             this.pboxLogo.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
@@ -183,6 +146,50 @@
             this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboxLogo.TabIndex = 31;
             this.pboxLogo.TabStop = false;
+            // 
+            // companyDataGridViewTextBoxColumn
+            // 
+            this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
+            this.companyDataGridViewTextBoxColumn.HeaderText = "Bedrijf";
+            this.companyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
+            this.companyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.companyDataGridViewTextBoxColumn.Width = 74;
+            // 
+            // createDateDataGridViewTextBoxColumn
+            // 
+            this.createDateDataGridViewTextBoxColumn.DataPropertyName = "CreateDate";
+            this.createDateDataGridViewTextBoxColumn.HeaderText = "Datum";
+            this.createDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.createDateDataGridViewTextBoxColumn.Name = "createDateDataGridViewTextBoxColumn";
+            this.createDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.createDateDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // paymentTermDataGridViewTextBoxColumn
+            // 
+            this.paymentTermDataGridViewTextBoxColumn.DataPropertyName = "PaymentTerm";
+            this.paymentTermDataGridViewTextBoxColumn.HeaderText = "Betaaltermijn";
+            this.paymentTermDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.paymentTermDataGridViewTextBoxColumn.Name = "paymentTermDataGridViewTextBoxColumn";
+            this.paymentTermDataGridViewTextBoxColumn.ReadOnly = true;
+            this.paymentTermDataGridViewTextBoxColumn.Width = 114;
+            // 
+            // productDataGridViewTextBoxColumn
+            // 
+            this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
+            this.productDataGridViewTextBoxColumn.HeaderText = "Koffiezetapparaat";
+            this.productDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
+            this.productDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productDataGridViewTextBoxColumn.Width = 141;
+            // 
+            // leasecontractBindingSource
+            // 
+            this.leasecontractBindingSource.DataSource = typeof(Barroc_Intens.Classes.Leasecontract);
+            // 
+            // companyBindingSource
+            // 
+            this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
             // 
             // LeaseContractForm
             // 
@@ -203,9 +210,9 @@
             this.Text = "Leasecontracten";
             this.Load += new System.EventHandler(this.LeaseContractForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLeaseContracts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leasecontractBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

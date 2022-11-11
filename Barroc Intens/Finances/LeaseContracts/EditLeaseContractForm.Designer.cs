@@ -44,6 +44,7 @@
             this.cbYearly = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
+            this.btnBackToLease = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -176,11 +177,22 @@
             this.lblError.Size = new System.Drawing.Size(0, 20);
             this.lblError.TabIndex = 24;
             // 
+            // btnBackToLease
+            // 
+            this.btnBackToLease.Location = new System.Drawing.Point(545, 12);
+            this.btnBackToLease.Name = "btnBackToLease";
+            this.btnBackToLease.Size = new System.Drawing.Size(122, 41);
+            this.btnBackToLease.TabIndex = 25;
+            this.btnBackToLease.Text = "Terug naar leasecontracten";
+            this.btnBackToLease.UseVisualStyleBackColor = true;
+            this.btnBackToLease.Click += new System.EventHandler(this.btnBackToLease_Click);
+            // 
             // EditLeaseContractForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 342);
+            this.Controls.Add(this.btnBackToLease);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbYearly);
@@ -221,5 +233,6 @@
         private System.Windows.Forms.CheckBox cbYearly;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Button btnBackToLease;
     }
 }

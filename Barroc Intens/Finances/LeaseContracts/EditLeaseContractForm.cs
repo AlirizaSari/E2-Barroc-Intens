@@ -104,5 +104,10 @@ namespace Barroc_Intens.Finances.LeaseContracts
         {
             cbMonthly.Checked = false;
         }
+
+        private void btnBackToLease_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new LeaseContractForm());
+        }
     }
 }
