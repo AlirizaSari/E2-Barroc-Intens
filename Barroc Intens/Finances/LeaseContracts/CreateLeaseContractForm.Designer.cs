@@ -179,6 +179,7 @@
             this.cbMonthly.TabIndex = 14;
             this.cbMonthly.Text = "Maandelijks";
             this.cbMonthly.UseVisualStyleBackColor = true;
+            this.cbMonthly.CheckedChanged += new System.EventHandler(this.cbMonthly_CheckedChanged);
             // 
             // txbTelephoneNumber
             // 
@@ -228,6 +229,7 @@
             this.cbYearly.TabIndex = 20;
             this.cbYearly.Text = "Jaarlijks";
             this.cbYearly.UseVisualStyleBackColor = true;
+            this.cbYearly.CheckedChanged += new System.EventHandler(this.cbYearly_CheckedChanged);
             // 
             // label3
             // 

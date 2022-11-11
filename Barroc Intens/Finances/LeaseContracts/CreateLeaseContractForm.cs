@@ -127,5 +127,15 @@ namespace Barroc_Intens.Finances.LeaseContracts
             myForm.ShowDialog();
             this.Close();
         }
+
+        private void cbMonthly_CheckedChanged(object sender, EventArgs e)
+        {
+            cbYearly.Checked = false;
+        }
+
+        private void cbYearly_CheckedChanged(object sender, EventArgs e)
+        {
+            cbMonthly.Checked = false;
+        }
     }
 }
