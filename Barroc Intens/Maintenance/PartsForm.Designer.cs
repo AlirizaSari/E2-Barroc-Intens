@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PartsForm));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvParts = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblProductStockStatus = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblProductCategory = new System.Windows.Forms.Label();
@@ -44,8 +46,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnBackToDashboard = new System.Windows.Forms.Button();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblProductStockAmount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -87,6 +89,18 @@
             this.dgvParts.Size = new System.Drawing.Size(444, 336);
             this.dgvParts.TabIndex = 1;
             this.dgvParts.SelectionChanged += new System.EventHandler(this.dgvParts_SelectionChanged);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Naam";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 5;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
             // 
             // lblProductStockStatus
             // 
@@ -206,23 +220,31 @@
             this.btnBackToDashboard.UseVisualStyleBackColor = true;
             this.btnBackToDashboard.Click += new System.EventHandler(this.btnBackToDashboard_Click);
             // 
-            // nameDataGridViewTextBoxColumn
+            // label2
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Naam";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 5;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(487, 210);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Hoeveelheid:";
             // 
-            // productBindingSource
+            // lblProductStockAmount
             // 
-            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
+            this.lblProductStockAmount.AutoSize = true;
+            this.lblProductStockAmount.Location = new System.Drawing.Point(588, 210);
+            this.lblProductStockAmount.Name = "lblProductStockAmount";
+            this.lblProductStockAmount.Size = new System.Drawing.Size(108, 13);
+            this.lblProductStockAmount.TabIndex = 30;
+            this.lblProductStockAmount.Text = "ProductStockAmount";
             // 
             // PartsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblProductStockAmount);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBackToDashboard);
             this.Controls.Add(this.lblProductStockStatus);
             this.Controls.Add(this.label8);
@@ -266,5 +288,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnBackToDashboard;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblProductStockAmount;
     }
 }

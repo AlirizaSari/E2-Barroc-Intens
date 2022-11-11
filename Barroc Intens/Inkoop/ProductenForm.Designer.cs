@@ -57,6 +57,8 @@
             this.cboxStockStatus = new System.Windows.Forms.ComboBox();
             this.stockStatusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblProductStockAmount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
@@ -68,10 +70,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Barroc_Intens.Properties.Resources.Logo6_klein;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 101);
+            this.pictureBox1.Size = new System.Drawing.Size(98, 82);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -92,8 +93,7 @@
             this.dataGridViewTextBoxColumn1});
             this.dgvProducts.DataSource = this.productsBindingSource;
             this.dgvProducts.EnableHeadersVisualStyles = false;
-            this.dgvProducts.Location = new System.Drawing.Point(164, 196);
-            this.dgvProducts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvProducts.Location = new System.Drawing.Point(123, 159);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.ReadOnly = true;
             this.dgvProducts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -103,7 +103,7 @@
             this.dgvProducts.ShowCellToolTips = false;
             this.dgvProducts.ShowEditingIcon = false;
             this.dgvProducts.ShowRowErrors = false;
-            this.dgvProducts.Size = new System.Drawing.Size(563, 385);
+            this.dgvProducts.Size = new System.Drawing.Size(422, 313);
             this.dgvProducts.TabIndex = 1;
             this.dgvProducts.SelectionChanged += new System.EventHandler(this.dgvProducts_SelectionChanged);
             // 
@@ -129,10 +129,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(160, 171);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(120, 139);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 23);
+            this.label1.Size = new System.Drawing.Size(70, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Producten:";
             // 
@@ -142,10 +141,9 @@
             this.cboxCategory.DisplayMember = "Name";
             this.cboxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCategory.FormattingEnabled = true;
-            this.cboxCategory.Location = new System.Drawing.Point(164, 137);
-            this.cboxCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboxCategory.Location = new System.Drawing.Point(123, 111);
             this.cboxCategory.Name = "cboxCategory";
-            this.cboxCategory.Size = new System.Drawing.Size(160, 24);
+            this.cboxCategory.Size = new System.Drawing.Size(121, 21);
             this.cboxCategory.TabIndex = 0;
             this.cboxCategory.ValueMember = "CategoryId";
             this.cboxCategory.SelectedIndexChanged += new System.EventHandler(this.cboxCategory_SelectedIndexChanged);
@@ -154,19 +152,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(160, 112);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(120, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 23);
+            this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Categorie:";
             // 
             // btnBackToInkoopDashboard
             // 
-            this.btnBackToInkoopDashboard.Location = new System.Drawing.Point(873, 34);
-            this.btnBackToInkoopDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBackToInkoopDashboard.Location = new System.Drawing.Point(655, 28);
             this.btnBackToInkoopDashboard.Name = "btnBackToInkoopDashboard";
-            this.btnBackToInkoopDashboard.Size = new System.Drawing.Size(243, 34);
+            this.btnBackToInkoopDashboard.Size = new System.Drawing.Size(182, 28);
             this.btnBackToInkoopDashboard.TabIndex = 2;
             this.btnBackToInkoopDashboard.Text = "Terug naar inkoop dashboard";
             this.btnBackToInkoopDashboard.UseVisualStyleBackColor = true;
@@ -176,10 +172,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(735, 171);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(551, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 23);
+            this.label3.Size = new System.Drawing.Size(119, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Product Informatie:";
             // 
@@ -187,10 +182,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(735, 207);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(551, 168);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 20);
+            this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "Naam:";
             // 
@@ -198,10 +192,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(735, 236);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(551, 192);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 20);
+            this.label5.Size = new System.Drawing.Size(81, 15);
             this.label5.TabIndex = 8;
             this.label5.Text = "Omschrijving:";
             // 
@@ -209,10 +202,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(735, 267);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(551, 217);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 20);
+            this.label6.Size = new System.Drawing.Size(37, 15);
             this.label6.TabIndex = 9;
             this.label6.Text = "Merk:";
             // 
@@ -220,10 +212,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(735, 299);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(551, 243);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 20);
+            this.label7.Size = new System.Drawing.Size(61, 15);
             this.label7.TabIndex = 10;
             this.label7.Text = "Categorie:";
             // 
@@ -231,10 +222,9 @@
             // 
             this.lblProductName.AutoSize = true;
             this.lblProductName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductName.Location = new System.Drawing.Point(869, 207);
-            this.lblProductName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProductName.Location = new System.Drawing.Point(652, 168);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(100, 20);
+            this.lblProductName.Size = new System.Drawing.Size(81, 15);
             this.lblProductName.TabIndex = 11;
             this.lblProductName.Text = "ProductNaam";
             // 
@@ -242,10 +232,9 @@
             // 
             this.lblProductDescription.AutoSize = true;
             this.lblProductDescription.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductDescription.Location = new System.Drawing.Point(869, 236);
-            this.lblProductDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProductDescription.Location = new System.Drawing.Point(652, 192);
             this.lblProductDescription.Name = "lblProductDescription";
-            this.lblProductDescription.Size = new System.Drawing.Size(146, 20);
+            this.lblProductDescription.Size = new System.Drawing.Size(120, 15);
             this.lblProductDescription.TabIndex = 12;
             this.lblProductDescription.Text = "ProductOmschrijving";
             // 
@@ -253,10 +242,9 @@
             // 
             this.lblProductBrand.AutoSize = true;
             this.lblProductBrand.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductBrand.Location = new System.Drawing.Point(869, 267);
-            this.lblProductBrand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProductBrand.Location = new System.Drawing.Point(652, 217);
             this.lblProductBrand.Name = "lblProductBrand";
-            this.lblProductBrand.Size = new System.Drawing.Size(93, 20);
+            this.lblProductBrand.Size = new System.Drawing.Size(76, 15);
             this.lblProductBrand.TabIndex = 13;
             this.lblProductBrand.Text = "ProductMerk";
             // 
@@ -264,39 +252,35 @@
             // 
             this.lblProductCategory.AutoSize = true;
             this.lblProductCategory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductCategory.Location = new System.Drawing.Point(869, 299);
-            this.lblProductCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProductCategory.Location = new System.Drawing.Point(652, 243);
             this.lblProductCategory.Name = "lblProductCategory";
-            this.lblProductCategory.Size = new System.Drawing.Size(125, 20);
+            this.lblProductCategory.Size = new System.Drawing.Size(100, 15);
             this.lblProductCategory.TabIndex = 14;
             this.lblProductCategory.Text = "ProductCategorie";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(735, 329);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(551, 267);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 16);
+            this.label8.Size = new System.Drawing.Size(86, 13);
             this.label8.TabIndex = 15;
             this.label8.Text = "Voorraad Status:";
             // 
             // lblProductStockStatus
             // 
             this.lblProductStockStatus.AutoSize = true;
-            this.lblProductStockStatus.Location = new System.Drawing.Point(869, 329);
-            this.lblProductStockStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProductStockStatus.Location = new System.Drawing.Point(652, 267);
             this.lblProductStockStatus.Name = "lblProductStockStatus";
-            this.lblProductStockStatus.Size = new System.Drawing.Size(124, 16);
+            this.lblProductStockStatus.Size = new System.Drawing.Size(102, 13);
             this.lblProductStockStatus.TabIndex = 16;
             this.lblProductStockStatus.Text = "ProductStockStatus";
             // 
             // btnOrderProduct
             // 
-            this.btnOrderProduct.Location = new System.Drawing.Point(784, 462);
-            this.btnOrderProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOrderProduct.Location = new System.Drawing.Point(585, 409);
             this.btnOrderProduct.Name = "btnOrderProduct";
-            this.btnOrderProduct.Size = new System.Drawing.Size(152, 42);
+            this.btnOrderProduct.Size = new System.Drawing.Size(114, 34);
             this.btnOrderProduct.TabIndex = 17;
             this.btnOrderProduct.Text = "Betellen";
             this.btnOrderProduct.UseVisualStyleBackColor = true;
@@ -304,24 +288,22 @@
             // 
             // nupAmountProduct
             // 
-            this.nupAmountProduct.Location = new System.Drawing.Point(865, 412);
-            this.nupAmountProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nupAmountProduct.Location = new System.Drawing.Point(634, 373);
             this.nupAmountProduct.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.nupAmountProduct.Name = "nupAmountProduct";
-            this.nupAmountProduct.Size = new System.Drawing.Size(160, 22);
+            this.nupAmountProduct.Size = new System.Drawing.Size(120, 20);
             this.nupAmountProduct.TabIndex = 18;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(735, 415);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(551, 375);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 16);
+            this.label9.Size = new System.Drawing.Size(70, 13);
             this.label9.TabIndex = 19;
             this.label9.Text = "Hoeveelheid:";
             // 
@@ -329,10 +311,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(735, 382);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(551, 341);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(147, 23);
+            this.label10.Size = new System.Drawing.Size(111, 17);
             this.label10.TabIndex = 20;
             this.label10.Text = "Product Bestellen:";
             // 
@@ -342,10 +323,9 @@
             this.cboxStockStatus.DisplayMember = "Name";
             this.cboxStockStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxStockStatus.FormattingEnabled = true;
-            this.cboxStockStatus.Location = new System.Drawing.Point(484, 137);
-            this.cboxStockStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboxStockStatus.Location = new System.Drawing.Point(363, 111);
             this.cboxStockStatus.Name = "cboxStockStatus";
-            this.cboxStockStatus.Size = new System.Drawing.Size(241, 24);
+            this.cboxStockStatus.Size = new System.Drawing.Size(182, 21);
             this.cboxStockStatus.TabIndex = 21;
             this.cboxStockStatus.ValueMember = "StockStatusId";
             this.cboxStockStatus.SelectedIndexChanged += new System.EventHandler(this.cboxStockStatus_SelectedIndexChanged);
@@ -358,18 +338,37 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(480, 112);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(360, 91);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 23);
+            this.label11.Size = new System.Drawing.Size(46, 17);
             this.label11.TabIndex = 22;
             this.label11.Text = "Status:";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(551, 289);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 13);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Hoeveelheid:";
+            // 
+            // lblProductStockAmount
+            // 
+            this.lblProductStockAmount.AutoSize = true;
+            this.lblProductStockAmount.Location = new System.Drawing.Point(652, 289);
+            this.lblProductStockAmount.Name = "lblProductStockAmount";
+            this.lblProductStockAmount.Size = new System.Drawing.Size(108, 13);
+            this.lblProductStockAmount.TabIndex = 24;
+            this.lblProductStockAmount.Text = "ProductStockAmount";
+            // 
             // ProductenForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1208, 610);
+            this.ClientSize = new System.Drawing.Size(906, 496);
+            this.Controls.Add(this.lblProductStockAmount);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.cboxStockStatus);
             this.Controls.Add(this.label10);
@@ -394,7 +393,6 @@
             this.Controls.Add(this.dgvProducts);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ProductenForm";
             this.Text = "Producten";
             this.Load += new System.EventHandler(this.ProductenForm_Load);
@@ -439,5 +437,7 @@
         private System.Windows.Forms.ComboBox cboxStockStatus;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.BindingSource stockStatusBindingSource;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblProductStockAmount;
     }
 }
