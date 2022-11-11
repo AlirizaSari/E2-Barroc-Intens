@@ -71,23 +71,26 @@ namespace Barroc_Intens.Finances
             {
                 _message = $"Hallo {_companyName},%0d%0a" +
                 $"%0d%0aOp {_date} is er een koffiezetapparaat geïnstalleerd.%0d%0a" +
-                $"Gelieve de volgende kosten zo snel mogelijk te betalen:%0d%0a%0d%0a" +
-                $"Uur gewerkt%20|%20Arbeidskosten per uur%20|%20Korting%20|%20total%0d%0a";
+                $"Het model koffiezetapparaat is: {cboxProduct.SelectedItem}%0d%0a" +
+                $"%0d%0aGelieve de volgende kosten zo snel mogelijk te betalen:%0d%0a%0d%0a" +
+                $"Uur gewerkt:%20{_hoursWorked} uur%0d%0a" +
+                $"Arbeidskosten per uur: €{_pricePerHour}%0d%0a" +
+                $"Korting: {Math.Round(_discount,2)}%%0d%0a";
 
                 if (_discount > 0 && _discount <= 100)
                 {
-                    _message += $"{_hoursWorked}%20|%20{_pricePerHour}%20|%20{_discount}%20|%20{_hoursWorked * _pricePerHour * (1 - (_discount / 100))}";
+                    _message += $"Totaal €{Math.Round(_hoursWorked * _pricePerHour * (1 - (_discount / 100)),2)}%0d%0a";
                 }
                 else
                 {
-                    _message += $"{_hoursWorked}%20|%20{_pricePerHour}%20|%20{_discount}%20|%20{_hoursWorked * _pricePerHour * 1}";
+                    _message += $"Totaal €{Math.Round(_hoursWorked * _pricePerHour * 1, 2)}";
                 }
 
                 if (!String.IsNullOrEmpty(_comment))
                 {
                     _message += $"%0d%0a{_comment}%0d%0a";
                 }
-                _message += $"Uw betaaltermijn is: {_paymentTerm}%0d%0a";
+                _message += $"%0d%0aUw betaaltermijn is: {_paymentTerm}%0d%0a";
 
                 _message += $"%0d%0aMet vriendelijke groeten,%0d%0a" +
                     $"Barroc Intens%0d%0a%0d%0a";
