@@ -1,5 +1,4 @@
 ﻿using Barroc_Intens.Classes;
-using Barroc_Intens.Finances.LeaseContracts;
 using Barroc_Intens.Sales;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -33,7 +32,6 @@ namespace Barroc_Intens
             if (UserLoginInformation.LoginRolId != 1 && UserLoginInformation.LoginRolId != 4)
             {
                 btnAddCompany.Visible = false;
-                btnEditCompany.Visible= false;
             }
         }
 
@@ -76,12 +74,6 @@ namespace Barroc_Intens
         private void btnAddCompany_Click(object sender, EventArgs e)
         {
             DirectToForm(new AddCompanyForm());
-        }
-
-        private void btnEditCompany_Click(object sender, EventArgs e)
-        {
-            var currSelect = (Company)dgvCompany.CurrentRow?.DataBoundItem;
-            DirectToForm(new EditCompanyForm(currSelect));
         }
     }
 }

@@ -38,11 +38,13 @@
             this.lblAccountName = new System.Windows.Forms.Label();
             this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.btnOfferte = new System.Windows.Forms.Button();
             this.lblSystemName = new System.Windows.Forms.Label();
             this.btnCustomerNotes = new System.Windows.Forms.Button();
             this.btnBackToMain = new System.Windows.Forms.Button();
+            this.btnOfferte = new System.Windows.Forms.Button();
             this.dgvCompany = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAddCompany = new System.Windows.Forms.Button();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,9 +53,6 @@
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countryCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAddCompany = new System.Windows.Forms.Button();
-            this.btnEditCompany = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -140,18 +139,8 @@
             this.pnlTop.Controls.Add(this.btnBackToMain);
             this.pnlTop.Location = new System.Drawing.Point(222, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(848, 157);
+            this.pnlTop.Size = new System.Drawing.Size(802, 157);
             this.pnlTop.TabIndex = 1;
-            // 
-            // btnOfferte
-            // 
-            this.btnOfferte.Location = new System.Drawing.Point(508, 117);
-            this.btnOfferte.Name = "btnOfferte";
-            this.btnOfferte.Size = new System.Drawing.Size(172, 37);
-            this.btnOfferte.TabIndex = 4;
-            this.btnOfferte.Text = "Offertes";
-            this.btnOfferte.UseVisualStyleBackColor = true;
-            this.btnOfferte.Click += new System.EventHandler(this.btnOfferte_Click);
             // 
             // lblSystemName
             // 
@@ -183,6 +172,15 @@
             this.btnBackToMain.UseVisualStyleBackColor = true;
             this.btnBackToMain.Click += new System.EventHandler(this.btnBackToMain_Click);
             // 
+            // btnOfferte
+            // 
+            this.btnOfferte.Location = new System.Drawing.Point(508, 117);
+            this.btnOfferte.Name = "btnOfferte";
+            this.btnOfferte.Size = new System.Drawing.Size(172, 37);
+            this.btnOfferte.TabIndex = 4;
+            this.btnOfferte.Text = "Offertes";
+            this.btnOfferte.UseVisualStyleBackColor = true;
+            this.btnOfferte.Click += new System.EventHandler(this.btnOfferte_Click);
             // dgvCompany
             // 
             this.dgvCompany.AllowUserToAddRows = false;
@@ -207,8 +205,28 @@
             this.dgvCompany.Name = "dgvCompany";
             this.dgvCompany.ReadOnly = true;
             this.dgvCompany.RowHeadersVisible = false;
-            this.dgvCompany.Size = new System.Drawing.Size(830, 368);
+            this.dgvCompany.Size = new System.Drawing.Size(785, 368);
             this.dgvCompany.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(223, 192);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Bedrijven/Klanten";
+            // 
+            // btnAddCompany
+            // 
+            this.btnAddCompany.Location = new System.Drawing.Point(228, 594);
+            this.btnAddCompany.Name = "btnAddCompany";
+            this.btnAddCompany.Size = new System.Drawing.Size(175, 47);
+            this.btnAddCompany.TabIndex = 4;
+            this.btnAddCompany.Text = "Toevoegen";
+            this.btnAddCompany.UseVisualStyleBackColor = true;
+            this.btnAddCompany.Click += new System.EventHandler(this.btnAddCompany_Click);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -270,42 +288,11 @@
             // 
             this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(223, 192);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Bedrijven/Klanten";
-            // 
-            // btnAddCompany
-            // 
-            this.btnAddCompany.Location = new System.Drawing.Point(228, 594);
-            this.btnAddCompany.Name = "btnAddCompany";
-            this.btnAddCompany.Size = new System.Drawing.Size(175, 47);
-            this.btnAddCompany.TabIndex = 4;
-            this.btnAddCompany.Text = "Toevoegen";
-            this.btnAddCompany.UseVisualStyleBackColor = true;
-            this.btnAddCompany.Click += new System.EventHandler(this.btnAddCompany_Click);
-            // 
-            // btnEditCompany
-            // 
-            this.btnEditCompany.Location = new System.Drawing.Point(409, 594);
-            this.btnEditCompany.Name = "btnEditCompany";
-            this.btnEditCompany.Size = new System.Drawing.Size(175, 47);
-            this.btnEditCompany.TabIndex = 5;
-            this.btnEditCompany.Text = "Bewerken";
-            this.btnEditCompany.UseVisualStyleBackColor = true;
-            this.btnEditCompany.Click += new System.EventHandler(this.btnEditCompany_Click);
-            // 
             // DashboardSalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 653);
-            this.Controls.Add(this.btnEditCompany);
+            this.ClientSize = new System.Drawing.Size(1025, 653);
             this.Controls.Add(this.btnAddCompany);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvCompany);
@@ -354,6 +341,5 @@
         private System.Windows.Forms.BindingSource companyBindingSource;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddCompany;
-        private System.Windows.Forms.Button btnEditCompany;
     }
 }
