@@ -54,22 +54,16 @@
             this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCategories = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isEmployeeOnlyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isEmployeeOnlyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +87,7 @@
             this.lblExtraInfo.AutoSize = true;
             this.lblExtraInfo.Location = new System.Drawing.Point(20, 322);
             this.lblExtraInfo.Name = "lblExtraInfo";
-            this.lblExtraInfo.Size = new System.Drawing.Size(115, 20);
+            this.lblExtraInfo.Size = new System.Drawing.Size(91, 15);
             this.lblExtraInfo.TabIndex = 6;
             this.lblExtraInfo.Text = "Extra Informatie";
             // 
@@ -120,7 +114,7 @@
             this.lblDepartment.AutoSize = true;
             this.lblDepartment.Location = new System.Drawing.Point(53, 249);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(66, 20);
+            this.lblDepartment.Size = new System.Drawing.Size(52, 15);
             this.lblDepartment.TabIndex = 3;
             this.lblDepartment.Text = "Afdeling";
             // 
@@ -129,7 +123,7 @@
             this.lblAccountName.AutoSize = true;
             this.lblAccountName.Location = new System.Drawing.Point(53, 220);
             this.lblAccountName.Name = "lblAccountName";
-            this.lblAccountName.Size = new System.Drawing.Size(107, 20);
+            this.lblAccountName.Size = new System.Drawing.Size(87, 15);
             this.lblAccountName.TabIndex = 2;
             this.lblAccountName.Text = "Account Naam";
             // 
@@ -161,7 +155,7 @@
             this.lblInkoop.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInkoop.Location = new System.Drawing.Point(293, 30);
             this.lblInkoop.Name = "lblInkoop";
-            this.lblInkoop.Size = new System.Drawing.Size(118, 41);
+            this.lblInkoop.Size = new System.Drawing.Size(95, 32);
             this.lblInkoop.TabIndex = 3;
             this.lblInkoop.Text = "Inkoop";
             // 
@@ -269,6 +263,7 @@
             this.dgvProducts.DataSource = this.productBindingSource;
             this.dgvProducts.Location = new System.Drawing.Point(229, 164);
             this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.RowHeadersVisible = false;
             this.dgvProducts.RowHeadersWidth = 51;
             this.dgvProducts.Size = new System.Drawing.Size(673, 196);
             this.dgvProducts.TabIndex = 10;
@@ -315,23 +310,26 @@
             this.dgvCategories.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategories.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn1,
+            this.Name,
             this.isEmployeeOnlyDataGridViewTextBoxColumn});
             this.dgvCategories.DataSource = this.categoryBindingSource;
             this.dgvCategories.Location = new System.Drawing.Point(229, 410);
             this.dgvCategories.Name = "dgvCategories";
+            this.dgvCategories.RowHeadersVisible = false;
             this.dgvCategories.RowHeadersWidth = 51;
             this.dgvCategories.Size = new System.Drawing.Size(302, 178);
             this.dgvCategories.TabIndex = 10;
             this.dgvCategories.SelectionChanged += new System.EventHandler(this.dgvCategories_SelectionChanged);
             // 
-            // nameDataGridViewTextBoxColumn1
+            // categoryBindingSource
             // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Naam";
-            this.nameDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            this.nameDataGridViewTextBoxColumn1.Width = 125;
+            this.categoryBindingSource.DataSource = typeof(Barroc_Intens.Category);
+            // 
+            // Name
+            // 
+            this.Name.DataPropertyName = "Name";
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
             // 
             // isEmployeeOnlyDataGridViewTextBoxColumn
             // 
@@ -341,41 +339,9 @@
             this.isEmployeeOnlyDataGridViewTextBoxColumn.Name = "isEmployeeOnlyDataGridViewTextBoxColumn";
             this.isEmployeeOnlyDataGridViewTextBoxColumn.Width = 125;
             // 
-            // categoryBindingSource
-            // 
-            this.categoryBindingSource.DataSource = typeof(Barroc_Intens.Category);
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Naam";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Beschrijving";
-            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // categoryDataGridViewTextBoxColumn
-            // 
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "Categorie";
-            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            this.categoryDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
-            // 
             // DashboardInkoopForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.dgvCategories);
@@ -400,8 +366,6 @@
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
@@ -437,7 +401,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Brand;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn isEmployeeOnlyDataGridViewTextBoxColumn;
     }
 }

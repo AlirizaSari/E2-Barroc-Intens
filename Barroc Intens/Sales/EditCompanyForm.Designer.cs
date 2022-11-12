@@ -32,6 +32,7 @@
             this.btnCancelCompany = new System.Windows.Forms.Button();
             this.btnEditCompany = new System.Windows.Forms.Button();
             this.txbCompanyCountryCode = new System.Windows.Forms.TextBox();
+            this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txbCompanyCity = new System.Windows.Forms.TextBox();
             this.txbCompanyHouseNumber = new System.Windows.Forms.TextBox();
             this.txbCompanyStreet = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,15 +72,17 @@
             // 
             // txbCompanyCountryCode
             // 
-            this.txbCompanyCountryCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.companyBindingSource, "CountryCode", true));
             this.txbCompanyCountryCode.Location = new System.Drawing.Point(405, 134);
             this.txbCompanyCountryCode.Name = "txbCompanyCountryCode";
             this.txbCompanyCountryCode.Size = new System.Drawing.Size(181, 20);
             this.txbCompanyCountryCode.TabIndex = 31;
             // 
+            // companyBindingSource
+            // 
+            this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
+            // 
             // txbCompanyCity
             // 
-            this.txbCompanyCity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.companyBindingSource, "City", true));
             this.txbCompanyCity.Location = new System.Drawing.Point(405, 103);
             this.txbCompanyCity.Name = "txbCompanyCity";
             this.txbCompanyCity.Size = new System.Drawing.Size(181, 20);
@@ -88,7 +90,6 @@
             // 
             // txbCompanyHouseNumber
             // 
-            this.txbCompanyHouseNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.companyBindingSource, "HouseNumber", true));
             this.txbCompanyHouseNumber.Location = new System.Drawing.Point(405, 72);
             this.txbCompanyHouseNumber.Name = "txbCompanyHouseNumber";
             this.txbCompanyHouseNumber.Size = new System.Drawing.Size(181, 20);
@@ -96,7 +97,6 @@
             // 
             // txbCompanyStreet
             // 
-            this.txbCompanyStreet.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.companyBindingSource, "Street", true));
             this.txbCompanyStreet.Location = new System.Drawing.Point(130, 165);
             this.txbCompanyStreet.Name = "txbCompanyStreet";
             this.txbCompanyStreet.Size = new System.Drawing.Size(181, 20);
@@ -104,7 +104,6 @@
             // 
             // txbCompanyEmail
             // 
-            this.txbCompanyEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.companyBindingSource, "EmailAddress", true));
             this.txbCompanyEmail.Location = new System.Drawing.Point(130, 134);
             this.txbCompanyEmail.Name = "txbCompanyEmail";
             this.txbCompanyEmail.Size = new System.Drawing.Size(181, 20);
@@ -112,7 +111,6 @@
             // 
             // txbCompanyPhone
             // 
-            this.txbCompanyPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.companyBindingSource, "Phone", true));
             this.txbCompanyPhone.Location = new System.Drawing.Point(130, 103);
             this.txbCompanyPhone.Name = "txbCompanyPhone";
             this.txbCompanyPhone.Size = new System.Drawing.Size(181, 20);
@@ -120,7 +118,6 @@
             // 
             // txbCompanyName
             // 
-            this.txbCompanyName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.companyBindingSource, "Name", true));
             this.txbCompanyName.Location = new System.Drawing.Point(130, 72);
             this.txbCompanyName.Name = "txbCompanyName";
             this.txbCompanyName.Size = new System.Drawing.Size(181, 20);
@@ -198,10 +195,6 @@
             this.label1.Size = new System.Drawing.Size(154, 25);
             this.label1.TabIndex = 17;
             this.label1.Text = "Bedrijf Bewerken";
-            // 
-            // companyBindingSource
-            // 
-            this.companyBindingSource.DataSource = typeof(Barroc_Intens.Company);
             // 
             // EditCompanyForm
             // 
