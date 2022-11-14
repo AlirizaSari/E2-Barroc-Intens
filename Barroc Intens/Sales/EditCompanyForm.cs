@@ -44,6 +44,15 @@ namespace Barroc_Intens.Sales
             txbCompanyCity.Text = _company.City;
             txbCompanyCountryCode.Text = _company.CountryCode;
 
+            if (_company.IsBkrChecked)
+            {
+                cbBkr.Checked = true;
+            }
+            else
+            {
+                cbBkr.Checked = false;
+            }
+
         }
 
         private void DirectToForm(Form myForm)
@@ -64,6 +73,18 @@ namespace Barroc_Intens.Sales
             saveCompany.HouseNumber = txbCompanyHouseNumber.Text;
             saveCompany.City = txbCompanyCity.Text;
             saveCompany.CountryCode = txbCompanyCountryCode.Text;
+
+            if (cbBkr.Checked)
+            {
+                saveCompany.IsBkrChecked = true;
+                saveCompany.BkrCheckedAt = DateTime.Now;
+            }
+            else
+            {
+                saveCompany.IsBkrChecked = false;
+                saveCompany.BkrCheckedAt = null;
+
+            }
 
             dbContext.Companies.Update(saveCompany);
             dbContext.SaveChanges();
