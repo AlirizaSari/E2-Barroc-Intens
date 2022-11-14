@@ -73,8 +73,8 @@ namespace Barroc_Intens.Maintenance
         private void btnCreateAppointment_Click(object sender, EventArgs e)
         {
         var selectedAppointment = (MaintenanceAppointment)dgvNewAppointments.CurrentRow.DataBoundItem;
-            
-        //select the current appointment selected in 
+
+            //select the current appointment selected in 
 
             //this will add the selected appoint to the planned appointment table
             var appointment = new PlannedAppointment()
@@ -85,7 +85,7 @@ namespace Barroc_Intens.Maintenance
                 AssignedEmployee = cbEmployeeAsigned.Text,
                 UserId = UserLoginInformation.LoginUserId,
                 CompanyId = selectedAppointment.CompanyId,
-                Company = selectedAppointment.Company
+                Company = selectedAppointment.Company,
             };
 
             if (selectedAppointment != null)
@@ -128,5 +128,12 @@ namespace Barroc_Intens.Maintenance
         {
             
         }
+
+        private void btnNewAppointment_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new NewMaintenanceAppointment());
+
+        }
+        
     }
 }

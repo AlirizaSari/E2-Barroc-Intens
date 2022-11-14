@@ -72,9 +72,6 @@
             this.txbCompanyLocation = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvNewAppointments = new System.Windows.Forms.DataGridView();
-            this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isRoutineAppointmentDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Added = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblInfoTextNewAppointment = new System.Windows.Forms.Label();
             this.lblSectionNewAppointmentsHeader = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -82,6 +79,9 @@
             this.btnEditDetails = new System.Windows.Forms.Button();
             this.txbCommandsAppointment = new System.Windows.Forms.TextBox();
             this.lblCommentsCompanyHeader = new System.Windows.Forms.Label();
+            this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isRoutineAppointmentDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Added = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTopMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlCalander.SuspendLayout();
@@ -193,7 +193,6 @@
             this.btnCreateAppointment.TabIndex = 10;
             this.btnCreateAppointment.Text = "Inplannen";
             this.btnCreateAppointment.UseVisualStyleBackColor = true;
-
             this.btnCreateAppointment.Click += new System.EventHandler(this.btnCreateAppointment_Click);
             // 
             // txbVisitDuration
@@ -493,7 +492,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNewAppointments.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvNewAppointments.Location = new System.Drawing.Point(6, 86);
+            this.dgvNewAppointments.Location = new System.Drawing.Point(0, 85);
             this.dgvNewAppointments.Name = "dgvNewAppointments";
             this.dgvNewAppointments.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -507,10 +506,81 @@
             this.dgvNewAppointments.RowHeadersVisible = false;
             this.dgvNewAppointments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgvNewAppointments.RowTemplate.Height = 24;
+            this.dgvNewAppointments.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvNewAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNewAppointments.Size = new System.Drawing.Size(568, 349);
             this.dgvNewAppointments.TabIndex = 19;
             this.dgvNewAppointments.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // lblInfoTextNewAppointment
+            // 
+            this.lblInfoTextNewAppointment.AutoSize = true;
+            this.lblInfoTextNewAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoTextNewAppointment.Location = new System.Drawing.Point(3, 66);
+            this.lblInfoTextNewAppointment.Name = "lblInfoTextNewAppointment";
+            this.lblInfoTextNewAppointment.Size = new System.Drawing.Size(275, 16);
+            this.lblInfoTextNewAppointment.TabIndex = 18;
+            this.lblInfoTextNewAppointment.Text = "Selecteer een nieuwe onderhouds aanvraag:";
+            // 
+            // lblSectionNewAppointmentsHeader
+            // 
+            this.lblSectionNewAppointmentsHeader.AutoSize = true;
+            this.lblSectionNewAppointmentsHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSectionNewAppointmentsHeader.Location = new System.Drawing.Point(131, 10);
+            this.lblSectionNewAppointmentsHeader.Name = "lblSectionNewAppointmentsHeader";
+            this.lblSectionNewAppointmentsHeader.Size = new System.Drawing.Size(311, 20);
+            this.lblSectionNewAppointmentsHeader.TabIndex = 17;
+            this.lblSectionNewAppointmentsHeader.Text = "Binnengekomen afspraak aanvragen";
+            // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(416, 627);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 46);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "edit details";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnNewAppointment
+            // 
+            this.btnNewAppointment.Enabled = false;
+            this.btnNewAppointment.Location = new System.Drawing.Point(57, 627);
+            this.btnNewAppointment.Name = "btnNewAppointment";
+            this.btnNewAppointment.Size = new System.Drawing.Size(103, 46);
+            this.btnNewAppointment.TabIndex = 8;
+            this.btnNewAppointment.Text = "nieuwe afspraak";
+            this.btnNewAppointment.UseVisualStyleBackColor = true;
+            this.btnNewAppointment.Click += new System.EventHandler(this.btnNewAppointment_Click);
+            // 
+            // btnEditDetails
+            // 
+            this.btnEditDetails.Enabled = false;
+            this.btnEditDetails.Location = new System.Drawing.Point(229, 627);
+            this.btnEditDetails.Name = "btnEditDetails";
+            this.btnEditDetails.Size = new System.Drawing.Size(103, 46);
+            this.btnEditDetails.TabIndex = 7;
+            this.btnEditDetails.Text = "edit details";
+            this.btnEditDetails.UseVisualStyleBackColor = true;
+            // 
+            // txbCommandsAppointment
+            // 
+            this.txbCommandsAppointment.Location = new System.Drawing.Point(57, 500);
+            this.txbCommandsAppointment.Multiline = true;
+            this.txbCommandsAppointment.Name = "txbCommandsAppointment";
+            this.txbCommandsAppointment.ReadOnly = true;
+            this.txbCommandsAppointment.Size = new System.Drawing.Size(462, 116);
+            this.txbCommandsAppointment.TabIndex = 6;
+            // 
+            // lblCommentsCompanyHeader
+            // 
+            this.lblCommentsCompanyHeader.AutoSize = true;
+            this.lblCommentsCompanyHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCommentsCompanyHeader.Location = new System.Drawing.Point(59, 481);
+            this.lblCommentsCompanyHeader.Name = "lblCommentsCompanyHeader";
+            this.lblCommentsCompanyHeader.Size = new System.Drawing.Size(101, 16);
+            this.lblCommentsCompanyHeader.TabIndex = 4;
+            this.lblCommentsCompanyHeader.Text = "opmerkingen:";
             // 
             // companyDataGridViewTextBoxColumn
             // 
@@ -538,72 +608,6 @@
             this.Added.Name = "Added";
             this.Added.ReadOnly = true;
             this.Added.Width = 125;
-            // 
-            // lblInfoTextNewAppointment
-            // 
-            this.lblInfoTextNewAppointment.AutoSize = true;
-            this.lblInfoTextNewAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoTextNewAppointment.Location = new System.Drawing.Point(3, 66);
-            this.lblInfoTextNewAppointment.Name = "lblInfoTextNewAppointment";
-            this.lblInfoTextNewAppointment.Size = new System.Drawing.Size(275, 16);
-            this.lblInfoTextNewAppointment.TabIndex = 18;
-            this.lblInfoTextNewAppointment.Text = "Selecteer een nieuwe onderhouds aanvraag:";
-            // 
-            // lblSectionNewAppointmentsHeader
-            // 
-            this.lblSectionNewAppointmentsHeader.AutoSize = true;
-            this.lblSectionNewAppointmentsHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSectionNewAppointmentsHeader.Location = new System.Drawing.Point(131, 10);
-            this.lblSectionNewAppointmentsHeader.Name = "lblSectionNewAppointmentsHeader";
-            this.lblSectionNewAppointmentsHeader.Size = new System.Drawing.Size(311, 20);
-            this.lblSectionNewAppointmentsHeader.TabIndex = 17;
-            this.lblSectionNewAppointmentsHeader.Text = "Binnengekomen afspraak aanvragen";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(416, 627);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 46);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "edit details";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnNewAppointment
-            // 
-            this.btnNewAppointment.Location = new System.Drawing.Point(57, 627);
-            this.btnNewAppointment.Name = "btnNewAppointment";
-            this.btnNewAppointment.Size = new System.Drawing.Size(103, 46);
-            this.btnNewAppointment.TabIndex = 8;
-            this.btnNewAppointment.Text = "nieuwe afspraak";
-            this.btnNewAppointment.UseVisualStyleBackColor = true;
-            // 
-            // btnEditDetails
-            // 
-            this.btnEditDetails.Location = new System.Drawing.Point(229, 627);
-            this.btnEditDetails.Name = "btnEditDetails";
-            this.btnEditDetails.Size = new System.Drawing.Size(103, 46);
-            this.btnEditDetails.TabIndex = 7;
-            this.btnEditDetails.Text = "edit details";
-            this.btnEditDetails.UseVisualStyleBackColor = true;
-            // 
-            // txbCommandsAppointment
-            // 
-            this.txbCommandsAppointment.Location = new System.Drawing.Point(57, 500);
-            this.txbCommandsAppointment.Multiline = true;
-            this.txbCommandsAppointment.Name = "txbCommandsAppointment";
-            this.txbCommandsAppointment.ReadOnly = true;
-            this.txbCommandsAppointment.Size = new System.Drawing.Size(462, 116);
-            this.txbCommandsAppointment.TabIndex = 6;
-            // 
-            // lblCommentsCompanyHeader
-            // 
-            this.lblCommentsCompanyHeader.AutoSize = true;
-            this.lblCommentsCompanyHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCommentsCompanyHeader.Location = new System.Drawing.Point(59, 481);
-            this.lblCommentsCompanyHeader.Name = "lblCommentsCompanyHeader";
-            this.lblCommentsCompanyHeader.Size = new System.Drawing.Size(101, 16);
-            this.lblCommentsCompanyHeader.TabIndex = 4;
-            this.lblCommentsCompanyHeader.Text = "opmerkingen:";
             // 
             // PlannerForm
             // 
@@ -682,9 +686,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentDuration;
         private System.Windows.Forms.DataGridViewTextBoxColumn AssignedEmployee;
         private System.Windows.Forms.DataGridViewTextBoxColumn userDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label lblErrorMsgNoAppointments;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isRoutineAppointmentDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Added;
-        private System.Windows.Forms.Label lblErrorMsgNoAppointments;
     }
 }

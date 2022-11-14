@@ -12,8 +12,6 @@ namespace Barroc_Intens
     public class MaintenanceAppointment
     {
         public int MaintenanceAppointmentId { get; set; }
-        public DateTime? AppointmentDate { get; set; }
-        public DateTime? AppointmentTime { get; set; }
         public string AppointmentDuration { get; set; }
         public string AssignedEmployee { get; set; }
         public int CompanyId { get; set; }

@@ -410,6 +410,12 @@
     <Compile Include="Maintenance\MaintenanceForm.Designer.cs">
       <DependentUpon>MaintenanceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Maintenance\NewMaintenanceAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\NewMaintenanceAppointment.Designer.cs">
+      <DependentUpon>NewMaintenanceAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maintenance\PartsForm.cs">
       <SubType>Form</SubType>
     </Compile>

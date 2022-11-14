@@ -18,6 +18,6 @@ namespace Barroc_Intens.Classes
         public string AssignedEmployee { get; set; }
         public int UserId { get; internal set; }
         public User User { get; internal set; }
-
+        public bool AppointmentIsPlanned { get; internal set; }
     }
 }
