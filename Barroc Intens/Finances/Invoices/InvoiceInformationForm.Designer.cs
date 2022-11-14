@@ -284,7 +284,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InvoiceInformationForm";
-            this.Text = "InvoiceInformation";
+            this.Text = "Informatie over factuur";
             this.Load += new System.EventHandler(this.InvoiceInformationForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).EndInit();
