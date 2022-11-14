@@ -52,11 +52,11 @@ namespace Barroc_Intens.Finances
             nudPricePerHour.Value = (decimal)_customInvoice.PricePerHour;
             txbNotes.Text = _customInvoice.Notes;
 
-            if (_paymentTerm == "Maandelijks")
+            if (_customInvoice.PaymentTerm == "Maandelijks")
             {
                 cbMonthly.Checked = true;
             }
-            else if (_paymentTerm == "Jaarlijks")
+            else if (_customInvoice.PaymentTerm == "Jaarlijks")
             {
                 cbYearly.Checked = true;
             }
