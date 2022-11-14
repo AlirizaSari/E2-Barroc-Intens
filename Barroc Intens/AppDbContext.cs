@@ -228,9 +228,9 @@ namespace Barroc_Intens
                 });
 
             modelBuilder.Entity<Category>().HasData(
-                new Category { CategoryId = 1, Name = "Automaten", IsEmployeeOnly = 2 },
-                new Category { CategoryId = 2, Name = "Koffiebonen", IsEmployeeOnly = 2 },
-                new Category { CategoryId = 3, Name = "Onderdelen", IsEmployeeOnly = 1  
+                new Category { CategoryId = 1, Name = "Automaten", IsEmployeeOnly = false },
+                new Category { CategoryId = 2, Name = "Koffiebonen", IsEmployeeOnly = false },
+                new Category { CategoryId = 3, Name = "Onderdelen", IsEmployeeOnly = true  
                 });
 
             modelBuilder.Entity<CustomInvoice>().HasData(

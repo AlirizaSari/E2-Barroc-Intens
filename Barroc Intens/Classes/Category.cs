@@ -8,7 +8,7 @@ namespace Barroc_Intens
 
         public string Name { get; set; }
 
-        public int IsEmployeeOnly { get; set; }
+        public bool IsEmployeeOnly { get; set; }
 
         public ObservableCollectionListSource<Product> Products { get; } = new ObservableCollectionListSource<Product>();
 

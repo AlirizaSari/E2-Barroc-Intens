@@ -32,6 +32,7 @@ namespace Barroc_Intens.Sales
         private void EditCompanyForm_Load(object sender, EventArgs e)
         {
             this.dbContext = new AppDbContext();
+
             this.dbContext.Companies.Load();
 
             this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();

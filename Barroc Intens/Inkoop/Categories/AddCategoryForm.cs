@@ -36,7 +36,7 @@ namespace Barroc_Intens.Inkoop
                 var category = new Category
                 {
                     Name = txbNameCategory.Text,
-                    IsEmployeeOnly = isChecked,
+                    IsEmployeeOnly = cbEmployeeOnly.Checked,
 
                 };
                 dbContext.Categories.Add(category);

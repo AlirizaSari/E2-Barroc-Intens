@@ -1,5 +1,8 @@
 ﻿using Barroc_Intens.Classes;
 using Barroc_Intens.Inkoop;
+using Barroc_Intens.Inkoop.Categories;
+using Barroc_Intens.Inkoop.Products;
+using Barroc_Intens.Sales;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -81,15 +84,9 @@ namespace Barroc_Intens
 
         private void btnEditProduct_Click(object sender, EventArgs e)
         {
-            var product = (Product)this.dgvProducts.CurrentRow?.DataBoundItem;
+            var currSelect = (Product)dgvProducts.CurrentRow?.DataBoundItem;
+            DirectToForm(new EditProductForm(currSelect));
 
-            if (product != null)
-            {
-                dbContext.Products.Update(product);
-                dbContext.SaveChanges();
-                dgvProducts.Refresh();
-            }
-            
         }
 
         private void btnRemoveProduct_Click(object sender, EventArgs e)
@@ -120,11 +117,8 @@ namespace Barroc_Intens
 
         private void btnEditCategory_Click(object sender, EventArgs e)
         {
-            var category = (Category)this.dgvCategories.CurrentRow?.DataBoundItem;
-
-            dbContext.Categories.Update(category);
-            dbContext.SaveChanges();
-            dgvCategories.Refresh();
+            var currSelect = (Category)dgvCategories.CurrentRow?.DataBoundItem;
+            DirectToForm(new EditCategoryForm(currSelect));
         }
 
         private void btnRemoveCategory_Click(object sender, EventArgs e)
