@@ -36,6 +36,14 @@ namespace Barroc_Intens.Sales
 
             this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
 
+            txbCompanyName.Text = _company.Name;
+            txbCompanyPhone.Text = _company.Phone;
+            txbCompanyEmail.Text = _company.EmailAddress;
+            txbCompanyStreet.Text = _company.Street;
+            txbCompanyHouseNumber.Text = _company.HouseNumber;
+            txbCompanyCity.Text = _company.City;
+            txbCompanyCountryCode.Text = _company.CountryCode;
+
         }
 
         private void DirectToForm(Form myForm)
@@ -47,7 +55,7 @@ namespace Barroc_Intens.Sales
 
         private void btnEditCompany_Click(object sender, EventArgs e)
         {
-            var saveCompany = dbContext.Companies.Where(c => c == _company).FirstOrDefault();
+            var saveCompany = dbContext.Companies.Where(c => c.CompanyId == _company.CompanyId).FirstOrDefault();
 
             saveCompany.Name = txbCompanyName.Text;
             saveCompany.Phone= txbCompanyPhone.Text;
