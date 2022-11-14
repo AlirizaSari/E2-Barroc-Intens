@@ -274,8 +274,8 @@ namespace Barroc_Intens
                 new Product { ProductId = 20, Name = "Maalmotor", Description = "", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
                 new Product { ProductId = 21, Name = "Zeef", Description = "", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
                 new Product { ProductId = 22, Name = "Reinigingstabletten", Description = "-", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
-                new Product { ProductId = 22, Name = "Reiningsborsteltjes", Description = "-", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
-                new Product { ProductId = 22, Name = "Ontkalkingspijp", Description = "-", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 }
+                new Product { ProductId = 23, Name = "Reiningsborsteltjes", Description = "-", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 24, Name = "Ontkalkingspijp", Description = "-", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 }
                 ); ;
 
             modelBuilder.Entity<MaintenanceAppointment>().HasData(
