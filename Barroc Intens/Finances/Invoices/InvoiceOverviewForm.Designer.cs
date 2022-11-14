@@ -134,9 +134,9 @@
             this.lblPaidInvoices.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaidInvoices.Location = new System.Drawing.Point(36, 82);
             this.lblPaidInvoices.Name = "lblPaidInvoices";
-            this.lblPaidInvoices.Size = new System.Drawing.Size(127, 20);
+            this.lblPaidInvoices.Size = new System.Drawing.Size(129, 20);
             this.lblPaidInvoices.TabIndex = 3;
-            this.lblPaidInvoices.Text = "Betaalde invoices";
+            this.lblPaidInvoices.Text = "Betaalde facturen";
             // 
             // label1
             // 
@@ -144,9 +144,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(470, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 20);
+            this.label1.Size = new System.Drawing.Size(162, 20);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Niet betaalde invoices";
+            this.label1.Text = "Niet betaalde facturen";
             // 
             // dataGridViewTextBoxColumn4
             // 
