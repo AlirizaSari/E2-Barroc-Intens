@@ -357,7 +357,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "DashboardInkoopForm";
+            //this.Name = "DashboardInkoopForm";
             this.Text = "Dashboard voor inkoop";
             this.Load += new System.EventHandler(this.DashboardInkoopForm_Load);
             this.pnlLeft.ResumeLayout(false);

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Mail;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace Barroc_Intens.Finances
 {
@@ -182,6 +183,8 @@ namespace Barroc_Intens.Finances
                     CompanyId = (int)cboxCompanyName.SelectedValue
                 };
                 dbContext.CustomInvoices.Add(invoice);
+
+                DirectToForm(new DashboardFinanceForm());
             }
 
             dbContext.SaveChanges();

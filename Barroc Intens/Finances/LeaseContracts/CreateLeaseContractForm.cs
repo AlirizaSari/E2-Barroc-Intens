@@ -21,28 +21,13 @@ namespace Barroc_Intens.Finances.LeaseContracts
         public CreateLeaseContractForm(/*Company myCompany*/)
         {
             InitializeComponent();
-            //txbCity.Text = myCompany.City;
-            //txbHouseNumber.Text = myCompany.HouseNumber;
-            //txbStreet.Text = myCompany.Street;
-            //txbTelephoneNumber.Text = myCompany.Phone;
-            //_company = myCompany;
-            //if (myCompany.IsBkrChecked)
-            //{
-            //    cbBkr.Checked = true;
-            //}
-            //else
-            //{
-            //    cbBkr.Checked = false;
-            //}
-            //
         }
 
         private void CreateInvoiceForm_Load(object sender, EventArgs e)
         {
             this.dbContext = new AppDbContext();
-            this.dbContext.Companies.Load();
-            this.dbContext.Products.Load();
-            //this.companyBindingSource.DataSource = dbContext.Companies.Local.Where(comp => comp.Name == _company.Name);
+            this.dbContext.Companies.OrderBy(c => c.Name).Load();
+            this.dbContext.Products.Where(p => p.CategoryId == 1).Load();
             this.companyBindingSource.DataSource = dbContext.Companies.Local.ToBindingList();
             this.productBindingSource.DataSource = dbContext.Products.Local.ToBindingList();
 
@@ -136,6 +121,11 @@ namespace Barroc_Intens.Finances.LeaseContracts
         private void cbYearly_CheckedChanged(object sender, EventArgs e)
         {
             cbMonthly.Checked = false;
+        }
+
+        private void btnBackToLease_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new LeaseContractForm());
         }
     }
 }
