@@ -124,5 +124,14 @@ namespace Barroc_Intens
                 dgvInvoices.Refresh();
             }
         }
+
+        private void btnRemoveInvoice_Click(object sender, EventArgs e)
+        {
+            var getRowData = (CustomInvoice)dgvInvoices.CurrentRow?.DataBoundItem;
+            this.dbContext.Remove(getRowData);
+
+            this.dbContext.SaveChanges();
+            dgvInvoices.Refresh();
+        }
     }
 }
