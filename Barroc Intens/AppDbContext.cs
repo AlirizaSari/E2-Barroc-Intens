@@ -230,7 +230,7 @@ namespace Barroc_Intens
             modelBuilder.Entity<Category>().HasData(
                 new Category { CategoryId = 1, Name = "Automaten", IsEmployeeOnly = 2 },
                 new Category { CategoryId = 2, Name = "Koffiebonen", IsEmployeeOnly = 2 },
-                new Category { CategoryId = 3, Name = "Onderdelen", IsEmployeeOnly = 1 
+                new Category { CategoryId = 3, Name = "Onderdelen", IsEmployeeOnly = 1  
                 });
 
             modelBuilder.Entity<CustomInvoice>().HasData(
@@ -259,7 +259,24 @@ namespace Barroc_Intens
                     StockStatusId = 1,
                     OrderAmount = 0,
                     CategoryId = 2
-                }); ;
+                },
+                new Product { ProductId = 9, Name = "Rubber (10 mm) ", Description = "10 mm", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 10, Name = "Rubber (14 mm) ", Description = "14 mm", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 11, Name = "Slang", Description = "-", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 12, Name = "Voeding (Elektra)", Description = "Elektra", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 13, Name = "Ontkalker", Description = "-", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 14, Name = "Waterfilter", Description = "-", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 15, Name = "Reservoir sensor", Description = "-", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 16, Name = "Druppelstop", Description = "-", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 17, Name = "Electrische pomp", Description = "-", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 18, Name = "Tandwiel 110mm", Description = "110 mm", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 19, Name = "Tandwiel 70mm", Description = "70 mm", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 20, Name = "Maalmotor", Description = "", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 21, Name = "Zeef", Description = "", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 22, Name = "Reinigingstabletten", Description = "-", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 22, Name = "Reiningsborsteltjes", Description = "-", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 },
+                new Product { ProductId = 22, Name = "Ontkalkingspijp", Description = "-", Brand = "-", AmountInStock = 0, StockStatusId = 1, OrderAmount = 0, CategoryId = 3 }
+                ); ;
 
             modelBuilder.Entity<MaintenanceAppointment>().HasData(
                 new MaintenanceAppointment { MaintenanceAppointmentId = 1, CompanyId = 151, Remark = "Koffiezet automaat 1 is ontploft", Added = DateTime.Now, AppointmentDate = null, AppointmentTime = null, AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = true, },
