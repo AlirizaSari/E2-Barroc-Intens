@@ -557,6 +557,9 @@
     <EmbeddedResource Include="Sales\Companies\EditCompanyForm.resx">
       <DependentUpon>EditCompanyForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\OfferteForm.resx">
+      <DependentUpon>OfferteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="bin\Debug\Barroc Intens.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Barroc_Intens.Classes.Leasecontract.datasource" />

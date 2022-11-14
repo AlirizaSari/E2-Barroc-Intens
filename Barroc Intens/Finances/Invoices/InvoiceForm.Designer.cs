@@ -59,8 +59,14 @@
             this.cbYearly = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cboxProduct = new System.Windows.Forms.ComboBox();
-            this.lblProduct = new System.Windows.Forms.Label();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblProduct = new System.Windows.Forms.Label();
+            this.lblNotOptional = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoursWorked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).BeginInit();
@@ -86,7 +92,7 @@
             this.btnCreateInvoice.Name = "btnCreateInvoice";
             this.btnCreateInvoice.Size = new System.Drawing.Size(173, 60);
             this.btnCreateInvoice.TabIndex = 8;
-            this.btnCreateInvoice.Text = "Creëer factuur";
+            this.btnCreateInvoice.Text = "Verzend factuur als Email";
             this.btnCreateInvoice.UseVisualStyleBackColor = true;
             this.btnCreateInvoice.Click += new System.EventHandler(this.btnCreateInvoice_Click);
             // 
@@ -247,7 +253,7 @@
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(363, 567);
+            this.lblError.Location = new System.Drawing.Point(209, 574);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 20);
             this.lblError.TabIndex = 18;
@@ -365,6 +371,10 @@
             this.cboxProduct.TabIndex = 28;
             this.cboxProduct.ValueMember = "ProductId";
             // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
+            // 
             // lblProduct
             // 
             this.lblProduct.AutoSize = true;
@@ -375,15 +385,83 @@
             this.lblProduct.TabIndex = 29;
             this.lblProduct.Text = "Product";
             // 
-            // productBindingSource
+            // lblNotOptional
             // 
-            this.productBindingSource.DataSource = typeof(Barroc_Intens.Product);
+            this.lblNotOptional.AutoSize = true;
+            this.lblNotOptional.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotOptional.ForeColor = System.Drawing.Color.Red;
+            this.lblNotOptional.Location = new System.Drawing.Point(153, 140);
+            this.lblNotOptional.Name = "lblNotOptional";
+            this.lblNotOptional.Size = new System.Drawing.Size(15, 20);
+            this.lblNotOptional.TabIndex = 30;
+            this.lblNotOptional.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(117, 174);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(15, 20);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(110, 279);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(15, 20);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "*";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(165, 308);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(15, 20);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "*";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(156, 370);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(15, 20);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "*";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(146, 442);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(15, 20);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "*";
             // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 721);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblNotOptional);
             this.Controls.Add(this.lblProduct);
             this.Controls.Add(this.cboxProduct);
             this.Controls.Add(this.label2);
@@ -463,5 +541,11 @@
         private System.Windows.Forms.ComboBox cboxProduct;
         private System.Windows.Forms.Label lblProduct;
         private System.Windows.Forms.BindingSource productBindingSource;
+        private System.Windows.Forms.Label lblNotOptional;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -40,7 +40,7 @@ namespace Barroc_Intens.Finances.LeaseContracts
         private void EditLeaseContractForm_Load(object sender, EventArgs e)
         {
             this.dbContext = new AppDbContext();
-            this.dbContext.Companies.Load();
+            this.dbContext.Companies.OrderBy(c => c.Name).Load();
             this.dbContext.Products.Where(c => c.CategoryId == 1).Load();
             //this.dbContext.LeaseContracts.Where(l => l == _leaseContract).Load();
             //this.companyBindingSource.DataSource = dbContext.Companies.Local.Where(comp => comp.Name == _company.Name);

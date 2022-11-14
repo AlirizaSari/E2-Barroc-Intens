@@ -63,6 +63,10 @@ namespace Barroc_Intens.Finances
             {
                 _paymentTerm = "Jaarlijks";
             }
+            else
+            {
+                return false;
+            }
 
             if (stringInputValidation(_companyName)
                 && stringInputValidation(_companyAdress)
@@ -130,7 +134,7 @@ namespace Barroc_Intens.Finances
         {
             if (invoiceInformation == 0)
             {
-                lblError.Text = "Zorg ervoor dat alle velden zijn ingevuld";
+                lblError.Text = "Zorg ervoor dat alle velden ingevuld zijn";
                 return false;
             }
             return true;
@@ -184,10 +188,16 @@ namespace Barroc_Intens.Finances
                 };
                 dbContext.CustomInvoices.Add(invoice);
 
+                dbContext.SaveChanges();
                 DirectToForm(new DashboardFinanceForm());
+
+            }
+            else
+            {
+                lblError.Text = "Zorg ervoor dat alle velden ingevuld of aangevinkt zijn";
             }
 
-            dbContext.SaveChanges();
+            
         }
 
         private void cboxCompanyName_SelectedIndexChanged(object sender, EventArgs e)
@@ -202,7 +212,6 @@ namespace Barroc_Intens.Finances
                 return;
 
             var company = (Company)cboxCompanyName.SelectedItem;
-            //txbEmailAdresCompany.Text = 
             txbCompanyAdress.Text = $"{company.Street} {company.HouseNumber}";
             txbEmailAdresCompany.Text = company.EmailAddress;
 

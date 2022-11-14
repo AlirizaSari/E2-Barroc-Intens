@@ -179,9 +179,9 @@
             // 
             // btnBackToLease
             // 
-            this.btnBackToLease.Location = new System.Drawing.Point(545, 12);
+            this.btnBackToLease.Location = new System.Drawing.Point(530, 12);
             this.btnBackToLease.Name = "btnBackToLease";
-            this.btnBackToLease.Size = new System.Drawing.Size(122, 41);
+            this.btnBackToLease.Size = new System.Drawing.Size(137, 58);
             this.btnBackToLease.TabIndex = 25;
             this.btnBackToLease.Text = "Terug naar leasecontracten";
             this.btnBackToLease.UseVisualStyleBackColor = true;

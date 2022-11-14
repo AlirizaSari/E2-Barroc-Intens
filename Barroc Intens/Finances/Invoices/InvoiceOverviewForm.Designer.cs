@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceOverviewForm));
             this.btnBackToFinanceDashboard = new System.Windows.Forms.Button();
             this.dgvPaidInvoices = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PaymentTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,13 +46,14 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvNotPaidInvoices = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.companyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paidAtDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaidInvoices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotPaidInvoices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customInvoiceBindingSource)).BeginInit();
@@ -77,7 +77,6 @@
             this.dgvPaidInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPaidInvoices.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvPaidInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPaidInvoices.ColumnHeadersVisible = false;
             this.dgvPaidInvoices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.companyDataGridViewTextBoxColumn1,
             this.dateDataGridViewTextBoxColumn1,
@@ -87,20 +86,12 @@
             this.dgvPaidInvoices.Location = new System.Drawing.Point(40, 105);
             this.dgvPaidInvoices.Name = "dgvPaidInvoices";
             this.dgvPaidInvoices.ReadOnly = true;
+            this.dgvPaidInvoices.RowHeadersVisible = false;
             this.dgvPaidInvoices.RowHeadersWidth = 51;
             this.dgvPaidInvoices.RowTemplate.Height = 24;
             this.dgvPaidInvoices.Size = new System.Drawing.Size(297, 364);
             this.dgvPaidInvoices.TabIndex = 1;
             this.dgvPaidInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPaidInvoices_CellClick);
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "PaymentTerm";
-            this.dataGridViewTextBoxColumn13.HeaderText = "PaymentTerm";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 6;
             // 
             // PaymentTerm
             // 
@@ -134,9 +125,9 @@
             this.lblPaidInvoices.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaidInvoices.Location = new System.Drawing.Point(36, 82);
             this.lblPaidInvoices.Name = "lblPaidInvoices";
-            this.lblPaidInvoices.Size = new System.Drawing.Size(127, 20);
+            this.lblPaidInvoices.Size = new System.Drawing.Size(129, 20);
             this.lblPaidInvoices.TabIndex = 3;
-            this.lblPaidInvoices.Text = "Betaalde invoices";
+            this.lblPaidInvoices.Text = "Betaalde facturen";
             // 
             // label1
             // 
@@ -144,9 +135,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(470, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 20);
+            this.label1.Size = new System.Drawing.Size(162, 20);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Niet betaalde invoices";
+            this.label1.Text = "Niet betaalde facturen";
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -226,7 +217,6 @@
             this.dgvNotPaidInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvNotPaidInvoices.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvNotPaidInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNotPaidInvoices.ColumnHeadersVisible = false;
             this.dgvNotPaidInvoices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn12,
@@ -235,38 +225,12 @@
             this.dgvNotPaidInvoices.Location = new System.Drawing.Point(474, 105);
             this.dgvNotPaidInvoices.Name = "dgvNotPaidInvoices";
             this.dgvNotPaidInvoices.ReadOnly = true;
+            this.dgvNotPaidInvoices.RowHeadersVisible = false;
             this.dgvNotPaidInvoices.RowHeadersWidth = 51;
             this.dgvNotPaidInvoices.RowTemplate.Height = 24;
             this.dgvNotPaidInvoices.Size = new System.Drawing.Size(297, 364);
             this.dgvNotPaidInvoices.TabIndex = 5;
             this.dgvNotPaidInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNotPaidInvoices_CellClick);
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Company";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Company";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 6;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Date";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Date";
-            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 6;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "PaymentTerm";
-            this.dataGridViewTextBoxColumn20.HeaderText = "PaymentTerm";
-            this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
-            this.dataGridViewTextBoxColumn20.Width = 6;
             // 
             // customInvoiceBindingSource
             // 
@@ -275,29 +239,65 @@
             // companyDataGridViewTextBoxColumn1
             // 
             this.companyDataGridViewTextBoxColumn1.DataPropertyName = "Company";
-            this.companyDataGridViewTextBoxColumn1.HeaderText = "Company";
+            this.companyDataGridViewTextBoxColumn1.HeaderText = "Bedrijf";
             this.companyDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.companyDataGridViewTextBoxColumn1.Name = "companyDataGridViewTextBoxColumn1";
             this.companyDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.companyDataGridViewTextBoxColumn1.Width = 6;
+            this.companyDataGridViewTextBoxColumn1.Width = 74;
             // 
             // dateDataGridViewTextBoxColumn1
             // 
             this.dateDataGridViewTextBoxColumn1.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn1.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn1.HeaderText = "Betaaldatum";
             this.dateDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
             this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dateDataGridViewTextBoxColumn1.Width = 6;
+            this.dateDataGridViewTextBoxColumn1.Width = 112;
             // 
             // paidAtDataGridViewTextBoxColumn1
             // 
             this.paidAtDataGridViewTextBoxColumn1.DataPropertyName = "PaidAt";
-            this.paidAtDataGridViewTextBoxColumn1.HeaderText = "PaidAt";
+            this.paidAtDataGridViewTextBoxColumn1.HeaderText = "Betaald op";
             this.paidAtDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.paidAtDataGridViewTextBoxColumn1.Name = "paidAtDataGridViewTextBoxColumn1";
             this.paidAtDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.paidAtDataGridViewTextBoxColumn1.Width = 6;
+            this.paidAtDataGridViewTextBoxColumn1.Width = 102;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "PaymentTerm";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Betaaltermijn";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 114;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Company";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Bedrijf";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 74;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Date";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Betaaldatum";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 112;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "PaymentTerm";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Betaaltermijn";
+            this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            this.dataGridViewTextBoxColumn20.Width = 114;
             // 
             // InvoiceOverviewForm
             // 

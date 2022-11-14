@@ -46,21 +46,23 @@ namespace Barroc_Intens
             this.btnDirectToInvoice = new System.Windows.Forms.Button();
             this.btnBackToMain = new System.Windows.Forms.Button();
             this.dgvInvoices = new System.Windows.Forms.DataGridView();
-            this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CompanyCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CompanyStreet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CompanyHouseNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PaidAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoursWorkedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnPaidInvoice = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNotPaid = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaidAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CompanyCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CompanyStreet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CompanyHouseNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoursWorkedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRemoveInvoice = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -217,12 +219,12 @@ namespace Barroc_Intens
             this.dgvInvoices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.companyDataGridViewTextBoxColumn,
             this.ProductName,
+            this.dateDataGridViewTextBoxColumn,
+            this.PaidAt,
             this.CompanyCity,
             this.CompanyStreet,
             this.CompanyHouseNumber,
             this.Company,
-            this.dateDataGridViewTextBoxColumn,
-            this.PaidAt,
             this.hoursWorkedDataGridViewTextBoxColumn,
             this.notesDataGridViewTextBoxColumn});
             this.dgvInvoices.DataSource = this.customInvoiceBindingSource;
@@ -234,100 +236,6 @@ namespace Barroc_Intens
             this.dgvInvoices.Size = new System.Drawing.Size(882, 182);
             this.dgvInvoices.TabIndex = 2;
             this.dgvInvoices.SelectionChanged += new System.EventHandler(this.dgvInvoices_SelectionChanged);
-            // 
-            // companyDataGridViewTextBoxColumn
-            // 
-            this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
-            this.companyDataGridViewTextBoxColumn.HeaderText = "Bedrijf";
-            this.companyDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
-            this.companyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.companyDataGridViewTextBoxColumn.Width = 82;
-            // 
-            // ProductName
-            // 
-            this.ProductName.DataPropertyName = "Product";
-            this.ProductName.HeaderText = "Product";
-            this.ProductName.MinimumWidth = 6;
-            this.ProductName.Name = "ProductName";
-            this.ProductName.ReadOnly = true;
-            this.ProductName.Width = 89;
-            // 
-            // CompanyCity
-            // 
-            this.CompanyCity.DataPropertyName = "CompanyCity";
-            this.CompanyCity.HeaderText = "Stad";
-            this.CompanyCity.MinimumWidth = 6;
-            this.CompanyCity.Name = "CompanyCity";
-            this.CompanyCity.ReadOnly = true;
-            this.CompanyCity.Width = 68;
-            // 
-            // CompanyStreet
-            // 
-            this.CompanyStreet.DataPropertyName = "CompanyStreet";
-            this.CompanyStreet.HeaderText = "Straat";
-            this.CompanyStreet.MinimumWidth = 6;
-            this.CompanyStreet.Name = "CompanyStreet";
-            this.CompanyStreet.ReadOnly = true;
-            this.CompanyStreet.Width = 77;
-            // 
-            // CompanyHouseNumber
-            // 
-            this.CompanyHouseNumber.DataPropertyName = "CompanyHouseNumber";
-            this.CompanyHouseNumber.HeaderText = "Huisnummer";
-            this.CompanyHouseNumber.MinimumWidth = 6;
-            this.CompanyHouseNumber.Name = "CompanyHouseNumber";
-            this.CompanyHouseNumber.ReadOnly = true;
-            this.CompanyHouseNumber.Width = 122;
-            // 
-            // Company
-            // 
-            this.Company.DataPropertyName = "CompanyEmailAddress";
-            this.Company.HeaderText = "Email";
-            this.Company.MinimumWidth = 6;
-            this.Company.Name = "Company";
-            this.Company.ReadOnly = true;
-            this.Company.Width = 75;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Datum";
-            this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dateDataGridViewTextBoxColumn.Width = 83;
-            // 
-            // PaidAt
-            // 
-            this.PaidAt.DataPropertyName = "PaidAt";
-            this.PaidAt.HeaderText = "Betaaldatum";
-            this.PaidAt.MinimumWidth = 6;
-            this.PaidAt.Name = "PaidAt";
-            this.PaidAt.ReadOnly = true;
-            this.PaidAt.Width = 123;
-            // 
-            // hoursWorkedDataGridViewTextBoxColumn
-            // 
-            this.hoursWorkedDataGridViewTextBoxColumn.DataPropertyName = "HoursWorked";
-            this.hoursWorkedDataGridViewTextBoxColumn.HeaderText = "Uur gewerkt";
-            this.hoursWorkedDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.hoursWorkedDataGridViewTextBoxColumn.Name = "hoursWorkedDataGridViewTextBoxColumn";
-            this.hoursWorkedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hoursWorkedDataGridViewTextBoxColumn.Width = 118;
-            // 
-            // notesDataGridViewTextBoxColumn
-            // 
-            this.notesDataGridViewTextBoxColumn.DataPropertyName = "Notes";
-            this.notesDataGridViewTextBoxColumn.HeaderText = "Notities";
-            this.notesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
-            this.notesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.notesDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // customInvoiceBindingSource
-            // 
-            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
             // 
             // btnPaidInvoice
             // 
@@ -366,11 +274,124 @@ namespace Barroc_Intens
             this.btnNotPaid.UseVisualStyleBackColor = true;
             this.btnNotPaid.Click += new System.EventHandler(this.btnNotPaid_Click);
             // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Product";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Product";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 82;
+            // 
+            // customInvoiceBindingSource
+            // 
+            this.customInvoiceBindingSource.DataSource = typeof(Barroc_Intens.CustomInvoice);
+            // 
+            // companyDataGridViewTextBoxColumn
+            // 
+            this.companyDataGridViewTextBoxColumn.DataPropertyName = "Company";
+            this.companyDataGridViewTextBoxColumn.HeaderText = "Bedrijf";
+            this.companyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
+            this.companyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.companyDataGridViewTextBoxColumn.Width = 82;
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "Product";
+            this.ProductName.HeaderText = "Product";
+            this.ProductName.MinimumWidth = 6;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            this.ProductName.Width = 89;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Betaaldatum";
+            this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn.Width = 123;
+            // 
+            // PaidAt
+            // 
+            this.PaidAt.DataPropertyName = "PaidAt";
+            this.PaidAt.HeaderText = "Betaald op";
+            this.PaidAt.MinimumWidth = 6;
+            this.PaidAt.Name = "PaidAt";
+            this.PaidAt.ReadOnly = true;
+            this.PaidAt.Width = 111;
+            // 
+            // CompanyCity
+            // 
+            this.CompanyCity.DataPropertyName = "CompanyCity";
+            this.CompanyCity.HeaderText = "Stad";
+            this.CompanyCity.MinimumWidth = 6;
+            this.CompanyCity.Name = "CompanyCity";
+            this.CompanyCity.ReadOnly = true;
+            this.CompanyCity.Width = 68;
+            // 
+            // CompanyStreet
+            // 
+            this.CompanyStreet.DataPropertyName = "CompanyStreet";
+            this.CompanyStreet.HeaderText = "Straat";
+            this.CompanyStreet.MinimumWidth = 6;
+            this.CompanyStreet.Name = "CompanyStreet";
+            this.CompanyStreet.ReadOnly = true;
+            this.CompanyStreet.Width = 77;
+            // 
+            // CompanyHouseNumber
+            // 
+            this.CompanyHouseNumber.DataPropertyName = "CompanyHouseNumber";
+            this.CompanyHouseNumber.HeaderText = "Huisnummer";
+            this.CompanyHouseNumber.MinimumWidth = 6;
+            this.CompanyHouseNumber.Name = "CompanyHouseNumber";
+            this.CompanyHouseNumber.ReadOnly = true;
+            this.CompanyHouseNumber.Width = 122;
+            // 
+            // Company
+            // 
+            this.Company.DataPropertyName = "CompanyEmailAddress";
+            this.Company.HeaderText = "Email";
+            this.Company.MinimumWidth = 6;
+            this.Company.Name = "Company";
+            this.Company.ReadOnly = true;
+            this.Company.Width = 75;
+            // 
+            // hoursWorkedDataGridViewTextBoxColumn
+            // 
+            this.hoursWorkedDataGridViewTextBoxColumn.DataPropertyName = "HoursWorked";
+            this.hoursWorkedDataGridViewTextBoxColumn.HeaderText = "Uur gewerkt";
+            this.hoursWorkedDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hoursWorkedDataGridViewTextBoxColumn.Name = "hoursWorkedDataGridViewTextBoxColumn";
+            this.hoursWorkedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hoursWorkedDataGridViewTextBoxColumn.Width = 118;
+            // 
+            // notesDataGridViewTextBoxColumn
+            // 
+            this.notesDataGridViewTextBoxColumn.DataPropertyName = "Notes";
+            this.notesDataGridViewTextBoxColumn.HeaderText = "Notities";
+            this.notesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
+            this.notesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.notesDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // btnRemoveInvoice
+            // 
+            this.btnRemoveInvoice.Location = new System.Drawing.Point(268, 428);
+            this.btnRemoveInvoice.Name = "btnRemoveInvoice";
+            this.btnRemoveInvoice.Size = new System.Drawing.Size(172, 59);
+            this.btnRemoveInvoice.TabIndex = 5;
+            this.btnRemoveInvoice.Text = "Verwijder factuur";
+            this.btnRemoveInvoice.UseVisualStyleBackColor = true;
+            this.btnRemoveInvoice.Click += new System.EventHandler(this.btnRemoveInvoice_Click);
+            // 
             // DashboardFinanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1122, 600);
+            this.Controls.Add(this.btnRemoveInvoice);
             this.Controls.Add(this.btnNotPaid);
             this.Controls.Add(this.btnPaidInvoice);
             this.Controls.Add(this.dgvInvoices);
@@ -414,17 +435,19 @@ namespace Barroc_Intens
         private System.Windows.Forms.DataGridViewTextBoxColumn companyEmailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyAdressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Button btnNotPaid;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PaidAt;
         private System.Windows.Forms.DataGridViewTextBoxColumn CompanyCity;
         private System.Windows.Forms.DataGridViewTextBoxColumn CompanyStreet;
         private System.Windows.Forms.DataGridViewTextBoxColumn CompanyHouseNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Company;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PaidAt;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoursWorkedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.Button btnNotPaid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Button btnRemoveInvoice;
     }
 }

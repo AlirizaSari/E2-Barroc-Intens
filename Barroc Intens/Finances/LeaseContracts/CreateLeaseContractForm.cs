@@ -113,7 +113,12 @@ namespace Barroc_Intens.Finances.LeaseContracts
             this.Close();
         }
 
-        private void cbMonthly_CheckedChanged(object sender, EventArgs e)
+        private void btnBackToLease_Click(object sender, EventArgs e)
+        {
+            DirectToForm(new LeaseContractForm());
+        }
+
+        private void cbMonthly_Click(object sender, EventArgs e)
         {
             cbYearly.Checked = false;
         }
@@ -121,11 +126,6 @@ namespace Barroc_Intens.Finances.LeaseContracts
         private void cbYearly_CheckedChanged(object sender, EventArgs e)
         {
             cbMonthly.Checked = false;
-        }
-
-        private void btnBackToLease_Click(object sender, EventArgs e)
-        {
-            DirectToForm(new LeaseContractForm());
         }
     }
 }
