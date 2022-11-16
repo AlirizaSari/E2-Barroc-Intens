@@ -930,14 +930,14 @@ namespace Barroc_Intens
                 ); ;
 
             modelBuilder.Entity<MaintenanceAppointment>().HasData(
-                new MaintenanceAppointment { MaintenanceAppointmentId = 1, CompanyId = 151, Remark = "Koffiezet automaat 1 is ontploft", Added = DateTime.Now,  AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = true, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 2, CompanyId = 151, Remark = "Koffiezet automaat 2 is ontploft", Added = DateTime.Now, AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = false, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 3, CompanyId = 151, Remark = "Koffiezet automaat 3 is de linker tuben kapot", Added = DateTime.Now, AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = false, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 4, CompanyId = 151, Remark = "Koffiezet automaat 4 is ontploft", Added = DateTime.Now,  AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = false, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 5, CompanyId = 152, Remark = "Koffiezet automaat 1 is ontploft", Added = DateTime.Now, AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = true, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 6, CompanyId = 152, Remark = "Koffiezet automaat 2 is de linker tuben kapot", Added = DateTime.Now,  AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = false, },
-                new MaintenanceAppointment { MaintenanceAppointmentId = 7, CompanyId = 153, Remark = "Koffiezet automaat 3 is ontploft", Added = DateTime.Now,  AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = false, },
-                new MaintenanceAppointment{ MaintenanceAppointmentId = 8,CompanyId = 154,Remark = "Koffiezet automaat 4 is ontploft",Added = DateTime.Now, AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null,IsRoutineAppointment = false,                
+                new MaintenanceAppointment { MaintenanceAppointmentId = 1, CompanyId = 151, Remark = "Koffiezet automaat 1 is aan het lekken.", Added = DateTime.Now,  AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = true, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 2, CompanyId = 151, Remark = "Koffiezet automaat 2 is omgevallen", Added = DateTime.Now, AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = false, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 3, CompanyId = 151, Remark = "Koffiezet automaat 3 heeft kortsluiting", Added = DateTime.Now, AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = false, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 4, CompanyId = 151, Remark = "Koffiezet automaat 4 heeft een blue screen ", Added = DateTime.Now,  AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = false, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 5, CompanyId = 152, Remark = "Koffiezet automaat 5 is weggelopen", Added = DateTime.Now, AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = true, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 6, CompanyId = 152, Remark = "Koffiezet automaat 6 heeft een bewustzijn gekregen", Added = DateTime.Now,  AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = false, },
+                new MaintenanceAppointment { MaintenanceAppointmentId = 7, CompanyId = 153, Remark = "Koffiezet automaat 7 is op vakantie", Added = DateTime.Now,  AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null, IsRoutineAppointment = false, },
+                new MaintenanceAppointment{ MaintenanceAppointmentId = 8,CompanyId = 154,Remark = "Koffiezet automaat 8 is ontploft",Added = DateTime.Now, AppointmentIsPlanned = false, AssignedEmployee = null, UserId = null,IsRoutineAppointment = false,                
                 });
 
             modelBuilder.Entity<PlannedAppointment>().HasData(
