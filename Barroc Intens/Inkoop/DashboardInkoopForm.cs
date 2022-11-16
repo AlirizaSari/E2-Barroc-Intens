@@ -93,10 +93,9 @@ namespace Barroc_Intens
         {
             var product = (Product)this.dgvProducts.CurrentRow?.DataBoundItem;
 
-            dgvProducts.Rows.RemoveAt(dgvProducts.SelectedRows[0].Index);
-
             dbContext.Products.Remove(product);
             dbContext.SaveChanges();
+            dgvProducts.Refresh();
         }
 
         private void dgvCategories_SelectionChanged(object sender, EventArgs e)

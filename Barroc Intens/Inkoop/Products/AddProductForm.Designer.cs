@@ -92,27 +92,27 @@
             // txbNameProduct
             // 
             this.txbNameProduct.Location = new System.Drawing.Point(177, 82);
-            this.txbNameProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbNameProduct.Margin = new System.Windows.Forms.Padding(4);
             this.txbNameProduct.Name = "txbNameProduct";
             this.txbNameProduct.Size = new System.Drawing.Size(297, 22);
-            this.txbNameProduct.TabIndex = 5;
+            this.txbNameProduct.TabIndex = 0;
             // 
             // txbDescriptionProduct
             // 
             this.txbDescriptionProduct.Location = new System.Drawing.Point(177, 116);
-            this.txbDescriptionProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbDescriptionProduct.Margin = new System.Windows.Forms.Padding(4);
             this.txbDescriptionProduct.Name = "txbDescriptionProduct";
             this.txbDescriptionProduct.Size = new System.Drawing.Size(297, 22);
-            this.txbDescriptionProduct.TabIndex = 6;
+            this.txbDescriptionProduct.TabIndex = 1;
             // 
             // btnSaveProduct
             // 
             this.btnSaveProduct.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveProduct.Location = new System.Drawing.Point(177, 238);
-            this.btnSaveProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveProduct.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveProduct.Name = "btnSaveProduct";
             this.btnSaveProduct.Size = new System.Drawing.Size(100, 28);
-            this.btnSaveProduct.TabIndex = 9;
+            this.btnSaveProduct.TabIndex = 4;
             this.btnSaveProduct.Text = "Opslaan";
             this.btnSaveProduct.UseVisualStyleBackColor = true;
             this.btnSaveProduct.Click += new System.EventHandler(this.btnSaveProduct_Click);
@@ -121,10 +121,10 @@
             // 
             this.btnCancelProduct.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelProduct.Location = new System.Drawing.Point(285, 238);
-            this.btnCancelProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelProduct.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelProduct.Name = "btnCancelProduct";
             this.btnCancelProduct.Size = new System.Drawing.Size(100, 28);
-            this.btnCancelProduct.TabIndex = 10;
+            this.btnCancelProduct.TabIndex = 5;
             this.btnCancelProduct.Text = "Annuleren";
             this.btnCancelProduct.UseVisualStyleBackColor = true;
             this.btnCancelProduct.Click += new System.EventHandler(this.btnCancelProduct_Click);
@@ -136,10 +136,10 @@
             this.cboxNewProductCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxNewProductCategory.FormattingEnabled = true;
             this.cboxNewProductCategory.Location = new System.Drawing.Point(177, 181);
-            this.cboxNewProductCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboxNewProductCategory.Margin = new System.Windows.Forms.Padding(4);
             this.cboxNewProductCategory.Name = "cboxNewProductCategory";
             this.cboxNewProductCategory.Size = new System.Drawing.Size(297, 24);
-            this.cboxNewProductCategory.TabIndex = 11;
+            this.cboxNewProductCategory.TabIndex = 3;
             this.cboxNewProductCategory.ValueMember = "CategoryId";
             // 
             // categoryBindingSource
@@ -160,10 +160,10 @@
             // txbBrandProduct
             // 
             this.txbBrandProduct.Location = new System.Drawing.Point(177, 149);
-            this.txbBrandProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbBrandProduct.Margin = new System.Windows.Forms.Padding(4);
             this.txbBrandProduct.Name = "txbBrandProduct";
             this.txbBrandProduct.Size = new System.Drawing.Size(297, 22);
-            this.txbBrandProduct.TabIndex = 13;
+            this.txbBrandProduct.TabIndex = 2;
             // 
             // AddProductForm
             // 
@@ -182,7 +182,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddProductForm";
             this.Text = "Product toevoegen";
             this.Load += new System.EventHandler(this.AddProductFrom_Load);
