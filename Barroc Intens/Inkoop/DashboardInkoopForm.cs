@@ -124,10 +124,9 @@ namespace Barroc_Intens
         {
             var category = (Category)this.dgvCategories.CurrentRow?.DataBoundItem;
 
-            dgvCategories.Rows.RemoveAt(dgvCategories.SelectedRows[0].Index);
-
             dbContext.Categories.Remove(category);
             dbContext.SaveChanges();
+            dgvCategories.Refresh();
         }
 
         private void btnBackToMain_Click(object sender, EventArgs e)
