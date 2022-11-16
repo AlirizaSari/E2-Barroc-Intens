@@ -87,7 +87,7 @@ namespace Barroc_Intens.Finances.LeaseContracts
             }
             else if(!currSelect.IsBkrChecked)
             {
-                lblError.Text = $"BKR van {currSelect.Name}";
+                lblError.Text = $"BKR van {currSelect.Name} is (nog) niet goedgekeurd";
             }
             else
             {
